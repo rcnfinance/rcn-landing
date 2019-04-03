@@ -1,0 +1,26 @@
+@import '../../../styles.scss'; //Styles
+
+.main-container {
+    background-color: black;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+    .col-sm {
+        width: 14%;
+        // background-color: red;
+        margin: 1% 0;
+        .title {
+            @include foot-title;
+            margin-bottom: 7%;
+        }
+        .subtitle {
+            @include foot-subtitle;
+            margin: 4% 0;
+        }
+    }
+    .col-m {
+        width: 24%;
+        background-color: green;
+        margin: 1% 0;
+    }
+}

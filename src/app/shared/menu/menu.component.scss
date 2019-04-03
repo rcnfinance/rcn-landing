@@ -1,0 +1,37 @@
+@import '../../../styles.scss'; //Styles
+
+.main-container {
+	@include shadow;
+	.container{
+		@include row-both;
+		align-content: flex-start;
+		padding: 0;
+		// position: relative;
+		.logo {
+			// @include shadow;
+			width: 8%;
+			border-radius: 50px;
+			margin-left: 2%;
+			// position: absolute;
+			background-color: white;
+		 }
+	}
+}
+
+.col-tabs{
+	@include three-quarters;
+	display: flex;
+	align-content: center;
+	margin: 0.5% 2%;
+  .tabs {
+    list-style-type: none;
+		@include row-right;
+		margin: 0;
+		display: flex;
+		align-items: center;	
+    .menu-text {
+    @include menu-text;
+    margin: 0 2% ;
+    }   
+  }
+}

@@ -1,0 +1,44 @@
+@import '../../../../styles.scss'; //Styles
+
+.main-container{
+  .col-1 {
+    @include three-quarters;
+    margin-left: 10%;
+    margin-top: 5%;
+  }
+  .row {
+		display: flex;
+		justify-content: center;
+		table {
+			width: 45%;
+			border-collapse:separate;
+			border:solid $rcn-blue 1px;
+			border-radius:35px;
+			-moz-border-radius:6px;
+			margin: 3%;
+		}
+  }
+}
+
+td, th {
+	border-left:solid $rcn-blue 1px;
+	border-top:solid $rcn-blue 1px;
+}
+
+.first {
+	border-top: none;
+}
+
+td:first-child, th:first-child {
+	 border-left: none;
+}
+
+.img-box {
+	margin: 10%;
+	width: 70%;
+}
+
+h6 {
+	margin: 10%;
+	@include part-card-text;
+}

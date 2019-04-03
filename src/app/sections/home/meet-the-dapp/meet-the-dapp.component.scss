@@ -1,0 +1,47 @@
+@import '../../../../styles.scss'; //Styles
+
+
+.main-container {
+    display: flex;
+    justify-content: center;
+}
+
+.col-1 {
+    width: 55%;
+    margin-top: 5%;
+    .title {
+        @include subtitle;
+        margin-top: 10%;
+    }
+    p {
+        margin: 5% 0;
+    }
+    .button {
+        border: solid $rcn-blue 1px;
+        margin: 0;
+        padding: 20px 50px;
+        border-radius: 30px;
+        width: auto;
+        overflow: visible;
+        background: transparent;
+        @include button-text;
+        color: $rcn-blue;
+    }
+}
+
+.col-2 {
+    width: 45%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.img-box {
+    width: 120%;
+    height: auto;
+    // position: relative;
+    img {
+        width: 100%;
+        margin-left: -47%;
+        // position: absolute;
+    }
+}

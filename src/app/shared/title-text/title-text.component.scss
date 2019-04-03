@@ -1,0 +1,15 @@
+@import '../../../styles.scss'; //Styles
+
+.col-inner {
+    width: 80%;
+    .reg-text {
+        @include reg-text;
+    }
+}
+
+.title {
+    @include title;
+    font-size: 42px;
+    font-weight: 500;
+}
+

@@ -1,0 +1,7 @@
+@import '../../../../styles.scss'; //Styles
+
+.col-1 {
+    @include three-quarters;
+    margin-left: 10%;
+    margin-top: 5%;
+}
