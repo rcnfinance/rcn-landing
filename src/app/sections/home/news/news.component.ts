@@ -7,9 +7,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewsComponent implements OnInit {
 
+  
+  // @ViewChild('nav', {read: DragScrollComponent}) ds: DragScrollComponent;
+  
+  // moveLeft() {
+  //   this.ds.moveLeft();
+  // }
+ 
+  // moveRight() {
+  //   this.ds.moveRight();
+  // }
+ 
+  // moveTo(index) {
+  //   this.ds.moveTo(index);
+  // }
   constructor() { }
-
+  
   ngOnInit() {
   }
+  
 
 }

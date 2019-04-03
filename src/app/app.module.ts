@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+//Material
 import { MaterialModule } from '../app/material/material.module';
+
+//Carrousel
+import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,7 +53,8 @@ import { MeetTheDappComponent } from './sections/home/meet-the-dapp/meet-the-dap
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MaterialModule
+    MaterialModule,
+    DragScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

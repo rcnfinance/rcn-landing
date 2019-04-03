@@ -20,9 +20,18 @@
   }
 }
 
+.container {
+	width: 100%;
+	height: auto;
+}
+
 td, th {
 	border-left:solid $rcn-blue 1px;
 	border-top:solid $rcn-blue 1px;
+}
+
+th {
+	width: 20%;
 }
 
 .first {
@@ -35,7 +44,6 @@ td:first-child, th:first-child {
 
 .img-box {
 	margin: 10%;
-	width: 70%;
 }
 
 h6 {

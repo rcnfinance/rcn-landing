@@ -5,3 +5,42 @@
     margin-left: 10%;
     margin-top: 5%;
 }
+
+.border {
+    border: solid $rcn-blue;
+    width: 23%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    .content {
+        width: 80%;
+        margin: 7% 5%;
+        flex-wrap: wrap;
+        display: flex;
+        .title-box {
+        height: 50%;
+
+            h3 {
+                @include spon-card-title;
+            }
+
+        }
+        p {
+            @include spon-card-text;
+        }
+    }
+
+}
+
+.row {
+    width: 100%;
+    drag-scroll {
+        height: 100%;
+        width: 100%;
+      }
+      img {
+        height: 500px;
+        width: auto;
+      }
+}
+
