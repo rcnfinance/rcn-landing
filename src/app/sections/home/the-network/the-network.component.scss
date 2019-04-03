@@ -5,17 +5,21 @@
 
     .container {
         @include row-around;
+        margin: 3% 0;
         .col-1 {
-            @include three-quarters;
+            @include half;
             margin-left: 10%;
             margin-top: 5%;
         }
         .col-2 {
-            @include quarter;
+            @include half;
             // background-color: green;
         }
         .img {
-            width: 50%;
+            width: 30%;
+            img {
+                margin: 15% 0 0 -30% ;
+            }
         }
     }
 }
@@ -36,7 +40,7 @@
 }
 
 .tabs {
-    width: 60%;
+    width: 80%;
 
 }
 
