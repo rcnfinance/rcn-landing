@@ -1,0 +1,93 @@
+@import '../../../../styles.scss'; //Styles
+
+.main-container {
+    display:flex;
+    justify-content: center;
+    margin: 5% 0;
+    .row {
+        width: 80%;
+        .text {
+            @include three-quarters;
+        }
+    }
+}
+
+.row-2 {
+    display: flex;
+    justify-content: center;
+    .box-border {
+        height: auto;
+        width: 45%;
+        border: solid $text-gray 1px;
+        border-radius: 35px;
+        padding: 4%;
+        margin-top: 3%;
+        .title-box {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 2%;
+            .img-box {
+                width: 50px;
+                height: auto;
+                margin-right: 2%;
+            }
+            .title {
+                width: auto;
+                h4 {
+                    @include tab-title;
+                    font-weight: 700;
+                }
+            }
+
+        }
+    }
+}
+
+.bottom-border {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:solid $text-gray 1px;
+    margin: 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 2% 0;
+        .col-1 {
+            width: 60%;
+            display:flex;
+            justify-content: flex-start;
+
+        }
+        .col-2 {
+            width: 40%;
+            display:flex;
+            justify-content: flex-start;
+
+        }
+    }
+}
+
+.fas {
+    margin-right: 12px;
+    font-size: 20px;
+}
+
+h6 {
+    @include tab-title;
+}
+
+.sub-title {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 6%;
+}
+
+.data {
+    font-weight: 700;
+    font-size: 18px;
+}

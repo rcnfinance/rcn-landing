@@ -1,3 +1,43 @@
-<p>
-  loan-properties works!
-</p>
+<div class="main-container">
+  <div class="row">
+      <div class="text">
+      <app-title-text>
+          <h3>THE NETWORK</h3>
+          <p>In a world of ever-growing markets we harness blockchain technology to bridge
+            credit's supply and demand across borders, creating a new ecosystem for decentralized lending</p>
+      </app-title-text>
+    </div>
+    <div class="row-2">
+      <div class="box-border">
+        <div class="box">
+          <div class="title-box">
+            <div class="img-box">
+              <img src="../../../../assets/isologo.svg" alt="">
+            </div>
+            <div class="title">
+              <h4>LOAN OVERVIEW</h4>
+            </div>
+          </div>
+          <div class="bottom-border" *ngFor="let content of content">
+              <div class="wrapper">
+                <div class="col-1">
+                  <div><i class="{{content.icon}}"></i></div>
+                  <div>
+                    <h6 class="sub-title">BORROWER</h6>
+                    <h6 class="data">ox2c...ef20</h6>
+                  </div>
+                </div>
+                <div class="col-2">
+                    <div><i class="fas fa-chart-line"></i></div>
+                    <div>
+                      <h6 class="sub-title">LENDING AMOUNT</h6>
+                      <h6 class="data">2500</h6>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
