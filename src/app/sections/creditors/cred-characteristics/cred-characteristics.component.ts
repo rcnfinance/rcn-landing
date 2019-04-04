@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CredCharacteristicsComponent implements OnInit {
 
+  content = [
+    {img: "../../../../assets/icons/icon-multicurrency.png", 
+    title: "Multicurrency"},
+    {img: "../../../../assets/icons/icon-competitive.png", 
+    title: "Scalable"},
+    {img: "../../../../assets/icons/icon-risk.png", 
+    title: "Borderless"}
+    ];
+
   constructor() { }
 
   ngOnInit() {
