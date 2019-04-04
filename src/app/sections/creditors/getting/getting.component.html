@@ -1,3 +1,26 @@
-<p>
-  getting works!
-</p>
+<div class="main-container">
+  <div class ="phrase">
+    <div class="row">
+      <div class="text">
+        <app-title-text>
+            <h3 class="title">Getting started</h3>
+            <p class="text-p">In a world of ever-growing markets we harness blockchain technology to bridge
+              credit's supply and demand across borders, creating a new ecosystem for decentralized lending</p>
+        </app-title-text>
+      </div>
+    </div>
+  </div>
+    <div class="row-2">
+      <div class="col">
+        <div class="wrapper" *ngFor="let content of content">
+          <div class="box-img">
+            <img src="{{content.icon}}" alt="">
+          </div>
+          <div class="content">
+            <h6>{{content.title}}</h6>
+            <p>{{content.data}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
