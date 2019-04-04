@@ -4,7 +4,7 @@
     @include row-both;
 
     .container {
-        @include row-around;
+        @include row-both;
         margin: 3% 0;
         .col-1 {
             @include half;
