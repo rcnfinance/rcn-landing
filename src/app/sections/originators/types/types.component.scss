@@ -1,0 +1,60 @@
+@import '../../../../styles.scss'; //Styles
+
+.row{
+    @include row-both;
+
+    .container {
+        @include row-around;
+        margin: 3% 0;
+        .col-1 {
+            @include half;
+            margin-left: 10%;
+            margin-top: 5%;
+        }
+        .col-2 {
+            @include half;
+            // background-color: green;
+        }
+        .img {
+            width: 30%;
+            img {
+                margin: 15% 0 0 -30% ;
+            }
+        }
+    }
+}
+
+.tab-title-box {
+    width: auto;
+}
+.tab-title {
+    @include tab-title;
+    color: black;
+}
+
+.sm-text {
+    @include sm-text;
+}
+
+.tabs {
+    width: 80%;
+
+}
+
+//----------------------
+
+/* active tab */
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
+    @include tab-title;
+    }
+    
+    /* ink bar */
+    ::ng-deep .mat-ink-bar {
+    background-color: $yellow !important;
+    width: 30px;
+    }
+
+    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+        background: white;
+        height: 5px; 
+      }
