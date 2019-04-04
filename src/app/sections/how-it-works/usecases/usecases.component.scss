@@ -1,0 +1,31 @@
+@import '../../../../styles.scss'; //Styles
+
+.main-container {
+    display:flex;
+    justify-content: center;
+    margin: 5% 0;
+    .row {
+        width: 80%;
+        .text {
+            @include three-quarters;
+            h3 {
+
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.img-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    .img-box {
+        width: 80%;
+        img {
+            width: 100%
+        }
+    }
+}
