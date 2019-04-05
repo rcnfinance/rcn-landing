@@ -29,6 +29,22 @@
         <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
         <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
     </button>
+    <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
+      <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
+        <!-- <div></div> -->
+        <div class="logo img" (click)="sectionHome()">
+          <img src="../../../assets/isologotypo.svg" alt="">
+        </div>
+        <div class="col-tabs">
+          <ul class="tabs">
+            <li class="menu-text" (click)="sectionCreditors()">CREDITORS</li>
+            <li class="menu-text" (click)="sectionOriginators()">ORIGINATORS</li>
+            <li class="menu-text" (click)="sectionDevelopers()">DEVELOPERS</li>
+            <li class="menu-text" (click)="sectionHow()">HOW IT WORKS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
 </div>
 </div>    
 <app-home *ngIf="home" class="section"></app-home>

@@ -29,6 +29,13 @@
     .title {
         font-size: 30px;
     }
+
+    .col-inner {
+        width: 100%;
+        .reg-text {
+            @include reg-text;
+        }
+    }
     
 }
 

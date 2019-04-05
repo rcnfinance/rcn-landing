@@ -66,6 +66,7 @@
             width: 70%;
             margin-right: 0;
             height: 550px;
+            overflow: hidden;
             img {
                 height: 100%;
                 width: auto;
@@ -110,7 +111,7 @@
     // overflow: visible;
     // background: transparent;
 		// @include button-text;
-		font-size: 12px;
+	font-size: 12px;
     // color: white;
 }
 
