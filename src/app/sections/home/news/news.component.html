@@ -8,9 +8,9 @@
     </div>
   </div>
   <div class="row">
-    <!-- <drag-scroll
+    <drag-scroll
     drag-scroll-y-disabled="true"
-    scrollbar-hidden="true"
+    drag-scroll-x-disabled="true"
     (reachesLeftBound)="leftBoundStat($event)"
     (reachesRightBound)="rightBoundStat($event)"
     #nav>
@@ -24,7 +24,7 @@
     <img drag-scroll-item (click)="clickItem(image)" src="../../../../assets/icons/icon-borderless.png" />
     <img drag-scroll-item (click)="clickItem(image)" src="../../../../assets/icons/icon-borderless.png" />
    
-  </drag-scroll> -->
+  </drag-scroll>
   <button (click)="moveLeft()">Left</button>
   <button (click)="moveRight()">Right</button>
   <button (click)="moveTo(2)">Last</button>
