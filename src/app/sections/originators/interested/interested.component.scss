@@ -12,9 +12,28 @@
         .title {
             @include subtitle;
 				}
-				.text-p {
-				}
             
         }
     }
+}
+
+@media (max-width: 768px){
+
+	.phrase {
+		display: flex;
+			justify-content: center;
+			margin: 5% 0;
+		.row {
+			width: 100%;
+			margin-left: 10%;
+			.text {
+					@include half;
+					width: 100%;
+					.title {
+							@include subtitle;
+					}
+							
+					}
+			}
+	}
 }
