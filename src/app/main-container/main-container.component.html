@@ -1,3 +1,31 @@
-<app-menu></app-menu>
-<app-home></app-home>
+<!-- <app-menu></app-menu> -->
+<section>
+        <div class="mobile-nav">
+            <button class="bars" (click)="mobileMenu()">
+                <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+                <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+            </button>
+        </div>
+      <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
+        <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
+          <!-- <div></div> -->
+          <div class="logo img" (click)="sectionHome()">
+            <img src="../../../assets/isologotypo.svg" alt="">
+          </div>
+          <div class="col-tabs">
+            <ul class="tabs">
+              <li class="menu-text" (click)="sectionCreditors()">CREDITORS</li>
+              <li class="menu-text" (click)="sectionOriginators()">ORIGINATORS</li>
+              <li class="menu-text" (click)="sectionDevelopers()">DEVELOPERS</li>
+              <li class="menu-text" (click)="sectionHow()">HOW IT WORKS</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+<app-home *ngIf="home"></app-home>
+<app-creditors *ngIf="creditors"></app-creditors>
+<app-originators *ngIf="originators"></app-originators>
+<app-developers *ngIf="developers"></app-developers>
+<app-how-it-works *ngIf="how"></app-how-it-works>
 <app-footer></app-footer>

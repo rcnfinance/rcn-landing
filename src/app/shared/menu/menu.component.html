@@ -1,18 +1,57 @@
 <section>
-  <div class="main-container">
-    <div class="container">
+    <div class="mobile-nav">
+        <button class="bars" (click)="mobileMenu()">
+            <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+            <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+        </button>
+    </div>
+  <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
+    <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
       <!-- <div></div> -->
       <div class="logo img">
         <img src="../../../assets/isologotypo.svg" alt="">
       </div>
       <div class="col-tabs">
         <ul class="tabs">
-          <li class="menu-text">CREDITORS</li>
-          <li class="menu-text">ORIGINATORS</li>
-          <li class="menu-text">DEVELOPERS</li>
-          <li class="menu-text">HOW IT WORKS</li>
+          <li class="menu-text" (click)="sectionCreditors()">CREDITORS</li>
+          <li class="menu-text" (click)="sectionOriginators()">ORIGINATORS</li>
+          <li class="menu-text" (click)="sectionDevelopers()">DEVELOPERS</li>
+          <li class="menu-text" (click)="sectionHow()">HOW IT WORKS</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ------------------------------ -->
+<!-- 
+<nav class="navbar">
+  <div class="imgDiv">
+    <a (click)="clearSec()" href="#home"><img src="../../assets/img/marmo-iso.svg" alt="marmo logo"></a> 
+  </div>  
+  <button class="bars" (click)="mobileMenu()" >
+    <i *ngIf="!mobile" class="fas fa-bars"></i>
+    <i *ngIf="mobile" class="fas fa-times"></i>
+  </button>
+  <div [ngClass]="mobile ? 'mobile' : 'container'">
+      <div class="nav">
+        <div class="secBox">
+            <div class="sec"><a (click)="sectionFeat()" (click)="hideMenu()" href="#features">FEATURES</a></div>
+        </div>
+        <div class="secBox">
+            <div class="sec"><a  (click)="sectionLib()"  href="#libraries">LIBRARIES</a></div>
+        </div>
+        <div class="secBox" >
+            <div class="sec"><a href="https://docs.marmo.io/docs/intro" target="_blank">DOCUMENTATION</a></div>
+          </div>
+        <div class="secBox" >
+            <div class="sec"><a href="https://github.com/ripio" target="_blank">GITHUB</a></div>
+          </div>
+       </div>
+  </div>
+  <div  (click)="mobileMenu()" [ngClass]="mobile ? 'back' : 'noBack'">
+    
+  </div>
+</nav>
+
+ -->

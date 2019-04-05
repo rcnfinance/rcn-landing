@@ -13,3 +13,22 @@
     font-weight: 500;
 }
 
+.subtitle {
+    margin: 4% 0 1% 0;
+    @include tab-title;
+    color: $text-gray;
+    font-weight: 700;
+}
+
+.reg-text {
+    margin: 0;
+}
+
+@media (max-width: 768px){
+
+    .title {
+        font-size: 30px;
+    }
+    
+}
+
