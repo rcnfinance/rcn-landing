@@ -26,3 +26,35 @@
         }
     }
 }
+
+@media (max-width: 768px){
+
+    .main-container {
+        display:flex;
+        justify-content: center;
+        margin: 5% 0;
+        .row {
+            width: 80%;
+            .text {
+                @include three-quarters;
+                width: 100%;
+                p {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    .img-container {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        .img-box {
+            width: 100%;
+            img {
+                width: 100%
+            }
+        }
+    }
+
+}
