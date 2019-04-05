@@ -7,6 +7,9 @@
         @include three-quarters;
         width: 70%;
         margin-right: 0;
+        img {
+            width: 100%;
+        }
     }
 }
 
@@ -53,21 +56,22 @@
 
 @media (max-width: 768px){
 
-// 	.row {
-//     @include row-right;
-// 		position: relative;
-// 		height: 550px;
-//     .col-right {
-// 				@include three-quarters;
-// 				height: 100%;
-
-// 				margin-right: 0;
-// 				img {
-// 					height: 100%;
-// 					width: auto;
-// 				}
-//     }
-// }
+    .row {
+        @include row-right;
+        position: relative;
+        height: 100%;
+        margin-bottom: 10%;
+        .col-right {
+            @include three-quarters;
+            width: 70%;
+            margin-right: 0;
+            height: 550px;
+            img {
+                height: 100%;
+                width: auto;
+            }
+        }
+    }
 
 .content-back {
     // @include row-center;
@@ -84,7 +88,7 @@
 
     .main-title {
 				// @include main-title;
-				font-size: 43px;
+				font-size: 40px;
     }
     .main-subtitle {
 				// @include main-subtitle;
