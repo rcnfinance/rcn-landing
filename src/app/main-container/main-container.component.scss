@@ -1,5 +1,17 @@
 @import '../../styles.scss'; //Styles
 
+section {
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	background-color: white;
+}
+
+.up-space {
+	
+}
+
+
 .main-container {
 	@include shadow;
 	position: sticky;
@@ -125,11 +137,14 @@ section {
 			.tabs {
 				list-style-type: none;
 				@include row-right;
-				margin: 0;
+				margin: 2% 0;
 				display: block;	
+
 				.menu-text {
 				@include menu-text;
-				margin: 0 2% ;
+				font-size: 18px;
+				margin: 10% 0;
+				border-bottom: solid $gray 1px;
 				}   
 			}
 		}

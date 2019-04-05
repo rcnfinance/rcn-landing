@@ -23,9 +23,17 @@
         </div>
       </div>
     </section>
-<app-home *ngIf="home"></app-home>
-<app-creditors *ngIf="creditors"></app-creditors>
-<app-originators *ngIf="originators"></app-originators>
-<app-developers *ngIf="developers"></app-developers>
-<app-how-it-works *ngIf="how"></app-how-it-works>
-<app-footer></app-footer>
+<div class="up-space">
+  <div class="mobile-nav">
+    <button class="bars" (click)="mobileMenu()">
+        <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+        <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+    </button>
+</div>
+</div>    
+<app-home *ngIf="home" class="section"></app-home>
+<app-creditors *ngIf="creditors" class="section"></app-creditors>
+<app-originators *ngIf="originators" class="section"></app-originators>
+<app-developers *ngIf="developers" class="section"></app-developers>
+<app-how-it-works *ngIf="how" class="section"></app-how-it-works>
+<app-footer class="section"></app-footer>
