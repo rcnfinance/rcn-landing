@@ -40,14 +40,8 @@
 
 }
 
-h3 {
-    border-bottom: solid $rcn-blue 3px;
-
-}
-
 .link {
     @include link-text;
-    font-size: 12px;
 }
 
 //----------------------
@@ -85,7 +79,6 @@ h3 {
         }
         .col-2 {
             @include half;
-						// background-color: green;
 						width: 90%;
         }
         .img {
