@@ -10,7 +10,6 @@
   .col-1 {
     @include half;
     margin-left: 10%;
-    margin-top: 5%;
   }
   .row {
 		display: flex;
@@ -118,6 +117,30 @@ h6 {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.close-icon {
+	display: flex;
+	justify-content: flex-end;
+	margin: 6% 6%;
+	.fas {
+		font-size: 40px;
+		color: white;
+		margin-right: 4%;
+	}
+}
+
+.title {
+	@include char-card-text;
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 70%;
+}
+
+.p {
+	@include char-card-text;
+	font-size: 14px;
+	width: 80%;
 }
 
 @media (max-width: 768px){
