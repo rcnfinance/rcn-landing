@@ -17,6 +17,10 @@
     }
 }
 
+.mail {
+	@include link-text;
+}
+
 @media (max-width: 768px){
 
 	.phrase {

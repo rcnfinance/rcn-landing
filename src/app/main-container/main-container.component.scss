@@ -41,9 +41,14 @@ section {
 		align-items: center;	
     .menu-text {
     @include menu-text;
-    margin: 0 2% ;
+		margin: 0 2% ;
     }   
   }
+}
+
+a {
+	text-decoration: none;
+	margin: 0 2% ;
 }
 
 .bars{

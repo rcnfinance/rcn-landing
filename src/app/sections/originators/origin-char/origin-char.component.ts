@@ -9,11 +9,11 @@ export class OriginCharComponent implements OnInit {
 
   content = [
     {img: "../../../../assets/icons/icon-multicurrency.png", 
-    title: "Multicurrency"},
+    title: "Clobaly liquid"},
     {img: "../../../../assets/icons/icon-competitive.png", 
-    title: "Scalable"},
+    title: "Term flexible"},
     {img: "../../../../assets/icons/icon-risk.png", 
-    title: "Borderless"}
+    title: "Plug & play"}
     ];
 
   constructor() { }
