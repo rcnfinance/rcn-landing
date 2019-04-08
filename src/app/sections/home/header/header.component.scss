@@ -5,7 +5,7 @@
     position: relative;
     .col-right {
         @include three-quarters;
-        width: 70%;
+        width: 60%;
         margin-right: 0;
         img {
             width: 100%;
@@ -20,8 +20,8 @@
 .content-back {
     @include row-center;
     position: absolute;
-     left: 0;
-    top: 20%;
+    left: 0;
+    top: 5%;
     height: auto;
     width: 50%;
     border-right: solid white 10px;
@@ -39,10 +39,12 @@
     }
     .main-subtitle {
         @include main-subtitle;
+        margin-bottom: 2%;
     }
     .main-text {
         @include main-text;
-
+        line-height: 1.6;
+        margin-bottom: 2%;
     }
 }
 
