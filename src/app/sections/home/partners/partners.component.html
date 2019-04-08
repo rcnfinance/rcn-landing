@@ -65,7 +65,7 @@
     </div>
 </div>
 <div [ngClass]="show ? 'showCard' : 'row2'">
-    <div class="close-icon">
+    <div class="close-icon" (click)="close()">
       <i class="fas fa-times"></i>
     </div>
   <div class="content">

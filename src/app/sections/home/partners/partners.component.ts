@@ -11,6 +11,10 @@ export class PartnersComponent implements OnInit {
 
   constructor() { }
 
+  close(){
+    this.show = false;
+  }
+
   ripio(){
   this.show = !this.show;
     this.info = [

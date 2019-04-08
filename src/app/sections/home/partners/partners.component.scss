@@ -1,7 +1,7 @@
 @import '../../../../styles.scss'; //Styles
 
 .main-container{
-	overflow: hidden;
+	overflow-x: hidden;
 	position: relative;
 	width: 100%;
 	display:flex;
@@ -83,6 +83,7 @@ h6 {
     top: 0;
 	background-color: $rcn-blue;
 	border-top-left-radius: 30px;
+	overflow-x: hidden;
 }
 
 .content {
@@ -111,6 +112,7 @@ h6 {
 	background-color: $rcn-blue;
 	border-top-left-radius: 30px;
 	@include shadow;
+	overflow-x: hidden;
 }
 
 .fullRow {
@@ -160,6 +162,27 @@ h6 {
 	
 	th {
 		width: 10%;
+	}
+
+	.showCard {
+		right: 0;
+		-webkit-transition:right 1s;
+		height: 100%;
+		width: 100%;
+		height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		background-color: $rcn-blue;
+		border-top-left-radius: 30px;
+		@include shadow;
+		overflow-x: hidden;
+	}
+
+	.firstBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
 	}
 	
 }
