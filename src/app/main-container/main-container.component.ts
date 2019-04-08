@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-container',
@@ -7,67 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContainerComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-
-  home = true;
-  creditors = false;
-  originators = false;
-  developers = false;
-  how = false;
   mobile = false;
   menu = false;
-
-  sectionHome() {
-    this.home = true;
-    this.creditors = false;
-    this.originators = false;
-    this.developers = false;
-    this.how = false;
-    this.menu = !this.menu;
-    // this.mobile = !this.mobile;
-  }
-
-  
-  sectionCreditors() {
-    this.home = false;
-    this.creditors = true;
-    this.originators = false;
-    this.developers = false;
-    this.how = false;
-    this.menu = !this.menu;
-    // this.mobile = !this.mobile;
-  }
-
-  sectionOriginators() {
-    this.home = false;
-    this.creditors = false;
-    this.originators = true;
-    this.developers = false;
-    this.how = false;
-    this.menu = !this.menu;
-    // this.mobile = !this.mobile;
-  }
-
-  sectionDevelopers() {
-    this.home = false;
-    this.creditors = false;
-    this.originators = false;
-    this.developers = true;
-    this.how = false;
-    this.menu = !this.menu;
-    // this.mobile = !this.mobile;
-  }
-
-  sectionHow() {
-    this.home = false;
-    this.creditors = false;
-    this.originators = false;
-    this.developers = false;
-    this.how = true;
-    this.menu = !this.menu;
-    // this.mobile = !this.mobile;
-  }
 
   mobileMenu() {
     this.mobile = !this.mobile;
@@ -77,15 +23,6 @@ export class MainContainerComponent implements OnInit {
   hideMenu() {
     this.menu = !this.menu;
   }
-
-  clearSec() {
-  this.creditors = false;
-  this.originators = false;
-  this.developers = false;
-  this.how = false;
-  }
-
-
 
   ngOnInit() {
   }

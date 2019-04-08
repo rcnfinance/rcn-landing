@@ -1,58 +1,32 @@
 <!-- <app-menu></app-menu> -->
-<section>
-        <div class="mobile-nav">
-            <div class="logo-mobile" (click)="sectionHome()">
-                <img src="../../../assets/isologotypo.svg" alt="">
-              </div>
-            <button class="bars" (click)="mobileMenu()">
-                <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
-                <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
-            </button>
-        </div>
-      <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
-        <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
-          <!-- <div></div> -->
-          <div class="logo img" (click)="sectionHome()">
-            <img src="../../../assets/isologotypo.svg" alt="">
-          </div>
-          <div class="col-tabs">
-            <ul class="tabs">
-              <li class="menu-text" (click)="sectionCreditors()">CREDITORS</li>
-              <li class="menu-text" (click)="sectionOriginators()">ORIGINATORS</li>
-              <a href="https://github.com/ripio/rcn-loans" target="blank"><li class="menu-text" >DEVELOPERS</li></a> 
-              <li class="menu-text" (click)="sectionHow()">HOW IT WORKS</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-<div class="up-space">
-  <div class="mobile-nav">
+
+<nav>
+  <!-- <div class="mobile-nav">
+    <div class="logo-mobile" routerLink='/home'>
+      <img src="../../../assets/isologotypo.svg" alt="">
+    </div>
     <button class="bars" (click)="mobileMenu()">
-        <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
-        <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+      <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+      <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
     </button>
-    <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
-      <div [ngClass]="mobile ? 'mobile' : 'main-container'"  >
-        <!-- <div></div> -->
-        <div class="logo img" (click)="sectionHome()">
-          <img src="../../../assets/isologotypo.svg" alt="">
-        </div>
-        <div class="col-tabs">
-          <ul class="tabs">
-            <li class="menu-text" (click)="sectionCreditors()">CREDITORS</li>
-            <li class="menu-text" (click)="sectionOriginators()">ORIGINATORS</li>
-            <li class="menu-text" (click)="sectionDevelopers()">DEVELOPERS</li>
-            <li class="menu-text" (click)="sectionHow()">HOW IT WORKS</li>
-          </ul>
-        </div>
+  </div> -->
+
+  <div [ngClass]="mobile ? 'mobile' : 'main-container'">
+    <!-- <div></div> -->
+    <div class="logo img" routerLink='/home'>
+      <img src="../../../assets/isologotypo.svg" alt="">
+    </div>
+    <div class="col-tabs">
+      <div class="tabs">
+        <div class="menu-text" routerLink='/creditors'>CREDITORS</div>
+        <div class=" menu-text" routerLink='/originators'>ORIGINATORS</div>
+        <a href="https://github.com/ripio/rcn-loans" target="blank" class="menu-text">DEVELOPERS</a>
+        <div class="menu-text" routerLink='/how-it-works'>HOW IT WORKS</div>
       </div>
     </div>
-</div>
-</div>    
-<app-home *ngIf="home" class="section"></app-home>
-<app-creditors *ngIf="creditors" class="section"></app-creditors>
-<app-originators *ngIf="originators" class="section"></app-originators>
-<app-developers *ngIf="developers" class="section"></app-developers>
-<app-how-it-works *ngIf="how" class="section"></app-how-it-works>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>
+
 <app-footer class="section"></app-footer>
