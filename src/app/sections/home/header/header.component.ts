@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
     if (this.counter < 0) {
       this.counter = 0
     }
-    this.changingContent()  
+    this.changingContent()
   }
 
   right(){
