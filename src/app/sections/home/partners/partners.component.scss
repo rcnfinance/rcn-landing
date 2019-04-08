@@ -1,7 +1,7 @@
 @import '../../../../styles.scss'; //Styles
 
 .main-container{
-	overflow: hidden;
+	overflow-x: hidden;
 	position: relative;
 	width: 100%;
 	display:flex;
@@ -10,7 +10,6 @@
   .col-1 {
     @include half;
     margin-left: 10%;
-    margin-top: 5%;
   }
   .row {
 		display: flex;
@@ -44,7 +43,7 @@ td, th {
 }
 
 th {
-	width: 20%;
+	width: 15%;
 }
 
 .first {
@@ -55,12 +54,18 @@ td:first-child, th:first-child {
 	 border-left: none;
 }
 
-.img-box {
-	margin: 10%;
-	img {
-		width: 100%;
+.img-outer{
+	display: flex;
+	justify-content: center;
+	.img-box {
+		margin: 10%;
+		width: 50%;
+		img {
+			width: 100%;
+		}
 	}
 }
+
 
 h6 {
 	margin: 10%;
@@ -78,6 +83,7 @@ h6 {
     top: 0;
 	background-color: $rcn-blue;
 	border-top-left-radius: 30px;
+	overflow-x: hidden;
 }
 
 .content {
@@ -106,12 +112,37 @@ h6 {
 	background-color: $rcn-blue;
 	border-top-left-radius: 30px;
 	@include shadow;
+	overflow-x: hidden;
 }
 
 .fullRow {
 	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
+}
+
+.close-icon {
+	display: flex;
+	justify-content: flex-end;
+	margin: 6% 6%;
+	.fas {
+		font-size: 40px;
+		color: white;
+		margin-right: 4%;
+	}
+}
+
+.title {
+	@include char-card-text;
+	font-size: 25px;
+	font-weight: 700;
+	margin-bottom: 70%;
+}
+
+.p {
+	@include char-card-text;
+	font-size: 14px;
+	width: 80%;
 }
 
 @media (max-width: 768px){
@@ -131,6 +162,27 @@ h6 {
 	
 	th {
 		width: 10%;
+	}
+
+	.showCard {
+		right: 0;
+		-webkit-transition:right 1s;
+		height: 100%;
+		width: 100%;
+		height: 100%;
+			position: absolute;
+			top: 0;
+			z-index: 1;
+		background-color: $rcn-blue;
+		border-top-left-radius: 30px;
+		@include shadow;
+		overflow-x: hidden;
+	}
+
+	.firstBox {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
 	}
 	
 }
