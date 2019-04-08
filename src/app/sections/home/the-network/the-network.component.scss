@@ -75,11 +75,17 @@
             @include half;
             margin-left: 10%;
 						margin-top: 5%;
+						margin-bottom: 2%;
 						width: 80%;
+						.text {
+							font-size: 18px;
+							line-height: 1.6;
+						}
         }
         .col-2 {
             @include half;
 						width: 90%;
+						margin-bottom: 5%;
         }
         .img {
             width: 100%;
@@ -104,7 +110,7 @@
 }
 
 .tabs {
-    width: 90%;
+    width: 100%;
 
 }
 
