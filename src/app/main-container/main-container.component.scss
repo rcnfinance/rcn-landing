@@ -7,11 +7,6 @@ section {
 	background-color: white;
 }
 
-.up-space {
-	
-}
-
-
 .main-container {
 	@include shadow;
 	position: sticky;
@@ -74,7 +69,15 @@ section {
 	height: 9vh;
 	display: flex;
 	align-items: center;
-	justify-content: flex-end;
+	justify-content: space-between;
+	.logo-mobile {
+		width: 25%;
+		margin-left: 4%;
+		img {
+			margin: 0;
+		}
+
+	}
 		button {
 		background: none;
 		color: inherit;
@@ -103,6 +106,9 @@ section {
 }
 }
 
+.logo {
+	display: none;
+}
 
 
 .main-container {
@@ -114,16 +120,7 @@ section {
 .col-tabs {
 	display: none;
 }
-.logo img {
-	display: none;
-}
 
-.logo img {
-	display: none;
-	img {
-		display: none;
-	}
-}
 
 
 

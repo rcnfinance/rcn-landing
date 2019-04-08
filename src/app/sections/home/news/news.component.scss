@@ -1,33 +1,53 @@
 @import '../../../../styles.scss'; //Styles
 
 .col-1 {
-    @include three-quarters;
+    @include half;
     margin-left: 10%;
     margin-top: 5%;
-    width: 90%
 }
 
 .border {
-    border: solid $rcn-blue;
+    border: solid $rcn-blue 1px;
     width: 23%;
     height: 250px;
     display: flex;
-    justify-content: center;
+		justify-content: center;
+		flex-wrap: wrap;
     .content {
         width: 80%;
         margin: 7% 5%;
         flex-wrap: wrap;
         display: flex;
         .title-box {
-        height: 50%;
+        height: 20%;
+        width: 100%;
 
             h3 {
                 @include spon-card-title;
             }
 
         }
-        p {
-            @include spon-card-text;
+        .p-box {
+					display: flex;
+					flex-wrap: wrap;
+            p {
+                @include spon-card-text;
+            }
+        }
+
+        .info-box {
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            .icon {
+                margin-right: 1%;
+            }
+            p {
+                margin: 0;
+                color: black;
+                font-size: 12px;
+                font-weight: 400;
+            }
         }
     }
 
@@ -43,5 +63,75 @@
         height: 500px;
         width: auto;
       }
+}
+
+@media (max-width: 768px){
+
+	.col-1 {
+    @include three-quarters;
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 90%
+}
+
+.border {
+    border: solid $rcn-blue 1px;
+    width: 100%;
+    height: 250px;
+    display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+    .content {
+        width: 80%;
+        margin: 7% 5%;
+        flex-wrap: wrap;
+        display: flex;
+        .title-box {
+        height: 20%;
+        width: 100%;
+
+            h3 {
+                @include spon-card-title;
+            }
+
+        }
+        .p-box {
+					display: flex;
+					flex-wrap: wrap;
+            p {
+                @include spon-card-text;
+            }
+        }
+
+        .info-box {
+            display: flex;
+            justify-content: flex-start;
+            align-content: center;
+            .icon {
+                margin-right: 1%;
+            }
+            p {
+                margin: 0;
+                color: black;
+                font-size: 12px;
+                font-weight: 400;
+            }
+        }
+    }
+
+}
+
+.row {
+    width: 100%;
+    drag-scroll {
+        height: 100%;
+        width: 100%;
+      }
+      img {
+        height: 500px;
+        width: auto;
+      }
+}
+
 }
 

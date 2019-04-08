@@ -17,7 +17,7 @@
     justify-content: center;
     .box-border {
         height: auto;
-        width: 30%;
+        width: 40%;
         border: solid $text-gray 1px;
         border-radius: 35px;
         padding: 4%;
@@ -57,19 +57,14 @@
         align-items: center;
         width: 100%;
         margin: 2% 0;
-        .col-1 {
-            width: 60%;
+        .col {
+            width: 33%;
             display:flex;
             justify-content: flex-start;
+            margin: 0 3%;
 
         }
-        .col-2 {
-            width: 40%;
-            display:flex;
-            justify-content: flex-start;
-
-        }
-    }
+     }
 }
 
 .fas {

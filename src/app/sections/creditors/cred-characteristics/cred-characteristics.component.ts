@@ -11,9 +11,9 @@ export class CredCharacteristicsComponent implements OnInit {
     {img: "../../../../assets/icons/icon-multicurrency.png", 
     title: "Multicurrency"},
     {img: "../../../../assets/icons/icon-competitive.png", 
-    title: "Scalable"},
+    title: "Competitive"},
     {img: "../../../../assets/icons/icon-risk.png", 
-    title: "Borderless"}
+    title: "Risk Versatile"}
     ];
 
   constructor() { }

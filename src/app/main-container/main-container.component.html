@@ -1,6 +1,9 @@
 <!-- <app-menu></app-menu> -->
 <section>
         <div class="mobile-nav">
+            <div class="logo-mobile" (click)="sectionHome()">
+                <img src="../../../assets/isologotypo.svg" alt="">
+              </div>
             <button class="bars" (click)="mobileMenu()">
                 <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
                 <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>

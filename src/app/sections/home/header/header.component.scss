@@ -13,6 +13,10 @@
     }
 }
 
+.col-right-mobile {
+    display: none;
+}
+
 .content-back {
     @include row-center;
     position: absolute;
@@ -67,12 +71,18 @@
             margin-right: 0;
             height: 550px;
             overflow: hidden;
+            display: none;
             img {
                 height: 100%;
                 width: auto;
             }
         }
     }
+
+.col-right-mobile {
+    display: block;
+}
+
 
 .content-back {
     // @include row-center;

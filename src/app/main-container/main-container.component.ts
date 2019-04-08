@@ -24,7 +24,8 @@ export class MainContainerComponent implements OnInit {
     this.originators = false;
     this.developers = false;
     this.how = false;
-    this.mobile = !this.mobile;
+    this.menu = !this.menu;
+    // this.mobile = !this.mobile;
   }
 
   
@@ -34,7 +35,8 @@ export class MainContainerComponent implements OnInit {
     this.originators = false;
     this.developers = false;
     this.how = false;
-    this.mobile = !this.mobile;
+    this.menu = !this.menu;
+    // this.mobile = !this.mobile;
   }
 
   sectionOriginators() {
@@ -43,7 +45,8 @@ export class MainContainerComponent implements OnInit {
     this.originators = true;
     this.developers = false;
     this.how = false;
-    this.mobile = !this.mobile;
+    this.menu = !this.menu;
+    // this.mobile = !this.mobile;
   }
 
   sectionDevelopers() {
@@ -52,7 +55,8 @@ export class MainContainerComponent implements OnInit {
     this.originators = false;
     this.developers = true;
     this.how = false;
-    this.mobile = !this.mobile;
+    this.menu = !this.menu;
+    // this.mobile = !this.mobile;
   }
 
   sectionHow() {
@@ -61,11 +65,13 @@ export class MainContainerComponent implements OnInit {
     this.originators = false;
     this.developers = false;
     this.how = true;
-    this.mobile = !this.mobile;
+    this.menu = !this.menu;
+    // this.mobile = !this.mobile;
   }
 
   mobileMenu() {
     this.mobile = !this.mobile;
+    this.menu = !this.menu;
   }
 
   hideMenu() {

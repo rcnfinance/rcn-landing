@@ -2,9 +2,8 @@
   <div class="row">
     <div class="text">
       <app-title-text>
-          <h3>THE NETWORK</h3>
-          <p>In a world of ever-growing markets we harness blockchain technology to bridge
-            credit's supply and demand across borders, creating a new ecosystem for decentralized lending</p>
+          <h3>LOAN PROPERTIES</h3>
+          <p>To provide its creditors with the highest transparency standards, RCN provides a wealth of data for each of its loans.</p>
       </app-title-text>
     </div>
     <div class="row-2">
@@ -20,18 +19,25 @@
           </div>
           <div class="bottom-border" *ngFor="let content of content">
               <div class="wrapper">
-                <div class="col-1">
+                <div class="col">
                   <div><i class="{{content.icon}}"></i></div>
                   <div>
-                    <h6 class="sub-title">BORROWER</h6>
-                    <h6 class="data">ox2c...ef20</h6>
+                    <h6 class="sub-title">{{content.title}}</h6>
+                    <h6 class="data">{{content.data}}</h6>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col">
                     <div><i class="fas fa-chart-line"></i></div>
                     <div>
-                      <h6 class="sub-title">LENDING AMOUNT</h6>
-                      <h6 class="data">2500</h6>
+                      <h6 class="sub-title">{{content.title2}}</h6>
+                      <h6 class="data">{{content.data2}}</h6>
+                    </div>
+                </div>
+                <div class="col">
+                    <div><i class="fas fa-chart-line"></i></div>
+                    <div>
+                      <h6 class="sub-title">{{content.title3}}</h6>
+                      <h6 class="data">{{content.data3}}</h6>
                     </div>
                 </div>
               </div>

@@ -11,7 +11,7 @@ export class CharacteristicsComponent implements OnInit {
     {img: "../../../../assets/icons/icon-frictionless.png", 
     title: "Frictionless"},
     {img: "../../../../assets/icons/icon-transparent.png", 
-    title: "Scalable"},
+    title: "Transparent"},
     {img: "../../../../assets/icons/icon-borderless.png", 
     title: "Borderless"}
     ];

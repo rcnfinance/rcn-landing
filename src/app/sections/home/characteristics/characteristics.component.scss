@@ -59,6 +59,8 @@
 
 }
 
+
+
 @media (max-width: 768px){
 
 	.main-container {
@@ -86,19 +88,20 @@
 		display: flex;
 		justify-content: center;
 		.row-inner {
-			width: 43%;
+			width: 35%;
 			display: flex;
-			justify-content: space-around;
-			margin-top: 2%;
+					justify-content: center;
+					flex-wrap: wrap;
+					margin-top: 2%;
 			.card-border {
-				width: 32%;
-				height: auto;
-				padding: 4% 6%;
-				margin: 0 4%;
-				border: solid white 1px;
-				border-radius: 40px;
-				display: flex;
-				justify-content: center;
+				width: 100%;
+							height: auto;
+							padding: 10% 20%;
+							margin: 5% 0;
+							border: solid white 1px;
+							border-radius: 40px;
+							display: flex;
+							justify-content: center;
 			}
 		}
 	}
