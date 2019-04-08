@@ -7,6 +7,14 @@ section {
 	background-color: white;
 }
 
+.navbar {
+	position: sticky;
+	top: 0px;
+	z-index: 9999;
+	background: white;
+	height: 9vh;
+}
+
 .main-container {
 	@include shadow;
 	position: sticky;
