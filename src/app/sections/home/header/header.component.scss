@@ -88,6 +88,7 @@
         position: relative;
         height: 100%;
         margin-bottom: 10%;
+        overflow-x: hidden;
         .col-right {
             @include three-quarters;
             width: 30%;
