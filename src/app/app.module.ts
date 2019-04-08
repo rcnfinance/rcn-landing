@@ -9,7 +9,6 @@ import { DragScrollModule } from 'ngx-drag-scroll';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MenuComponent } from './shared/menu/menu.component';
 import { CharacteristicCardComponent } from './shared/characteristic-card/characteristic-card.component';
 import { TabDescriptionComponent } from './shared/tab-description/tab-description.component';
 import { HeadingSectionComponent } from './shared/heading-section/heading-section.component';
@@ -42,7 +41,6 @@ import { LoanLifeComponent } from './sections/how-it-works/loan-life/loan-life.c
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     CharacteristicCardComponent,
     TabDescriptionComponent,
     HeadingSectionComponent,
