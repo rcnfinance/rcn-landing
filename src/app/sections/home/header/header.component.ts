@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   content = {title: "RCN",
-              img: "../../../../assets/img/1_T6A9296_.jpg",
-              imgMobile: "../../../../assets/img/slide1-home_mobile.jpg"};
+            img: "../../../../assets/img/slider-RCN_desktop.jpg",
+            imgMobile: "../../../../assets/img/slider-RCN_mobile.jpg"};
   counter = 0;
   hidden = false;
 
@@ -27,16 +27,16 @@ export class HeaderComponent implements OnInit {
   changingContent(){
     if (this.counter == 0) {
     this.content = {title: "RCN",
-                    img: "../../../../assets/img/1_T6A9296_.jpg",
-                    imgMobile: "../../../../assets/img/slide1-home_mobile.jpg"};
+                    img: "../../../../assets/img/slider-RCN_desktop.jpg",
+                    imgMobile: "../../../../assets/img/slider-RCN_mobile.jpg"};
     } else if (this.counter == 1) {
       this.content = {title: "BLOCKCHAIN GLOBAL LENDING",
-                      img: "../../../../assets/img/1_T6A9296_.jpg",
-                      imgMobile: "../../../../assets/img/slide1-home_mobile.jpg"};
+                      img: "../../../../assets/img/slider-blockchain_desktop.jpg",
+                      imgMobile: "../../../../assets/img/slider-blockchain_mobile.jpg"};
     } else {
       this.content = {title: "FRICTIONLESS DEBT MARKETS",
-                      img: "../../../../assets/img/1_T6A9296_.jpg",
-                      imgMobile: "../../../../assets/img/slide1-home_mobile.jpg"};
+                      img: "../../../../assets/img/slider-frictionless_desktop.jpg",
+                      imgMobile: "../../../../assets/img/slider-frictionless_mobile.jpg"};
     }
   }
 

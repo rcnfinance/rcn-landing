@@ -5,7 +5,7 @@
     position: relative;
     .col-right {
         @include three-quarters;
-        width: 60%;
+        width: 67%;
         margin-right: 0;
         img {
             width: 100%;
@@ -15,6 +15,7 @@
 
 .col-right-mobile {
     display: none;
+
 }
 
 .content-back {
@@ -89,7 +90,7 @@
         margin-bottom: 10%;
         .col-right {
             @include three-quarters;
-            width: 70%;
+            width: 30%;
             margin-right: 0;
             height: 550px;
             overflow: hidden;
@@ -103,6 +104,16 @@
 
 .col-right-mobile {
     display: block;
+    transition: display 2s;
+    width: 70%;
+    margin-right: 0;
+    .img-box {
+        height: 100%;
+        margin-bottom: 4%;
+        img {
+            height: 100%;
+        }
+    }
 }
 
 
