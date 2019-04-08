@@ -66,12 +66,12 @@
 	.main-container {
 		background-image: $gradient;
 		height: auto;
-		padding: 5% 0;
+		padding: 15% 0;
 	}
 	.col-1 {
 		// @include half;
 		// margin-left: 10%;
-		width: 90%
+		width: 80%
 	}
 	
 	
@@ -80,6 +80,8 @@
 	}
 	.reg-text {
 		color: white;
+		font-size: 18px;
+		line-height: 1.6;
 	}
 	
 	.row-2 {
