@@ -44,7 +44,7 @@ td, th {
 }
 
 th {
-	width: 20%;
+	width: 15%;
 }
 
 .first {
@@ -55,12 +55,18 @@ td:first-child, th:first-child {
 	 border-left: none;
 }
 
-.img-box {
-	margin: 10%;
-	img {
-		width: 100%;
+.img-outer{
+	display: flex;
+	justify-content: center;
+	.img-box {
+		margin: 10%;
+		width: 50%;
+		img {
+			width: 100%;
+		}
 	}
 }
+
 
 h6 {
 	margin: 10%;
