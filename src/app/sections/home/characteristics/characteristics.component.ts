@@ -15,8 +15,8 @@ export class CharacteristicsComponent implements OnInit {
     {img: "../../../../assets/icons/icon-borderless.png", 
     title: "Borderless"}
     ];
-  title = ["Frictionless","2","3"];
-  constructor() { }
+
+    constructor() { }
 
   
 

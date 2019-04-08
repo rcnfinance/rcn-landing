@@ -2,7 +2,7 @@
   <div class="content-back">
     <div class="content">
       <h2 class="main-subtitle">WELCOME TO...</h2>
-        <h1 class="main-title">BLOCKCHAIN <br>GLOBAL LENDING</h1>
+        <h1 class="main-title">{{content.title}}</h1>
         <p class="main-text">RCN is an open global credit network that connects borrowers, creditors, 
           and financial institucions on the blockchain to create efficient, acalable, and borderless debt market</p>
         <button class="button" href="#howItWorks" (click)="navigate()">SEE HOW IT WORKS</button>
@@ -13,19 +13,22 @@
       <img src="../../../../assets/img/1_T6A9296_.jpg" alt="">
     </div>
     <div class="second-container">
-      <div class="col-right-2">
-        <div class="buttons-box">
-          <button>left</button>
-          <button>right</button>
-        </div>
+      <div class="buttons-box">
+        <button><i class="fas fa-arrow-left"></i></button>
+        <button><i class="fas fa-arrow-right"></i></button>
       </div>
     </div>
   </div>
   <div class="col-right-mobile">
-    <img src="../../../../assets/img/slide1-home_mobile.jpg" alt="">
-  </div>
-  <div class="second-container-mobile">
-    <div class="col-right-2-mobile"></div>
+    <div>
+      <img src="../../../../assets/img/slide1-home_mobile.jpg" alt="">
+    </div>
+    <div class="second-container">
+        <div class="buttons-box">
+          <button (click)="left()"><i class="fas fa-arrow-left"></i></button>
+          <button (click)="right()"><i class="fas fa-arrow-right"></i></button>
+        </div>
+    </div>
   </div>
 </div>
 
