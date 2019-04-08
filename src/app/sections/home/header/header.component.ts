@@ -50,6 +50,7 @@ export class HeaderComponent implements OnInit {
 
   right(){
     this.counter++
+    console.log(123)
     if (this.counter > 2) {
       this.counter = 2
     }
