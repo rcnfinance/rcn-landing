@@ -10,13 +10,13 @@ export class GettingComponent implements OnInit {
   content = [
     {icon: "../../../../assets/icons/icon-borderless.png", 
     title: "GET CRYPTO",
-    data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
+    data: "Acquire RCN eligible lending currencies in exchanges, brokers or peer-to-peer platforms."},
     {icon: "../../../../assets/icons/icon-borderless.png", 
-    title: "GET CRYPTO",
-    data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
+    title: "FUND THE ACCOUNT",
+    data: "Download Metamask plug-in for your browser and transfer funds to the wallet with no minimum amount."},
     {icon: "../../../../assets/icons/icon-borderless.png", 
-    title: "GET CRYPTO",
-    data: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."},
+    title: "START LENDING",
+    data: "Access the platform, complete Civic KYC requirements and begin earning passive income."},
     ];
 
   constructor() { }
