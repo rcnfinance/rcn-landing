@@ -57,6 +57,7 @@ td:first-child, th:first-child {
 .img-outer{
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 	.img-box {
 		margin: 10%;
 		width: 50%;
@@ -66,11 +67,14 @@ td:first-child, th:first-child {
 	}
 }
 
-
-h6 {
-	margin: 10%;
-	@include part-card-text;
+.text-box {
+	width: 100%;
+	h6 {
+		margin: 10%;
+		@include part-card-text;
+	}
 }
+
 
 
 
@@ -93,7 +97,7 @@ h6 {
 		width: 100%;
 		
 	}
-	.img {
+	.img-box {
 		width: 20%;
 		img {
 			width: 100%;
@@ -147,6 +151,48 @@ h6 {
 
 @media (max-width: 768px){
 
+	.main-container{
+		overflow-x: hidden;
+		position: relative;
+		width: 100%;
+		display:flex;
+		flex-wrap: wrap;
+	
+		.col-1 {
+			width: 80%;
+			margin-left: 10%;
+		}
+		.row {
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			table {
+				width: 700px;
+				border-collapse:separate;
+				border:solid $rcn-blue 1px;
+				border-radius:35px;
+				-moz-border-radius:6px;
+				margin: 10%;
+			}
+		}
+	}
+
+	p {
+		font-size: 18px;
+		line-height: 1.6;
+	}
+
+	h6 {
+		font-size: 12px;
+	}
+
+	.img-box {
+		width: 100%;
+		img {
+			width: 100%;
+		}
+	}
+
 	.row {
 		display: flex;
 		justify-content: center;
@@ -162,6 +208,7 @@ h6 {
 	
 	th {
 		width: 10%;
+		padding-top: 5%;
 	}
 
 	.showCard {
