@@ -1,5 +1,5 @@
-<!-- <app-menu></app-menu> -->
-<nav class="navbar" [@fadeInOut]>
+
+<nav class="navbar">
     <div class="mobile-nav">
         <div class="logo-mobile" routerLink='/home'>
           <img src="../../../assets/isologotypo.svg" alt="">
@@ -11,15 +11,14 @@
       </div>
 
   <div [ngClass]="mobile ? 'mobile' : 'main-container'">
-    <!-- <div></div> -->
-    <div class="logo img" routerLink='/home'>
-      <img src="../../../assets/isologotypo.svg" alt="">
+    <div class="logo" routerLink='/home'>
+      <img src="../../assets/img/isologotypo.svg" alt="">
     </div>
     <div class="col-tabs">
       <div class="tabs">
         <div class="menu-text" routerLink='/creditors'>CREDITORS</div>
         <div class=" menu-text" routerLink='/originators'>ORIGINATORS</div>
-        <a href="https://github.com/ripio/rcn-loans" target="blank" class="menu-text">DEVELOPERS</a>
+        <div class="menu-text"> <a href="https://github.com/ripio" target="blank" >DEVELOPERS</a></div>
         <div class="menu-text" routerLink='/how-it-works'>HOW IT WORKS</div>
       </div>
     </div>

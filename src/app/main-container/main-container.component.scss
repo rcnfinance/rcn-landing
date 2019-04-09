@@ -21,19 +21,25 @@ section {
 	height: 9vh;
 	display: flex;
 	align-items: center;
-	.main-container {
-		.container{
-			@include row-both;
-			align-content: flex-start;
-			padding: 0;
-		}
+	justify-content: space-between;
+}
+
+.logo img{
+	width: 100%;
+	margin-left: 40%;
+	background-color: white;
+	cursor: pointer;
+	img {
+		width: 100%;
 	}
 }
 
-.logo img {
-	width: 50%;
-	margin-left: 8%;
-	background-color: white;
+.logo:focus {
+	outline: white;
+}
+
+.menu-text:focus {
+	outline: white;
 }
 
 .col-tabs{
@@ -50,13 +56,15 @@ section {
     .menu-text {
     @include menu-text;
 		margin: 0 2% ;
+		cursor: pointer;
     }   
   }
 }
 
 a {
 	text-decoration: none;
-	margin: 0 2% ;
+	margin: 0;
+	color: inherit;
 }
 
 .bars{
@@ -76,8 +84,6 @@ section {
 
 }
 
-
-
 @media (max-width: 700px) {
 
 section {
@@ -93,6 +99,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	background-color: white;
 	.logo-mobile {
 		display: block;
 		width: 25%;
@@ -136,7 +143,6 @@ section {
 
 
 .main-container {
-	// margin-top: 19vh;
 	display: none;
 	@include no-shadow;
 }	
@@ -145,30 +151,34 @@ section {
 	display: none;
 }
 
-
-
-
 .mobile {
-		display: block;
-    // z-index: 2;
- 		width: 100%;
-		.col-tabs{
-			@include one;
-			display: block;
-			.tabs {
-				list-style-type: none;
-				@include row-right;
-				margin: 2% 0;
-				display: block;	
-
-				.menu-text {
-				@include menu-text;
-				font-size: 18px;
-				margin: 10% 0;
-				border-bottom: solid $gray 1px;
-				}   
+	display: block;
+		width: 100%;
+		background-color: white;
+		padding: 2% 0;
+	.col-tabs{
+		@include one;
+		display: flex;
+		justify-content: center;
+		.tabs {
+			list-style-type: none;
+			@include row-center;
+			margin: 2% 0%;
+			width: 70%;
+			display: block;	
+			.menu-text {
+			@include menu-text;
+			font-size: 17px;
+			padding: 8% 0;
+			border-bottom: solid rgb(212, 212, 212) 1px;
 			}
+			.menu-text:last-child {
+				border-bottom: none;
+			}   
 		}
+	}
 }
+
+
 
 }
