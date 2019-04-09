@@ -7,9 +7,10 @@
   .row {
     width: 80%;
     .text {
-      @include three-quarters;
+      width: 100%;
       p {
         font-size: 16px;
+        line-height: 1.6;
       }
     }
   
@@ -19,13 +20,17 @@
 .img-container {
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   .img-box {
-    width: 80%;
+    width: 70%;
     img {
       width: 100%
     }
   }
+}
+
+.img-box-mobile {
+  display: none;
 }
 
 @media (max-width: 768px){
@@ -45,13 +50,18 @@
     }
   }
 }
+
+.img-box {
+  display: none;
+}
     
 .img-container {
   width: 100%;
   display: flex;
 	justify-content: flex-end;
 	margin: 10% 0;
-  .img-box {
+  .img-box-mobile {
+    display: block;
     width: 100%;
     img {
       width: 100%
