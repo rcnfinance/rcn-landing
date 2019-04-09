@@ -1,14 +1,19 @@
 @import '../../../../styles.scss'; //Styles
 
-.img-box {
-    height: auto;
-    background-image: url("../../../../assets/img/header-creditors.jpg");
-    overflow: hidden;
+.main-container {
+		overflow: hidden;
+		.img-box {
+			height: auto;
+			background-image: url("../../../../assets/img/header-creditors.jpg");
+			overflow: hidden;
+	}
+	
+	.img-box-mobile {
+			display: none;
+	} 
+	
 }
 
-.img-box-mobile {
-    display: none;
-} 
 
 .content {
     display: flex;
@@ -45,12 +50,12 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 19vh;
-    width: 100%;
+    top: 16vh;
+		width: 100%;
     .row {
 				@include three-quarters;
-				width: 90%;
-				margin-left: 10%;
+				width: 80%;
+				margin-left: 5%;
         .title {
             Color: white;
 						font-size: 45px;
@@ -58,7 +63,8 @@
         }
         .text {
 						Color: white;
-						font-size: 24px;
+						font-size: 22px;
+						line-height: 1.6;
         }
     }
 }
