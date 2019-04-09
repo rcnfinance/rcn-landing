@@ -33,7 +33,6 @@ export class CharacteristicsComponent implements OnInit {
 
 
   characteristics: ICharacteristic[];
-  selection = false;
 
   constructor() { }
 
