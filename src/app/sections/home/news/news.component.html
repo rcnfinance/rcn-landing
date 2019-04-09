@@ -8,14 +8,43 @@
     </div>
   </div>
   <div class="row">
+    <div class="carrousel">
+      <div class="container" *ngFor="let info of info">
+      <div class="border" >
+          <div class="content">
+            <div class="title-box">
+              <div><h3>{{info.title}}</h3></div>
+            <div>
+              <div class="p-box"><p>{{info.text}}</p></div>
+            </div>
+            <div class="info-box">
+              <div class="icon"><i class="{{info.icon1}}"></i></div>
+              <div><p>{{info.date}}</p></div>
+            </div>
+            <div class="info-box">
+                <div class="icon"><i class="{{info.icon2}}"></i></div>
+                <div><p>{{info.location}}</p></div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="second-container">
+      <div class="buttons-box">
+        <button (click)="left()"><i class="fas fa-arrow-left"></i></button>
+        <button (click)="right()"><i class="fas fa-arrow-right"></i></button>
+      </div>
+  </div>
+<!--
     <drag-scroll
     drag-scroll-y-disabled="true"
     drag-scroll-x-disabled="true"
     (reachesLeftBound)="leftBoundStat($event)"
     (reachesRightBound)="rightBoundStat($event)"
     #nav>
-    <!-- --------------------------------------------------- -->
-    <div drag-scroll-item class="border" >
+    --------------------------------------------------- -->
+    <!-- <div drag-scroll-item class="border" >
       <div class="content">
         <div class="title-box">
           <div><h3>LendIt USA 2019</h3></div>
@@ -33,9 +62,9 @@
           </div>
       </div>
       </div>
-    </div>
+    </div> -->
     <!-- --------------------------------------------------- -->
-        <div drag-scroll-item class="border" >
+        <!-- <div drag-scroll-item class="border" >
           <div class="content">
             <div class="title-box">
               <div><h3>Coindesk</h3></div>
@@ -52,9 +81,9 @@
               </div>
           </div>
           </div>
-        </div>
+        </div> -->
             <!-- --------------------------------------------------- -->
-    <div drag-scroll-item class="border" >
+    <!-- <div drag-scroll-item class="border" >
       <div class="content">
         <div class="title-box">
           <div><h3>EDCON 2019</h3></div>
@@ -72,9 +101,9 @@
           </div>
       </div>
       </div>
-    </div>
+    </div> -->
     <!-- --------------------------------------------------- -->
-        <div drag-scroll-item class="border" >
+        <!-- <div drag-scroll-item class="border" >
           <div class="content">
             <div class="title-box">
               <div><h3>Forbes</h3></div>
@@ -91,9 +120,9 @@
               </div>
           </div>
           </div>
-        </div>
+        </div> -->
             <!-- --------------------------------------------------- -->
-    <div drag-scroll-item class="border" >
+    <!-- <div drag-scroll-item class="border" >
       <div class="content">
         <div class="title-box">
           <div><h3>Cointelegraph</h3></div>
@@ -110,9 +139,9 @@
           </div>
       </div>
       </div>
-    </div>
+    </div> -->
     <!-- --------------------------------------------------- -->
-        <div drag-scroll-item class="border" >
+        <!-- <div drag-scroll-item class="border" >
           <div class="content">
             <div class="title-box">
               <div><h3>Venturebeat</h3></div>
@@ -129,9 +158,9 @@
               </div>
           </div>
           </div>
-        </div>
+        </div> -->
         <!-- --------------------------------------------------- -->
-    <div drag-scroll-item class="border" >
+    <!-- <div drag-scroll-item class="border" >
       <div class="content">
         <div class="title-box">
           <div><h3>Nasdaq</h3></div>
@@ -148,11 +177,11 @@
           </div>
       </div>
       </div>
-    </div>
+    </div> -->
         <!-- --------------------------------------------------- -->
-  </drag-scroll>
-  <button (click)="moveLeft()">Left</button>
-  <button (click)="moveRight()">Right</button>
+  <!-- </drag-scroll> -->
+  <!-- <button (click)="moveLeft()">Left</button>
+  <button (click)="moveRight()">Right</button> -->
   <!-- <button (click)="moveTo(2)">Last</button> -->
   
 

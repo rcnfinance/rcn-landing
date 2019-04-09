@@ -13,22 +13,8 @@ export class NewsComponent implements OnInit {
   disabled;
   xDisabled;
   yDisabled;
-  // imagelist = [
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png',
-  //   'icon-borderless.png'
-  // ];
 
-
-  imageList = [
+  info = [
     {title: "Jinse", 
     text: "Ripio Closes $37 million ICO for Ethereum Lending Network",
     icon1: "fas fa-chart-line",
