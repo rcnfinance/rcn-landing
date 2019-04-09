@@ -6,7 +6,7 @@ import { MaterialModule } from '../app/material/material.module';
 
 //Carrousel
 import { DragScrollModule } from 'ngx-drag-scroll';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharacteristicCardComponent } from './shared/characteristic-card/characteristic-card.component';
@@ -74,7 +74,8 @@ import { LoanLifeComponent } from './sections/how-it-works/loan-life/loan-life.c
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
-    DragScrollModule
+    DragScrollModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
