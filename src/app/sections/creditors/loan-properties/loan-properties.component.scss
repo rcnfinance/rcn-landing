@@ -18,9 +18,9 @@
 	.box-border {
 		height: auto;
 		width: 40%;
-		border: solid $text-gray 1px;
+		border: solid #cfcfcf  1px;
 		border-radius: 35px;
-		padding: 5%;
+		padding: 2%;
 		margin-top: 3%;
 		.title-box {
 			display: flex;
@@ -44,12 +44,20 @@
 	}
 }
 
+.bottom-border:last-child {
+	border:none;
+}
+
+.bottom-border:nth-child(3) {
+	border:none;
+}
+
 .bottom-border {
 	width: auto;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-bottom:solid $text-gray 1px;
+	border-bottom:solid #cfcfcf 1px;
 	margin: 0;
 	.bottom-border:last-child{
 			border-bottom: none;
@@ -59,7 +67,7 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		width: 100%;
-		margin: 2% 0;
+		margin: 3% 0;
 		.col {
 			width: 33%;
 			display:flex;
@@ -71,6 +79,11 @@
 }
 
 .fas {
+	margin-right: 12px;
+	font-size: 20px;
+}
+
+.far {
 	margin-right: 12px;
 	font-size: 20px;
 }
@@ -97,7 +110,7 @@ h6 {
 	justify-content: center;
 	margin: 5% 0;
 	.row {
-		width: 0%;
+		width: 80%;
 		.text {
 			@include three-quarters;
 			width: 100%;
@@ -116,7 +129,6 @@ h6 {
 	.box-border {
 		height: auto;
 		width: 100%;
-		border: solid $text-gray 1px;
 		border-radius: 35px;
 		padding: 4%;
 		margin: 10% 0;
@@ -147,7 +159,6 @@ h6 {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-bottom:solid $text-gray 1px;
 	margin: 0;
 	.wrapper {
 		display: flex;
