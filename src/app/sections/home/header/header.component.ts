@@ -1,11 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({
+        opacity: 0
+      })),
+      transition('void <=> *', animate(3000)),
+    ]),
+    trigger('EnterLeft', [
+      state('flyIn', style({ transform: 'translateX(0)' })),
+      transition(':enter', [
+        style({ transform: 'translateX(-100%)' }),
+        animate('0.6s ease-in')
+      ])
+    ]),
+    trigger('slideInLeft', [
+      transition(':enter', [
+        style({transform: 'translateX(20px)', opacity: 0}),
+        animate('600ms ease-in', style({transform: 'translateX(0%)', opacity: 1}))
+      ]),
+    ]),
+    trigger('slideInUp', [
+      transition(':enter', [
+        style({transform: 'translateY(20px)', opacity: 0}),
+        animate('600ms ease-in', style({transform: 'translateY(0%)', opacity: 1}))
+      ]),
+    ])
+  ]
 })
+
 export class HeaderComponent implements OnInit {
 
   content = {title: "RCN",

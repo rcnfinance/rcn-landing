@@ -1,5 +1,6 @@
-<div [ngClass]="hide ? 'row' : 'hide'">
-  <div class="content-back">
+
+<div [ngClass]="hide ? 'row' : 'hide'" [@slideInUp] >
+  <div class="content-back"  > 
     <div class="content">
       <h2 class="main-subtitle">WELCOME TO...</h2>
         <h1 class="main-title">{{content.title}}</h1>
@@ -9,8 +10,8 @@
     </div>
   </div>
   <div class="col-right">
-    <div class="img-box">
-      <img src="{{content.img}}" alt="">
+    <div class="img-box" >
+      <img src="{{content.img}}" alt=""  >
     </div>
     <div class="second-container">
       <div class="buttons-box">
