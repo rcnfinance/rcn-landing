@@ -119,14 +119,14 @@ h6 {
             border: solid $text-gray 1px;
             border-radius: 35px;
             padding: 4%;
-            margin-top: 3%;
+            margin: 10% 0;
             .title-box {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 margin-bottom: 2%;
                 .img-box {
-                    width: 50px;
+                    width: 40px;
                     height: auto;
                     margin-right: 2%;
                 }
@@ -181,7 +181,7 @@ h6 {
     }
     
     .sub-title {
-        font-size: 12px;
+        font-size: 10px;
         font-weight: 400;
         margin-bottom: 6%;
     }

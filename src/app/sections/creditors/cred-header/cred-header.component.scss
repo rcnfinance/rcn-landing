@@ -1,14 +1,19 @@
 @import '../../../../styles.scss'; //Styles
 
-.img-box {
-    height: auto;
-    background-image: url("../../../../assets/img/header-creditors.jpg");
-    overflow: hidden;
+.main-container {
+		overflow: hidden;
+		.img-box {
+			height: auto;
+			background-image: url("../../../../assets/img/header-creditors.jpg");
+			overflow: hidden;
+	}
+	
+	.img-box-mobile {
+			display: none;
+	} 
+	
 }
 
-.img-box-mobile {
-    display: none;
-} 
 
 .content {
     display: flex;
