@@ -21,19 +21,27 @@ section {
 	height: 9vh;
 	display: flex;
 	align-items: center;
-	.main-container {
-		.container{
-			@include row-both;
-			align-content: flex-start;
-			padding: 0;
-		}
+	justify-content: space-between;
+}
+
+.logo img{
+	width: 100%;
+	margin-left: 40%;
+	background-color: white;
+	cursor: pointer;
+	img {
+		width: 100%;
 	}
 }
 
-.logo img {
-	width: 50%;
-	margin-left: 8%;
-	background-color: white;
+.logo:focus {
+	outline: white;
+	
+}
+
+.menu-text:focus {
+	outline: white;
+	
 }
 
 .col-tabs{
@@ -50,6 +58,7 @@ section {
     .menu-text {
     @include menu-text;
 		margin: 0 2% ;
+		cursor: pointer;
     }   
   }
 }
@@ -75,8 +84,6 @@ section {
 	}
 
 }
-
-
 
 @media (max-width: 700px) {
 
