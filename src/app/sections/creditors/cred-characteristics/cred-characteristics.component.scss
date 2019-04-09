@@ -5,17 +5,18 @@
     margin-left: 10%;
   }
 
-.main-container {
-	// background-image: $gradient;
-  height: auto;
-  padding: 5% 0;
-}
+// .main-container {
+// 	// background-image: $gradient;
+//   height: auto;
+//   padding: 5% 0;
+// }
 
 .row {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: center;
+    padding: 10% 0;
     .row-inner {
       width: 43%;
       display: flex;
@@ -25,7 +26,7 @@
         width: 32%;
               height: auto;
               padding: 4% 6%;
-              margin: 0 4%;
+              margin: 10% 0;
               border: solid $rcn-blue 1px;
               border-radius: 40px;
               display: flex;

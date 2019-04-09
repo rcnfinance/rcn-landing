@@ -1,19 +1,12 @@
 @import '../../../../styles.scss'; //Styles
 
-// .img-box {
-//     height: 300px;
-//     background-image: $gradient;
-// }
-
 .content {
   display: flex;
   justify-content: center;
-    // position: absolute;
-    // top: 19vh;
   width: 100%;
   padding: 5% 0;
   margin: 0;
-  background-image: $gradient;
+  // background-image: $gradient;
   .row {
     @include three-quarters;
     .title {
@@ -26,5 +19,28 @@
     }
   }
 
+
+}
+
+@media (max-width: 768px){ 
+
+.content {
+  padding: 10% 0;
+  .row {
+		@include three-quarters;
+		width: 80%;
+		margin-left: 0%;
+    .title {
+      Color: black;
+			font-size: 45px;
+			width: 100%;
+    }
+    .text {
+			Color: $text-gray;
+			font-size: 22px;
+			line-height: 1.6;
+    }
+  }
+}
 
 }

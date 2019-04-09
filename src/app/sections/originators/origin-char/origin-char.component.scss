@@ -1,56 +1,56 @@
 @import '../../../../styles.scss'; //Styles
 
 .row-2 {
-    @include half;
-    margin-left: 10%;
-  }
+  @include half;
+  margin-left: 10%;
+}
 
 .main-container {
-	// background-image: $gradient;
   height: auto;
   padding: 5% 0;
 }
 
 .row {
-    width: 100%;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding: 10% 0;
+  .row-inner {
+  width: 43%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2%;
+    .card-border {
+    width: 32%;
     height: auto;
+    padding: 4% 6%;
+    margin: 0 4%;
+    border: solid $rcn-blue 1px;
+    border-radius: 40px;
     display: flex;
     justify-content: center;
-    .row-inner {
-      width: 43%;
-      display: flex;
-          justify-content: space-around;
-          margin-top: 2%;
-      .card-border {
-        width: 32%;
-              height: auto;
-              padding: 4% 6%;
-              margin: 0 4%;
-              border: solid $rcn-blue 1px;
-              border-radius: 40px;
-              display: flex;
-              justify-content: center;
-      }
     }
   }
+}
   
-  .content {
-      width: 100%;
-      img {
-          width: 100%;
-      }
-      .h6 {
-          display: flex;
-          justify-content: center;
-          h6 {
-              @include char-card-text;
-              margin-top: 8%;
-              text-align: center;
-              color: $rcn-blue;
-          }
-      } 
-  
+.content {
+  width: 100%;
+  img {
+    width: 100%;
   }
+  .h6 {
+    display: flex;
+    justify-content: center;
+    h6 {
+      @include char-card-text;
+      margin-top: 8%;
+      text-align: center;
+      color: $rcn-blue;
+    }
+  } 
+  
+}
 
   @media (max-width: 768px){
 
@@ -60,7 +60,6 @@
     }
   
   .main-container {
-    // background-image: $gradient;
     height: auto;
     padding: 5% 0;
   }

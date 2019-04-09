@@ -1,8 +1,6 @@
 @import '../../../../styles.scss'; //Styles
 
 .main-container {
-    // display:flex;
-    // justify-content: center;
     margin-top: 5%;
     padding: 5% 0;
     background-color: $rcn-blue;
@@ -57,12 +55,10 @@
 @media (max-width: 768px){
 
 	.main-container {
-    // display:flex;
-    // justify-content: center;
     margin-top: 5%;
-    padding: 5% 0;
-    background-color: $gray;
-		border-radius: 0;
+    padding: 10% 0;
+    background-color: $rcn-blue;
+		border-radius: 50px 50px 0 0;
 		.phrase {
 			display: flex;
 			justify-content: center;
@@ -71,10 +67,14 @@
         .text {
             width: 100%;
             .title {
-                @include subtitle;
+								@include subtitle;
+								margin: 5% 0;
 						}
 						.text-p {
-							color: black;
+							color: white;
+							font-size: 18px;
+							line-height: 1.6;
+							margin: 10% 0 5% 0;
 						}
             
         }
@@ -89,11 +89,11 @@
 	.col {
 		width: 65%;
 		display: block;
-		// justify-content: space-between;
 		.wrapper {
 			width: 100%;
 			.box-img {
 				width: 40%;
+				margin-top: 10%;
 			}
 			h6 {
 				margin-top: 4%;
@@ -103,8 +103,9 @@
 			p {
 				@include tab-title;
 				font-weight: 400;
-				color: black;
-				margin-top: 4%;
+				color: white;
+				margin: 2% 0 20% 0;
+				line-height: 1.6;
 			}
 		}
 	}
