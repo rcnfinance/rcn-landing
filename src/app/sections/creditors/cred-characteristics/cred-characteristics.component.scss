@@ -10,16 +10,16 @@
     height: auto;
     display: flex;
     justify-content: center;
-    padding: 5% 0;
+    padding: 2% 0;
     .row-inner {
-      width: 43%;
+      width: auto;
       display: flex;
       justify-content: space-around;
       margin-top: 2%;
       .card-border {
         width: 32%;
         height: auto;
-        padding: 4% 6%;
+        padding: 1%;
         margin: 0 4%;
         border: solid $rcn-blue 1px;
         border-radius: 40px;
@@ -30,9 +30,17 @@
   }
   
   .content {
-      width: 100%;
-      img {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+      .img-box {
           width: 100%;
+          img {
+            width: 100%;
+          }
       }
       .h6 {
           display: flex;
@@ -47,7 +55,26 @@
   
   }
 
-@media (max-width: 768px){
+	.content-box {
+		width: 200px;
+		height: 200px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+@media (max-width: 1000px){
+
+  .content-box {
+		width: 150px;
+		height: 150px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
 
   .row-2 {
     @include half;
@@ -74,7 +101,7 @@
       .card-border {
         width: 100%;
               height: auto;
-              padding: 10% 20%;
+              padding: 10% 10%;
               margin: 5% 0;
               border: solid $rcn-blue 1px;
               border-radius: 40px;
@@ -85,9 +112,11 @@
   }
   
   .content {
-      width: 100px;
-      img {
+      .img-box {
           width: 100%;
+          img {
+            width: 100%;
+          }
       }
       .h6 {
           display: flex;

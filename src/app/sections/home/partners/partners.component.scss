@@ -6,7 +6,6 @@
 	width: 100%;
 	display:flex;
 	flex-wrap: wrap;
-
   .col-1 {
     @include half;
     margin-left: 10%;
@@ -16,9 +15,10 @@
 		justify-content: center;
 		width: 100%;
 		table {
-			width: 700px;
+			width: auto;
+			height: auto;
 			border-collapse:separate;
-			border:solid $rcn-blue 1px;
+			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
 			-moz-border-radius:6px;
 			margin: 3%;
@@ -37,9 +37,9 @@
 	height: auto;
 }
 
-td, th {
-	border-left:solid $rcn-blue 1px;
-	border-top:solid $rcn-blue 1px;
+tr, th {
+	border-left:solid $rcn-blue 1.2px;
+	border-top:solid $rcn-blue 1.2px;
 }
 
 th {
@@ -58,8 +58,11 @@ td:first-child, th:first-child {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	width: 200px;
+	height: 200px;
 	.img-box {
 		margin: 10%;
+		margin-bottom: 0;
 		width: 50%;
 		img {
 			width: 100%;
@@ -70,21 +73,18 @@ td:first-child, th:first-child {
 .text-box {
 	width: 100%;
 	h6 {
-		margin: 10%;
+		margin: 0;
 		@include part-card-text;
 	}
 }
-
-
-
 
 .row2 {
 	height: 100%;
 	width: 25%;
 	height: 100%;
-    position: absolute;
-    right: -25%;
-    top: 0;
+  position: absolute;
+  right: -25%;
+  top: 0;
 	background-color: $rcn-blue;
 	border-top-left-radius: 30px;
 	overflow-x: hidden;
@@ -111,8 +111,8 @@ td:first-child, th:first-child {
 	height: 100%;
 	width: 25%;
 	height: 100%;
-    position: absolute;
-    top: 0;
+  position: absolute;
+  top: 0;
 	background-color: $rcn-blue;
 	border-top-left-radius: 30px;
 	@include shadow;
@@ -149,7 +149,15 @@ td:first-child, th:first-child {
 	width: 80%;
 }
 
-@media (max-width: 768px){
+.table-mobile {
+	display: none;
+}
+
+@media (max-width: 1000px){
+
+.table {
+	display: none;
+}
 
 	.main-container{
 		overflow-x: hidden;
@@ -157,7 +165,6 @@ td:first-child, th:first-child {
 		width: 100%;
 		display:flex;
 		flex-wrap: wrap;
-	
 		.col-1 {
 			width: 80%;
 			margin-left: 10%;
@@ -166,13 +173,13 @@ td:first-child, th:first-child {
 			display: flex;
 			justify-content: center;
 			width: 100%;
-			table {
-				width: 700px;
+			.table-mobile {
+				display: block;
+				width: auto;
 				border-collapse:separate;
-				border:solid $rcn-blue 1px;
+				border:solid $rcn-blue 1.2px;
 				border-radius:35px;
 				-moz-border-radius:6px;
-				margin: 10%;
 			}
 		}
 	}
@@ -182,9 +189,9 @@ td:first-child, th:first-child {
 		line-height: 1.6;
 	}
 
-	h6 {
-		font-size: 12px;
-	}
+	// h6 {
+	// 	font-size: 12px;
+	// }
 
 	.img-box {
 		width: 100%;
@@ -199,27 +206,25 @@ td:first-child, th:first-child {
 		table {
 			width: 45%;
 			border-collapse:separate;
-			border:solid $rcn-blue 1px;
+			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
 			-moz-border-radius:6px;
 			margin: 3%;
 		}
 	}
-	
-	th {
-		width: 10%;
-		padding-top: 5%;
-	}
 
+	th {
+		width: auto;
+	}
 	.showCard {
 		right: 0;
 		-webkit-transition:right 1s;
 		height: 100%;
 		width: 100%;
 		height: 100%;
-			position: absolute;
-			top: 0;
-			z-index: 1;
+		position: absolute;
+		top: 0;
+		z-index: 1;
 		background-color: $rcn-blue;
 		border-top-left-radius: 30px;
 		@include shadow;
@@ -231,5 +236,31 @@ td:first-child, th:first-child {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
+	.img-outer{
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		width: 150px;
+		height: 150px;
+		margin: 0;
+		.img-box {
+			margin: 10%;
+			margin-bottom: 0;
+			width: 50%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	.text-box {
+		h6 {
+			@include part-card-text;
+			font-size: 10px;
+		}
+	}
+
+
 	
 }

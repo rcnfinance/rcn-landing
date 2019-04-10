@@ -209,6 +209,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 15px;
   font-weight: 500;
   color: black;
+  letter-spacing: 0.1em; 
 }
 
 //Buttons
@@ -302,6 +303,45 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 //-----------------------------------------------------------------------------------------------------------
+
+//----------------------
+
+/* active tab */
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {
+  @include tab-title;
+  padding: 0 10%;
+  width: 40%;
+  color: black !important;
+  }
+
+  ::ng-deep .mat-tab-list .mat-tab-label  {
+    width: 40%;
+    }
+  
+  /* ink bar */
+  ::ng-deep .mat-ink-bar {
+  background-color: $yellow !important;
+  // width: 60px;
+  // display: table !important;
+  // margin-left: auto !important;
+  // margin-right: auto !important;
+  }
+  
+  ::ng-deep .mat-tab-disabled {
+      color: red /*!important*/;
+}
+
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+      background: white;
+      // height: 5px; 
+      // width: 60%;
+    }
+    // .mat-tab-labels, .mat-tab-label, .mat-tab-link {
+    //   color: black;
+    //   font-size: 16px;
+      // background-color: #804A71;
+    // }
+  
 
 // Margins
 .margintop0  {margin-top:0 !important;}

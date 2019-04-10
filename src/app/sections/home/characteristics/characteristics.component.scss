@@ -25,16 +25,16 @@
   display: flex;
   justify-content: center;
   .row-inner {
-    width: 43%;
+    width: auto;
     display: flex;
 		justify-content: space-around;
 		margin-top: 2%;
     .card-border {
       width: 32%;
 			height: auto;
-			padding: 4% 6%;
+			padding: 1%;
 			margin: 0 4%;
-			border: solid white 1px;
+			border: solid white 1.2px;
 			border-radius: 40px;
 			display: flex;
 			justify-content: center;
@@ -42,11 +42,29 @@
   }
 }
 
+.content-box {
+	width: 200px;
+	height: 200px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}
+
 .content {
-	width: 100%;
-	img {
+	width: 50%;
+	height: auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	.img-box {
 		width: 100%;
+		img {
+			width: 100%;
+		}
 	}
+
 	.h6 {
 		display: flex;
 		justify-content: center;
@@ -61,7 +79,7 @@
 
 
 
-@media (max-width: 768px){
+@media (max-width: 1000px){
 
 	.main-container {
 		background-image: $gradient;
@@ -69,12 +87,27 @@
 		padding: 15% 0;
 	}
 	.col-1 {
-		// @include half;
-		// margin-left: 10%;
 		width: 80%
 	}
 	
-	
+	.content-box {
+		width: 150px;
+		height: 150px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.content{
+		.img-box {
+			width: 50%;
+			img {
+				width: 100%;
+			}
+		}
+	}
+
 	.title {
 		color: white;
 	}
@@ -90,17 +123,17 @@
 		display: flex;
 		justify-content: center;
 		.row-inner {
-			width: 35%;
+			width: 40%;
 			display: flex;
 					justify-content: center;
 					flex-wrap: wrap;
 					margin-top: 2%;
 			.card-border {
-				width: 100%;
+				width: auto;
 							height: auto;
-							padding: 10% 20%;
+							padding: 4%;
 							margin: 5% 0;
-							border: solid white 1px;
+							border: solid white 1.2px;
 							border-radius: 40px;
 							display: flex;
 							justify-content: center;
