@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { isContentQueryHost } from '@angular/core/src/render3/util';
 
 @Component({
   selector: 'app-header',
@@ -76,34 +75,26 @@ export class HeaderComponent implements OnInit {
 
     this.activeContent = this.content[0];
     this.activeContentIndex = 0;
-    console.log(this.content);
+
   }
 
 
   left() {
-    if (this.activeContentIndex === 0) {
-      this.activeContentIndex = this.content.length - 1;
-      this.activeContent = this.content[this.activeContentIndex];
-    } else {
+      if (this.activeContentIndex > 0) {
       --this.activeContentIndex;
       this.activeContent = this.content[this.activeContentIndex];
+      this.activeContent.selected = 'selected';
     }
-    this.activeContent.selected = 'selected';
   }
 
   right() {
 
-    if (this.activeContentIndex === this.content.length - 1) {
-      this.activeContentIndex = 0;
-      this.activeContent = this.content[0];
-
-    } else {
+    if (this.activeContentIndex < this.content.length - 1) {
       ++this.activeContentIndex;
       this.activeContent = this.content[this.activeContentIndex];
       this.content[this.activeContentIndex].selected = 'selected';
     }
-    console.log(this.content);
-    console.log(this.activeContent);
+
   }
 
 }

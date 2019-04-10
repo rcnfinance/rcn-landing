@@ -7,28 +7,28 @@
       </app-title-text>
     </div>
   </div>
-  <div class="row">
+  <div class="row" >
     <div class="carrousel">
-      <div class="container" *ngFor="let info of info">
-      <div class="border" >
-          <div class="content">
-            <div class="row-up">
+      <div class="container" *ngFor="let eachContent of activeContent" [@opacity]="eachContent.selected"   >
+      <div class="border">
+          <div class="content" >
+            <div class="row-up" >
               <div class="title-box">
-                <div><h3>{{info.title}}</h3></div>
+                <div><h3>{{eachContent.title}}</h3></div>
                 <div class="line"></div>
               </div>
               <div>
-                <div class="p-box"><p>{{info.text}}</p></div>
+                <div class="p-box"><p>{{eachContent.text}}</p></div>
               </div>
             </div>
             <div class="row-down">
               <div class="info-box">
-                <div class="icon"><i class="{{info.icon1}}"></i></div>
-                <div><p>{{info.date}}</p></div>
+                <div class="icon"><i class="{{eachContent.icon1}}"></i></div>
+                <div><p>{{eachContent.date}}</p></div>
               </div>
               <div class="info-box">
-                <div class="icon"><i class="{{info.icon2}}"></i></div>
-                <div><p>{{info.location}}</p></div>
+                <div class="icon"><i class="{{eachContent.icon2}}"></i></div>
+                <div><p>{{eachContent.location}}</p></div>
               </div>
             </div>
           
