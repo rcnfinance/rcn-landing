@@ -46,6 +46,15 @@ th {
 	width: 15%;
 }
 
+.selected {
+	background-color: $rcn-blue;
+	border-top-left-radius: 35px;
+	padding: 1%;
+	.text-box {
+		color: white;
+	}
+}
+
 .first {
 	border-top: none;
 }
@@ -90,20 +99,7 @@ td:first-child, th:first-child {
 	overflow-x: hidden;
 }
 
-.content {
-	width: 80%;
-	margin: 10%;
-	.title {
-		width: 100%;
-		
-	}
-	.img-box {
-		width: 20%;
-		img {
-			width: 100%;
-		}
-	}
-}
+
 
 .showCard {
 	right: 0;
@@ -114,9 +110,22 @@ td:first-child, th:first-child {
   position: absolute;
   top: 0;
 	background-color: $rcn-blue;
-	border-top-left-radius: 30px;
+	border-top-left-radius: 150px;
 	@include shadow;
 	overflow-x: hidden;
+	.content {
+		width: 80%;
+		margin: 15%;
+		.title {
+			width: 100%;
+		}
+		.img-box {
+			width: 40%;
+			img {
+				width: 100%;
+			}
+		}
+	}
 }
 
 .fullRow {
@@ -140,7 +149,7 @@ td:first-child, th:first-child {
 	@include char-card-text;
 	font-size: 25px;
 	font-weight: 700;
-	margin-bottom: 70%;
+	// margin-bottom: 70%;
 }
 
 .p {

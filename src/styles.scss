@@ -321,10 +321,6 @@ h1,h2,h3,h4,h5,h6 {
   /* ink bar */
   ::ng-deep .mat-ink-bar {
   background-color: $yellow !important;
-  // width: 60px;
-  // display: table !important;
-  // margin-left: auto !important;
-  // margin-right: auto !important;
   }
   
   ::ng-deep .mat-tab-disabled {
@@ -333,15 +329,7 @@ h1,h2,h3,h4,h5,h6 {
 
   .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
       background: white;
-      // height: 5px; 
-      // width: 60%;
     }
-    // .mat-tab-labels, .mat-tab-label, .mat-tab-link {
-    //   color: black;
-    //   font-size: 16px;
-      // background-color: #804A71;
-    // }
-  
 
 // Margins
 .margintop0  {margin-top:0 !important;}
