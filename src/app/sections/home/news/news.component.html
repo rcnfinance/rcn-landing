@@ -12,20 +12,26 @@
       <div class="container" *ngFor="let info of info">
       <div class="border" >
           <div class="content">
-            <div class="title-box">
-              <div><h3>{{info.title}}</h3></div>
-            <div>
-              <div class="p-box"><p>{{info.text}}</p></div>
+            <div class="row-up">
+              <div class="title-box">
+                <div><h3>{{info.title}}</h3></div>
+                <div class="line"></div>
+              </div>
+              <div>
+                <div class="p-box"><p>{{info.text}}</p></div>
+              </div>
             </div>
-            <div class="info-box">
-              <div class="icon"><i class="{{info.icon1}}"></i></div>
-              <div><p>{{info.date}}</p></div>
-            </div>
-            <div class="info-box">
+            <div class="row-down">
+              <div class="info-box">
+                <div class="icon"><i class="{{info.icon1}}"></i></div>
+                <div><p>{{info.date}}</p></div>
+              </div>
+              <div class="info-box">
                 <div class="icon"><i class="{{info.icon2}}"></i></div>
                 <div><p>{{info.location}}</p></div>
               </div>
-          </div>
+            </div>
+          
           </div>
         </div>
       </div>
