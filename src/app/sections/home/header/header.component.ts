@@ -33,7 +33,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger('slideInUp', [
       transition(':enter', [
         style({ transform: 'translateY(20px)', opacity: 0 }),
-        animate('800ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
+        animate('600ms 0.3s ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
       ]),
     ])
   ]

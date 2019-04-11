@@ -1,40 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, OnInit, HostListener, ElementRef  } from '@angular/core';
+import { LandingAnimations } from '../../../animations/animations';
 
 @Component({
   selector: 'app-characteristics',
   templateUrl: './characteristics.component.html',
   styleUrls: ['./characteristics.component.scss'],
-  animations: [
-    trigger('selected', [
-      state('selected',
-        style({
-          transform: 'scale(1.3)',
-        })
-      ),
-      transition('selected <=> *', [
-        animate('300ms ease-in')
-      ])
-    ]),
-    trigger('opacity', [
-      state('opacity',
-        style({
-          opacity: 0.2,
-        })
-      ),
-      transition('* => opacity', [
-        animate('300ms ease-in')
-      ])
-    ]),
-  ]
+  animations: LandingAnimations.animations
 })
 export class CharacteristicsComponent implements OnInit {
 
-
-
   characteristics: ICharacteristic[];
+  state = 'hide';
 
-  constructor() { }
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition + 700 >= componentPosition) {
+      this.state = 'show';
+    } else {
+      this.state = 'hide';
+    }
+
+  }
 
   ngOnInit() {
     this.characteristics = [

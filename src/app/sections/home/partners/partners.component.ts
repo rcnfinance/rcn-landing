@@ -1,15 +1,32 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
+import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-partners',
   templateUrl: './partners.component.html',
-  styleUrls: ['./partners.component.scss']
+  styleUrls: ['./partners.component.scss'],
+  animations: LandingAnimations.animations
 })
 export class PartnersComponent implements OnInit {
   info = {};
   show = false;
 
-  constructor() { }
+  state = 'hide';
+
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition + 700 >= componentPosition) {
+      this.state = 'show';
+    } else {
+      this.state = 'hide';
+    }
+
+  }
 
   close(){
     this.show = false;
