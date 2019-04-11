@@ -50,6 +50,50 @@
 				// justify-content: center;
 	
 			}
+			.card-border-expanded{
+				border: solid white 1px; 
+				border-left: solid white 8px;
+				border-radius: 0 40px 40px 0;
+				background-image: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
+				// background-color: #5F24BE;
+				.content-box {
+					width: 220px;
+					height: 200px;
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					align-items: center;
+					.content-expanded {
+						width: 80%;
+						height: auto;
+						display: flex;
+						flex-wrap: wrap;
+						justify-content: flex-start;
+						align-items: center;
+						margin: 3%;
+						.img-box-expanded {
+							width: 40%;
+							margin-right: 60%;
+							img {
+								width: 100%;
+							}
+						}
+						.h6 {
+							@include char-card-text;
+						}
+						.line {
+							width: 10%;
+							border-bottom: solid white 2px;
+							margin-top: 2%;
+						}
+						.text {
+							@include char-card-text;
+							font-size: 10px;
+							margin-top: 6%;
+						}
+					}
+				}
+			}
 
 		}
 
@@ -80,34 +124,15 @@
 	}
 
 	
-.card {
-	width: 32%;
-	height: auto;
-	padding: 1%;
-	margin: 0 4%;
-	display: flex;
-	justify-content: center;
-	.card-border-expanded{
-		border: solid white 1.2px !important; 
-		border-radius: 40px;
-		.content-box {
-			.content-expanded {
-				width: 80%;
-				height: auto;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: flex-start;
-				align-items: center;
-				.img-box-expanded {
-					width: 50%;
-					img {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
-}	
+// .card {
+// 	width: 32%;
+// 	height: auto;
+// 	padding: 1%;
+// 	margin: 0 4%;
+// 	display: flex;
+// 	justify-content: center;
+
+// }	
 
 
 	.h6 {
@@ -181,6 +206,14 @@
 				justify-content: center;
 				flex-wrap: wrap;
 				margin-top: 2%;
+				.card {
+					width: 100%;
+						height: auto;
+						padding: 1%;
+						margin: 0 4%;
+					
+						display: flex;
+						justify-content: center;
 			.card-border {
 				width: auto;
 				height: auto;
@@ -191,6 +224,7 @@
 				display: flex;
 				justify-content: center;
 			}
+		}
 		}
 	}
 	
