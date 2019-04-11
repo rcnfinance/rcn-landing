@@ -5,7 +5,6 @@ import { Router } from '@angular/router';
   selector: 'app-the-network',
   templateUrl: './the-network.component.html',
   styleUrls: ['./the-network.component.scss'],
-  encapsulation: ViewEncapsulation.None
 })
 export class TheNetworkComponent implements OnInit {
 
