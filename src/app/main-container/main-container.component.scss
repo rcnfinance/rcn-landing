@@ -54,7 +54,8 @@ section {
 		display: flex;
 		align-items: center;	
     .menu-text {
-    @include menu-text;
+		@include menu-text;
+		font-size: 14px;
 		margin: 0 2% ;
 		cursor: pointer;
     }   
@@ -81,7 +82,10 @@ section {
 	.logo-mobile {
 		display: none;
 	}
+}
 
+.overlay {
+	display: none;
 }
 
 @media (max-width: 700px) {
@@ -179,6 +183,16 @@ section {
 	}
 }
 
-
+.overlay {
+	display: block;
+	position: absolute;
+	z-index: 1;
+	width: 100vw;
+	height: 50vh;
+	background-color: black;
+	overflow: hidden;
+	opacity: 0.5;
+	margin-top: 2%;
+}
 
 }

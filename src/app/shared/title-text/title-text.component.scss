@@ -18,10 +18,12 @@
     @include tab-title;
     color: $text-gray;
     font-weight: 700;
+    font-size: 17px;
 }
 
 .reg-text {
     margin: 0;
+    line-height: 1.6;
 }
 
 @media (max-width: 768px){
