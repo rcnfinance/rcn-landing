@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { start } from 'repl';
 
 @Component({
   selector: 'app-news',
@@ -8,25 +7,26 @@ import { start } from 'repl';
   styleUrls: ['./news.component.scss'],
   animations: [
     trigger('slideInLeft', [
-      transition(':enter', [
+      state('enterLeft', style({ transform: 'translateX(0)' })),
+      transition('void => enterLeft', [
         style({ transform: 'translateX(20px)', opacity: 0 }),
         animate('600ms ease-in')
-      ])
+      ]),
     ]),
-    trigger('selected', [
-      state('selected', style({ transform: 'translateX(0)' })),
-      transition(':enter', [
-        style({ transform: 'translateX(20px)', opacity: 0 }),
+    trigger('slideInRight', [
+      state('enterRight', style({ transform: 'translateX(0)' })),
+      transition('void => enterRight', [
+        style({ transform: 'translateX(-20px)', opacity: 0 }),
         animate('600ms ease-in')
       ])
     ]),
     trigger('opacity', [
-      state('selected',
+      state('opacity',
         style({
           opacity: 0.2,
         })
       ),
-      transition('notSelected <=> *', [
+      transition('* => opacity', [
         animate('300ms ease-in')
       ])
     ])
@@ -56,7 +56,8 @@ export class NewsComponent implements OnInit {
         icon2: "fas fa-map-marker-alt",
         date: "04/08-09/2019",
         location: "SAN FRANSISCO - US",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
       {
         title: "Coindesk",
@@ -65,7 +66,8 @@ export class NewsComponent implements OnInit {
         icon2: "",
         date: "",
         location: "",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
       {
         title: "EDCON 2019",
@@ -74,7 +76,8 @@ export class NewsComponent implements OnInit {
         icon2: "fas fa-chart-line",
         date: "04/08-14/2019",
         location: "Sydney - Australia",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
       {
         title: "Forbes",
@@ -83,7 +86,8 @@ export class NewsComponent implements OnInit {
         icon2: "",
         date: "",
         location: "",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
       {
         title: "Cointelegraph",
@@ -92,7 +96,8 @@ export class NewsComponent implements OnInit {
         icon2: "",
         date: "",
         location: "",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
       {
         title: "Venturebeat",
@@ -101,7 +106,8 @@ export class NewsComponent implements OnInit {
         icon2: "",
         date: "",
         location: "",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
       {
         title: "Nasdaq",
@@ -110,33 +116,45 @@ export class NewsComponent implements OnInit {
         icon2: "",
         date: "",
         location: "",
-        selected: 'notSelected'
+        movement: 'noMovement',
+        opacity: 'notOpacity'
       },
     ];
 
     this.activeContentStartIndex = 0;
-    this.activateContent(this.activeContentStartIndex);
+    this.activateContent(this.activeContentStartIndex, '');
 
   }
 
-  activateContent(startIndex: number) {
-    const activeContent: IContent[] = [];
-    for (startIndex; startIndex < this.content.length; startIndex++) {
-      if (activeContent.length < this.maxActiveContent) {
-        activeContent.push(this.content[startIndex]);
-      }
-    }
-    activeContent[activeContent.length - 1].selected = 'selected';
-    this.activeContent = activeContent;
+  activateContent(startIndex: number, movement: string) {
+    let activeContent: IContent[] = [];
+
+    console.log(this.content);
+
+    activeContent = activeContent.concat(this.content.slice(startIndex, startIndex + this.maxActiveContent));
 
     console.log(activeContent);
+
+    this.activeContent = activeContent;
+
+    if (movement === 'right') {
+      this.activeContent[this.activeContent.length - 1].movement = 'enterLeft';
+    }
+
+    if (movement === 'left') {
+      this.activeContent[0].movement = 'enterRight';
+    }
+
+    this.activeContent[this.activeContent.length - 1].opacity = 'opacity';
+
+   
   }
 
 
   left() {
     if (this.activeContentStartIndex > 0) {
       --this.activeContentStartIndex;
-      this.activateContent(this.activeContentStartIndex);
+      this.activateContent(this.activeContentStartIndex, 'left');
 
     }
   }
@@ -145,8 +163,7 @@ export class NewsComponent implements OnInit {
 
     if (this.activeContentStartIndex < this.content.length - this.maxActiveContent) {
       ++this.activeContentStartIndex;
-      this.activateContent(this.activeContentStartIndex);
-
+      this.activateContent(this.activeContentStartIndex, 'right');
     }
 
   }
@@ -159,5 +176,6 @@ interface IContent {
   icon2: string;
   date: string;
   location: string;
-  selected: string;
+  movement: string;
+  opacity: string;
 }
