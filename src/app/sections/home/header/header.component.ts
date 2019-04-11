@@ -1,42 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations: [
-    trigger('selected', [
-      state('selected',
-        style({
-        })
-      ),
-      transition('selected <=> *', [
-        style({ transform: 'translateY(20px)', opacity: 0 }),
-        animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
-      ])
-    ]),
-    trigger('fadeIn', [
-      state('fadeIn', style({
-        opacity: 1
-      })),
-      transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0 }), animate('600ms ease-in')]),
-    ]),
-    trigger('slideInLeft', [
-      state('selected', style({ transform: 'translateX(0)' })),
-      transition('void => selected', [
-        style({ transform: 'translateX(20px)', opacity: 0 }),
-        animate('600ms ease-in')
-      ]),
-    ]),
-    trigger('slideInUp', [
-      transition(':enter', [
-        style({ transform: 'translateY(20px)', opacity: 0 }),
-        animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
-      ]),
-    ])
-  ]
+  animations: LandingAnimations.animations
 })
 
 export class HeaderComponent implements OnInit {
@@ -92,7 +62,7 @@ export class HeaderComponent implements OnInit {
       this.activeContent.push(this.content[this.activeContentIndex]);
 
 
-      this.activeContent[0].selected = 'selected';
+      this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
 
       console.log(this.activeContent);
@@ -108,7 +78,7 @@ export class HeaderComponent implements OnInit {
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
  
-      this.activeContent[0].selected = 'selected';
+      this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
 
       console.log(this.activeContent);

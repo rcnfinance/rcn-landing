@@ -1,36 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, OnInit, ViewChild, HostListener, ElementRef } from '@angular/core';
+import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-news',
   templateUrl: './news.component.html',
   styleUrls: ['./news.component.scss'],
-  animations: [
-    trigger('slideInLeft', [
-      state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
-      transition('void => enterLeft', [
-        style({ transform: 'translateX(20px)', opacity: 0.2 }),
-        animate('600ms ease-in')
-      ]),
-    ]),
-    trigger('slideInRight', [
-      state('enterRight', style({ transform: 'translateX(0)' })),
-      transition('void => enterRight', [
-        style({ transform: 'translateX(-20px)', opacity: 0 }),
-        animate('600ms ease-in')
-      ])
-    ]),
-    trigger('opacity', [
-      state('opacity',
-        style({
-          opacity: 0.2,
-        })
-      ),
-      transition('* => opacity', [
-        animate('0ms ease-in')
-      ])
-    ])
-  ]
+  animations: LandingAnimations.animations
 })
 export class NewsComponent implements OnInit {
 
@@ -45,7 +20,22 @@ export class NewsComponent implements OnInit {
   activeContentStartIndex: number;
   maxActiveContent = 5;
 
-  constructor() { }
+  state = 'hide';
+
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition + 700 >= componentPosition) {
+      this.state = 'show';
+    } else {
+      this.state = 'hide';
+    }
+
+  }
 
   ngOnInit() {
     this.content = [

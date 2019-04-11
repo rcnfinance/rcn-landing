@@ -5,9 +5,11 @@
 	position: relative;
 	.col-right {
 		@include three-quarters;
+		
 		width: 67%;
 		margin-right: 0;
 		img {
+			min-height: 725px;
 				width: 100%;
 		}
 	}
@@ -24,11 +26,11 @@
     left: 0;
     top: 5%;
 	height: auto;
-	opacity: 0.8;
+	opacity: 0.9;
     z-index: 999;
     width: 50%;
     border-right: solid white 10px;
-    background-color: $rcn-blue;
+	background-color: $rcn-blue;
     .content {
         margin: 4% 2% 4% 20%;
     }
