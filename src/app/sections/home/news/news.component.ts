@@ -39,9 +39,9 @@ export class NewsComponent implements OnInit {
   xDisabled;
   yDisabled;
 
-  content: IContent[];
+  content: IContent[] = [];
 
-  activeContent: IContent[];
+  activeContent: IContent[] = [];
   activeContentStartIndex: number;
   maxActiveContent = 5;
 
@@ -129,13 +129,10 @@ export class NewsComponent implements OnInit {
   activateContent(startIndex: number, movement: string) {
     let activeContent: IContent[] = [];
 
-    console.log(this.content);
+    activeContent = JSON.parse(JSON.stringify(this.content));
 
-    activeContent = activeContent.concat(this.content.slice(startIndex, startIndex + this.maxActiveContent));
 
-    console.log(activeContent);
-
-    this.activeContent = activeContent;
+    this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
 
     if (movement === 'right') {
       this.activeContent[this.activeContent.length - 1].movement = 'enterLeft';
@@ -146,8 +143,6 @@ export class NewsComponent implements OnInit {
     }
 
     this.activeContent[this.activeContent.length - 1].opacity = 'opacity';
-
-   
   }
 
 
