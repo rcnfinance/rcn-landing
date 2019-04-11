@@ -7,9 +7,9 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   styleUrls: ['./news.component.scss'],
   animations: [
     trigger('slideInLeft', [
-      state('enterLeft', style({ transform: 'translateX(0)' })),
+      state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
       transition('void => enterLeft', [
-        style({ transform: 'translateX(20px)', opacity: 0 }),
+        style({ transform: 'translateX(20px)', opacity: 0.2 }),
         animate('600ms ease-in')
       ]),
     ]),
@@ -27,7 +27,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         })
       ),
       transition('* => opacity', [
-        animate('300ms ease-in')
+        animate('0ms ease-in')
       ])
     ])
   ]
@@ -134,6 +134,8 @@ export class NewsComponent implements OnInit {
 
     this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
 
+    this.activeContent[this.activeContent.length - 1].opacity = 'opacity';
+
     if (movement === 'right') {
       this.activeContent[this.activeContent.length - 1].movement = 'enterLeft';
     }
@@ -142,7 +144,7 @@ export class NewsComponent implements OnInit {
       this.activeContent[0].movement = 'enterRight';
     }
 
-    this.activeContent[this.activeContent.length - 1].opacity = 'opacity';
+
   }
 
 
