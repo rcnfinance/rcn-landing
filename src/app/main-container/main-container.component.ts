@@ -12,6 +12,12 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         opacity: 0
       })),
       transition('void <=> *', animate(800)),
+    ]),
+    trigger('slideInUp', [
+      transition(':enter', [
+        style({ transform: 'translateY(0)', opacity: 0 }),
+        animate('800ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
+      ]),
     ])
   ]
 })

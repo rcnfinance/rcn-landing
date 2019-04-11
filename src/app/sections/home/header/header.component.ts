@@ -24,7 +24,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0 }), animate('600ms ease-in')]),
     ]),
     trigger('slideInLeft', [
-      state('selected', style({ transform: 'translateX(0)' })),
+      state('selected', style({ transform: 'translateX(0)', opacity: 1  })),
       transition('void => selected', [
         style({ transform: 'translateX(20px)', opacity: 0 }),
         animate('600ms ease-in')
@@ -33,7 +33,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     trigger('slideInUp', [
       transition(':enter', [
         style({ transform: 'translateY(20px)', opacity: 0 }),
-        animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
+        animate('800ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
       ]),
     ])
   ]
