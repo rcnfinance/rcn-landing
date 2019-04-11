@@ -12,6 +12,7 @@ import { LandingAnimations } from 'src/app/animations/animations';
 export class TheNetworkComponent implements OnInit {
 
   state = 'hide';
+  lineState = 'hide';
 
   constructor(public el: ElementRef,  private router: Router) { }
 
@@ -24,8 +25,10 @@ export class TheNetworkComponent implements OnInit {
       console.info('scrollPosition', scrollPosition);
 
       if (scrollPosition + 700 >= componentPosition) {
+        this.lineState = 'show';
         this.state = 'show';
       } else {
+        this.lineState = 'hide';
         this.state = 'hide';
       }
 

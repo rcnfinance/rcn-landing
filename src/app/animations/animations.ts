@@ -22,6 +22,18 @@ export class LandingAnimations {
                   animate('300ms ease-in')
                 ])
               ]),
+              trigger('lineAnimation', [
+                state('show', style({
+                  width: '220px',
+                  transform: 'translateX(0)'
+                })),
+                state('hide',   style({
+                  width: '55px',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('400ms 0.4s ease-out')),
+                transition('hide => show', animate('400ms 0.4s ease-in'))
+              ]),
               trigger('scrollAnimation', [
                 state('show', style({
                   opacity: 1,
