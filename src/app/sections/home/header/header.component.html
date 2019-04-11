@@ -1,19 +1,19 @@
 
-<div class="row"  >
+<div class="row"  [@slideInUp] >
   <div class="content-back" > 
-    <div class="content" >
+    <div class="content">
       <h2 class="main-subtitle">WELCOME TO...</h2>
-        <h1 class="main-title"  >{{activeContent.title}}</h1>
+        <h1 class="main-title" >{{activeContent.title}}</h1>
         <p class="main-text">RCN is an open global credit network that connects borrowers, creditors, 
           and financial institucions on the blockchain to create efficient, acalable, and borderless debt market</p>
         <button class="button" href="#howItWorks" (click)="navigate()">SEE HOW IT WORKS</button>
     </div>
   </div>
   <div class="col-right" >
-    <div class="img-box" >
+    <div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected" >
       <img src="{{activeContent.img}}" alt=""  >
     </div>
-    <div class="second-container" [@selected]="activeContent.selected">
+    <div class="second-container" >
       <div class="buttons-box">
         <button (click)="left()"><i class="fas fa-arrow-left"></i></button>
         <button (click)="right()"><i class="fas fa-arrow-right"></i></button>
