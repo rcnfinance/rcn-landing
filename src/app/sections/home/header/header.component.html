@@ -1,18 +1,19 @@
-<div [ngClass]="hide ? 'row' : 'hide'">
-  <div class="content-back">
-    <div class="content">
+
+<div class="row"  >
+  <div class="content-back" > 
+    <div class="content" >
       <h2 class="main-subtitle">WELCOME TO...</h2>
-        <h1 class="main-title">{{content.title}}</h1>
+        <h1 class="main-title"  >{{activeContent.title}}</h1>
         <p class="main-text">RCN is an open global credit network that connects borrowers, creditors, 
           and financial institucions on the blockchain to create efficient, acalable, and borderless debt market</p>
         <button class="button" href="#howItWorks" (click)="navigate()">SEE HOW IT WORKS</button>
     </div>
   </div>
-  <div class="col-right">
-    <div class="img-box">
-      <img src="{{content.img}}" alt="">
+  <div class="col-right" >
+    <div class="img-box" >
+      <img src="{{activeContent.img}}" alt=""  >
     </div>
-    <div class="second-container">
+    <div class="second-container" [@selected]="activeContent.selected">
       <div class="buttons-box">
         <button (click)="left()"><i class="fas fa-arrow-left"></i></button>
         <button (click)="right()"><i class="fas fa-arrow-right"></i></button>
@@ -21,7 +22,7 @@
   </div>
   <div class="col-right-mobile">
     <div class="img-box">
-      <img src="{{content.imgMobile}}" alt="">
+      <img src="{{activeContent.imgMobile}}" alt="">
     </div>
     <div class="second-container">
         <div class="buttons-box">

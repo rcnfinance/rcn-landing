@@ -18,34 +18,37 @@
 }
 
 .content-back {
-	@include row-center;
-	position: absolute;
-	left: 0;
-	top: 5%;
-	height: auto;
-	width: 50%;
-	border-right: solid white 10px;
-	background-color: $rcn-blue;
-	.content {
-		margin: 4% 2% 4% 20%;
-	}
-	.white-line {
-		height: 100%;
-		width: 10px;
-		background-color: white;
-	}
-	.main-title {
-		@include main-title;
-	}
-	.main-subtitle {
-		@include main-subtitle;
-		margin-bottom: 2%;
-	}
-	.main-text {
-		@include main-text;
-		line-height: 1.6;
-		margin-bottom: 2%;
-	}
+
+    @include row-center;
+    position: absolute;
+    left: 0;
+    top: 5%;
+    height: auto;
+    z-index: 999;
+    width: 50%;
+    border-right: solid white 10px;
+    background-color: $rcn-blue;
+    .content {
+        margin: 4% 2% 4% 20%;
+    }
+    .white-line {
+        height: 100%;
+        width: 10px;
+        background-color: white;
+    }
+    .main-title {
+        @include main-title;
+    }
+    .main-subtitle {
+        @include main-subtitle;
+        margin-bottom: 2%;
+    }
+    .main-text {
+        @include main-text;
+        line-height: 1.6;
+        margin-bottom: 2%;
+    }
+
 }
 
 .button {
