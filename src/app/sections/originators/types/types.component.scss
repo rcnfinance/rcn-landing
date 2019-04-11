@@ -5,7 +5,7 @@
 
     .container {
         @include row-both;
-        margin: 3% 0;
+        margin: 0 0 3% 0;
         .col-1 {
             @include half;
             margin-left: 10%;

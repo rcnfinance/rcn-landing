@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-the-network',
   templateUrl: './the-network.component.html',
-  styleUrls: ['./the-network.component.scss']
+  styleUrls: ['./the-network.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class TheNetworkComponent implements OnInit {
 
