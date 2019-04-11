@@ -36,28 +36,36 @@ export class CharacteristicsComponent implements OnInit {
 
   constructor() { }
 
+  expandedStyle = false
 
   ngOnInit() {
     this.characteristics = [
       {
         img: '../../../../assets/icons/icon-frictionless.png',
-        title: 'Frictionless', selected: 'notSelected', opacity: 'notOpacity'
+        text:'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+        title: 'Frictionless', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {
         img: '../../../../assets/icons/icon-transparent.png',
-        title: 'Transparent', selected: 'notSelected', opacity: 'notOpacity'
+        text:'RCN smart-contracts ensure non-custodial storage of all funds and full auditability of every transaction.',
+        title: 'Transparent', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {
         img: '../../../../assets/icons/icon-borderless.png',
-        title: 'Borderless', selected: 'notSelected', opacity: 'notopacity'
+        text:'The network seamlessly connects borrowers and creditors from all around the world.',
+        title: 'Borderless', selected: 'notSelected', opacity: 'notopacity', expanded : false
       }
     ];
   }
+
+
 
   updateNoSelections() {
     for (const characteristic of this.characteristics) {
         characteristic.selected = 'notSelected';
         characteristic.opacity = 'notOpacity';
+        characteristic.expanded = false;
+        this.expandedStyle = false
     }
   }
 
@@ -67,9 +75,13 @@ export class CharacteristicsComponent implements OnInit {
           if (characteristic.title !== title) {
             characteristic.selected = 'notSelected';
             characteristic.opacity = 'opacity';
+            characteristic.expanded = false;
+            this.expandedStyle = false
           } else {
             characteristic.selected = 'selected';
             characteristic.opacity = 'notOpacity';
+            characteristic.expanded = true;
+            this.expandedStyle = true
           }
         }
   }
@@ -79,6 +91,8 @@ export class CharacteristicsComponent implements OnInit {
 interface ICharacteristic {
   img: string;
   title: string;
+  text: string;
   selected: string;
   opacity: string;
+  expanded: boolean;
 }
