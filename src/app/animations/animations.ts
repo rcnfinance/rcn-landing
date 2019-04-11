@@ -9,7 +9,7 @@ export class LandingAnimations {
             trigger('FadeIn', [
                 transition(':enter', [
                   style({ transform: 'translateY(0)', opacity: 0 }),
-                  animate('600ms 0.3s ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
+                  animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
                 ]),
               ]),
               trigger('selected', [
@@ -31,11 +31,18 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('600ms ease-out')),
-                transition('hide => show', animate('600ms ease-in'))
+                transition('show => hide', animate('400ms ease-out')),
+                transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
+                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+                transition('void => enterLeft', [
+                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
+                  animate('600ms ease-in')
+                ]),
+              ]),
+              trigger('slideInLeftWithOpacity', [
+                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
                 transition('void => enterLeft', [
                   style({ transform: 'translateX(20px)', opacity: 0.2 }),
                   animate('600ms ease-in')
@@ -57,7 +64,19 @@ export class LandingAnimations {
                 transition('* => opacity', [
                   animate('0ms ease-in')
                 ])
-              ])
+              ]),
+              trigger('slideInUp', [
+                transition(':enter', [
+                  style({ transform: 'translateY(20px)', opacity: 0 }),
+                  animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
+                ]),
+              ]),
+              trigger('fadeInImage', [
+                state('fadeIn', style({
+                  opacity: 1
+                })),
+                transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0 }), animate('600ms ease-in')]),
+              ]),
         ];
     }
 
