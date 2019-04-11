@@ -22,7 +22,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
           opacity: 0.2,
         })
       ),
-      transition('opacity <=> *', [
+      transition('* => opacity', [
         animate('300ms ease-in')
       ])
     ]),
