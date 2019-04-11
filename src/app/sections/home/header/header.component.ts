@@ -17,16 +17,17 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
       ])
     ]),
-    trigger('fadeInOut', [
+    trigger('fadeIn', [
       state('fadeIn', style({
-        opacity: 0
+        opacity: 1
       })),
-      transition('void <=> *', animate(3000)),
+      transition('fadeIn => *', animate('600ms ease-in')),
     ]),
     trigger('slideInLeft', [
-      transition(':enter', [
+      state('selected', style({ transform: 'translateX(0)' })),
+      transition('void => selected', [
         style({ transform: 'translateX(20px)', opacity: 0 }),
-        animate('600ms ease-in', style({ transform: 'translateX(0%)', opacity: 1 }))
+        animate('600ms ease-in')
       ]),
     ]),
     trigger('slideInUp', [
@@ -42,7 +43,7 @@ export class HeaderComponent implements OnInit {
 
   content: IContent[];
 
-  activeContent: IContent;
+  activeContent: IContent[] = [];
   activeContentIndex: number;
 
   constructor(private router: Router) { }
@@ -57,42 +58,59 @@ export class HeaderComponent implements OnInit {
         title: 'RCN',
         img: '../../../../assets/img/slider-RCN_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-RCN_mobile.jpg',
-        selected: 'selected'
+        selected: 'notSelected',
+        fadeIn: 'notFadeIn'
       },
       {
         title: 'BLOCKCHAIN GLOBAL LENDING',
         img: '../../../../assets/img/slider-blockchain_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-blockchain_mobile.jpg',
-        selected: 'notSelected'
+        selected: 'notSelected',
+        fadeIn: 'notFadeIn'
       },
       {
         title: 'FRICTIONLESS DEBT MARKETS',
         img: '../../../../assets/img/slider-frictionless_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-frictionless_mobile.jpg',
-        selected: 'notSelected'
+        selected: 'notSelected',
+        fadeIn: 'notFadeIn'
       }
     ];
 
-    this.activeContent = this.content[0];
+    this.activeContent.push(this.content[0]);
     this.activeContentIndex = 0;
-
   }
 
 
   left() {
-      if (this.activeContentIndex > 0) {
+    if (this.activeContentIndex > 0) {
+      this.activeContent[0].selected = 'notSelected';
+      this.activeContent[0].fadeIn = 'notFadeIn';
       --this.activeContentIndex;
-      this.activeContent = this.content[this.activeContentIndex];
-      this.activeContent.selected = 'selected';
+      this.activeContent.shift();
+      this.activeContent.push(this.content[this.activeContentIndex]);
+
+
+      this.activeContent[0].selected = 'selected';
+      this.activeContent[0].fadeIn = 'fadeIn';
+
+      console.log(this.activeContent);
     }
   }
 
   right() {
 
     if (this.activeContentIndex < this.content.length - 1) {
+      this.activeContent[0].selected = 'notSelected';
+      this.activeContent[0].fadeIn = 'notFadeIn';
       ++this.activeContentIndex;
-      this.activeContent = this.content[this.activeContentIndex];
-      this.content[this.activeContentIndex].selected = 'selected';
+      this.activeContent.shift();
+      this.activeContent.push(this.content[this.activeContentIndex]);
+ 
+      this.activeContent[0].selected = 'selected';
+      this.activeContent[0].fadeIn = 'fadeIn';
+
+      console.log(this.activeContent);
     }
 
   }
@@ -105,4 +123,5 @@ interface IContent {
   img: string;
   imgMobile: string;
   selected: string;
+  fadeIn: string;
 }
