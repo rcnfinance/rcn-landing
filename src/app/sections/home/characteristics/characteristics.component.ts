@@ -36,8 +36,6 @@ export class CharacteristicsComponent implements OnInit {
 
   constructor() { }
 
-  expandedStyle = false
-
   ngOnInit() {
     this.characteristics = [
       {
@@ -65,7 +63,6 @@ export class CharacteristicsComponent implements OnInit {
         characteristic.selected = 'notSelected';
         characteristic.opacity = 'notOpacity';
         characteristic.expanded = false;
-        this.expandedStyle = false
     }
   }
 
@@ -76,12 +73,10 @@ export class CharacteristicsComponent implements OnInit {
             characteristic.selected = 'notSelected';
             characteristic.opacity = 'opacity';
             characteristic.expanded = false;
-            this.expandedStyle = false
           } else {
             characteristic.selected = 'selected';
             characteristic.opacity = 'notOpacity';
             characteristic.expanded = true;
-            this.expandedStyle = true
           }
         }
   }
