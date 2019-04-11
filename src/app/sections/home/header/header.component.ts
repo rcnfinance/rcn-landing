@@ -21,7 +21,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       state('fadeIn', style({
         opacity: 1
       })),
-      transition('fadeIn => *', animate('600ms ease-in')),
+      transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0 }), animate('600ms ease-in')]),
     ]),
     trigger('slideInLeft', [
       state('selected', style({ transform: 'translateX(0)' })),
@@ -79,6 +79,7 @@ export class HeaderComponent implements OnInit {
 
     this.activeContent.push(this.content[0]);
     this.activeContentIndex = 0;
+    this.activeContent[0].fadeIn = 'fadeIn';
   }
 
 
