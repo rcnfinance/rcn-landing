@@ -1,9 +1,9 @@
 
 <div class="row"  [@slideInUp] >
   <div class="content-back" > 
-    <div class="content">
+    <div class="content" *ngFor="let activeContent of activeContent" [@fadeInImage]="activeContent.fadeIn" >
       <h2 class="main-subtitle">WELCOME TO...</h2>
-        <h1 class="main-title" *ngFor="let activeContent of activeContent" [@fadeInImage]="activeContent.fadeIn">{{activeContent.title}}</h1>
+        <h1 class="main-title" >{{activeContent.title}}</h1>
         <p class="main-text">RCN is an open global credit network that connects borrowers, creditors, 
           and financial institucions on the blockchain to create efficient, acalable, and borderless debt market</p>
         <button class="button" href="#howItWorks" (click)="navigate()">SEE HOW IT WORKS</button>

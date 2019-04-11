@@ -42,7 +42,7 @@ export class LandingAnimations {
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+                state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
                 transition('void => enterLeft', [
                   style({ transform: 'translateX(20px)', opacity: 0.2 }),
                   animate('600ms ease-in')
