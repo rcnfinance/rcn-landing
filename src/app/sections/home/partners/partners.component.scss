@@ -7,11 +7,11 @@
 	display:flex;
 	flex-wrap: wrap;
 	padding-top: 2%;
-  .col-1 {
-    @include half;
-	margin-left: 10%;
-	margin-right: 40%;
-  }
+	.col-1 {
+		@include half;
+		margin-left: 10%;
+		margin-right: 40%;
+	  }
   .row {
 		display: flex;
 		justify-content: center;
@@ -31,6 +31,8 @@
 		}
   }
 }
+
+
 
 .row-show {
 	display: flex;
@@ -259,16 +261,20 @@ td:first-child, th:first-child {
 	display: none;
 }
 
+
+
 	.main-container{
 		overflow-x: hidden;
 		position: relative;
 		width: 100%;
 		display:flex;
 		flex-wrap: wrap;
-		padding: 0;
+		padding: 5% 0;
+		margin-right: 0%;
 		.col-1 {
 			width: 80%;
 			margin-left: 10%;
+			margin-right: 0;
 		}
 		.row {
 			display: flex;
