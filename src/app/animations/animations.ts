@@ -22,9 +22,21 @@ export class LandingAnimations {
                   animate('300ms ease-in')
                 ])
               ]),
-              trigger('lineAnimation', [
+              trigger('lineAnimationThin', [
                 state('show', style({
                   width: '30%',
+                  transform: 'translateX(0)'
+                })),
+                state('hide',   style({
+                  width: '0%',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('400ms ease-out')),
+                transition('hide => show', animate('400ms 0.1s ease-in'))
+              ]),
+              trigger('lineAnimationThick', [
+                state('show', style({
+                  width: '10%',
                   transform: 'translateX(0)'
                 })),
                 state('hide',   style({
@@ -43,10 +55,6 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', [ animate('400ms ease-out'),  query('@*', [
-                  animateChild(),
-                ])
-              ]),
                 transition('hide => show', [ animate('400ms ease-in'),  query('@*', [
                   animateChild(),
                 ])
@@ -61,7 +69,6 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('400ms ease-out')),
                 transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
