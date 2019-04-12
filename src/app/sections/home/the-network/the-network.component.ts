@@ -21,6 +21,8 @@ export class TheNetworkComponent implements OnInit {
       const componentPosition = this.el.nativeElement.offsetTop;
       const scrollPosition = window.pageYOffset;
 
+      console.info('componentPosition', componentPosition);
+      console.info('scrollPosition', scrollPosition);
 
       if (scrollPosition + 700 >= componentPosition) {
         this.lineState = 'show';
