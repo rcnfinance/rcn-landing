@@ -86,36 +86,36 @@ th {
 }
 
 .th-back-up-left {
-	background-color: #f8f8f8;
+	background-color: $gray;
 	border-top: none;
 	border-top-left-radius: 35px;
 }
 
 .th-back-up-right {
-	background-color: #f8f8f8;
+	background-color: $gray;
 	border-top: none;
 	border-top-right-radius: 35px;
 }
 
 .th-back-up {
-	background-color: #f8f8f8;
+	background-color: $gray;
 	border-top: none;
 }
 
 .th-back {
-	background-color: #f8f8f8;
+	background-color: $gray;
 	border-top-right-radius: 0;
 }
 
 .th-back-down-left {
-	background-color: #f8f8f8;
+	background-color: $gray;
 	border-top: none;
 	border-bottom-left-radius: 35px;
 	border-top: solid $rcn-blue 1px;
 }
 
 .th-back-down-right {
-	background-color: #f8f8f8;
+	background-color: $gray;
 	border-top: none;
 	border-bottom-right-radius: 35px;
 	border-top: solid $rcn-blue 1px;
@@ -179,27 +179,28 @@ td:first-child, th:first-child {
 }
 
 .row2 {
-	height: 100%;
-	width: 25%;
-	height: 100%;
-  position: absolute;
-  right: -25%;
-  top: 0;
-	background-color: $rcn-blue;
-	border-top-left-radius: 30px;
-	overflow-x: hidden;
+height: 100%;
+width: 25%;
+height: 100%;
+position: absolute;
+right: -25%;
+top: 0;
+background-color: $rcn-blue;
+border-top-left-radius: 30px;
+overflow-x: hidden;
 }
 
 
 
 .showCard {
-	right: 0;
-	-webkit-transition:right 0.5s;
-	height: 100%;
-	width: 25%;
-	height: 100%;
-  position: absolute;
-  top: 0;
+right: 0;
+-webkit-transition:right 0.5s;
+height: 100%;
+width: 25%;
+height: 100%;
+position: absolute;
+top: 0;
+
 	background-color: $rcn-blue;
 	border-top-left-radius: 150px;
 	@include shadow;
@@ -266,35 +267,41 @@ td:first-child, th:first-child {
 	display: none;
 }
 
-
-
-	.main-container{
-		overflow-x: hidden;
-		position: relative;
-		width: 100%;
-		display:flex;
-		flex-wrap: wrap;
-		padding: 5% 0;
-		margin-right: 0%;
-		.col-1 {
-			width: 80%;
-			margin-left: 10%;
-			margin-right: 0;
-		}
-		.row {
-			display: flex;
-			justify-content: center;
-			width: 100%;
-			.table-mobile {
-				display: block;
-				width: auto;
-				border-collapse:separate;
-				border:solid $rcn-blue 1.2px;
-				border-radius:35px;
-				-moz-border-radius:6px;
-			}
-		}
+.main-container{
+	overflow-x: hidden;
+	position: relative;
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+	padding-top: 5%;
+	padding-bottom: 5;
+	margin-right: 0%;
+	.col-1 {
+		width: 80%;
+		margin-left: 10%;
+		margin-right: 0;
 	}
+}
+
+.padding-mobile {
+	padding-bottom: 160%;
+}
+
+
+.row {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	.table-mobile {
+		display: block;
+		width: auto;
+		border-collapse:separate;
+		border:solid $rcn-blue 1.2px;
+		border-radius:35px;
+		-moz-border-radius:6px;
+	}
+}
+
 
 	p {
 		font-size: 18px;
