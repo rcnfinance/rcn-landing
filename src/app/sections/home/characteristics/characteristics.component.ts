@@ -11,6 +11,7 @@ export class CharacteristicsComponent implements OnInit {
 
   characteristics: ICharacteristic[];
   state = 'hide';
+  lineState = 'hide';
 
   constructor(public el: ElementRef) { }
 
@@ -19,10 +20,10 @@ export class CharacteristicsComponent implements OnInit {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
 
-    if (scrollPosition + 700 >= componentPosition) {
+    if (scrollPosition + 750 >= componentPosition) {
       this.state = 'show';
+      this.lineState = 'show';
     } else {
-      this.state = 'hide';
     }
 
   }

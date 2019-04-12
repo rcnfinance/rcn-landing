@@ -22,6 +22,16 @@ export class LandingAnimations {
                   animate('300ms ease-in')
                 ])
               ]),
+              trigger('scrollAndShrink', [
+                state('scrollAndShrink',
+                  style({
+                    transform: 'scaleY(0.9)',
+                  })
+                ),
+                transition('default <=> scrollAndShrink', [
+                  animate('300ms ease')
+                ])
+              ]),
               trigger('lineAnimationThin', [
                 state('show', style({
                   width: '30%',
@@ -31,8 +41,8 @@ export class LandingAnimations {
                   width: '0%',
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('400ms ease-out')),
-                transition('hide => show', animate('400ms 0.1s ease-in'))
+                transition('show => hide', animate('300ms ease-out')),
+                transition('hide => show', animate('300ms 0.1s ease-in'))
               ]),
               trigger('lineAnimationThick', [
                 state('show', style({
@@ -43,8 +53,8 @@ export class LandingAnimations {
                   width: '0%',
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('400ms ease-out')),
-                transition('hide => show', animate('400ms ease-in'))
+                transition('show => hide', animate('300ms ease-out')),
+                transition('hide => show', animate('300ms ease-in'))
               ]),
               trigger('scrollGroupAnimation', [
                 state('show', style({
@@ -55,7 +65,7 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('hide => show', [ animate('400ms ease-in'),  query('@*', [
+                transition('hide => show', [ animate('300ms ease-in'),  query('@*', [
                   animateChild(),
                 ])
               ])
