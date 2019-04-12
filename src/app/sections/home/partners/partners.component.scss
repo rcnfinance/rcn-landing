@@ -171,6 +171,11 @@ td:first-child, th:first-child {
 		margin: 0;
 		@include part-card-text;
 	}
+	.h6-bold {
+		margin: 0;
+		@include part-card-text;
+		font-weight: 700;
+	}
 }
 
 .row2 {
