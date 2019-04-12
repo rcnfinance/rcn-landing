@@ -1,5 +1,11 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin: 0; 
+	border-bottom: 2px solid blue; 
+}
 
 .main-container {
 	display: flex;
