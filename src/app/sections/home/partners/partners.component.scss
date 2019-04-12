@@ -6,17 +6,23 @@
 	width: 100%;
 	display:flex;
 	flex-wrap: wrap;
+	padding-top: 2%;
   .col-1 {
     @include half;
-    margin-left: 10%;
+	margin-left: 10%;
+	margin-right: 40%;
   }
   .row {
 		display: flex;
 		justify-content: center;
 		width: 100%;
+		position: relative;
+		z-index: 2;
 		table {
 			width: auto;
 			height: auto;
+			-webkit-transition: width 0.5s; /* Safari */
+			transition: width 0.5s;
 			border-collapse:separate;
 			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
@@ -24,6 +30,27 @@
 			margin: 3%;
 		}
   }
+}
+
+.row-show {
+	display: flex;
+	justify-content: flex-start;
+	align-content: flex-end;
+	margin-left: 10%;
+	margin-top: 4%;
+	-webkit-transition: display 0.5s; /* Safari */
+	transition: display 0.5s;
+	table {
+		width: auto;
+		height: auto;
+		-webkit-transition: width 0.5s; /* Safari */
+		transition: width 0.5s;
+		border-collapse:separate;
+		border:solid $rcn-blue 1.2px;
+		border-radius:35px;
+		-moz-border-radius:6px;
+		margin: 3%;
+	}
 }
 
 .firstBox {
@@ -46,6 +73,7 @@ th {
 	width: 15%;
 }
 
+
 .selected {
 	background-color: $rcn-blue;
 	border-top-left-radius: 35px;
@@ -53,6 +81,42 @@ th {
 	.text-box {
 		color: white;
 	}
+}
+
+.th-back-up-left {
+	background-color: #f8f8f8;
+	border-top: none;
+	border-top-left-radius: 35px;
+}
+
+.th-back-up-right {
+	background-color: #f8f8f8;
+	border-top: none;
+	border-top-right-radius: 35px;
+}
+
+.th-back-up {
+	background-color: #f8f8f8;
+	border-top: none;
+}
+
+.th-back {
+	background-color: #f8f8f8;
+	border-top-right-radius: 0;
+}
+
+.th-back-down-left {
+	background-color: #f8f8f8;
+	border-top: none;
+	border-bottom-left-radius: 35px;
+	border-top: solid $rcn-blue 1px;
+}
+
+.th-back-down-right {
+	background-color: #f8f8f8;
+	border-top: none;
+	border-bottom-right-radius: 35px;
+	border-top: solid $rcn-blue 1px;
 }
 
 .first {
@@ -73,6 +137,26 @@ td:first-child, th:first-child {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 50%;
+		-webkit-transition: width 0.5s; /* Safari */
+		transition: width 0.5s;
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.img-outer-show {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 160px;
+	height: 160px;
+	.img-box {
+		margin: 10%;
+		margin-bottom: 0;
+		width: 40%;
+		-webkit-transition: width 0.5s; /* Safari */
+		transition: width 0.5s;
 		img {
 			width: 100%;
 		}
@@ -103,7 +187,7 @@ td:first-child, th:first-child {
 
 .showCard {
 	right: 0;
-	-webkit-transition:right 1s;
+	-webkit-transition:right 0.5s;
 	height: 100%;
 	width: 25%;
 	height: 100%;
@@ -139,7 +223,7 @@ td:first-child, th:first-child {
 	justify-content: flex-end;
 	margin: 6% 6%;
 	.fas {
-		font-size: 40px;
+		font-size: 30px;
 		color: white;
 		margin-right: 4%;
 	}
@@ -152,10 +236,17 @@ td:first-child, th:first-child {
 	// margin-bottom: 70%;
 }
 
+.line {
+	width: 5%;
+	margin-top: 2%;
+	border-bottom: solid white 3px;
+}
+
 .p {
 	@include char-card-text;
 	font-size: 14px;
 	width: 80%;
+	line-height: 1.6;
 }
 
 .table-mobile {
@@ -174,6 +265,7 @@ td:first-child, th:first-child {
 		width: 100%;
 		display:flex;
 		flex-wrap: wrap;
+		padding: 0;
 		.col-1 {
 			width: 80%;
 			margin-left: 10%;
@@ -198,10 +290,6 @@ td:first-child, th:first-child {
 		line-height: 1.6;
 	}
 
-	// h6 {
-	// 	font-size: 12px;
-	// }
-
 	.img-box {
 		width: 100%;
 		img {
@@ -214,6 +302,7 @@ td:first-child, th:first-child {
 		justify-content: center;
 		table {
 			width: 45%;
+
 			border-collapse:separate;
 			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
@@ -222,22 +311,39 @@ td:first-child, th:first-child {
 		}
 	}
 
+
 	th {
 		width: auto;
 	}
 	.showCard {
 		right: 0;
-		-webkit-transition:right 1s;
+		-webkit-transition:right 0.5s;
 		height: 100%;
 		width: 100%;
 		height: 100%;
 		position: absolute;
 		top: 0;
-		z-index: 1;
+		z-index: 2;
 		background-color: $rcn-blue;
-		border-top-left-radius: 30px;
+		border-top-left-radius: 0;
 		@include shadow;
 		overflow-x: hidden;
+		.content {
+			width: 90%;
+			margin: 15%;
+			.title {
+				width: 100%;
+			}
+			.p {
+				font-size: 10px;
+			}
+			.img-box {
+				width: 40%;
+				img {
+					width: 100%;
+				}
+			}
+		}
 	}
 
 	.firstBox {
