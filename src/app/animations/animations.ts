@@ -22,6 +22,16 @@ export class LandingAnimations {
                   animate('300ms ease-in')
                 ])
               ]),
+              trigger('scrollAndShrink', [
+                state('scrollAndShrink',
+                  style({
+                    transform: 'scaleY(0.9)',
+                  })
+                ),
+                transition('default <=> scrollAndShrink', [
+                  animate('300ms ease')
+                ])
+              ]),
               trigger('lineAnimationThin', [
                 state('show', style({
                   width: '30%',

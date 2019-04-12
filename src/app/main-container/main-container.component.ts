@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
 import { LandingAnimations } from '../animations/animations';
 
@@ -10,12 +10,31 @@ import { LandingAnimations } from '../animations/animations';
 })
 export class MainContainerComponent implements OnInit {
 
-  constructor(
-    private router: Router
-  ) { }
-
+  state = 'default';
+  lineState = 'hide';
   mobile = false;
   menu = false;
+
+  constructor(public el: ElementRef,  private router: Router) { }
+
+  @HostListener('window:scroll', ['$event'])
+    checkScroll() {
+      const componentPosition = this.el.nativeElement.offsetTop;
+      const scrollPosition = window.pageYOffset;
+
+      console.info('componentPosition', componentPosition);
+      console.info('scrollPosition', scrollPosition);
+
+      if (scrollPosition > componentPosition) {
+        this.lineState = 'show';
+        this.state = 'scrollAndShrink';
+      } else {
+        this.lineState = 'hide';
+        this.state = 'default';
+      }
+
+    }
+ 
 
   mobileMenu() {
     this.mobile = !this.mobile;
