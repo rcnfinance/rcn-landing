@@ -26,17 +26,17 @@ export class NewsComponent implements OnInit {
   constructor(public el: ElementRef) { }
 
   @HostListener('window:scroll', ['$event'])
-    checkScroll() {
-      const componentPosition = this.el.nativeElement.offsetTop;
-      const scrollPosition = window.pageYOffset;
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
 
-      if (scrollPosition + 750 >= componentPosition) {
-        this.lineState = 'show';
-        this.state = 'show';
-      } else {
-      }
-
+    if (scrollPosition + 750 >= componentPosition) {
+      this.lineState = 'show';
+      this.state = 'show';
+    } else {
     }
+
+  }
 
   ngOnInit() {
     this.content = [
