@@ -46,6 +46,7 @@ th {
 	width: 15%;
 }
 
+
 .selected {
 	background-color: $rcn-blue;
 	border-top-left-radius: 35px;
@@ -53,6 +54,42 @@ th {
 	.text-box {
 		color: white;
 	}
+}
+
+.th-back-up-left {
+	background-color: rgb(206, 206, 206);
+	border-top: none;
+	border-top-left-radius: 35px;
+}
+
+.th-back-up-right {
+	background-color: rgb(206, 206, 206);
+	border-top: none;
+	border-top-right-radius: 35px;
+}
+
+.th-back-up {
+	background-color: rgb(206, 206, 206);
+	border-top: none;
+}
+
+.th-back {
+	background-color: rgb(206, 206, 206);
+	border-top-right-radius: 0;
+}
+
+.th-back-down-left {
+	background-color: rgb(206, 206, 206);
+	border-top: none;
+	border-bottom-left-radius: 35px;
+	border-top: solid $rcn-blue 1px;
+}
+
+.th-back-down-right {
+	background-color: rgb(206, 206, 206);
+	border-top: none;
+	border-bottom-right-radius: 35px;
+	border-top: solid $rcn-blue 1px;
 }
 
 .first {
@@ -242,9 +279,25 @@ td:first-child, th:first-child {
 		top: 0;
 		z-index: 1;
 		background-color: $rcn-blue;
-		border-top-left-radius: 30px;
+		border-top-left-radius: 0;
 		@include shadow;
 		overflow-x: hidden;
+		.content {
+			width: 90%;
+			margin: 15%;
+			.title {
+				width: 100%;
+			}
+			.p {
+				font-size: 10px;
+			}
+			.img-box {
+				width: 40%;
+				img {
+					width: 100%;
+				}
+			}
+		}
 	}
 
 	.firstBox {

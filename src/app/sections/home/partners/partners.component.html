@@ -10,25 +10,25 @@
     <div class="row">
       <table class="table">
         <tr>
-          <th class="first" (click)="ripio()">
+          <th [ngClass]="info.ripioActive && show ? 'th-back-up-left' : 'first'" (click)="ripio()">
             <div class="img-outer">
               <div class="img-box"><img src="../../../../assets/partners/logo-ripio.jpg" alt=""></div>
               <div class="text-box"><h6>Ripio</h6></div>
             </div>
           </th>
-          <th class="first" (click)="bancor()">
+          <th [ngClass]="info.bancorActive && show ? 'th-back-up' : 'first'" (click)="bancor()">
             <div class="img-outer">
               <div class="img-box"><img src="../../../../assets/partners/logo-bancor.jpg" alt=""></div>
               <div class="text-box"><h6>Bancor<br>Network </h6></div>
             </div>
           </th>
-          <th class="first" (click)="kyber()">
+          <th [ngClass]="info.kyberActive && show ? 'th-back-up' : 'first'" (click)="kyber()">
             <div class="img-outer">
               <div class="img-box"><img src="../../../../assets/partners/logo-kyber.jpg" alt=""></div>
               <div class="text-box"><h6>Kyber<br>Network</h6></div>
             </div>
           </th>
-          <th class="first" (click)="zeppelin()">
+          <th [ngClass]="info.zeppelinActive && show ? 'th-back-up-right' : 'first'" (click)="zeppelin()">
             <div class="img-outer">
               <div class="img-box"><img src="../../../../assets/partners/logo-zeppelin.jpg" alt=""></div>
               <div class="text-box"><h6>Zeppelin</h6></div>
@@ -36,25 +36,25 @@
           </th>
         </tr>
         <tr>
-          <th>
+          <th [ngClass]="info.decentralandActive && show ? 'th-back-down-left' : ''">
             <div class="img-outer">
               <div class="img-box" (click)="decentraland()"><img src="../../../../assets/partners/logo-descentraland.jpg" alt=""></div>
               <div class="text-box"><h6>Decentraland</h6></div>
             </div>
           </th>
-          <th>
+          <th [ngClass]="info.metamaskActive && show ? 'th-back' : ''">
             <div class="img-outer">
               <div class="img-box" (click)="metamask()"><img src="../../../../assets/partners/logo-metamask.jpg" alt=""></div>
               <div class="text-box"><h6>Metamask</h6></div>
             </div>
           </th>
-          <th>
+          <th [ngClass]="info.civicActive && show ? 'th-back' : ''">
             <div class="img-outer">
               <div class="img-box" (click)="civic()"><img src="../../../../assets/partners/logo-civic.jpg" alt=""></div>
               <div class="text-box"><h6>Civic</h6></div>
             </div>
           </th>
-          <th>
+          <th [ngClass]="info.ethereumActive && show ? 'th-back-down-right' : ''">
             <div class="img-outer">
               <div class="img-box" (click)="ethereum()"><img src="../../../../assets/partners/logo-eea.jpg" alt=""></div>
               <div class="text-box"><h6>Enterprise Ethereum<br>Alliance</h6></div>
