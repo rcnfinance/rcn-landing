@@ -124,6 +124,7 @@
     </div>
 </div>
   <div [ngClass]="show ? 'showCard' : 'row2'">
+
       <div class="close-icon" (click)="close()">
         <i class="fas fa-times"></i>
       </div>
@@ -134,4 +135,5 @@
       <div class="p"><p>{{info.text}}</p></div>
     </div>
   </div>
+  <div class="padding-mobile" *ngIf="show"></div>
 </div>
