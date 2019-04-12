@@ -14,25 +14,25 @@
           <th [ngClass]="info.ripioActive && show ? 'th-back-up-left' : 'first'" (click)="ripio()">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box"><img src="../../../../assets/partners/logo-ripio.png" alt=""></div>
-              <div class="text-box"><h6>Ripio</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.ripioActive && show ? 'h6-bold' : 'h6'">Ripio</h6></div>
             </div>
           </th>
           <th [ngClass]="info.bancorActive && show ? 'th-back-up' : 'first'" (click)="bancor()">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box"><img src="../../../../assets/partners/logo-bancor.png" alt=""></div>
-              <div class="text-box"><h6>Bancor<br>Network </h6></div>
+              <div class="text-box"><h6 [ngClass]="info.bancorActive && show ? 'h6-bold' : 'h6'">Bancor<br>Network </h6></div>
             </div>
           </th>
           <th [ngClass]="info.kyberActive && show ? 'th-back-up' : 'first'" (click)="kyber()">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box"><img src="../../../../assets/partners/logo-kyber.png" alt=""></div>
-              <div class="text-box"><h6>Kyber<br>Network</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.kyberActive && show ? 'h6-bold' : 'h6'">Kyber<br>Network</h6></div>
             </div>
           </th>
           <th [ngClass]="info.zeppelinActive && show ? 'th-back-up-right' : 'first'" (click)="zeppelin()">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box"><img src="../../../../assets/partners/logo-zeppelin.png" alt=""></div>
-              <div class="text-box"><h6>Zeppelin</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.zeppelinActive && show ? 'h6-bold' : 'h6'">Zeppelin</h6></div>
             </div>
           </th>
         </tr>
@@ -40,25 +40,25 @@
           <th [ngClass]="info.decentralandActive && show ? 'th-back-down-left' : ''">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box" (click)="decentraland()"><img src="../../../../assets/partners/logo-decentraland.png" alt=""></div>
-              <div class="text-box"><h6>Decentraland</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.decentralandActive && show ? 'h6-bold' : 'h6'">Decentraland</h6></div>
             </div>
           </th>
           <th [ngClass]="info.metamaskActive && show ? 'th-back' : ''">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box" (click)="metamask()"><img src="../../../../assets/partners/logo-metamask.png" alt=""></div>
-              <div class="text-box"><h6>Metamask</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.metamaskActive && show ? 'h6-bold' : 'h6'">Metamask</h6></div>
             </div>
           </th>
           <th [ngClass]="info.civicActive && show ? 'th-back' : ''">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box" (click)="civic()"><img src="../../../../assets/partners/logo-civic.png" alt=""></div>
-              <div class="text-box"><h6>Civic</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.civicActive && show ? 'h6-bold' : 'h6'">Civic</h6></div>
             </div>
           </th>
           <th [ngClass]="info.ethereumActive && show ? 'th-back-down-right' : ''">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box" (click)="ethereum()"><img src="../../../../assets/partners/logo-eea.png" alt=""></div>
-              <div class="text-box"><h6>Enterprise Ethereum<br>Alliance</h6></div>
+              <div class="text-box"><h6 [ngClass]="info.ethereumActive && show ? 'h6-bold' : 'h6'">Enterprise Ethereum<br>Alliance</h6></div>
             </div>
           </th>
         </tr>
