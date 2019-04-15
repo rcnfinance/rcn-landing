@@ -40,13 +40,13 @@
 	align-content: flex-end;
 	margin-left: 10%;
 	margin-top: 4%;
-	-webkit-transition: display 0.5s; /* Safari */
-	transition: display 0.5s;
+	-webkit-transition: display 0.5s ease; /* Safari */
+	transition: display 0.5s ease;
 	table {
 		width: auto;
 		height: auto;
-		-webkit-transition: width 0.5s; /* Safari */
-		transition: width 0.5s;
+		-webkit-transition: width 0.5s ease; /* Safari */
+		transition: width 0.5s ease;
 		border-collapse:separate;
 		border:solid $rcn-blue 1.2px;
 		border-radius:35px;
