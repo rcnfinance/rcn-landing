@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-loan-properties',
   templateUrl: './loan-properties.component.html',
-  styleUrls: ['./loan-properties.component.scss']
+  styleUrls: ['./loan-properties.component.scss'],
+  animations: LandingAnimations.animations
 })
 export class LoanPropertiesComponent implements OnInit {
 
+  state = 'hide';
+  lineState = 'hide';
 
   content = [
     {icon: "fas fa-user", 
@@ -47,7 +51,20 @@ export class LoanPropertiesComponent implements OnInit {
     data3: "16195"},   
     ];
 
-  constructor() { }
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition + 750 >= componentPosition) {
+      this.state = 'show';
+      this.lineState = 'show';
+    } else {
+    }
+
+  }
 
   ngOnInit() {
   }

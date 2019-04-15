@@ -1,9 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
   selector: 'app-getting',
   templateUrl: './getting.component.html',
-  styleUrls: ['./getting.component.scss']
+  styleUrls: ['./getting.component.scss'],
+  animations: LandingAnimations.animations
 })
 export class GettingComponent implements OnInit {
 
@@ -40,7 +42,24 @@ export class GettingComponent implements OnInit {
     number: "3"},
     ];
 
-  constructor() { }
+    state = 'hide';
+    lineState = 'hide';
+
+  constructor(public el: ElementRef) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition + 750 >= componentPosition) {
+      this.state = 'show';
+      this.lineState = 'show';
+    } else {
+    }
+
+  }
+
 
   ngOnInit() {
   }

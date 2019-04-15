@@ -1,9 +1,10 @@
-<div class="main-container">
+<div class="main-container" [@scrollGroupAnimation]="state">
   <div class ="phrase">
     <div class="row">
       <div class="text">
         <app-title-text>
             <h3 class="title">Getting started</h3>
+            <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
             <div class="line"></div>
             <p class="text-p">RCN blockchain-based lending eliminates unnecessary friction, 
               allowing creditors to start lending in three easy steps.</p>
