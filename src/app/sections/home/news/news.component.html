@@ -11,7 +11,7 @@
   </div>
   <div class="row" >
     <div class="carrousel">
-      <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeftWithOpacity]="eachContent.movement" 
+      <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeft]="eachContent.movement" 
        [@slideInRight]="eachContent.movement"  [@opacity]="eachContent.opacity">
       <div class="border" >
           <div class="content" >
