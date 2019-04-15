@@ -1,7 +1,9 @@
-<div class="main-container" [@scrollAnimation]="state">
+<div class="main-container" [@scrollGroupAnimation]="state">
     <div class="col-1">
       <app-title-text>
           <h3 class="title">NEWS AND EVENTS</h3>
+          <h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+          <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
           <p class="reg-text">As one of the Decentralized Finance ecosystem’s key stakeholders, 
             RCN is regularly featured at top events and media outlets across the world.</p>
       </app-title-text>
@@ -9,7 +11,7 @@
   </div>
   <div class="row" >
     <div class="carrousel">
-      <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeftWithOpacity]="eachContent.movement" 
+      <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeft]="eachContent.movement" 
        [@slideInRight]="eachContent.movement"  [@opacity]="eachContent.opacity">
       <div class="border" >
           <div class="content" >

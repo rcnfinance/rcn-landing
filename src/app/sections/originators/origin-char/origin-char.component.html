@@ -1,16 +1,26 @@
-<div class="row">
-  <div class="row-inner">
-    <div class="card-border" *ngFor = "let content of content">
-      <div class="content-box">
-        <div class="content">
-          <div class="img-box">
-            <img src={{content.img}} alt="">
-          </div>
-          <div class="h6">
-            <h6>{{content.title}}</h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<div class="row-2">
+    <div class="row-inner">
+        <div class="card" *ngFor="let characteristic of characteristics"
+				[@selected]="characteristic.selected" [@opacity]="characteristic.opacity">
+				<a (click)="characteristic.selected === 'selected' ?
+				updateNoSelections() :
+				updateCharacteristics(characteristic.title)">
+					<div [ngClass]="characteristic.expanded ? 'card-border-expanded' : 'card-border'">
+						<div class="content-box">
+							<div [ngClass]="characteristic.expanded ? 'content-expanded' : 'content'">
+								<div [ngClass]="characteristic.expanded ? 'img-box-expanded' : 'img-box'">
+									<img src={{characteristic.img}} alt="">
+								</div>
+								<div class="h6">
+									<h6>{{characteristic.title}}</h6>
+								</div>
+								<div *ngIf='characteristic.expanded'>
+									<div class="line"></div>
+									<div class="text"><p>{{characteristic.text}}</p></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
 </div>

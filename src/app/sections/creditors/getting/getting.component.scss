@@ -1,5 +1,14 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+	content: ""; 
+	display: block;
+	margin: 0; 
+	border-bottom: 2px solid white; 
+	width: 50%;
+}
+
+
 .main-container {
     margin-top: 5%;
     padding: 5% 0;
@@ -14,6 +23,10 @@
             @include three-quarters;
             .title {
                 @include subtitle;
+						}
+						.line {
+							width: 10%;
+							border-bottom: solid black 3px; 
 						}
 						.text-p {
 							color: white;
@@ -96,6 +109,10 @@
             .title {
 								@include subtitle;
 								margin: 5% 0;
+						}
+						.line {
+							width: 10%;
+							border-bottom: solid black 3px; 
 						}
 						.text-p {
 							color: white;
