@@ -3,6 +3,7 @@
 .main-container {
   overflow: hidden;
   position: relative;
+  width: 100vw;
 }
 
 .img-box {
@@ -24,7 +25,9 @@
   position: absolute;
   align-items: center;
   height: auto;
-  top: 20%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 100%;
   .row {
     width: 80%;
