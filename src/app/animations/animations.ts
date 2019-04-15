@@ -42,7 +42,7 @@ export class LandingAnimations {
                   transform: 'translateX(0)'
                 })),
                 transition('show => hide', animate('300ms ease-out')),
-                transition('hide => show', animate('300ms 0.1s ease-in'))
+                transition('hide => show', animate('600ms ease-in'))
               ]),
               trigger('lineAnimationThick', [
                 state('show', style({
@@ -54,7 +54,7 @@ export class LandingAnimations {
                   transform: 'translateX(0)'
                 })),
                 transition('show => hide', animate('300ms ease-out')),
-                transition('hide => show', animate('300ms ease-in'))
+                transition('hide => show', animate('600ms  ease-in'))
               ]),
               trigger('scrollGroupAnimation', [
                 state('show', style({
@@ -124,6 +124,14 @@ export class LandingAnimations {
                 })),
                 transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0 }), animate('600ms ease-in')]),
               ]),
+              trigger('slideInUpGroup', [
+                transition(':enter', [
+                  style({ transform: 'translateY(20px)', opacity: 0 }),
+                  animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 })),  query('@*', [
+                    animateChild(),
+                  ])
+                ])
+              ])
         ];
     }
 
