@@ -1,5 +1,24 @@
 @import '../../../../styles.scss'; //Styles
 
+
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin: 0; 
+    border-bottom: 2px solid blue; 
+}
+
+
+.page-title2:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 5px; 
+    padding-top: 0; 
+    border-bottom: 1px solid blue; 
+}
+
+
 .row{
     @include row-both;
 

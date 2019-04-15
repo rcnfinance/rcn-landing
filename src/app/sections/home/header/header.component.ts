@@ -64,8 +64,6 @@ export class HeaderComponent implements OnInit {
 
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
-
-      console.log(this.activeContent);
     }
   }
 

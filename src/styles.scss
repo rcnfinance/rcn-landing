@@ -229,6 +229,14 @@ h1,h2,h3,h4,h5,h6 {
   color: white;
 }
 
+@mixin char-card-text-color {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark-blue;
+}
+
+
 @mixin part-card-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 14px;
@@ -274,7 +282,7 @@ h1,h2,h3,h4,h5,h6 {
 
 @mixin link-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 13px;
   font-weight: 700;
   color: $rcn-blue;
 }

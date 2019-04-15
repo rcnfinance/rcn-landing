@@ -21,18 +21,31 @@ export class NewsComponent implements OnInit {
   maxActiveContent = 5;
 
   state = 'hide';
+  lineState = 'hide';
+
+  private isMobileResolution: boolean;
 
   constructor(public el: ElementRef) { }
+
+
+  @HostListener('window:resize', ['$event'])
+  checkWidth() {
+    if (window.innerWidth < 768) {
+      this.isMobileResolution = true;
+    } else {
+      this.isMobileResolution = false;
+    }
+  }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
 
-    if (scrollPosition + 700 >= componentPosition) {
+    if (scrollPosition + 750 >= componentPosition) {
+      this.lineState = 'show';
       this.state = 'show';
     } else {
-      this.state = 'hide';
     }
 
   }
@@ -117,6 +130,13 @@ export class NewsComponent implements OnInit {
   }
 
   activateContent(startIndex: number, movement: string) {
+    if (this.isMobileResolution === true) {
+      this.maxActiveContent = 1;
+    } else {
+      this.maxActiveContent = 5;
+    }
+
+
     let activeContent: IContent[] = [];
 
     activeContent = JSON.parse(JSON.stringify(this.content));

@@ -13,6 +13,7 @@ section {
 	z-index: 9999;
 	background: white;
 	height: 9vh;
+	transform-origin: top;
 }
 
 .main-container {
@@ -188,7 +189,7 @@ section {
 	position: absolute;
 	z-index: 1;
 	width: 100vw;
-	height: 50vh;
+	height: 60vh;
 	background-color: black;
 	overflow: hidden;
 	opacity: 0.5;
