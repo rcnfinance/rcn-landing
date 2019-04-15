@@ -36,7 +36,6 @@ import { TypesComponent } from './sections/originators/types/types.component';
 import { InterestedComponent } from './sections/originators/interested/interested.component';
 import { HowHeaderComponent } from './sections/how-it-works/how-header/how-header.component';
 import { UsecasesComponent } from './sections/how-it-works/usecases/usecases.component';
-import { LoanLifeComponent } from './sections/how-it-works/loan-life/loan-life.component';
 
 @NgModule({
   declarations: [
@@ -67,8 +66,7 @@ import { LoanLifeComponent } from './sections/how-it-works/loan-life/loan-life.c
     TypesComponent,
     InterestedComponent,
     HowHeaderComponent,
-    UsecasesComponent,
-    LoanLifeComponent,
+    UsecasesComponent
   ],
   imports: [
     BrowserModule,

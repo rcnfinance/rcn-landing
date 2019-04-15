@@ -15,6 +15,10 @@
             .title {
                 @include subtitle;
 						}
+						.line {
+							width: 10%;
+							border-bottom: solid black 3px; 
+						}
 						.text-p {
 							color: white;
 						}
@@ -34,20 +38,47 @@
 		justify-content: space-between;
 		.wrapper {
 			width: 22%;
+			position: relative;
+			.box-number {
+				position: absolute;
+				top: 0;
+				left: -10%;
+				.number {
+					font-size: 100px;
+					color: $dark-blue;
+					margin: 0;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 400;
+				}
+			}
 			.box-img {
 				width: 40%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2;
 			}
-			h6 {
-				margin-top: 4%;
-				@include tab-title;
-				font-weight: 700;
+			.content {
+				margin-top: 40%;
+				h6 {
+					margin-top: 4%;
+					@include tab-title;
+					font-weight: 700;
+				}
+				p {
+					@include tab-title;
+					font-weight: 400;
+					color: white;
+					margin-top: 4%;
+				}
+				a {
+					@include tab-title;
+					font-weight: 400;
+					color: white;
+					margin-top: 4%;
+				}
 			}
-			p {
-				@include tab-title;
-				font-weight: 400;
-				color: white;
-				margin-top: 4%;
-			}
+		
 		}
 	}
 }
@@ -69,6 +100,10 @@
             .title {
 								@include subtitle;
 								margin: 5% 0;
+						}
+						.line {
+							width: 10%;
+							border-bottom: solid black 3px; 
 						}
 						.text-p {
 							color: white;
@@ -92,21 +127,34 @@
 		.wrapper {
 			width: 100%;
 			.box-img {
-				width: 40%;
-				margin-top: 10%;
+				width: 30%;
+				margin-top: 0%;
+				margin-bottom: 40%;
+				position: absolute;
+				top: -100%;
+				left: 0;
 			}
-			h6 {
-				margin-top: 4%;
-				@include tab-title;
-				font-weight: 700;
+			.box-number {
+				position: absolute;
+				top: -100%;
+				left: 0;
 			}
-			p {
-				@include tab-title;
-				font-weight: 400;
-				color: white;
-				margin: 2% 0 20% 0;
-				line-height: 1.6;
+			.content {
+				margin-top: 60%;
+				h6 {
+					margin-top: 4%;
+					@include tab-title;
+					font-weight: 700;
+				}
+				p {
+					@include tab-title;
+					font-weight: 400;
+					color: white;
+					margin: 2% 0 20% 0;
+					line-height: 1.6;
+				}
 			}
+			
 		}
 	}
 }

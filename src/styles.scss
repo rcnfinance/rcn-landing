@@ -312,11 +312,10 @@ h1,h2,h3,h4,h5,h6 {
 
 //-----------------------------------------------------------------------------------------------------------
 
-//----------------------
-
 /* active tab */
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {
   @include tab-title;
+  font-size: 11px;
   padding: 0 10%;
   width: 40%;
   color: black !important;
@@ -338,6 +337,8 @@ h1,h2,h3,h4,h5,h6 {
   .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
       background: white;
     }
+
+
 
 // Margins
 .margintop0  {margin-top:0 !important;}
