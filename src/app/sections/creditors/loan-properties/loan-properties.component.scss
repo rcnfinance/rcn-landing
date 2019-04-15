@@ -111,6 +111,62 @@ h6 {
 	@include tab-title;
 }
 
+.tooltip-box {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	background-color: red;
+	width: 150%;
+	height: auto;
+	position: absolute;
+	left: 150%;
+	bottom: 50%;
+	z-index: 2;
+	.front-box {
+		border: solid $rcn-blue 1px;
+		border-radius: 15px;
+		width: 90%;
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: white;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.content {
+			width: 90%
+		}
+	}
+	.back-box {
+		border-radius: 15px;
+		width: 90%;
+		height: auto;
+		position: absolute;
+		top: 1%;
+		left: 5%;
+		overflow: hidden;
+		-webkit-mask-image: url(../../../../assets/graphics/tooltip-shadow_long.svg);
+		img {
+			width: 100%;
+		}
+	}
+}
+
+.hover {
+	position: relative;
+	width: 100%;
+}
+
+.hover:hover > .tooltip-box{
+	opacity: 1.0;
+
+}
+
 .sub-title {
 	font-size: 10px;
 	font-weight: 400;
