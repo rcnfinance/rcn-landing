@@ -14,20 +14,22 @@ export class TheNetworkComponent implements OnInit {
   state = 'hide';
   lineState = 'hide';
 
-  constructor(public el: ElementRef,  private router: Router) { }
+  constructor(public el: ElementRef, private router: Router) { }
 
   @HostListener('window:scroll', ['$event'])
-    checkScroll() {
-      const componentPosition = this.el.nativeElement.offsetTop;
-      const scrollPosition = window.pageYOffset;
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
 
-      if (scrollPosition + 750 >= componentPosition) {
-        this.lineState = 'show';
-        this.state = 'show';
-      } else {
-      }
-
+    if (scrollPosition + 750 >= componentPosition) {
+      this.lineState = 'show';
+      this.state = 'show';
+    } else {
+      this.lineState = 'hide';
+      this.state = 'hide';
     }
+
+  }
 
   ngOnInit() {
   }
