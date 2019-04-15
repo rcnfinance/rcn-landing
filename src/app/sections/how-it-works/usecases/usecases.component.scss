@@ -33,6 +33,84 @@
   display: none;
 }
 
+.title-ref {
+  margin-top: 5%;
+  @include char-card-text;
+  color: gray;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  .fa-info-circle {
+    margin-left: 0.5%;
+  }
+}
+
+.row-ref {
+  // background-color: red;
+  margin-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .col-1-ref {
+    // background-color: green;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .ref-1 {
+      width: 45%;
+    }
+    .ref-2 {
+      width: 45%;
+    }
+  }
+  .col-2-ref {
+    // background-color: green;
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .ref-3 {
+      width: 45%;
+    }
+    .ref-4 {
+      width: 45%;
+    }
+  }
+}
+
+.ref-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8% 0;
+  .ref {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    h6 {
+      @include link-text;
+      font-weight: 400;
+    }
+  }
+  .ref-img-box {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .ref-img {
+      margin-left: 10%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+}
+
 @media (max-width: 768px){
 
 .main-container {
