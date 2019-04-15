@@ -1,7 +1,8 @@
 @import '../../../../styles.scss'; //Styles
 
 .main-container {
-	overflow: hidden;
+  overflow: hidden;
+  position: relative;
 }
 
 .img-box {
@@ -21,7 +22,9 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 21vh;
+  align-items: center;
+  height: auto;
+  top: 20%;
   width: 100%;
   .row {
     width: 80%;
