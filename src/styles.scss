@@ -276,14 +276,14 @@ h1,h2,h3,h4,h5,h6 {
 
 @mixin sm-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: $text-gray;
 }
 
 @mixin link-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 700;
   color: $rcn-blue;
 }
