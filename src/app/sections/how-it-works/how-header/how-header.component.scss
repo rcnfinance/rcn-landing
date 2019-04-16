@@ -65,7 +65,10 @@
   justify-content: center;
   position: absolute;
   top: 16vh;
-	width: 100%;
+  width: 100%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   .row {
 		@include three-quarters;
 		width: 80%;
