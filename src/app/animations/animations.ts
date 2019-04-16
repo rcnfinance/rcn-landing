@@ -168,6 +168,17 @@ export class LandingAnimations {
                 transition('show => hide', animate('0s')),
                 transition('hide => show', animate('600ms  ease-in'))
               ]),
+              trigger('slideInComputer', [
+                 state('show', style({
+                opacity: 1,
+                transform: 'translateX(20%)'
+              })),
+              state('hide',   style({
+                opacity: 0.8,
+                transform: 'translateX(0)'
+              })),
+              transition('hide => show', animate('600ms ease-in'))
+            ])
         ];
     }
 
