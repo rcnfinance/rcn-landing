@@ -56,6 +56,30 @@ export class LandingAnimations {
                 transition('show => hide', animate('300ms ease-out')),
                 transition('hide => show', animate('300ms ease-in'))
               ]),
+              trigger('lineAnimationThinMobile', [
+                state('show', style({
+                  width: '50%',
+                  transform: 'translateX(0)'
+                })),
+                state('hide',   style({
+                  width: '0%',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('300ms ease-out')),
+                transition('hide => show', animate('300ms 0.1s ease-in'))
+              ]),
+              trigger('lineAnimationThickMobile', [
+                state('show', style({
+                  width: '16%',
+                  transform: 'translateX(0)'
+                })),
+                state('hide',   style({
+                  width: '0%',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('300ms ease-out')),
+                transition('hide => show', animate('300ms ease-in'))
+              ]),
               trigger('scrollGroupAnimation', [
                 state('show', style({
                   opacity: 1,

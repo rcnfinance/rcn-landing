@@ -1,5 +1,31 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin: 0; 
+    border-bottom: 2px solid blue; 
+}
+
+
+.page-title2:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 5px; 
+    padding-top: 0; 
+    border-bottom: 1px solid blue; 
+}
+
+.page-title-mobile:after {
+    display: none;
+}
+
+
+.page-title2-mobile:after {
+    display: none;
+}
+
 .main-container{
 	overflow-x: hidden;
 	position: relative;
@@ -262,6 +288,32 @@ top: 0;
 }
 
 @media (max-width: 1000px){
+
+	.page-title:after {
+        display: none;
+    }
+    
+    
+    .page-title2:after {
+        display: none;
+    }
+    
+    .page-title-mobile:after {
+        content: ""; 
+        display: block;
+        margin: 0; 
+        border-bottom: 2px solid blue; 
+    }
+    
+    
+    .page-title2-mobile:after {
+        content: ""; 
+        display: block; 
+        margin: 0; 
+        padding-top: 5px; 
+        padding-top: 0; 
+        border-bottom: 1px solid blue; 
+    }
 
 .table {
 	display: none;
