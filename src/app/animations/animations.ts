@@ -89,7 +89,7 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('hide => show', [ animate('300ms ease-in'),  query('@*', [
+                transition('hide => show', [ animate('600ms ease-in'),  query('@*', [
                   animateChild(),
                 ])
               ])
@@ -106,17 +106,17 @@ export class LandingAnimations {
                 transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
-                transition('void => enterLeft', [
-                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('600ms ease-in')
+                state('enterLeft', style({ transform: 'translateX(50%)', opacity: 1})),
+                transition('* => enterLeft', [
+                  style({ transform: 'translateX(0)', opacity: 0.2 }),
+                  animate('600ms 1s ease-in')
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
                 state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
                 transition('void => enterLeft', [
                   style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('600ms ease-in')
+                  animate('3s ease-in')
                 ]),
               ]),
               trigger('slideInRight', [
@@ -155,7 +155,30 @@ export class LandingAnimations {
                     animateChild(),
                   ])
                 ])
-              ])
+              ]),
+              trigger('lineAnimationThickParameter', [
+                state('show', style({
+                  width: '{{ widthLength }}',
+                  transform: 'translateX(0)'
+                }), {params: {widthLength: '10%'}}),
+                state('hide',   style({
+                  width: '0%',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('0s')),
+                transition('hide => show', animate('600ms  ease-in'))
+              ]),
+              trigger('slideInComputer', [
+                 state('show', style({
+                opacity: 1,
+                transform: 'translateX(20%)'
+              })),
+              state('hide',   style({
+                opacity: 0.8,
+                transform: 'translateX(0)'
+              })),
+              transition('hide => show', animate('600ms ease-in'))
+            ])
         ];
     }
 
