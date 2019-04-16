@@ -18,18 +18,19 @@
 		margin-top: 2%;
 		.card {
 			width: 32%;
-				height: auto;
-				padding: 1%;
-				margin: 0 4%;
-				display: flex;
-				justify-content: center;
+			height: auto;
+			padding: 1%;
+			margin: 0 4%;
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
 			.card-border {
-				border: solid #5F24BE 1.2px;
+				border: solid $rcn-blue 1.2px;
 				border-radius: 40px;
 			}
 			.card-border-expanded{
-				border: solid #5F24BE 1px; 
-				border-left: solid #5F24BE 8px;
+				border: solid $rcn-blue 1px; 
+				border-left: solid $rcn-blue 8px;
 				border-radius: 0 40px 40px 0;
 				background-image: white ;
 				.content-box {
@@ -61,7 +62,7 @@
 						}
 						.line {
 							width: 10%;
-							border-bottom: solid #5F24BE 2px;
+							border-bottom: solid $rcn-blue 2px;
 							margin-top: 2%;
 						}
 						.text {
@@ -185,7 +186,7 @@
 				height: auto;
 				padding: 4%;
 				margin: 5% 0;
-				border: solid #5F24BE 1.2px;
+				border: solid $rcn-blue 1.2px;
 				border-radius: 40px;
 				display: flex;
 				justify-content: center;
