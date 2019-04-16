@@ -106,17 +106,17 @@ export class LandingAnimations {
                 transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
-                transition('void => enterLeft', [
-                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('600ms ease-in')
+                state('enterLeft', style({ transform: 'translateX(50%)', opacity: 1})),
+                transition('* => enterLeft', [
+                  style({ transform: 'translateX(0)', opacity: 0.2 }),
+                  animate('600ms 1s ease-in')
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
                 state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
                 transition('void => enterLeft', [
                   style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('600ms ease-in')
+                  animate('3s ease-in')
                 ]),
               ]),
               trigger('slideInRight', [
