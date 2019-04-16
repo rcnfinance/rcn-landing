@@ -21,28 +21,17 @@
 				height: auto;
 				padding: 1%;
 				margin: 0 4%;
-			
 				display: flex;
 				justify-content: center;
-
 			.card-border {
-				// width: 32%;
-				// height: auto;
-				// padding: 1%;
-				// margin: 0 4%;
 				border: solid #5F24BE 1.2px;
 				border-radius: 40px;
-				// border-radius: 40px;
-				// display: flex;
-				// justify-content: center;
-	
 			}
 			.card-border-expanded{
 				border: solid #5F24BE 1px; 
 				border-left: solid #5F24BE 8px;
 				border-radius: 0 40px 40px 0;
-        background-image: white ;
-				// background-color: #5F24BE;
+				background-image: white ;
 				.content-box {
 					width: 220px;
 					height: 200px;
@@ -176,6 +165,8 @@
 		height: auto;
 		display: flex;
 		justify-content: center;
+		padding-top: 5%;
+		padding-bottom: 5%;
 		.row-inner {
 			width: 40%;
 			display: flex;
@@ -187,7 +178,6 @@
 						height: auto;
 						padding: 1%;
 						margin: 0 4%;
-					
 						display: flex;
 						justify-content: center;
 			.card-border {
@@ -199,6 +189,7 @@
 				border-radius: 40px;
 				display: flex;
 				justify-content: center;
+				
 			}
 		}
 		}
