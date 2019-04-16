@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import { Router } from '@angular/router';
 import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
@@ -11,7 +12,7 @@ export class TypesComponent implements OnInit {
   state = 'hide';
   lineState = 'hide';
 
-  constructor(public el: ElementRef) { }
+  constructor(public el: ElementRef, private router: Router) { }
 
   @HostListener('window:scroll', ['$event'])
     checkScroll() {

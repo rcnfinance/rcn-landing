@@ -17,7 +17,7 @@ export class OriginCharComponent implements OnInit {
 
     this.characteristics = [
       {img: '../../../../assets/icons/icon-multicurrency.png',
-      title: 'Clobaly liquid',
+      title: 'Globaly liquid',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-competitive.png',

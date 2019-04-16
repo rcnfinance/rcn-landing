@@ -69,6 +69,10 @@
 
 }
 
+.link {
+    @include link-text;
+}
+
 //----------------------
 
 /* active tab */
