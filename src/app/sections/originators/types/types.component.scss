@@ -93,6 +93,10 @@
 
 @media (max-width: 768px){
 
+	.col-2 {
+		display: none;
+	}
+
 	.page-title:after {
 		display: none;
 	}
