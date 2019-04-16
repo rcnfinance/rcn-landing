@@ -15,26 +15,51 @@ export class MainContainerComponent implements OnInit {
   mobile = false;
   menu = false;
 
-  constructor(public el: ElementRef,  private router: Router) { }
+  lineStateCreditors = 'hide';
+  lineStateOriginators = 'hide';
+  lineStateDevelopers = 'hide';
+  lineStateHowItWorks = 'hide';
+
+  constructor(public el: ElementRef, private router: Router) { }
 
   @HostListener('window:scroll', ['$event'])
-    checkScroll() {
-      const componentPosition = this.el.nativeElement.offsetTop;
-      const scrollPosition = window.pageYOffset;
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
 
-      console.info('componentPosition', componentPosition);
-      console.info('scrollPosition', scrollPosition);
+    if (scrollPosition > componentPosition) {
+      this.lineState = 'show';
+      this.state = 'scrollAndShrink';
+    } else {
+      this.lineState = 'hide';
+      this.state = 'default';
+    }
 
-      if (scrollPosition > componentPosition) {
-        this.lineState = 'show';
-        this.state = 'scrollAndShrink';
-      } else {
-        this.lineState = 'hide';
-        this.state = 'default';
-      }
+  }
+
+  markAsSelected(section: string) {
+    this.lineStateCreditors = 'hide';
+    this.lineStateOriginators = 'hide';
+    this.lineStateDevelopers = 'hide';
+    this.lineStateHowItWorks = 'hide';
+    switch (section) {
+      case 'creditors':
+        this.lineStateCreditors = 'show';
+        break;
+      case 'originators':
+        this.lineStateOriginators = 'show';
+        break;
+      case 'developers':
+        this.lineStateDevelopers = 'show';
+        break;
+      case 'howItWorks':
+        this.lineStateHowItWorks = 'show';
+        break;
+      default:
+      break;
 
     }
- 
+  }
 
   mobileMenu() {
     this.mobile = !this.mobile;

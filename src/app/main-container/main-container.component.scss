@@ -1,5 +1,22 @@
 @import '../../styles.scss'; //Styles
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+}
+
+.page-title:after {
+	content: ""; 
+	display: block;
+	margin: 0; 
+	border-bottom: 2px solid $rcn-blue; 
+}
+
+
+
 section {
 	position: absolute;
 	z-index: 2;
@@ -68,7 +85,9 @@ section {
 			.h2:hover {
 				color: $text-gray;
 			} 
+
 		}
+
   }
 }
 

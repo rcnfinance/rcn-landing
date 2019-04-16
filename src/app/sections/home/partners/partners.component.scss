@@ -47,15 +47,15 @@
 		table {
 			width: auto;
 			height: auto;
-			-webkit-transition: width 0.5s; /* Safari */
-			transition: width 0.5s;
+			-webkit-transition: width 0.6s; /* Safari */
+			transition: width 0.6s, transform 0.6s ease ;
 			border-collapse:separate;
 			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
 			-moz-border-radius:6px;
 			margin: auto;
-			-webkit-transition: margin 0.5s; /* Safari */
-			transition: margin 0.5s;
+			-webkit-transition: margin 0.6, transform 0.6s ease,; /* Safari */
+			transition: margin 0.6s, transform 0.6s ease;
 		}
   	}
 }
@@ -69,16 +69,16 @@
 	table {
 		width: auto;
 		height: auto;
-		-webkit-transition: width 0.5s ease; /* Safari */
-		transition: width 0.5s ease;
+		-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+		transition: width 0.6s, transform 0.6s ease;
 		border-collapse:separate;
 		border:solid $rcn-blue 1.2px;
 		border-radius:35px;
 		-moz-border-radius:6px;
 		margin-left: 0%;
 		margin-bottom: 0%;
-		-webkit-transition: margin 0.5s; /* Safari */
-		transition: margin 0.5s;
+		-webkit-transition: margin 0.6s,transform 0.6s ease; /* Safari */
+		transition: margin 0.6s,transform 0.6s ease;
 	}
 }
 
@@ -162,16 +162,16 @@ td:first-child, th:first-child {
 	flex-wrap: wrap;
 	width: 200px;
 	height: 200px;
-	-webkit-transition: width 0.5s; /* Safari */
-	transition: width 0.5s;
+	-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+	transition: width 0.6s, transform 0.6s ease;
 	// -webkit-transition: height 0.5s; /* Safari */
 	// transition: height 0.5s;
 	.img-box {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 50%;
-		-webkit-transition: width 0.5s; /* Safari */
-		transition: width 0.5s;
+		-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+		transition: width 0.6s, transform 0.6s ease;
 		img {
 			width: 100%;
 		}
@@ -184,16 +184,16 @@ td:first-child, th:first-child {
 	flex-wrap: wrap;
 	width: 160px;
 	height: 160px;
-	-webkit-transition: width 0.5s; /* Safari */
-	transition: width 0.5s;
+	-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+	transition: width 0.6s, transform 0.6s ease;
 	// -webkit-transition: height 0.5s; /* Safari */
 	// transition: height 0.5s;
 	.img-box {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 40%;
-		-webkit-transition: width 0.5s; /* Safari */
-		transition: width 0.5s;
+		-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+		transition: width 0.6s, transform 0.6s ease;
 		img {
 			width: 100%;
 		}

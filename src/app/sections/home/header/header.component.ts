@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
   activeContent: IContent[] = [];
   activeContentIndex: number;
+  enabledLeft = false;
 
   constructor(private router: Router) { }
 
