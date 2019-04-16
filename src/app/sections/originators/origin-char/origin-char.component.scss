@@ -14,79 +14,68 @@
   .row-inner {
     width: auto;
     display: flex;
-		justify-content: space-around;
-		margin-top: 2%;
-		.card {
-			width: 32%;
-				height: auto;
-				padding: 1%;
-				margin: 0 4%;
-			
-				display: flex;
-				justify-content: center;
+	justify-content: space-around;
+	margin-top: 2%;
+	.card {
+		width: 32%;
+		height: auto;
+		padding: 1%;
+		margin: 0 4%;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
 
-			.card-border {
-				// width: 32%;
-				// height: auto;
-				// padding: 1%;
-				// margin: 0 4%;
-				border: solid #5F24BE 1.2px;
-				border-radius: 40px;
-				// border-radius: 40px;
-				// display: flex;
-				// justify-content: center;
-	
-			}
-			.card-border-expanded{
-				border: solid #5F24BE 1px; 
-				border-left: solid #5F24BE 8px;
-				border-radius: 0 40px 40px 0;
-        background-image: white ;
-				// background-color: #5F24BE;
-				.content-box {
-					width: 220px;
-					height: 200px;
+		.card-border {
+			border: solid $rcn-blue 1.2px;
+			border-radius: 40px;
+		}
+		.card-border-expanded{
+			border: solid $rcn-blue 1px; 
+			border-left: solid $rcn-blue 8px;
+			border-radius: 0 40px 40px 0;
+			background-image: white ;
+			.content-box {
+				width: 220px;
+				height: 200px;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				align-items: center;
+				.content-expanded {
+					width: 80%;
+					height: auto;
 					display: flex;
 					flex-wrap: wrap;
-					justify-content: center;
+					justify-content: flex-start;
 					align-items: center;
-					.content-expanded {
-						width: 80%;
-						height: auto;
-						display: flex;
-						flex-wrap: wrap;
-						justify-content: flex-start;
-						align-items: center;
-						margin: 3%;
-						.img-box-expanded {
-							width: 40%;
-							margin-right: 60%;
-
-							img {
-								width: 100%;
-							}
+					margin: 3%;
+					.img-box-expanded {
+						width: 40%;
+						margin-right: 60%;
+						img {
+							width: 100%;
 						}
-
-						.h6 {
-							@include char-card-text-color;
-						}
-						.line {
-							width: 10%;
-							border-bottom: solid #5F24BE 2px;
-							margin-top: 2%;
-						}
-						.text {
-							@include char-card-text-color;
-							font-size: 10px;
-							margin-top: 6%;
-						}
-
 					}
+
+					.h6 {
+						@include char-card-text-color;
+					}
+					.line {
+						width: 10%;
+						border-bottom: solid $rcn-blue 2px;
+						margin-top: 2%;
+					}
+					.text {
+						@include char-card-text-color;
+						font-size: 10px;
+						margin-top: 6%;
+					}
+
 				}
 			}
-
 		}
 
+	}
   }
 }
   
@@ -196,7 +185,7 @@
 				height: auto;
 				padding: 4%;
 				margin: 5% 0;
-				border: solid #5F24BE 1.2px;
+				border: solid $rcn-blue 1.2px;
 				border-radius: 40px;
 				display: flex;
 				justify-content: center;
