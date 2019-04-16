@@ -60,12 +60,6 @@ section {
 	outline: white;
 }
 
-.menu-text:focus {
-	outline: white;
-}
-
-
-
 .col-tabs{
 	@include three-quarters;
 	display: flex;
@@ -82,12 +76,10 @@ section {
 			font-size: 14px;
 			margin: 0 2% ;
 			cursor: pointer;
-			.h2:hover {
-				color: $text-gray;
-			} 
-
 		}
-
+		.menu-text:hover {
+			color: $text-gray;
+		} 
   }
 }
 
