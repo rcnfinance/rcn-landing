@@ -4,7 +4,7 @@
     content: ""; 
     display: block;
     margin: 0; 
-	border-bottom: 2px solid blue; 
+	border-bottom: 2px solid $rcn-blue; 
 }
 
 .main-container {
@@ -68,6 +68,7 @@
 	.title {
 		@include subtitle;
 		margin-top: 10%;
+		margin-bottom: 2%;
 	}
 	.text {
 		margin: 5% 0;
