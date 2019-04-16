@@ -46,6 +46,10 @@
 			padding: 0;
 			font-size: 20px;
 	}
+
+	.fab:hover {
+		color: $rcn-blue;
+	}
 		
 	.links {
 		width: 52%;
@@ -56,6 +60,13 @@
 		a {
 			color: white;
 			text-decoration: none;
+		}
+		.link {
+			cursor: pointer;
+		}
+		.link:hover {
+			color: $rcn-blue;
+			font-weight: 700;
 		}
 		span {
 			color: white;

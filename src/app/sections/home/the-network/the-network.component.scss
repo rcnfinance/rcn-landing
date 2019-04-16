@@ -71,6 +71,10 @@
     @include link-text;
 }
 
+.link:hover {
+    color: $text-gray;
+}
+
 @media (max-width: 768px){
 
     .page-title:after {
