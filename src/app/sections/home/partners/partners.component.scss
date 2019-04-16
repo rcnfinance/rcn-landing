@@ -4,7 +4,7 @@
     content: ""; 
     display: block;
     margin: 0; 
-    border-bottom: 2px solid blue; 
+    border-bottom: 2px solid $rcn-blue; 
 }
 
 
@@ -14,7 +14,7 @@
     margin: 0; 
     padding-top: 5px; 
     padding-top: 0; 
-    border-bottom: 1px solid blue; 
+    border-bottom: 1px solid $rcn-blue; 
 }
 
 .page-title-mobile:after {
@@ -40,10 +40,10 @@
 	  }
   .row {
 		display: flex;
-		justify-content: center;
 		width: 100%;
 		position: relative;
 		z-index: 2;
+		padding: 3% 0;
 		table {
 			width: auto;
 			height: auto;
@@ -53,21 +53,19 @@
 			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
 			-moz-border-radius:6px;
-			margin: 3%;
+			margin: auto;
+			-webkit-transition: margin 0.5s; /* Safari */
+			transition: margin 0.5s;
 		}
-  }
+  	}
 }
 
 
 
 .row-show {
 	display: flex;
-	justify-content: flex-start;
-	align-content: flex-end;
-	margin-left: 10%;
-	margin-top: 4%;
-	-webkit-transition: display 0.5s ease; /* Safari */
-	transition: display 0.5s ease;
+	padding-left: 10%;
+	padding-top: 6.5%;
 	table {
 		width: auto;
 		height: auto;
@@ -77,7 +75,10 @@
 		border:solid $rcn-blue 1.2px;
 		border-radius:35px;
 		-moz-border-radius:6px;
-		margin: 3%;
+		margin-left: 0%;
+		margin-bottom: 0%;
+		-webkit-transition: margin 0.5s; /* Safari */
+		transition: margin 0.5s;
 	}
 }
 
@@ -161,6 +162,10 @@ td:first-child, th:first-child {
 	flex-wrap: wrap;
 	width: 200px;
 	height: 200px;
+	-webkit-transition: width 0.5s; /* Safari */
+	transition: width 0.5s;
+	// -webkit-transition: height 0.5s; /* Safari */
+	// transition: height 0.5s;
 	.img-box {
 		margin: 10%;
 		margin-bottom: 0;
@@ -179,6 +184,10 @@ td:first-child, th:first-child {
 	flex-wrap: wrap;
 	width: 160px;
 	height: 160px;
+	-webkit-transition: width 0.5s; /* Safari */
+	transition: width 0.5s;
+	// -webkit-transition: height 0.5s; /* Safari */
+	// transition: height 0.5s;
 	.img-box {
 		margin: 10%;
 		margin-bottom: 0;
@@ -215,8 +224,6 @@ background-color: $rcn-blue;
 border-top-left-radius: 30px;
 overflow-x: hidden;
 }
-
-
 
 .showCard {
 right: 0;
