@@ -1,26 +1,23 @@
-
-
 <nav class="navbar"   [@scrollAndShrink]="state">
-    <div class="mobile-nav">
-        <div class="logo-mobile" routerLink='/home'>
-          <img src="../../../assets/isologotypo.svg" alt="">
-        </div>
-        <button class="bars" (click)="mobileMenu()">
-          <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
-          <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
-        </button>
-      </div>
-
+  <div class="mobile-nav">
+    <div class="logo-mobile" routerLink='/home'>
+      <img src="../../../assets/isologotypo.svg" alt="">
+    </div>
+    <button class="bars" (click)="mobileMenu()">
+      <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+      <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+    </button>
+  </div>
   <div [ngClass]="mobile ? 'mobile' : 'main-container'">
     <div class="logo" routerLink='/home'>
       <img src="../../assets/img/isologotypo.svg" alt="">
     </div>
     <div class="col-tabs">
       <div class="tabs">
-        <div class="menu-text" routerLink='/creditors'>CREDITORS</div>
-        <div class=" menu-text" routerLink='/originators'>ORIGINATORS</div>
-        <div class="menu-text"> <a href="https://github.com/ripio" target="blank" >DEVELOPERS</a></div>
-        <div class="menu-text" routerLink='/how-it-works'>HOW IT WORKS</div>
+        <div class="menu-text" routerLink='/creditors'><h2 class="h2">CREDITORS</h2></div>
+        <div class="menu-text" routerLink='/originators'><h2 class="h2">ORIGINATORS</h2></div>
+        <div class="menu-text"> <a href="https://github.com/ripio" target="blank"><h2 class="h2">DEVELOPERS</h2></a></div>
+        <div class="menu-text" routerLink='/how-it-works'><h2 class="h2">HOW IT WORKS</h2></div>
       </div>
     </div>
     <div class="overlay" (click)="mobileMenu()"></div>
