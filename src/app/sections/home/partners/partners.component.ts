@@ -12,6 +12,7 @@ export class PartnersComponent implements OnInit {
   show = false;
 
   state = 'hide';
+  lineState = 'hide';
 
   constructor(public el: ElementRef) { }
 
@@ -22,7 +23,9 @@ export class PartnersComponent implements OnInit {
 
     if (scrollPosition + 700 >= componentPosition) {
       this.state = 'show';
+      this.lineState = 'show';
     } else {
+      this.state = 'hide';
       this.state = 'hide';
     }
 

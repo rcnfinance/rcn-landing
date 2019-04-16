@@ -89,7 +89,7 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('hide => show', [ animate('300ms ease-in'),  query('@*', [
+                transition('hide => show', [ animate('600ms ease-in'),  query('@*', [
                   animateChild(),
                 ])
               ])
