@@ -131,7 +131,19 @@ export class LandingAnimations {
                     animateChild(),
                   ])
                 ])
-              ])
+              ]),
+              trigger('lineAnimationThickParameter', [
+                state('show', style({
+                  width: '{{ widthLength }}',
+                  transform: 'translateX(0)'
+                }), {params: {widthLength: '10%'}}),
+                state('hide',   style({
+                  width: '0%',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('0s')),
+                transition('hide => show', animate('600ms  ease-in'))
+              ]),
         ];
     }
 

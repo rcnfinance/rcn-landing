@@ -1,31 +1,44 @@
-
-
 <nav class="navbar">
-    <div class="mobile-nav">
-        <div class="logo-mobile" routerLink='/home'>
-          <img src="../../../assets/isologotypo.svg" alt="">
-        </div>
-        <button class="bars" (click)="mobileMenu()">
-          <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
-          <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
-        </button>
-      </div>
+  <div class="mobile-nav">
+    <div class="logo-mobile" (click)="markAsSelected('home')" routerLink='/home'>
+      <img src="../../../assets/isologotypo.svg" alt="">
+    </div>
+    <button class="bars" (click)="mobileMenu()">
+      <i [ngClass]="mobile ? 'no-fa-bars' : 'fas fa-bars'"></i>
+      <i [ngClass]="mobile ? 'fas fa-times' : 'no-fa-times'"></i>
+    </button>
+  </div>
 
   <div [ngClass]="mobile ? 'mobile' : 'main-container'">
-    <div class="logo" routerLink='/home'>
+    <div class="logo" (click)="markAsSelected('home')" routerLink='/home'>
       <img src="../../assets/img/isologotypo.svg" alt="">
     </div>
     <div class="col-tabs">
-      <div class="tabs">
-        <div class="menu-text" routerLink='/creditors'>CREDITORS</div>
-        <div class=" menu-text" routerLink='/originators'>ORIGINATORS</div>
-        <div class="menu-text"> <a href="https://github.com/ripio" target="blank" >DEVELOPERS</a></div>
-        <div class="menu-text" routerLink='/how-it-works'>HOW IT WORKS</div>
-      </div>
+      <ul class="tabs underline">
+        <li class="menu-text" (click)="markAsSelected('creditors')" routerLink='/creditors'>
+          <a>CREDITORS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateCreditors, params: {widthLength: '30%' }}"></h3>
+        </li>
+
+        <li class="menu-text" (click)="markAsSelected('originators')" routerLink='/originators'>
+          <a>ORIGINATORS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateOriginators, params: {widthLength: '30%' }}"></h3>
+        </li>
+        <li class="menu-text" (click)="markAsSelected('developers')">
+          <a href="https://github.com/ripio" target="blank">DEVELOPERS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateDevelopers, params: {widthLength: '30%' }}"></h3>
+        </li>
+        <li class="menu-text" (click)="markAsSelected('howItWorks')"
+          routerLink='/how-it-works'>
+          <a>HOW IT WORKS</a>
+          <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateHowItWorks, params: {widthLength: '30%' }}"></h3>
+        </li>
+      </ul>
     </div>
     <div class="overlay" (click)="mobileMenu()"></div>
   </div>
 </nav>
+
 
 <router-outlet></router-outlet>
 
