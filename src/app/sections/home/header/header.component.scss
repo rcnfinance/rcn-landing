@@ -62,6 +62,12 @@
 	background: transparent;
 	@include button-text;
 	color: white;
+	cursor: pointer;
+}
+
+.button:hover {
+	font-weight: 700;
+	background-color: $button-rollover;
 }
 
 .buttons-box {
@@ -80,6 +86,7 @@
 	}
 	i {
 		color: $rcn-blue;
+		cursor: pointer;
 	}
 }
 

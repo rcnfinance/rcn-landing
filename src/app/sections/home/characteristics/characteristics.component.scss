@@ -56,31 +56,21 @@
 		margin-top: 2%;
 		.card {
 			width: 32%;
-				height: auto;
-				padding: 1%;
-				margin: 0 4%;
-			
-				display: flex;
-				justify-content: center;
-
+			height: auto;
+			padding: 1%;
+			margin: 0 4%;
+			cursor: pointer;
+			display: flex;
+			justify-content: center;
 			.card-border {
-				// width: 32%;
-				// height: auto;
-				// padding: 1%;
-				// margin: 0 4%;
 				border: solid white 1.2px;
 				border-radius: 40px;
-				// border-radius: 40px;
-				// display: flex;
-				// justify-content: center;
-	
 			}
 			.card-border-expanded{
 				border: solid white 1px; 
 				border-left: solid white 8px;
 				border-radius: 0 40px 40px 0;
 				background-image: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
-				// background-color: #5F24BE;
 				.content-box {
 					width: 220px;
 					height: 200px;
@@ -252,12 +242,11 @@
 				margin-top: 2%;
 				.card {
 					width: 100%;
-						height: auto;
-						padding: 1%;
-						margin: 0 4%;
-					
-						display: flex;
-						justify-content: center;
+					height: auto;
+					padding: 1%;
+					margin: 0 4%;
+					display: flex;
+					justify-content: center;
 			.card-border {
 				width: auto;
 				height: auto;
@@ -267,10 +256,14 @@
 				border-radius: 40px;
 				display: flex;
 				justify-content: center;
+				
 			}
+
 		}
 		}
 	}
+
+
 	
 	.content {
 		width: 100%;
