@@ -64,6 +64,11 @@
 	color: white;
 }
 
+.button:hover {
+	font-weight: 700;
+	background-color: $button-rollover;
+}
+
 .buttons-box {
 	display: flex;
 	justify-content: space-between;
