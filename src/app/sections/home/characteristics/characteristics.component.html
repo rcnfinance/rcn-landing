@@ -14,9 +14,7 @@
 		<div class="row-inner">
 			<div class="card" *ngFor="let characteristic of characteristics"
 				[@selected]="characteristic.selected" [@opacity]="characteristic.opacity">
-				<a (click)="characteristic.selected === 'selected' ?
-				updateNoSelections() :
-				updateCharacteristics(characteristic.title)">
+				<a (mouseleave)="updateNoSelections()" (mouseenter)="updateCharacteristics(characteristic.title)">
 					<div [ngClass]="characteristic.expanded ? 'card-border-expanded' : 'card-border'">
 						<div class="content-box">
 							<div [ngClass]="characteristic.expanded ? 'content-expanded' : 'content'">
