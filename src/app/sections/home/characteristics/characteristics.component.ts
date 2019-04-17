@@ -1,63 +1,60 @@
-import { Component, OnInit } from '@angular/core';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { Component, OnInit, HostListener, ElementRef  } from '@angular/core';
+import { LandingAnimations } from '../../../animations/animations';
 
 @Component({
   selector: 'app-characteristics',
   templateUrl: './characteristics.component.html',
   styleUrls: ['./characteristics.component.scss'],
-  animations: [
-    trigger('selected', [
-      state('selected',
-        style({
-          transform: 'scale(1.3)',
-        })
-      ),
-      transition('selected <=> *', [
-        animate('300ms ease-in')
-      ])
-    ]),
-    trigger('opacity', [
-      state('opacity',
-        style({
-          opacity: 0.2,
-        })
-      ),
-      transition('opacity <=> *', [
-        animate('300ms ease-in')
-      ])
-    ]),
-  ]
+  animations: LandingAnimations.animations
 })
 export class CharacteristicsComponent implements OnInit {
 
-
-
   characteristics: ICharacteristic[];
+  state = 'hide';
+  lineState = 'hide';
 
-  constructor() { }
+  constructor(public el: ElementRef) { }
 
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition + 750 >= componentPosition) {
+      this.state = 'show';
+      this.lineState = 'show';
+    } else {
+    }
+
+  }
 
   ngOnInit() {
     this.characteristics = [
       {
         img: '../../../../assets/icons/icon-frictionless.png',
-        title: 'Frictionless', selected: 'notSelected', opacity: 'notOpacity'
+        text:'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+        title: 'Frictionless', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {
         img: '../../../../assets/icons/icon-transparent.png',
-        title: 'Transparent', selected: 'notSelected', opacity: 'notOpacity'
+        text:'RCN smart-contracts ensure non-custodial storage of all funds and full auditability of every transaction.',
+        title: 'Transparent', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {
         img: '../../../../assets/icons/icon-borderless.png',
-        title: 'Borderless', selected: 'notSelected', opacity: 'notopacity'
+        text:'The network seamlessly connects borrowers and creditors from all around the world.',
+        title: 'Borderless', selected: 'notSelected', opacity: 'notopacity', expanded : false
       }
     ];
   }
+
+
 
   updateNoSelections() {
     for (const characteristic of this.characteristics) {
         characteristic.selected = 'notSelected';
         characteristic.opacity = 'notOpacity';
+        characteristic.expanded = false;
     }
   }
 
@@ -67,9 +64,11 @@ export class CharacteristicsComponent implements OnInit {
           if (characteristic.title !== title) {
             characteristic.selected = 'notSelected';
             characteristic.opacity = 'opacity';
+            characteristic.expanded = false;
           } else {
             characteristic.selected = 'selected';
             characteristic.opacity = 'notOpacity';
+            characteristic.expanded = true;
           }
         }
   }
@@ -79,6 +78,8 @@ export class CharacteristicsComponent implements OnInit {
 interface ICharacteristic {
   img: string;
   title: string;
+  text: string;
   selected: string;
   opacity: string;
+  expanded: boolean;
 }

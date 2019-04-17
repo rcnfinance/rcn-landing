@@ -1,28 +1,65 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, style, animate, transition } from '@angular/animations';
+import { LandingAnimations } from '../animations/animations';
 
 @Component({
   selector: 'app-main-container',
   templateUrl: './main-container.component.html',
   styleUrls: ['./main-container.component.scss'],
-  animations: [
-    trigger('fadeInOut', [
-      state('void', style({
-        opacity: 0
-      })),
-      transition('void <=> *', animate(800)),
-    ])
-  ]
+  animations: LandingAnimations.animations
 })
 export class MainContainerComponent implements OnInit {
 
-  constructor(
-    private router: Router
-  ) { }
-
+  state = 'default';
+  lineState = 'hide';
   mobile = false;
   menu = false;
+
+  lineStateCreditors = 'hide';
+  lineStateOriginators = 'hide';
+  lineStateDevelopers = 'hide';
+  lineStateHowItWorks = 'hide';
+
+  constructor(public el: ElementRef, private router: Router) { }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    const componentPosition = this.el.nativeElement.offsetTop;
+    const scrollPosition = window.pageYOffset;
+
+    if (scrollPosition > componentPosition) {
+      this.lineState = 'show';
+      this.state = 'scrollAndShrink';
+    } else {
+      this.lineState = 'hide';
+      this.state = 'default';
+    }
+
+  }
+
+  markAsSelected(section: string) {
+    this.lineStateCreditors = 'hide';
+    this.lineStateOriginators = 'hide';
+    this.lineStateDevelopers = 'hide';
+    this.lineStateHowItWorks = 'hide';
+    switch (section) {
+      case 'creditors':
+        this.lineStateCreditors = 'show';
+        break;
+      case 'originators':
+        this.lineStateOriginators = 'show';
+        break;
+      case 'developers':
+        this.lineStateDevelopers = 'show';
+        break;
+      case 'howItWorks':
+        this.lineStateHowItWorks = 'show';
+        break;
+      default:
+      break;
+
+    }
+  }
 
   mobileMenu() {
     this.mobile = !this.mobile;

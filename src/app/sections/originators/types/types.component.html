@@ -1,8 +1,12 @@
-<div class="row">
+<div class="row" [@scrollGroupAnimation]="state" >
     <div class="container">
         <div class="col-1">
             <app-title-text>
                 <h3 class="title">TYPES</h3>
+                <h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+                <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+                <h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+                <h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
                 <p class="text">Either they belong to the traditional finance world, the fintech industry or the blockchain ecosystem, RCN supports the funding needs of every kind of originator.
                   </p>
             </app-title-text>
@@ -29,10 +33,11 @@
                                 </p>
                       </mat-tab>
                   </mat-tab-group>
+                  <a href="" routerLink='/how-it-works' class="link">> SEE HOW IT WORKS </a>
             </div>
         </div>
-        <!-- <div class="col-2 img">
+        <div class="col-2 img">
           <img src="../../../../assets/img/grafico-muestra.svg" alt="">
-        </div> -->
+        </div>
     </div>
   </div>

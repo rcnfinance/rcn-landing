@@ -1,5 +1,22 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+  content: ""; 
+  display: block;
+  margin: 0; 
+  border-bottom: 2px solid blue; 
+}
+
+
+.page-title2:after {
+  content: ""; 
+  display: block; 
+  margin: 0; 
+  padding-top: 5px; 
+  padding-top: 0; 
+  border-bottom: 1px solid blue; 
+}
+
 .main-container {
   display:flex;
   justify-content: center;
@@ -31,6 +48,82 @@
 
 .img-box-mobile {
   display: none;
+}
+
+.title-ref {
+  margin-top: 5%;
+  margin-bottom: 0%;
+  @include char-card-text;
+  color: gray;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  .fa-info-circle {
+    margin-left: 0.5%;
+  }
+}
+
+.row-ref {
+  margin-bottom: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .col-1-ref {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .ref-1 {
+      width: 45%;
+    }
+    .ref-2 {
+      width: 45%;
+    }
+  }
+  .col-2-ref {
+    width: 45%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .ref-3 {
+      width: 45%;
+    }
+    .ref-4 {
+      width: 45%;
+    }
+  }
+}
+
+.ref-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 8% 0;
+  .ref {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    h6 {
+      @include link-text;
+      font-weight: 400;
+    }
+  }
+  .ref-img-box {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    .ref-img {
+      margin-left: 10%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
 }
 
 @media (max-width: 768px){
@@ -67,6 +160,45 @@
       width: 100%
     }
   }
+}
+
+.title-ref {
+  margin-top: 5%;
+  margin-bottom: 2%;
+  @include char-card-text;
+  color: gray;
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-start;
+  .fa-info-circle {
+    margin-left: 0.5%;
+  }
+}
+
+.row-ref {
+  .col-1-ref {
+    width: 100%;
+  }
+  .col-2-ref {
+    width: 100%;
+  }
+}
+
+.ref-box {
+  margin: 12% 0;
+  .ref {
+    width: 70%;
+    justify-content: flex-start;
+    h6 {
+      font-size: 12px;
+    }
+  }
+  .ref-img-box {
+    width: 30%;
+    justify-content: flex-end;
+  }
+
 }
 
 }

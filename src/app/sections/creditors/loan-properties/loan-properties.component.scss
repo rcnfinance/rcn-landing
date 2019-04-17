@@ -1,5 +1,32 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+	content: ""; 
+	display: block;
+	margin: 0; 
+	border-bottom: 2px solid blue; 
+}
+
+
+.page-title2:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 5px; 
+	padding-top: 0; 
+	border-bottom: 1px solid blue; 
+}
+
+
+.page-title-mobile:after {
+	display: none;
+}
+
+
+.page-title2-mobile:after {
+	display: none;
+}
+
 .main-container {
   display:flex;
   justify-content: center;
@@ -92,6 +119,116 @@ h6 {
 	@include tab-title;
 }
 
+.tooltip-box1 {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	width: 230%;
+	height: auto;
+	position: absolute;
+	right: 150%;
+	bottom: 300%;
+	z-index: 2;
+}
+
+.tooltip-box2 {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	width: 230%;
+	height: auto;
+	position: absolute;
+	left: 300%;
+	bottom: 300%;
+	z-index: 2;
+}
+
+.tooltip-box3 {
+	opacity: 0.0;
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	-ms-transition: all 500ms ease-in-out;
+	-o-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
+	width: auto;
+	height: auto;
+	position: relative;
+	left: 150%;
+	bottom: 300%;
+	z-index: 2;
+	padding: 0 0 5% 5%;
+}
+
+	.front-box {
+		border: solid $rcn-blue 1px;
+		border-radius: 15px;
+		width: auto;
+		height: auto;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: white;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.content {
+			width: 250px;
+			padding: 5%;
+
+			h6 {
+				@include link-text;
+  			font-size: 13px;
+			}
+			p {
+				@include sm-text;
+				font-size: 12px;
+			}
+		}
+	}
+	.back-box {
+		border-radius: 15px;
+		width: 90%;
+		height: auto;
+		position: absolute;
+		top: 1%;
+		left: 5%;
+		overflow: hidden;
+		img {
+			width: 100%;
+		}
+	}
+
+
+.hover {
+	position: relative;
+	width: 100%;
+}
+
+.hover1:hover > .tooltip-box1{
+	opacity: 1.0;
+}
+
+.hover2:hover > .tooltip-box2{
+	opacity: 1.0;
+}
+
+.hover3:hover > .tooltip-box3{
+	opacity: 1.0;
+}
+
+.hover:hover > h6{
+	color: $rcn-blue;
+	cursor: pointer;
+}
+
 .sub-title {
 	font-size: 10px;
 	font-weight: 400;
@@ -104,6 +241,32 @@ h6 {
 }
 
 @media (max-width: 768px){
+
+	.page-title:after {
+		display: none;
+}
+
+
+.page-title2:after {
+		display: none;
+}
+
+.page-title-mobile:after {
+		content: ""; 
+		display: block;
+		margin: 0; 
+		border-bottom: 2px solid $rcn-blue; 
+}
+
+
+.page-title2-mobile:after {
+		content: ""; 
+		display: block; 
+		margin: 0; 
+		padding-top: 5px; 
+		padding-top: 0; 
+		border-bottom: 1px solid $rcn-blue; 
+}
 
 .main-container {
 	display:flex;
@@ -138,7 +301,7 @@ h6 {
 			align-items: center;
 			margin-bottom: 2%;
 			.img-box {
-				width: 40px;
+				width: 35px;
 				height: auto;
 				margin-right: 2%;
 		}
@@ -165,7 +328,7 @@ h6 {
 		justify-content: space-between;
 		align-items: flex-start;
 		width: 100%;
-		margin: 2% 0;
+		margin: 4% 0;
 		.col-1 {
 			width: 60%;
 			display:flex;
@@ -187,6 +350,12 @@ h6 {
 	display: none;
 }
 
+.far {
+	margin-right: 12px;
+	font-size: 20px;
+	display: none;
+}
+
 h6 {
 	@include tab-title;
 }
@@ -200,6 +369,18 @@ h6 {
 .data {
 	font-weight: 700;
 	font-size: 12px;
+}
+
+.tooltip-box1{
+	display: none;
+}
+
+.tooltip-box2{
+	display: none;
+}
+
+.tooltip-box3{
+	display: none;
 }
 
 }

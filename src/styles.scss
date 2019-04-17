@@ -62,6 +62,7 @@ $dark-blue: #002ccb;
 $gray: #f8f8f8;
 $text-gray: #696969;
 $gradient-blue: #202880;
+$button-rollover: #8b93ff;
 
 //Shadows
 @mixin shadow {
@@ -209,6 +210,7 @@ h1,h2,h3,h4,h5,h6 {
   font-size: 15px;
   font-weight: 500;
   color: black;
+  letter-spacing: 0.1em; 
 }
 
 //Buttons
@@ -227,6 +229,14 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 500;
   color: white;
 }
+
+@mixin char-card-text-color {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: $dark-blue;
+}
+
 
 @mixin part-card-text {
   font-family: 'Montserrat', sans-serif;
@@ -266,14 +276,14 @@ h1,h2,h3,h4,h5,h6 {
 
 @mixin sm-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: $text-gray;
 }
 
 @mixin link-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 11px;
+  font-size: 15px;
   font-weight: 700;
   color: $rcn-blue;
 }
@@ -302,6 +312,34 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 //-----------------------------------------------------------------------------------------------------------
+
+/* active tab */
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {
+  @include tab-title;
+  font-size: 11px;
+  padding: 0 10%;
+  width: 40%;
+  color: black !important;
+  }
+
+  ::ng-deep .mat-tab-list .mat-tab-label  {
+    width: 40%;
+    }
+  
+  /* ink bar */
+  ::ng-deep .mat-ink-bar {
+  background-color: $yellow !important;
+  }
+  
+  ::ng-deep .mat-tab-disabled {
+      color: red /*!important*/;
+}
+
+  .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+      background: white;
+    }
+
+
 
 // Margins
 .margintop0  {margin-top:0 !important;}

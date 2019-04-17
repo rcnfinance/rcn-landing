@@ -1,5 +1,11 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin: 0; 
+	border-bottom: 2px solid $rcn-blue; 
+}
 
 .main-container {
 	display: flex;
@@ -28,6 +34,11 @@
 		background: transparent;
 		@include button-text;
 		color: $rcn-blue;
+		cursor: pointer;
+	}
+	.button:hover {
+		background-color: $rcn-blue;
+		color: white;
 	}
 }
 
@@ -62,6 +73,7 @@
 	.title {
 		@include subtitle;
 		margin-top: 10%;
+		margin-bottom: 2%;
 	}
 	.text {
 		margin: 5% 0;
@@ -70,7 +82,7 @@
 	}
 	.button {
 		padding: 14px 26px;
-		margin-top: 5%;
+		margin: 2% 0;
 		font-size: 12px;
 	}
 }

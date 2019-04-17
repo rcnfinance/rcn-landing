@@ -8,7 +8,8 @@
 		width: 67%;
 		margin-right: 0;
 		img {
-				width: 100%;
+			min-height: 758px;
+			width: 100%;
 		}
 	}
 }
@@ -18,16 +19,16 @@
 }
 
 .content-back {
-
     @include row-center;
     position: absolute;
     left: 0;
     top: 5%;
-    height: auto;
+	height: auto;
+	opacity: 0.9;
     z-index: 999;
     width: 50%;
     border-right: solid white 10px;
-    background-color: $rcn-blue;
+	background-color: $rcn-blue;
     .content {
         margin: 4% 2% 4% 20%;
     }
@@ -61,6 +62,12 @@
 	background: transparent;
 	@include button-text;
 	color: white;
+	cursor: pointer;
+}
+
+.button:hover {
+	font-weight: 700;
+	background-color: $button-rollover;
 }
 
 .buttons-box {
@@ -68,6 +75,7 @@
 	justify-content: space-between;
 	width: 50%;
 	margin-top: 1%;
+	height: 10%;
 	button {
 		background: none;
 		color: inherit;
@@ -78,9 +86,9 @@
 	}
 	i {
 		color: $rcn-blue;
+		cursor: pointer;
 	}
 }
-
 
 @media (max-width: 768px){
 
@@ -110,8 +118,9 @@
 	width: 70%;
 	margin-right: 0;
 	.img-box {
-		height: 100%;
+		height: 90%;
 		margin-bottom: 4%;
+		width: auto
 		img {
 			height: 100%;
 		}
@@ -146,6 +155,8 @@
 
 .buttons-box {
 	width: 80%;
+	height: 5%;
+	margin-top: 8%;
 }
 
 }  

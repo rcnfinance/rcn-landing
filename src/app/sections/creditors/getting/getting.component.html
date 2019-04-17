@@ -1,9 +1,11 @@
-<div class="main-container">
+<div class="main-container" [@scrollGroupAnimation]="state">
   <div class ="phrase">
     <div class="row">
       <div class="text">
         <app-title-text>
             <h3 class="title">Getting started</h3>
+            <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+            <div class="line"></div>
             <p class="text-p">RCN blockchain-based lending eliminates unnecessary friction, 
               allowing creditors to start lending in three easy steps.</p>
         </app-title-text>
@@ -18,7 +20,10 @@
           </div>
           <div class="content">
             <h6>{{content.title}}</h6>
-            <p>{{content.data}}</p>
+            <p>{{content.data}}<a href="{{content.target1}}" target="_blank">{{content.data2}}</a>{{content.data3}}<a href="{{content.target2}}" target="_blank">{{content.data4}}</a>{{content.data5}}</p>
+          </div>
+          <div class="box-number">
+            <p class="number">{{content.number}}</p>
           </div>
         </div>
       </div>

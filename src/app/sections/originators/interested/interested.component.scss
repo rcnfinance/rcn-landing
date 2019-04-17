@@ -1,20 +1,28 @@
 @import '../../../../styles.scss'; //Styles
 
+.page-title:after {
+    content: ""; 
+    display: block;
+    margin: 0; 
+    border-bottom: 2px solid blue; 
+}
+
 .phrase {
 	display: flex;
-    justify-content: center;
-    margin: 5% 0;
-	.row {
-    width: 100%;
-    margin-left: 10%;
-    .text {
-        @include half;
-        .title {
-            @include subtitle;
-				}
-            
-        }
-    }
+	justify-content: center;
+	padding: 5% 0;
+	background-color: rgb(245, 245, 245);
+		.row {
+		width: 100%;
+		margin-left: 10%;
+		.text {
+			@include half;
+			.title {
+				@include subtitle;
+			}
+				
+		}
+	}
 }
 
 .mail {
@@ -23,24 +31,26 @@
 
 @media (max-width: 768px){
 
-	.phrase {
-		display: flex;
-			justify-content: center;
-			margin: 5% 0;
-		.row {
-			width: 80%;
-			margin-left: 0;
-			padding: 10% 0;
-			.text {
-					@include half;
-					width: 100%;
-					font-size: 22px;
-					line-height: 1.6;
-					.title {
-							@include subtitle;
-					}
-							
-					}
+.phrase {
+	display: flex;
+	justify-content: center;
+	margin: 5% 0 0 0;
+	.row {
+		width: 80%;
+		margin-left: 0;
+		padding: 10% 0;
+		.text {
+			@include half;
+			width: 100%;
+			
+			line-height: 1.6;
+			.title {
+				@include subtitle;
 			}
+			.text-p {
+				font-size: 18px;
+			}
+			}
+		}
 	}
 }

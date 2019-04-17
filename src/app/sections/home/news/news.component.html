@@ -1,34 +1,39 @@
-<div class="main-container">
+<div class="main-container" [@scrollGroupAnimation]="state">
     <div class="col-1">
       <app-title-text>
           <h3 class="title">NEWS AND EVENTS</h3>
+          <h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+          <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+          <h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+          <h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
           <p class="reg-text">As one of the Decentralized Finance ecosystem’s key stakeholders, 
             RCN is regularly featured at top events and media outlets across the world.</p>
       </app-title-text>
     </div>
   </div>
-  <div class="row">
+  <div class="row" >
     <div class="carrousel">
-      <div class="container" *ngFor="let info of info">
+      <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeft]="eachContent.movement" 
+       [@slideInRight]="eachContent.movement"  [@opacity]="eachContent.opacity">
       <div class="border" >
-          <div class="content">
-            <div class="row-up">
+          <div class="content" >
+            <div class="row-up" >
               <div class="title-box">
-                <div><h3>{{info.title}}</h3></div>
+                <div><h3>{{eachContent.title}}</h3></div>
                 <div class="line"></div>
               </div>
               <div>
-                <div class="p-box"><p>{{info.text}}</p></div>
+                <div class="p-box"><p>{{eachContent.text}}</p></div>
               </div>
             </div>
             <div class="row-down">
               <div class="info-box">
-                <div class="icon"><i class="{{info.icon1}}"></i></div>
-                <div><p>{{info.date}}</p></div>
+                <div class="icon"><i class="{{eachContent.icon1}}"></i></div>
+                <div><p>{{eachContent.date}}</p></div>
               </div>
               <div class="info-box">
-                <div class="icon"><i class="{{info.icon2}}"></i></div>
-                <div><p>{{info.location}}</p></div>
+                <div class="icon"><i class="{{eachContent.icon2}}"></i></div>
+                <div><p>{{eachContent.location}}</p></div>
               </div>
             </div>
           

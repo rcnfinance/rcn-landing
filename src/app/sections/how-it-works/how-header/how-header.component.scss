@@ -2,12 +2,14 @@
 
 
 .main-container {
-	overflow: hidden;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
 }
 
 .img-box {
-	height: auto;
-	overflow: hidden;
+	width: 100%;
+  overflow: hidden;
 	img {
 		width: 100%;
 	}
@@ -22,7 +24,9 @@
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 19vh;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 100%;
   .row {
     width: 80%;
@@ -34,6 +38,7 @@
 			Color: white;
       font-size: 24px;
       line-height: 1.6;
+      margin-top: -2%;
     }
   }
 }
@@ -60,7 +65,10 @@
   justify-content: center;
   position: absolute;
   top: 16vh;
-	width: 100%;
+  width: 100%;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   .row {
 		@include three-quarters;
 		width: 80%;
