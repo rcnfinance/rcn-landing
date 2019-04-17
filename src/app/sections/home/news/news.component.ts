@@ -66,7 +66,7 @@ export class NewsComponent implements OnInit {
         icon1: "fas fa-calendar-alt",
         icon2: "fas fa-map-marker-alt",
         date: "04/08-09/2019",
-        location: "SAN FRANSISCO - US",
+        location: "San Fransisco - US",
         movement: 'noMovement',
         opacity: 'notOpacity'
       },
