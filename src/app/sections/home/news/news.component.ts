@@ -140,7 +140,6 @@ export class NewsComponent implements OnInit {
   activateContent(startIndex: number, movement: string) {
     if (this.isMobileResolution === true) {
       this.maxActiveContent = 1;
-      // this.activeContentStartIndex = 1;
     } else {
       this.maxActiveContent = 6;
     }
