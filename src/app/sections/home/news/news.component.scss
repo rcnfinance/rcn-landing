@@ -36,7 +36,7 @@
 
 .container {
 	display: inline-block;
-	margin-top: 4%;
+	margin-top: 2%;
 	width: 380px;
 }
 
@@ -44,7 +44,7 @@
 
 .border {
 	border: solid $rcn-blue 1.2px;
-	border-right: none;
+	border-left: none;
 	width: 375px;
 	height: 270px;
 	display: flex;
@@ -57,7 +57,6 @@
 		padding: 8% 8%;
 		flex-wrap: wrap;
 		display: flex;
-		// align-content: space-between;
 		.row-up {
 			height: auto;
 			.title-box {
@@ -96,6 +95,7 @@
 					margin-right: 2%;
 					display: flex;
 					align-items: center;
+					font-size: 12px;
 				}
 				p {
 					@include spon-card-sub;
@@ -128,20 +128,30 @@
 }
 
 .second-container {
-	margin: 1% 0;
+	margin: 2% 0;
 	.buttons-box {
 		display: flex;
 		justify-content: space-between;
-		width: 50%;
+		width: 75%;
 		margin-top: 1%;
-		margin-left: 10%;
+		margin-left: 5%;
 		button {
-			background: none;
+			background-color: white;
+			// padding: 0.8%;
+			width: 30px;
+			height: 30px;
 			color: inherit;
 			border: none;
 			padding: 0;
 			font: inherit;
 			outline: inherit;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: rgb(200, 200, 200);
+			
+			border-radius: 50px;
+
 		}
 		i {
 			color: $rcn-blue;
