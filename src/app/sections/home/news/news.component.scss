@@ -40,18 +40,20 @@
 	width: 380px;
 }
 
+
+
 .border {
 	border: solid $rcn-blue 1.2px;
 	border-right: none;
-	width: 380px;
-	height: 300px;
+	width: 375px;
+	height: 280px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	cursor: pointer;
 	.content {
-		width: 80%;
-		margin: 7% 5%;
+		width: 100%;
+		padding: 10% 10%;
 		flex-wrap: wrap;
 		display: flex;
 		align-content: space-between;
@@ -62,6 +64,7 @@
 				margin-bottom: 4%;
 					h3 {
 							@include spon-card-title;
+							font-size: 27px;
 					}
 			}
 			.line {
@@ -93,7 +96,7 @@
 					@include spon-card-sub;
 					margin: 0;
 					color: black;
-					font-size: 11px;
+					font-size: 13px;
 				}
 			}
 		} 
@@ -111,6 +114,7 @@
 		width: auto;
 		display: flex;
 		overflow: hidden;
+		margin-left: -340px;
 	}
 	img {
 		height: 500px;
@@ -178,25 +182,32 @@
 
 .border {
 	border: solid $rcn-blue 1px;
-	border-right: none;
-	width: 380px;
-	height: 300px;
+	border-right: solid $rcn-blue 1px;
+	border-left: solid $rcn-blue 6px;
+	border-radius:  0 35px 35px 0;
+	width: 330px;
+	height: auto;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	.content {
-		width: 70%;
+		width: 85%;
 		margin: 7% 5%;
 		flex-wrap: wrap;
 		display: flex;
-		.title-box {
-		height: 20%;
-		width: 100%;
-			h3 {
-					@include spon-card-title;
+		.row-up {
+			.title-box {
+				height: 20%;
+				width: 100%;
+				margin: 0;
+					h3 {
+						@include spon-card-title;
+						font-size: 20px;
+					}
+		
 			}
-
-	}
+		}
+		
 		.p-box {
 			display: flex;
 			flex-wrap: wrap;
@@ -222,11 +233,34 @@
 
 }
 
+// .row {
+// 	width: 100%;
+// 	drag-scroll {
+// 	height: 100%;
+// 	width: 100%;
+// 	}
+// 	img {
+// 		height: 500px;
+// 		width: auto;
+// 	}
+// }
+
+.container {
+	display: inline-block;
+	margin-top: 4%;
+	width: 380px;
+	margin: 0 6%;
+}
+
 .row {
-	width: 100%;
-	drag-scroll {
-	height: 100%;
-	width: 100%;
+	width: auto;
+	overflow-x: hidden;
+	.carrousel {
+		height: 100%;
+		width: auto;
+		display: flex;
+		overflow: hidden;
+		margin-left: -110%;
 	}
 	img {
 		height: 500px;
