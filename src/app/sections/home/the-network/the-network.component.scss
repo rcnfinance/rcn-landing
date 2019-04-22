@@ -69,6 +69,8 @@
 
 .link {
     @include link-text;
+    letter-spacing: 1.6px;
+
 }
 
 .link:hover {

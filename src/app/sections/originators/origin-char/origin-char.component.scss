@@ -36,7 +36,7 @@
 			background-image: white ;
 			.content-box {
 				width: 220px;
-				height: 200px;
+				height: 220px;
 				display: flex;
 				flex-wrap: wrap;
 				justify-content: center;
@@ -50,15 +50,15 @@
 					align-items: center;
 					margin: 3%;
 					.img-box-expanded {
-						width: 40%;
+						width: 35%;
 						margin-right: 60%;
 						img {
 							width: 100%;
 						}
 					}
-
 					.h6 {
 						@include char-card-text-color;
+						margin-bottom: 1%;
 					}
 					.line {
 						width: 10%;
@@ -67,7 +67,7 @@
 					}
 					.text {
 						@include char-card-text-color;
-						font-size: 10px;
+						font-size: 12px;
 						margin-top: 6%;
 					}
 
