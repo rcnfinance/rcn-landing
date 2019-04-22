@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LandingAnimations } from 'src/app/animations/animations';
+import { checkAndUpdateBinding } from '@angular/core/src/view/util';
 
 @Component({
   selector: 'app-header',
@@ -16,6 +17,9 @@ export class HeaderComponent implements OnInit {
   activeContent: IContent[] = [];
   activeContentIndex: number;
   enabledLeft = false;
+  first = true;
+  last = false;
+  screen = 0;
 
   constructor(private router: Router) { }
 
@@ -61,11 +65,14 @@ export class HeaderComponent implements OnInit {
       --this.activeContentIndex;
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
-
-
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
     }
+    this.screen --
+    if (this.screen < 0) {
+      this.screen = 0;
+    }
+    this.check()
   }
 
   right() {
@@ -76,13 +83,27 @@ export class HeaderComponent implements OnInit {
       ++this.activeContentIndex;
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
- 
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
-
-      console.log(this.activeContent);
     }
+    this.screen ++
+    if (this.screen > 2) {
+      this.screen = 2;
+    }
+    this.check()
+  }
 
+  check() {
+    if (this.screen == 0) {
+      this.first = true;
+      this.last = false;
+    } else if (this.screen == 2) {
+      this.first = false;
+      this.last = true;
+    } else {
+      this.first = false;
+      this.last = false;
+    }
   }
 
 }
