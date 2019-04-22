@@ -88,7 +88,13 @@
 		color: $rcn-blue;
 		cursor: pointer;
 	}
+	.gray {
+		color: gray;
+		cursor: auto;
+	}
+	
 }
+
 
 @media (max-width: 768px){
 
@@ -148,16 +154,23 @@
 	}
 }
 
-.button {
-  padding: 14px 26px;
-	font-size: 12px;
-}
+
 
 .buttons-box {
 	width: 80%;
 	height: 5%;
 	margin-top: 8%;
+	.button {
+		padding: 14px 26px;
+		  font-size: 12px;
+		  .gray {
+			color: gray;
+			cursor: auto;
+		}
+	  }
 }
+
+
 
 }  
 

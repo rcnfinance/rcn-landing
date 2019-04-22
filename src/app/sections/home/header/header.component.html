@@ -15,8 +15,8 @@
     </div>
     <div class="second-container" >
       <div class="buttons-box">
-        <button (click)="left()"><i class="fas fa-arrow-left"></i></button>
-        <button (click)="right()"><i class="fas fa-arrow-right"></i></button>
+        <button (click)="left()"><i [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i></button>
+        <button (click)="right()"><i [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
       </div>
     </div>
   </div>
@@ -26,8 +26,8 @@
     </div>
     <div class="second-container">
         <div class="buttons-box">
-          <button (click)="left()"><i class="fas fa-arrow-left"></i></button>
-          <button (click)="right()"><i class="fas fa-arrow-right"></i></button>
+          <button (click)="left()"><i [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i></button>
+          <button (click)="right()"><i [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
         </div>
     </div>
   </div>
