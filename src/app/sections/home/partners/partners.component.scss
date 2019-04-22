@@ -164,8 +164,7 @@ td:first-child, th:first-child {
 	height: 200px;
 	-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
 	transition: width 0.6s, transform 0.6s ease;
-	// -webkit-transition: height 0.5s; /* Safari */
-	// transition: height 0.5s;
+	cursor: pointer;
 	.img-box {
 		margin: 10%;
 		margin-bottom: 0;
@@ -211,6 +210,11 @@ td:first-child, th:first-child {
 		@include part-card-text;
 		font-weight: 700;
 	}
+}
+
+.img-outer:hover h6 {
+	font-weight: 700;
+
 }
 
 .row2 {
