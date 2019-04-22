@@ -83,6 +83,12 @@
 		padding: 0;
 		font: inherit;
 		outline: inherit;
+		width: 30px;
+		height: 30px;
+	}
+	button:hover {
+		background-color: rgb(200, 200, 200);
+		border-radius: 50px;
 	}
 	i {
 		color: $rcn-blue;
