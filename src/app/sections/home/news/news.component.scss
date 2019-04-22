@@ -44,7 +44,7 @@
 
 .border {
 	border: solid $rcn-blue 1.2px;
-	border-left: none;
+	border-left: solid $rcn-blue 0.6px;
 	width: 375px;
 	height: 270px;
 	display: flex;
@@ -137,7 +137,6 @@
 		margin-left: 5%;
 		button {
 			background-color: white;
-			// padding: 0.8%;
 			width: 30px;
 			height: 30px;
 			color: inherit;
@@ -242,7 +241,6 @@
 					margin-right: 3%;
 				}
 				p {
-					// margin: 0;
 					color: black;
 					font-size: 11px;
 					font-weight: 400;
@@ -253,18 +251,6 @@
 	}
 
 }
-
-// .row {
-// 	width: 100%;
-// 	drag-scroll {
-// 	height: 100%;
-// 	width: 100%;
-// 	}
-// 	img {
-// 		height: 500px;
-// 		width: auto;
-// 	}
-// }
 
 .container {
 	display: inline-block;
