@@ -17,6 +17,9 @@ export class NewsComponent implements OnInit {
   activeContent: IContent[] = [];
   activeContentStartIndex: number;
   maxActiveContent = 6;
+  first = true;
+  last = false;
+  screen = 0;
 
   state = 'hide';
   lineState = 'hide';
@@ -170,8 +173,12 @@ export class NewsComponent implements OnInit {
     if (this.activeContentStartIndex > 0) {
       --this.activeContentStartIndex;
       this.activateContent(this.activeContentStartIndex, 'left');
-
     }
+    this.screen --
+    if (this.screen < 0) {
+      this.screen = 0;
+    }
+    this.check()
   }
 
   right() {
@@ -180,7 +187,24 @@ export class NewsComponent implements OnInit {
       ++this.activeContentStartIndex;
       this.activateContent(this.activeContentStartIndex, 'right');
     }
+    this.screen ++
+    if (this.screen > 2) {
+      this.screen = 2;
+    }
+    this.check()
+  }
 
+  check() {
+    if (this.screen == 0) {
+      this.first = true;
+      this.last = false;
+    } else if (this.screen == 2) {
+      this.first = false;
+      this.last = true;
+    } else {
+      this.first = false;
+      this.last = false;
+    }
   }
 }
 
