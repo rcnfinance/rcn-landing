@@ -106,10 +106,10 @@ export class LandingAnimations {
                 transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
-                state('enterLeft', style({ transform: 'translateX(50%)', opacity: 1})),
+                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
                 transition('* => enterLeft', [
-                  style({ transform: 'translateX(0)', opacity: 0.2 }),
-                  animate('600ms 1s ease-in')
+                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
+                  animate('600ms ease-in')
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
@@ -157,6 +157,18 @@ export class LandingAnimations {
                 ])
               ]),
               trigger('lineAnimationThickParameter', [
+                state('show', style({
+                  width: '{{ widthLength }}',
+                  transform: 'translateX(0)'
+                }), {params: {widthLength: '10%'}}),
+                state('hide',   style({
+                  width: '0%',
+                  transform: 'translateX(0)'
+                })),
+                transition('show => hide', animate('0s')),
+                transition('hide => show', animate('600ms  ease-in'))
+              ]),
+              trigger('lineAnimationThinParameter', [
                 state('show', style({
                   width: '{{ widthLength }}',
                   transform: 'translateX(0)'

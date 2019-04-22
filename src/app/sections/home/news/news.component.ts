@@ -14,11 +14,9 @@ export class NewsComponent implements OnInit {
   xDisabled;
   yDisabled;
 
-  content: IContent[] = [];
-
   activeContent: IContent[] = [];
   activeContentStartIndex: number;
-  maxActiveContent = 5;
+  maxActiveContent = 6;
 
   state = 'hide';
   lineState = 'hide';
@@ -53,12 +51,22 @@ export class NewsComponent implements OnInit {
   ngOnInit() {
     this.content = [
       {
+        title: "",
+        text: "",
+        icon1: "",
+        icon2: "",
+        date: "",
+        location: "",
+        movement: '',
+        opacity: ''
+      },
+      {
         title: "LendIt USA 2019",
         text: "LendIt is one of the world’s leading events in financial services innovation, fintech, digital banking, blockchain and lending.",
         icon1: "fas fa-calendar-alt",
         icon2: "fas fa-map-marker-alt",
         date: "04/08-09/2019",
-        location: "SAN FRANSISCO - US",
+        location: "San Fransisco - US",
         movement: 'noMovement',
         opacity: 'notOpacity'
       },
@@ -75,8 +83,8 @@ export class NewsComponent implements OnInit {
       {
         title: "EDCON 2019",
         text: "EDCON is a global conference series aiming to accelerate the development of the Ethereum ecosystem worldwide.",
-        icon1: "fas fa-chart-line",
-        icon2: "fas fa-chart-line",
+        icon1: "fas fa-calendar-alt",
+        icon2: "fas fa-map-marker-alt",
         date: "04/08-14/2019",
         location: "Sydney - Australia",
         movement: 'noMovement',
@@ -133,7 +141,7 @@ export class NewsComponent implements OnInit {
     if (this.isMobileResolution === true) {
       this.maxActiveContent = 1;
     } else {
-      this.maxActiveContent = 5;
+      this.maxActiveContent = 6;
     }
 
 

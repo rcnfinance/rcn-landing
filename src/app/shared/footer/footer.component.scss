@@ -104,16 +104,18 @@
 			width: 100%;
 			display: flex;
 			justify-content: space-between;
+			height: auto;
 			.links-mobile {
 				display: block;
 				@include foot-subtitle;
+				height: auto;
 				.link {
 					margin: 0 0 10% 0;
 				}
 				a {
 					color: white;
 					text-decoration: none;
-					margin-top: 2%;
+					margin: 5% 0;
 				}
 			}
 			.logo-box-mobile {
