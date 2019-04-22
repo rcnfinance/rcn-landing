@@ -33,6 +33,7 @@
 	display:flex;
 	flex-wrap: wrap;
 	padding-top: 2%;
+	border-bottom: solid $gray 1px;
 	.col-1 {
 		@include half;
 		margin-left: 10%;
@@ -47,15 +48,17 @@
 		table {
 			width: auto;
 			height: auto;
-			-webkit-transition: width 0.6s; /* Safari */
-			transition: width 0.6s, transform 0.6s ease ;
+			-webkit-transition: width 0.5s; /* Safari */
+			transition: width 0.5s, transform 0.5s ease ;
+			-webkit-transition: height 0.5s; /* Safari */
+			transition: height 0.5s, transform 0.5s ease ;
 			border-collapse:separate;
 			border:solid $rcn-blue 1.2px;
 			border-radius:35px;
 			-moz-border-radius:6px;
 			margin: auto;
-			-webkit-transition: margin 0.6, transform 0.6s ease,; /* Safari */
-			transition: margin 0.6s, transform 0.6s ease;
+			-webkit-transition: margin-left 0.6, transform 0.6s ease,; /* Safari */
+			transition: margin-left 0.6s, transform 0.6s ease;
 		}
   	}
 }
@@ -64,21 +67,23 @@
 
 .row-show {
 	display: flex;
-	padding-left: 10%;
+	padding-left: 0%;
 	padding-top: 6.5%;
 	table {
 		width: auto;
 		height: auto;
-		-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
-		transition: width 0.6s, transform 0.6s ease;
+		-webkit-transition: width 0.5s, transform 0.5s ease; /* Safari */
+		transition: width 0.5s, transform 0.5s ease;
+		-webkit-transition: height 0.5s; /* Safari */
+		transition: height 0.5s, transform 0.5s ease ;
 		border-collapse:separate;
 		border:solid $rcn-blue 1.2px;
 		border-radius:35px;
 		-moz-border-radius:6px;
-		margin-left: 0%;
+		margin-left: 30%;
 		margin-bottom: 0%;
-		-webkit-transition: margin 0.6s,transform 0.6s ease; /* Safari */
-		transition: margin 0.6s,transform 0.6s ease;
+		-webkit-transition: margin-left 0.6s,transform 0.6s ease; /* Safari */
+		transition: margin-left 0.6s,transform 0.6s ease;
 	}
 }
 
@@ -169,8 +174,8 @@ td:first-child, th:first-child {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 50%;
-		-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
-		transition: width 0.6s, transform 0.6s ease;
+		// -webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+		// transition: width 0.6s, transform 0.6s ease;
 		img {
 			width: 100%;
 		}
@@ -191,8 +196,8 @@ td:first-child, th:first-child {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 40%;
-		-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
-		transition: width 0.6s, transform 0.6s ease;
+		// -webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
+		// transition: width 0.6s, transform 0.6s ease;
 		img {
 			width: 100%;
 		}
