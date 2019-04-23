@@ -227,6 +227,8 @@ h6 {
 .hover:hover > h6{
 	color: $rcn-blue;
 	cursor: pointer;
+	-webkit-transition: color 0.2s; /* Safari */
+	transition: color 0.2s;
 }
 
 .sub-title {

@@ -75,9 +75,13 @@ section {
 			font-size: 14px;
 			margin: 0 2% ;
 			cursor: pointer;
+			-webkit-transition: color 0.2s; /* Safari */
+			transition: color 0.2s;
 		}
 		.menu-text:hover {
 			color: $text-gray;
+			-webkit-transition: color 0.2s; /* Safari */
+			transition: color 0.2s;
 		} 
   }
 }

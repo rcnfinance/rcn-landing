@@ -68,6 +68,8 @@
 .button:hover {
 	font-weight: 700;
 	background-color: $button-rollover;
+	-webkit-transition: background-color 0.2s; /* Safari */
+	transition: background-color 0.2s;
 }
 
 .buttons-box {
@@ -85,10 +87,8 @@
 		outline: inherit;
 		width: 30px;
 		height: 30px;
-	}
-	button:hover {
-		background-color: rgb(200, 200, 200);
-		border-radius: 50px;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
 	}
 	i {
 		color: $rcn-blue;
