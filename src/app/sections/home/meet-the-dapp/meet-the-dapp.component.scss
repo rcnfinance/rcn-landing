@@ -36,10 +36,24 @@
 		@include button-text;
 		color: $rcn-blue;
 		cursor: pointer;
+		-webkit-transition: font-weight 0.2s; /* Safari */
+		transition: font-weight 0.2s;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
+		-webkit-transition: color 0.2s; /* Safari */
+		transition: color 0.2s;
+		
 	}
 	.button:hover {
 		background-color: $rcn-blue;
 		color: white;
+		font-weight: 700;
+		-webkit-transition: font-weight 0.2s; /* Safari */
+		transition: font-weight 0.2s;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
+		-webkit-transition: color 0.2s; /* Safari */
+		transition: color 0.2s;
 	}
 }
 

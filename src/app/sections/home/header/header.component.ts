@@ -30,13 +30,15 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
     this.content = [
       {
-        title: 'RCN',
+        title0: 'THE RCN',
+        title: 'NETWORK',
         img: '../../../../assets/img/slider-RCN_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-RCN_mobile.jpg',
         selected: 'notSelected',
         fadeIn: 'notFadeIn'
       },
       {
+        title0: '',
         title: 'BLOCKCHAIN GLOBAL LENDING',
         img: '../../../../assets/img/slider-blockchain_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-blockchain_mobile.jpg',
@@ -44,6 +46,7 @@ export class HeaderComponent implements OnInit {
         fadeIn: 'notFadeIn'
       },
       {
+        title0: '',
         title: 'FRICTIONLESS DEBT MARKETS',
         img: '../../../../assets/img/slider-frictionless_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-frictionless_mobile.jpg',
@@ -57,7 +60,7 @@ export class HeaderComponent implements OnInit {
     this.activeContent[0].fadeIn = 'fadeIn';
     this.first = true;
 
-   // setInterval(() => this.changeActiveContent(), 10000);
+    // setInterval(() => this.changeActiveContent(), 5000);
 
   }
 
@@ -123,6 +126,7 @@ export class HeaderComponent implements OnInit {
 
 
 interface IContent {
+  title0:string;
   title: string;
   img: string;
   imgMobile: string;
