@@ -138,7 +138,7 @@ export class LandingAnimations {
               ]),
               trigger('slideInUp', [
                 transition(':enter', [
-                  style({ transform: 'translateY(20px)', opacity: 0 }),
+                  style({ transform: 'translateY(20px)', opacity: 0.2 }),
                   animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
                 ]),
               ]),
@@ -150,7 +150,7 @@ export class LandingAnimations {
               ]),
               trigger('slideInUpGroup', [
                 transition(':enter', [
-                  style({ transform: 'translateY(20px)', opacity: 0 }),
+                  style({ transform: 'translateY(20px)', opacity: 0.2 }),
                   animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 })),  query('@*', [
                     animateChild(),
                   ])
