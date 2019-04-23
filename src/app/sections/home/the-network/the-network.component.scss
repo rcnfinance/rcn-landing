@@ -29,6 +29,7 @@
 
 .row{
     @include row-both;
+    padding-bottom: 2%;
     .container {
         @include row-around;
         margin: 3% 0;
@@ -60,6 +61,7 @@
 
 .sm-text {
     @include sm-text;
+    line-height: 1.6;
 }
 
 .tabs {

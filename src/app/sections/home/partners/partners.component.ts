@@ -8,7 +8,7 @@ import { LandingAnimations } from 'src/app/animations/animations';
   animations: LandingAnimations.animations
 })
 export class PartnersComponent implements OnInit {
-  info = {};
+  info:any;
   show = false;
 
   state = 'hide';
