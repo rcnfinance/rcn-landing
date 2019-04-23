@@ -209,6 +209,8 @@ td:first-child, th:first-child {
 	h6 {
 		margin: 0;
 		@include part-card-text;
+		-webkit-transition: font-weight 0.2s; /* Safari */
+		transition: font-weight 0.2s;
 	}
 	.h6-bold {
 		margin: 0;
@@ -219,7 +221,8 @@ td:first-child, th:first-child {
 
 .img-outer:hover h6 {
 	font-weight: 700;
-
+	-webkit-transition: font-weight 0.2s; /* Safari */
+	transition: font-weight 0.2s;
 }
 
 .row2 {
