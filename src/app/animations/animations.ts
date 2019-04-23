@@ -19,7 +19,7 @@ export class LandingAnimations {
                   })
                 ),
                 transition('selected <=> *', [
-                  animate('300ms ease-in')
+                  animate('400ms ease-in')
                 ])
               ]),
               trigger('scrollAndShrink', [
@@ -133,7 +133,7 @@ export class LandingAnimations {
                   })
                 ),
                 transition('* => opacity', [
-                  animate('0ms ease-in')
+                  animate('400ms ease-in')
                 ])
               ]),
               trigger('slideInUp', [

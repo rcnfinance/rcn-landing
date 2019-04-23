@@ -57,8 +57,7 @@ export class HeaderComponent implements OnInit {
     this.activeContent[0].fadeIn = 'fadeIn';
     this.first = true;
 
-    // repeat with the interval of 2 seconds
-    setInterval(() => this.changeActiveContent(), 5000);
+    setInterval(() => this.changeActiveContent(), 4000);
 
   }
 
