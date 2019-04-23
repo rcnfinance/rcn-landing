@@ -8,7 +8,13 @@ import { LandingAnimations } from 'src/app/animations/animations';
   animations: LandingAnimations.animations
 })
 export class PartnersComponent implements OnInit {
-  info:any;
+  info = {
+    text: "", 
+    title: "",
+    subTitle:"",
+    img:"",
+    active: false
+  };
   show = false;
 
   state = 'hide';
@@ -41,7 +47,7 @@ export class PartnersComponent implements OnInit {
       title: "Ripio",
       subTitle:"Loan Origination",
       img:"../../../../assets/partners/loan-origination.png",
-      ripioActive: true}; 
+      active: true}; 
   }
 
   bancor(){
@@ -50,7 +56,7 @@ export class PartnersComponent implements OnInit {
       title: "Bancor Network",
       subTitle:"Liquidity Provision",
       img:"../../../../assets/partners/liquidity-provision.png",
-      bancorActive: true};  
+      active: true};  
   }
 
   kyber(){
@@ -59,7 +65,7 @@ export class PartnersComponent implements OnInit {
       title: "Kyber Network",
       subTitle:"Liquidity Provision",
       img:"../../../../assets/partners/liquidity-provision.png",
-      kyberActive: true};  
+      active: true};  
   }
 
   zeppelin(){
@@ -68,7 +74,7 @@ export class PartnersComponent implements OnInit {
       title: "Zeppelin",
       subTitle:"Security Auditing",
       img:"../../../../assets/partners/security-auditing.png",
-      zeppelinActive: true}; 
+      active: true}; 
   }
 
   decentraland(){
@@ -77,7 +83,7 @@ export class PartnersComponent implements OnInit {
       title: "Decentraland",
       subTitle:"Loan Origination",
       img:"../../../../assets/partners/loan-origination.png",
-      decentralandActive: true}; 
+      active: true}; 
   }
 
   metamask(){
@@ -86,7 +92,7 @@ export class PartnersComponent implements OnInit {
       title: "Metamask",
       subTitle:"Funds Management",
       img:"../../../../assets/partners/funds-management.png",
-      metamaskActive: true}; 
+      active: true}; 
   }
 
   civic(){
@@ -95,7 +101,7 @@ export class PartnersComponent implements OnInit {
       title: "Civic",
       subTitle:"Identity Management",
       img:"../../../../assets/partners/identity-management.png",
-      civicActive: true};  
+      active: true};  
   }
 
   ethereum(){
@@ -104,7 +110,7 @@ export class PartnersComponent implements OnInit {
       title: "Enterprise Ethereum Alliance",
       subTitle:"Ecosystem Integration",
       img:"../../../../assets/partners/ecosystem-integration.png",
-      ethereumActive: true};  
+      active: true};  
   }
 
  
