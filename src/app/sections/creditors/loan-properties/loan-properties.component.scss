@@ -214,19 +214,27 @@ h6 {
 
 .hover1:hover > .tooltip-box1{
 	opacity: 1.0;
+	// -webkit-transition: opacity 0.2s; /* Safari */
+	// transition: opacity 0.2s;
 }
 
 .hover2:hover > .tooltip-box2{
 	opacity: 1.0;
+	// -webkit-transition: opacity 0.2s; /* Safari */
+	// transition: opacity 0.2s;
 }
 
 .hover3:hover > .tooltip-box3{
 	opacity: 1.0;
+	// -webkit-transition: opacity 0.2s; /* Safari */
+	// transition: opacity 0.2s;
 }
 
 .hover:hover > h6{
 	color: $rcn-blue;
 	cursor: pointer;
+	-webkit-transition: color 0.2s; /* Safari */
+	transition: color 0.2s;
 }
 
 .sub-title {
