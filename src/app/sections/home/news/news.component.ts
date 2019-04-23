@@ -20,6 +20,7 @@ export class NewsComponent implements OnInit {
 
   state = 'hide';
   lineState = 'hide';
+  content = [];
 
   private isMobileResolution: boolean;
 
