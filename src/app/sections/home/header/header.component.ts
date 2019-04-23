@@ -17,7 +17,7 @@ export class HeaderComponent implements OnInit {
   activeContent: IContent[] = [];
   activeContentIndex: number;
   enabledLeft = false;
-  first = true;
+  first = false;
   last = false;
   screen = 0;
 
@@ -55,55 +55,69 @@ export class HeaderComponent implements OnInit {
     this.activeContent.push(this.content[0]);
     this.activeContentIndex = 0;
     this.activeContent[0].fadeIn = 'fadeIn';
+    this.first = true;
+
+    // repeat with the interval of 2 seconds
+    setInterval(() => this.changeActiveContent(), 5000);
+
+  }
+
+  changeActiveContent() {
+    if (this.activeContentIndex < this.content.length - 1) {
+      ++this.activeContentIndex;
+
+    } else {
+      this.activeContentIndex = 0;
+    }
+
+    if (this.activeContentIndex === 0) {
+      this.first = true;
+    } else {
+      this.first = false;
+    }
+    if (this.activeContentIndex === this.content.length - 1) {
+      this.last = true;
+    } else {
+      this.last = false;
+    }
+
+    this.activeContent.shift();
+    this.activeContent.push(this.content[this.activeContentIndex]);
+
+    this.activeContent[0].selected = 'enterLeft';
+    this.activeContent[0].fadeIn = 'fadeIn';
+
+
   }
 
 
   left() {
     if (this.activeContentIndex > 0) {
-      this.activeContent[0].selected = 'notSelected';
-      this.activeContent[0].fadeIn = 'notFadeIn';
+      this.last = false;
       --this.activeContentIndex;
+      if (this.activeContentIndex === 0) {
+        this.first = true;
+      }
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
     }
-    this.screen --
-    if (this.screen < 0) {
-      this.screen = 0;
-    }
-    this.check()
   }
 
   right() {
 
     if (this.activeContentIndex < this.content.length - 1) {
-      this.activeContent[0].selected = 'notSelected';
-      this.activeContent[0].fadeIn = 'notFadeIn';
+      this.first = false;
       ++this.activeContentIndex;
+      if (this.activeContentIndex === this.content.length - 1) {
+        this.last = true;
+      }
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
-    }
-    this.screen ++
-    if (this.screen > 2) {
-      this.screen = 2;
-    }
-    this.check()
-  }
-
-  check() {
-    if (this.screen == 0) {
-      this.first = true;
-      this.last = false;
-    } else if (this.screen == 2) {
-      this.first = false;
-      this.last = true;
-    } else {
-      this.first = false;
-      this.last = false;
-    }
+    } 
   }
 
 }

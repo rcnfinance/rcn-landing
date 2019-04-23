@@ -14,6 +14,7 @@ export class NewsComponent implements OnInit {
   xDisabled;
   yDisabled;
 
+  content: IContent[] = [];
   activeContent: IContent[] = [];
   activeContentStartIndex: number;
   maxActiveContent = 6;

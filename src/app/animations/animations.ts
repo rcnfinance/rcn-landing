@@ -9,7 +9,7 @@ export class LandingAnimations {
             trigger('FadeIn', [
                 transition(':enter', [
                   style({ transform: 'translateY(0)', opacity: 0 }),
-                  animate('600ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
+                  animate('900ms ease-in', style({ transform: 'translateY(0%)', opacity: 1 }))
                 ]),
               ]),
               trigger('selected', [
@@ -108,8 +108,8 @@ export class LandingAnimations {
               trigger('slideInLeft', [
                 state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
                 transition('* => enterLeft', [
-                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('600ms ease-in')
+                  style({ transform: 'translateX(5px)', opacity: 0.2 }),
+                  animate('900ms ease-in')
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
