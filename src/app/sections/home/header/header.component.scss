@@ -7,6 +7,11 @@
 		@include three-quarters;
 		width: 67%;
 		margin-right: 0;
+		.img-box {
+			width: 100%;
+			height: auto;
+			// background-color: $text-gray;
+		}
 		img {
 			min-height: 758px;
 			width: 100%;
