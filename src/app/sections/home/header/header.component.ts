@@ -51,13 +51,30 @@ export class HeaderComponent implements OnInit {
     this.activeContent.push(this.content[0]);
     this.activeContentIndex = 0;
     this.activeContent[0].fadeIn = 'fadeIn';
+
+    // repeat with the interval of 2 seconds
+    setInterval(() => this.changeActiveContent(), 4000);
+
+  }
+
+  changeActiveContent() {
+    if (this.activeContentIndex < this.content.length - 1) {
+      ++this.activeContentIndex;
+
+    } else {
+      this.activeContentIndex = 0;
+    }
+
+    this.activeContent.shift();
+    this.activeContent.push(this.content[this.activeContentIndex]);
+
+    this.activeContent[0].selected = 'enterLeft';
+    this.activeContent[0].fadeIn = 'fadeIn';
   }
 
 
   left() {
     if (this.activeContentIndex > 0) {
-      this.activeContent[0].selected = 'notSelected';
-      this.activeContent[0].fadeIn = 'notFadeIn';
       --this.activeContentIndex;
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
@@ -71,8 +88,6 @@ export class HeaderComponent implements OnInit {
   right() {
 
     if (this.activeContentIndex < this.content.length - 1) {
-      this.activeContent[0].selected = 'notSelected';
-      this.activeContent[0].fadeIn = 'notFadeIn';
       ++this.activeContentIndex;
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
@@ -80,9 +95,7 @@ export class HeaderComponent implements OnInit {
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
 
-      console.log(this.activeContent);
     }
-
   }
 
 }
