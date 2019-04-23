@@ -1,5 +1,5 @@
 import { Component, OnInit, ElementRef, HostListener } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { LandingAnimations } from '../animations/animations';
 
 @Component({
@@ -20,7 +20,9 @@ export class MainContainerComponent implements OnInit {
   lineStateDevelopers = 'hide';
   lineStateHowItWorks = 'hide';
 
-  constructor(public el: ElementRef, private router: Router) { }
+
+  constructor(public el: ElementRef, private router: Router) {
+   }
 
   @HostListener('window:scroll', ['$event'])
   checkScroll() {
@@ -52,7 +54,7 @@ export class MainContainerComponent implements OnInit {
       case 'developers':
         this.lineStateDevelopers = 'show';
         break;
-      case 'howItWorks':
+      case 'how-it-works':
         this.lineStateHowItWorks = 'show';
         break;
       default:
@@ -71,6 +73,14 @@ export class MainContainerComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.router.events.subscribe(
+      (event: any) => {
+        if (event instanceof NavigationEnd) {
+          const url = event.url;
+          this.markAsSelected(url.substring(1, url.length));
+        }
+      }
+    );
   }
 
 }
