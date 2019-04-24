@@ -36,12 +36,15 @@
 			border-left: solid $rcn-blue 8px;
 			border-radius: 0 40px 40px 0;
 			background-image: white ;
+			@include shadowElement;
 			-webkit-transition: border-radius 0.2s; /* Safari */
 			transition: border-radius 0.2s;
 			-webkit-transition: background-image 0.2s; /* Safari */
 			transition: background-image 0.2s;
 			-webkit-transition: border-left 0.2s; /* Safari */
 			transition: border-left 0.2s;
+			-webkit-transition: box-shadow 0.2s; /* Safari */
+				transition: box-shadow 0.2s;
 			.content-box {
 				width: 220px;
 				height: 220px;

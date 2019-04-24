@@ -74,6 +74,9 @@
 				border-left: solid white 8px;
 				border-radius: 0 40px 40px 0;
 				background-image: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
+				@include shadowElement;
+				-webkit-transition: box-shadow 0.2s; /* Safari */
+				transition: box-shadow 0.2s;
 				-webkit-transition: border-radius 0.2s; /* Safari */
 				transition: border-radius 0.2s;
 				-webkit-transition: background-image 0.2s; /* Safari */

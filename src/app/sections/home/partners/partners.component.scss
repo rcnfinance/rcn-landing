@@ -256,6 +256,7 @@ width: 25%;
 height: 100%;
 position: absolute;
 top: 0;
+@include shadow;
 
 	background-color: $rcn-blue;
 	border-top-left-radius: 150px;

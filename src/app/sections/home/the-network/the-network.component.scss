@@ -4,7 +4,7 @@
     content: ""; 
     display: block;
     margin: 0; 
-    border-bottom: 2px solid $rcn-blue; 
+    border-bottom: 3px solid $rcn-blue; 
 }
 
 
@@ -12,9 +12,9 @@
     content: ""; 
     display: block; 
     margin: 0; 
-    padding-top: 5px; 
+    padding-top: 8px; 
     padding-top: 0; 
-    border-bottom: 1px solid $rcn-blue; 
+    border-bottom: 1.9px solid $rcn-blue; 
 }
 
 .page-title-mobile:after {
@@ -26,6 +26,10 @@
     display: none;
 }
 
+.title {
+    margin-bottom: 8px;
+}
+
 
 .row{
     @include row-both;
@@ -35,12 +39,11 @@
         margin: 3% 0;
         .col-1 {
             @include half;
-            margin-left: 10%;
+            margin-left: 7%;
             margin-top: 5%;
         }
         .col-2 {
             @include half;
-            // background-color: green;
         }
         .img {
             width: 30%;
@@ -71,7 +74,7 @@
 
 .link {
     @include link-text;
-    letter-spacing: 1.6px;
+
 
 }
 
