@@ -4,7 +4,7 @@
     content: ""; 
     display: block;
     margin: 0; 
-    border-bottom: 2px solid $rcn-blue; 
+    border-bottom: 1.5px solid $rcn-blue; 
 }
 
 
@@ -12,9 +12,9 @@
     content: ""; 
     display: block; 
     margin: 0; 
-    padding-top: 5px; 
+    padding-top: 8px; 
     padding-top: 0; 
-    border-bottom: 1px solid $rcn-blue; 
+    border-bottom: 3px solid $rcn-blue; 
 }
 
 .page-title-mobile:after {
@@ -24,6 +24,10 @@
 
 .page-title2-mobile:after {
     display: none;
+}
+
+.title {
+    margin-bottom: 8px;
 }
 
 
