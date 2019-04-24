@@ -69,6 +69,12 @@ $button-rollover: #8b93ff;
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.05);
 }
 
+@mixin shadowElement {
+	box-shadow: 0 17px 38px 0 rgba(0,0,0,.13);
+}
+
+
+
 @mixin no-shadow {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;

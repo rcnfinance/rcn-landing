@@ -24,7 +24,7 @@
 }
 
 .content-back {
-	@include shadow;
+	@include shadowElement;
     @include row-center;
     position: absolute;
     left: 0;
