@@ -287,9 +287,12 @@ h1,h2,h3,h4,h5,h6 {
 
 @mixin link-text {
   font-family: 'Montserrat', sans-serif;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 700;
   color: $rcn-blue;
+  letter-spacing: 1.1px;
+  text-decoration: none;
+  border-bottom: solid $rcn-blue 1px;
 }
 
 //Footer

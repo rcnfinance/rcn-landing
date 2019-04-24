@@ -44,7 +44,6 @@
         }
         .col-2 {
             @include half;
-            // background-color: green;
         }
         .img {
             width: 30%;
@@ -75,7 +74,7 @@
 
 .link {
     @include link-text;
-    letter-spacing: 1.6px;
+
 
 }
 
