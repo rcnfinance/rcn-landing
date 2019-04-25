@@ -353,7 +353,23 @@ h1,h2,h3,h4,h5,h6 {
       background: white;
     }
 
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
+
+  ::ng-deep .mat-tab-list .mat-tab-label  {
+  width: 29%;
+  }
+
+  ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {
+    @include tab-title;
+    font-size: 11px;
+    padding: 0 10%;
+    width: 40%;
+    color: black !important;
+    }
+
+}
+
+@media (max-width: 1400px) {
 
   ::ng-deep .mat-tab-list .mat-tab-label  {
   width: 29%;
