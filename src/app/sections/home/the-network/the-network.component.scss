@@ -47,6 +47,7 @@
             .img {
                 width: 80%;
                 img {
+                    width: 100%;
                     // margin: 15% 0 0 -30% ;
                 }
             }
@@ -83,36 +84,7 @@
     color: $text-gray;
 }
 
-@media (min-width: 800px) and (max-width: 1310px) {
 
-    .row{
-        .container {
-
-            .col-1 {
-                            .title {
-
-                            }
-                            .text {
-
-                            }
-            }
-            .col-2 {
-                @include half;
-                margin-bottom: 5%;
-                display: flex;
-                justify-content: center;
-                .img {
-                    width: 60%;
-                    img {
-                        margin: 0;
-                    }
-                }
-            }
-           
-        }
-    }
-
-}
 
 
 
@@ -167,8 +139,9 @@
         }
         .col-2 {
             @include half;
-			width: 90%;
+			width: 80%;
             margin-bottom: 5%;
+            margin-left: 10%;
             .img {
                 width: 100%;
                 img {
@@ -234,5 +207,29 @@
         background: white;
         height: 5px; 
       }
+
+}
+
+@media (min-width: 800px) and (max-width: 1310px) {
+
+    .row{
+        .container {
+
+            .col-2 {
+                width: 100%;
+                margin-bottom: 5%;
+                margin-left: 0%;
+                display: flex;
+                justify-content: center;
+                .img {
+                    width: 60%;
+                    img {
+                        margin: 0;
+                    }
+                }
+            }
+           
+        }
+    }
 
 }
