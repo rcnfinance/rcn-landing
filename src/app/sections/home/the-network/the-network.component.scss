@@ -48,7 +48,6 @@
             .container {
                 width: 80%;
                 height: 100%;
-                // background-color: $gray;
                 overflow: hidden;
                 position: relative;
                 .cube-1 {
@@ -56,48 +55,63 @@
                     width: 26%;
                     top: 34%;
                     left: 16%;
-                    -webkit-transition: top 2s; /* Safari */
-                    transition: top 2s;
+                    opacity: 1;
+                    -webkit-transition: top 1s, opacity 1s; /* Safari */
+                    transition: top 1s, opacity 1s;
+                    transition-timing-function: ease-in-out;
                 }
                 .cube-out-1 {
                     position: absolute;
                     width: 26%;
-                    top: -100%;
+                    top: -30%;
                     left: 16%;
-                    -webkit-transition: top 2s; /* Safari */
-                    transition: top 2s;
+                    opacity: 0;
+                    -webkit-transition: top 1s, opacity 1s; /* Safari */
+                    transition: top 1s, opacity 1s;
+                    transition-timing-function: ease-in-out;
+                    
                 }
                 .cube-2 {
                     position: absolute;
                     width: 26%;
                     top: 58%;
                     left: 16%;
-                    -webkit-transition: top 2s; /* Safari */
-                    transition: top 2s;
+                    opacity: 1;
+                    -webkit-transition: top 1s, opacity 1s; /* Safari */
+                    transition: top 1s, opacity 1s;
+                    transition-timing-function: ease-in-out;
+                    // -webkit-transition: left 1s; /* Safari */
+                    // transition: left 1s;
                 }
                 .cube-out-2 {
                     position: absolute;
                     width: 26%;
                     top: 100%;
                     left: 8%;
-                    -webkit-transition: top 2s; /* Safari */
-                    transition: top 2s;
+                    opacity: 0;
+                    -webkit-transition: top 1s, opacity 1s; /* Safari */
+                    transition: top 1s, opacity 1s;
+                    transition-timing-function: ease-in-out;
                 }
                 .cube-3 {
                     position: absolute;
                     width: 26%;
                     top: 58%;
                     left: 30.2%;
-                    -webkit-transition: left 2s; /* Safari */
-                    transition: left 2s;
+                    opacity: 1;
+                    -webkit-transition: left 1s, opacity 1s; /* Safari */
+                    transition: left 1s, opacity 1s;
+                    transition-timing-function: ease-in-out;
                 }
                 .cube-out-3 {
                     position: absolute;
                     width: 26%;
                     top: 58%;
                     left: 100%;
-                    -webkit-transition: left 2s; /* Safari */
-                    transition: left 2s;
+                    opacity: 0;
+                    -webkit-transition: left 1s, opacity 1s; /* Safari */
+                    transition: left 1s, opacity 1s;
+                    transition-timing-function: ease-in-out;
                 }
                 .grid {
                     width: 80%;
