@@ -13,7 +13,7 @@
             <div class="tabs">
                 <mat-tab-group>
                     <mat-tab>
-                      <ng-template mat-tab-label>
+                      <ng-template mat-tab-label ng-click="onClickMe()">
                         CREDITORS
                       </ng-template>
                       <p class="sm-text">The decentralized marketplace allows lenders to reach the most profitable debt 
@@ -22,7 +22,7 @@
                       <a href="" routerLink='/creditors' class="link">> LEARN MORE</a>
                     </mat-tab>
                     <mat-tab>
-                      <ng-template mat-tab-label>
+                      <ng-template mat-tab-label ng-click="onClickMe()">
                         ECOSYSTEM
                       </ng-template>
                           <p class="sm-text">The network connects credit markets stakeholders with key Decentralized Finance 
@@ -30,7 +30,7 @@
                             <a href="" routerLink='/how-it-works' class="link">> LEARN MORE</a>
                     </mat-tab>
                     <mat-tab>
-                        <ng-template mat-tab-label>
+                        <ng-template mat-tab-label ng-click="onClickMe()">
                           ORIGINATORS
                         </ng-template>
                               <p class="sm-text">The platform provides financial institutions, fintech lending companies and 
@@ -38,10 +38,29 @@
                                 <a href="" routerLink='/originators' class="link">> LEARN MORE</a>
                       </mat-tab>
                   </mat-tab-group>
+                  <button (click)="onClickMe()">Prueba</button>
             </div>
         </div>
-        <div class="col-2 img">
-          <img src="../../../../assets/img/home-creditors-grilla.svg" alt="">
+        <div class="col-2">
+          <div class="container"> 
+            <div [ngClass]="creditors ? 'cube-1' : 'cube-out-1'">
+              <img src="../../../../assets/cubes/cubo-1.svg" alt="">
+            </div>
+            <div [ngClass]="creditors ? 'cube-2' : 'cube-out-2'">
+                <img src="../../../../assets/cubes/cubo-2.svg" alt="">
+            </div>
+            <div [ngClass]="creditors ? 'cube-3' : 'cube-out-3'">
+                <img src="../../../../assets/cubes/cubo-3.svg" alt="">
+            </div>
+              <div class="grid">
+                  <img src="../../../../assets/cubes/grilla.svg" alt="">
+              </div>
+          </div>
+          
+          
         </div>
+        <!-- <div class="col-2 img">
+          <img src="../../../../assets/img/home-creditors-grilla.svg" alt="">
+        </div> -->
     </div>
   </div>

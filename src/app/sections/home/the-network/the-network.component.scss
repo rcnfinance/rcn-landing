@@ -44,14 +44,82 @@
         }
         .col-2 {
             @include half;
-        }
-        .img {
-            width: 30%;
-            img {
-                margin: 15% 0 0 -30% ;
+            margin-top: 3%;
+            .container {
+                width: 80%;
+                height: 100%;
+                // background-color: $gray;
+                overflow: hidden;
+                position: relative;
+                .cube-1 {
+                    position: absolute;
+                    width: 26%;
+                    top: 34%;
+                    left: 16%;
+                    -webkit-transition: top 2s; /* Safari */
+                    transition: top 2s;
+                }
+                .cube-out-1 {
+                    position: absolute;
+                    width: 26%;
+                    top: -100%;
+                    left: 16%;
+                    -webkit-transition: top 2s; /* Safari */
+                    transition: top 2s;
+                }
+                .cube-2 {
+                    position: absolute;
+                    width: 26%;
+                    top: 58%;
+                    left: 16%;
+                    -webkit-transition: top 2s; /* Safari */
+                    transition: top 2s;
+                }
+                .cube-out-2 {
+                    position: absolute;
+                    width: 26%;
+                    top: 100%;
+                    left: 8%;
+                    -webkit-transition: top 2s; /* Safari */
+                    transition: top 2s;
+                }
+                .cube-3 {
+                    position: absolute;
+                    width: 26%;
+                    top: 58%;
+                    left: 30.2%;
+                    -webkit-transition: left 2s; /* Safari */
+                    transition: left 2s;
+                }
+                .cube-out-3 {
+                    position: absolute;
+                    width: 26%;
+                    top: 58%;
+                    left: 100%;
+                    -webkit-transition: left 2s; /* Safari */
+                    transition: left 2s;
+                }
+                .grid {
+                    width: 80%;
+                    height: auto;
+                    position: absolute;
+                    bottom: 0;
+                    // margin-top: 20%;
+                    img {
+                        width: 100%;
+                        // margin: 15% 0 0 -30% ;
+                        // margin-top: 80%;
+                    }
+                }
             }
+            
         }
+        
     }
+}
+
+img {
+    width: 100%;
 }
 
 .tab-title-box {
