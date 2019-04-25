@@ -32,7 +32,7 @@ ol, ul {
 	}
 }
 
-@media (max-width: 768px){
+@media (max-width: 1000px){
 
 body {
   margin: 0 !important;
@@ -508,7 +508,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 // Responsive
-@media (min-width: 768px){
+@media (min-width: 1000px){
 	.marginright500 {margin-right:50% !important;}
 	.marginleft500 {margin-left:50% !important;}
 	.margintop300 {margin-top:0% !important;}
