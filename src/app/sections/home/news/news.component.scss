@@ -161,7 +161,7 @@
 }
 
 
-@media (max-width: 1000px){
+@media (max-width: 768px){
 
 .page-title:after {
         display: none;
@@ -207,7 +207,7 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	.content {
-		width: 100%;
+		width: 100vw;
 		flex-wrap: wrap;
 		display: flex;
 		padding: 10%;
@@ -253,9 +253,9 @@
 }
 
 .container {
-	display: inline-block;
+	// display: inline-block;
 	margin-top: 4%;
-	width: 380px;
+	width: 100%;
 	margin: 0 6%;
 }
 

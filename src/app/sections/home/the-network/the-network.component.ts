@@ -31,10 +31,6 @@ export class TheNetworkComponent implements OnInit {
     }
 
   }
-  onClickMe() {
-    this.creditors = true;
-    console.info("3")
-  }
 
   ngOnInit() {
   }
