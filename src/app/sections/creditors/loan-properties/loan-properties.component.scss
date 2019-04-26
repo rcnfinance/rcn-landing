@@ -242,7 +242,7 @@ h6 {
 	font-size: 18px;
 }
 
-@media (max-width: 1000px){
+@media (max-width: 1260px){
 
 	.page-title:after {
 		display: none;
@@ -385,4 +385,17 @@ h6 {
 	display: none;
 }
 
+}
+
+@media (min-width: 1000px) and (max-width: 1600px) {
+	.sub-title {
+		font-size: 10px;
+		font-weight: 400;
+		margin-bottom: 6%;
+	}
+	
+	.data {
+		font-weight: 700;
+		font-size: 12px;
+	}
 }
