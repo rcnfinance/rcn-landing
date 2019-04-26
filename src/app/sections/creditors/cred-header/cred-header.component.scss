@@ -7,10 +7,12 @@
 }
 
 .img-box {
-	height: auto;
+  height: auto;
+  width: auto;
 	overflow: hidden;
 	img {
-		width: 100%;
+    width: auto;
+    min-height: 500px;
 	}
 }
 
@@ -48,7 +50,7 @@
 	display: none;
 } 
 
-@media (max-width: 1000px){ 
+@media (max-width: 768px){ 
 
 .img-box {
   display: none;
