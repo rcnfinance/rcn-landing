@@ -27,6 +27,20 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['how-it-works']);
   }
 
+  addClass() {
+  let element = document.getElementsByClassName("button");
+  element[0].classList.add("bounce");
+  setTimeout(function(){ 
+    let e = document.getElementById("button");
+    e.classList.remove("bounce"); 
+  }, 1000);
+  }
+
+  removeClass() {
+  let element = document.getElementById("button");
+  element.classList.remove("bounce");
+  }
+
   ngOnInit() {
     this.content = [
       {

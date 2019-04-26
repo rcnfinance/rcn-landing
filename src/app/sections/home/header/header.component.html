@@ -6,7 +6,7 @@
         <h1 class="main-title" >{{activeContent.title0}} <br *ngIf = "activeContent.title0 != ''"> {{activeContent.title}}</h1>
         <p class="main-text">RCN is an open global credit network that connects borrowers, creditors, 
           and financial institucions on the blockchain to create efficient, acalable, and borderless debt market</p>
-        <button class="button" href="#howItWorks" (click)="navigate()">SEE HOW IT WORKS</button>
+        <button class="button animated" (mouseenter) ="addClass()"  (mouseleave) ="removeClass()"href="#howItWorks" (click)="navigate()">SEE HOW IT WORKS</button>
     </div>
   </div>
   <div class="col-right" >
