@@ -13,6 +13,7 @@ export class TheNetworkComponent implements OnInit {
 
   state = 'hide';
   lineState = 'hide';
+  creditors = false;
 
   constructor(public el: ElementRef, private router: Router) { }
 
@@ -29,6 +30,10 @@ export class TheNetworkComponent implements OnInit {
       this.state = 'hide';
     }
 
+  }
+  onClickMe() {
+    this.creditors = true;
+    console.info("3")
   }
 
   ngOnInit() {

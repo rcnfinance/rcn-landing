@@ -13,7 +13,7 @@
             <div class="tabs">
                 <mat-tab-group>
                     <mat-tab>
-                      <ng-template mat-tab-label>
+                      <ng-template mat-tab-label ng-click="onClickMe()">
                         CREDITORS
                       </ng-template>
                       <p class="sm-text">The decentralized marketplace allows lenders to reach the most profitable debt 
@@ -22,7 +22,7 @@
                       <a href="" routerLink='/creditors' class="link">> LEARN MORE</a>
                     </mat-tab>
                     <mat-tab>
-                      <ng-template mat-tab-label>
+                      <ng-template mat-tab-label ng-click="onClickMe()">
                         ECOSYSTEM
                       </ng-template>
                           <p class="sm-text">The network connects credit markets stakeholders with key Decentralized Finance 
@@ -30,7 +30,7 @@
                             <a href="" routerLink='/how-it-works' class="link">> LEARN MORE</a>
                     </mat-tab>
                     <mat-tab>
-                        <ng-template mat-tab-label>
+                        <ng-template mat-tab-label ng-click="onClickMe()">
                           ORIGINATORS
                         </ng-template>
                               <p class="sm-text">The platform provides financial institutions, fintech lending companies and 
@@ -38,13 +38,16 @@
                                 <a href="" routerLink='/originators' class="link">> LEARN MORE</a>
                       </mat-tab>
                   </mat-tab-group>
+                  <button (click)="onClickMe()">Prueba</button>
             </div>
         </div>
         <div class="col-2">
           <div class="img">
               <img src="../../../../assets/img/home-creditors-grilla.svg" alt="">
           </div>
-          
         </div>
+        <!-- <div class="col-2 img">
+          <img src="../../../../assets/img/home-creditors-grilla.svg" alt="">
+        </div> -->
     </div>
   </div>
