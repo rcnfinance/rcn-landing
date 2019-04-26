@@ -10,12 +10,12 @@
   width: 100%;
   height: auto;
   display: flex;
-  justify-content: center;
+	justify-content: center;
+	margin: 5% 0;
   .row-inner {
     width: auto;
     display: flex;
 	justify-content: space-around;
-	margin-top: 2%;
 	.card {
 		width: 32%;
 		height: auto;

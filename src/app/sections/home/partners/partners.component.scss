@@ -227,12 +227,8 @@ td:first-child, th:first-child {
 
 .row2 {
 height: 100%;
--webkit-transition: top 0.4s; /* Safari */
-transition: top 0.4s;
 -webkit-transition: right 0.4s; /* Safari */
 transition: right 0.4s;
--webkit-transition: width 0.4s; /* Safari */
-transition: width 0.4s;
 width: 0%;
 position: absolute;
 right: -25%;
@@ -246,12 +242,8 @@ overflow-x: hidden;
 right: 0;
 -webkit-transition:right 0.4s;
 height: 100%;
--webkit-transition: top 0.4s; /* Safari */
-transition: top 0.4s;
 -webkit-transition: right 0.4s; /* Safari */
 transition: right 0.4s;
--webkit-transition: width 0.4s; /* Safari */
-transition: width 0.4s;
 width: 25%;
 height: 100%;
 position: absolute;
