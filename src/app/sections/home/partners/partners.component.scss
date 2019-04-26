@@ -317,6 +317,16 @@ top: 0;
 	display: none;
 }
 
+@media (min-width: 1000px) and (max-width: 1300px) {
+	.main-container{
+		.col-1 {
+			width: 100%;
+			margin-left: 10%;
+			margin-right: 10%;
+		  }
+	}
+}
+
 @media (max-width: 1000px){
 
 	.page-title:after {

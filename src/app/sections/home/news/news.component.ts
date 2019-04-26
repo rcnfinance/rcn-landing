@@ -26,7 +26,10 @@ export class NewsComponent implements OnInit {
   lineState = 'hide';
 
   private isMobileResolution: boolean;
-
+  private isDesktopResolution: boolean;
+  private isResolution1: boolean;
+  private isResolution2: boolean;
+  
   constructor(public el: ElementRef) { }
 
 
@@ -34,8 +37,30 @@ export class NewsComponent implements OnInit {
   checkWidth() {
     if (window.innerWidth < 768) {
       this.isMobileResolution = true;
-    } else {
+      this.activateContent(this.activeContentStartIndex,'enterLeft')
+    }  else {
       this.isMobileResolution = false;
+    }
+    
+    if (window.innerWidth > 768 && window.innerWidth < 1180) {
+      this.isResolution1 = true;
+      this.activateContent(this.activeContentStartIndex,'enterLeft')
+    } else {
+      this.isResolution1  = false;
+    }
+    
+    if (window.innerWidth > 1180 && window.innerWidth < 1560) {
+      this.isResolution2 = true;
+      this.activateContent(this.activeContentStartIndex,'enterLeft')
+    } else {
+      this.isResolution2  = false;
+    }
+    
+    if (window.innerWidth > 1560) {
+      this.isDesktopResolution = true;
+      this.activateContent(this.activeContentStartIndex,'enterLeft')
+    }  else {
+      this.isDesktopResolution = false;
     }
   }
 
@@ -142,12 +167,22 @@ export class NewsComponent implements OnInit {
   }
 
   activateContent(startIndex: number, movement: string) {
+    
     if (this.isMobileResolution === true) {
       this.maxActiveContent = 1;
-    } else {
+     } 
+     
+    if (this.isDesktopResolution === true) {
       this.maxActiveContent = 6;
     }
-
+    
+    if (this.isResolution1 === true) {
+      this.maxActiveContent = 4;
+    } 
+    
+    if (this.isResolution2 === true) {
+      this.maxActiveContent = 5;
+    }
 
     let activeContent: IContent[] = [];
 
@@ -156,7 +191,8 @@ export class NewsComponent implements OnInit {
 
     this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
 
-    this.activeContent[this.activeContent.length - 1].opacity = 'opacity';
+      this.activeContent[this.activeContent.length - 1].opacity = 'opacity';
+    
 
     if (movement === 'right') {
       this.activeContent[this.activeContent.length - 1].movement = 'enterLeft';

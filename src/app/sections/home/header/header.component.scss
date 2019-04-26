@@ -5,16 +5,19 @@
 	position: relative;
 	.col-right {
 		@include three-quarters;
-		width: 67%;
+		width: 68%;
+		height: auto;
+		// width: auto;
 		margin-right: 0;
+		overflow: hidden;
 		.img-box {
-			width: 100%;
+			width: auto;
 			height: auto;
-			// background-color: $text-gray;
 		}
 		img {
 			min-height: 758px;
-			width: 100%;
+			width: auto;
+			
 		}
 	}
 }
@@ -36,7 +39,7 @@
     border-right: solid white 10px;
 	background-color: $rcn-blue;
     .content {
-        margin: 4% 2% 4% 20%;
+        margin: 4% 6% 4% 20%;
     }
     .white-line {
         height: 100%;
@@ -108,7 +111,9 @@
 }
 
 
-@media (max-width: 768px){
+
+
+@media (max-width: 1100px){
 
 .row {
 	@include row-right;
@@ -186,5 +191,14 @@
 
 }  
 
+
+@media (min-width: 768px) and (max-width: 1100px) {
+	.content-back {
+
+		.content {
+			margin: 4% 6% 4% 20%;
+		}
+	}	
+}
 
 

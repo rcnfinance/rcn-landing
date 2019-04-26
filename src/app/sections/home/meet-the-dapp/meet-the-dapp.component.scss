@@ -72,7 +72,9 @@
 	}
 }
 
-@media (max-width: 768px){
+
+
+@media (max-width: 1000px){
 
 .main-container {
 	display: flex;
@@ -126,4 +128,13 @@ button:focus {
 		margin-right: -47%;
 	}
 }
+}
+
+@media (min-width: 800px) and (max-width: 1000px) {
+
+	.col-2 {
+		width: 70%
+	}
+
+
 }
