@@ -49,9 +49,11 @@
 			width: 22%;
 			position: relative;
 			.box-number {
-				position: absolute;
+				// position: absolute;
 				top: 0;
 				left: -10%;
+				margin: 0;
+				padding: 0;
 				.number {
 					font-size: 100px;
 					color: $dark-blue;
@@ -68,9 +70,9 @@
 				z-index: 2;
 			}
 			.content {
-				margin-top: 40%;
+				margin-top: 0%;
 				h6 {
-					margin-top: 4%;
+					margin-top: 0;
 					@include tab-title;
 					font-weight: 700;
 				}
