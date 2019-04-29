@@ -77,11 +77,12 @@ section {
 			cursor: pointer;
 			-webkit-transition: color 0.2s; /* Safari */
 			transition: color 0.2s;
+			animation-duration: 0.2s;
 		}
 		.menu-text:hover {
 			color: $text-gray;
 			-webkit-transition: color 0.2s; /* Safari */
-			transition: color 0.2s;
+			transition: color 0.8s;
 		} 
   }
 }
