@@ -92,10 +92,17 @@
 		color: inherit;
 		border: none;
 		padding: 0;
+		margin-bottom: 2%;
 		font: inherit;
 		outline: inherit;
 		width: 30px;
 		height: 30px;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
+	}
+	button:hover {
+		background-color: rgb(200, 200, 200);
+		border-radius: 50px;
 		-webkit-transition: background-color 0.2s; /* Safari */
 		transition: background-color 0.2s;
 	}
