@@ -63,6 +63,7 @@
 
 .button {
 	border: solid white 1px;
+	outline: white;
 	margin:  4% 0 0 0;
 	padding: 20px 50px;
 	border-radius: 30px;
@@ -73,13 +74,15 @@
 	color: white;
 	cursor: pointer;
 	animation-duration: 0.5s;
+	-webkit-transition: background-color 2s; /* Safari */
+	transition: background-color 2s;
 }
 
 .button:hover {
 	font-weight: 700;
 	background-color: $button-rollover;
-	-webkit-transition: background-color 0.2s; /* Safari */
-	transition: background-color 0.2s;
+	-webkit-transition: background-color 2s; /* Safari */
+	transition: background-color 2s;
 }
 
 .buttons-box {
