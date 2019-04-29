@@ -46,9 +46,14 @@ section {
 	margin-left: 40%;
 	background-color: white;
 	cursor: pointer;
+	
 	img {
 		width: 100%;
 	}
+}
+
+.logo {
+	animation-duration: 0.5s;
 }
 
 .logo:focus {
