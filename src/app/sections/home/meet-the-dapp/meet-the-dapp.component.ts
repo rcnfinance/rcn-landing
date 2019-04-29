@@ -27,13 +27,13 @@ export class MeetTheDappComponent implements OnInit {
 
     }
   
-    addClass() {
+    addClass2() {
       let element = document.getElementById("button");
       element.classList.add("pulse");
       setTimeout(function(){ 
         element.classList.remove("pulse"); 
       }, 1000);
-      }  
+      }
 
   ngOnInit() {
   }
