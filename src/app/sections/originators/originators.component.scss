@@ -8,8 +8,8 @@
     position: absolute;
     z-index: 2;
     background-color: white;
-    margin-top: 504px;
-    @include shadowElement;
+    margin-top: 500px;
+    @include shadowElementUp;
 }
 
 @media (max-width: 768px){ 
