@@ -57,8 +57,9 @@
 			border-radius:35px;
 			-moz-border-radius:6px;
 			margin: auto;
-			-webkit-transition: margin-left 0.6, transform 0.6s ease,; /* Safari */
-			transition: margin-left 0.6s, transform 0.6s ease;
+			-webkit-transition: margin 0.6, transform 0.6s ease,; /* Safari */
+			transition: margin 0.6s, transform 0.6s ease;
+			// @include shadowElement;
 		}
   	}
 }
@@ -82,8 +83,9 @@
 		-moz-border-radius:6px;
 		margin-left: 30%;
 		margin-bottom: 0%;
-		-webkit-transition: margin-left 0.6s,transform 0.6s ease; /* Safari */
-		transition: margin-left 0.6s,transform 0.6s ease;
+		-webkit-transition: margin 0.6s,transform 0.6s ease; /* Safari */
+		transition: margin 0.6s,transform 0.6s ease;
+		
 	}
 }
 
@@ -106,6 +108,9 @@ tr, th {
 th {
 	width: 15%;
 }
+
+
+
 
 
 .selected {
@@ -152,6 +157,14 @@ th {
 	border-bottom-right-radius: 35px;
 	border-top: solid $rcn-blue 1px;
 }
+
+.th-back-down-right:hover {
+	@include shadowElement;
+}
+
+// img:hover {
+// 	@include shadowElement;
+// }
 
 .first {
 	border-top: none;
@@ -225,6 +238,10 @@ td:first-child, th:first-child {
 	transition: font-weight 0.2s;
 }
 
+// .img-outer:hover {
+// 	@include shadowElement;
+// }
+
 .row2 {
 height: 100%;
 -webkit-transition: right 0.4s; /* Safari */
@@ -248,12 +265,10 @@ width: 25%;
 height: 100%;
 position: absolute;
 top: 0;
-@include shadow;
-
-	background-color: $rcn-blue;
-	border-top-left-radius: 150px;
-	@include shadow;
-	overflow-x: hidden;
+@include shadowElement;
+background-color: $rcn-blue;
+border-top-left-radius: 150px;
+overflow-x: hidden;
 	.content {
 		width: 80%;
 		margin: 15%;
