@@ -28,17 +28,11 @@ export class HeaderComponent implements OnInit {
   }
 
   addClass() {
-  let element = document.getElementsByClassName("button");
-  element[0].classList.add("bounce");
-  setTimeout(function(){ 
-    let e = document.getElementById("button");
-    e.classList.remove("bounce"); 
-  }, 1000);
-  }
-
-  removeClass() {
   let element = document.getElementById("button");
-  element.classList.remove("bounce");
+  element.classList.add("pulse");
+  setTimeout(function(){ 
+    element.classList.remove("pulse"); 
+  }, 1000);
   }
 
   ngOnInit() {
