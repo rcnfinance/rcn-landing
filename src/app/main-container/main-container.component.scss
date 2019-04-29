@@ -16,15 +16,16 @@ ul {
 }
 
 
-section {
-	position: absolute;
-	z-index: 2;
-	top: 0;
-	background-color: white;
-}
+// section {
+// 	position: absolute;
+// 	z-index: 2;
+// 	top: 0;
+// 	background-color: white;
+// }
 
 .navbar {
-	position: sticky;
+	position: fixed;
+	width: 100%;
 	top: 0px;
 	z-index: 9999;
 	background: white;
