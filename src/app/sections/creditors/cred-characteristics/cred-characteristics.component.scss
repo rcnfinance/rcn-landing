@@ -7,11 +7,12 @@
 }
 
 .row-2 {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  margin: 5% 0;
+max-height: 214px;
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+margin: 5% 0;
   .row-inner {
     width: auto;
     display: flex;
@@ -136,6 +137,10 @@
 }
 
 @media (max-width: 910px){
+
+	.row-2 {
+		max-height: 600px;
+	}
 
 	.main-container {
 		background-image: $gradient;

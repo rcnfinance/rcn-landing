@@ -43,18 +43,26 @@ export class PartnersComponent implements OnInit {
 
   onClickPartner(partnerName: string) {
     this.show = true;
-
     const partnerIndex = this.partners.findIndex(partner => partner.title === partnerName);
-
-
     this.partners[this.lastIndex].active = false;
     this.lastIndex = partnerIndex;
-
     this.partners[partnerIndex].active = true;
-
     this.activePartner = this.partners[partnerIndex];
+  //   let element = document.getElementById(partnerName);
+  //   element.classList.add("pulse");
+  //   setTimeout(function(){ 
+  //   element.classList.remove("pulse"); 
+  // }, 1000);
 
   }
+
+  addClass(partnerName: string) {
+    let element = document.getElementById(partnerName);
+    element.classList.add("pulse");
+    setTimeout(function(){ 
+      element.classList.remove("pulse"); 
+    }, 2000);
+    }
 
   close() {
     this.show = false;

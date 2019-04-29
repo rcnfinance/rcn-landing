@@ -27,13 +27,13 @@ export class MeetTheDappComponent implements OnInit {
 
     }
   
-    addClass() {
-      let element = document.getElementById("button");
+    addClass(id) {
+      let element = document.getElementById(id);
       console.log(element.classList)
-      element.classList.add("bounce");
+      element.classList.add("pulse");
       console.log(element.classList)
       setTimeout(function(){ 
-        element.classList.remove("bounce"); 
+        element.classList.remove("pulse"); 
       }, 1000);
       }
 

@@ -29,7 +29,8 @@
 .main-container {
 	background-image: $gradient;
   height: auto;
-  padding: 5% 0;
+	padding: 5% 0;
+	max-height: 570px;
 }
 .col-1 {
   @include half;
@@ -177,6 +178,8 @@
 
 @media (max-width: 910px){
 
+	
+
 	.page-title:after {
 		display: none;
 }
@@ -207,7 +210,9 @@
 		background-image: $gradient;
 		height: auto;
 		padding: 15% 0;
+		max-height: 900px;
 	}
+
 	.col-1 {
 		width: 80%
 	}
