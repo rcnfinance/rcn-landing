@@ -40,10 +40,10 @@ export class MainContainerComponent implements OnInit {
   }
 
   markAsSelected(section: string) {
-    let element = document.getElementById(section);
-    element.classList.add("pulse");
-    setTimeout(function(){ 
-      element.classList.remove("pulse"); 
+    const element = document.getElementById(section);
+    element.classList.add('pulse');
+    setTimeout(function() {
+    element.classList.remove('pulse');
     }, 1000);
     this.lineStateCreditors = 'hide';
     this.lineStateOriginators = 'hide';
@@ -66,40 +66,7 @@ export class MainContainerComponent implements OnInit {
       break;
 
     }
-    
   }
-
-  // addClass1() {
-  // let element = document.getElementById("creditors");
-  // element.classList.add("pulse");
-  // setTimeout(function(){ 
-  //   element.classList.remove("pulse"); 
-  // }, 1000);
-  // }
-
-  // addClass2() {
-  // let element = document.getElementById("originators");
-  // element.classList.add("pulse");
-  // setTimeout(function(){ 
-  //   element.classList.remove("pulse"); 
-  // }, 1000);
-  // }
-
-  // addClass3() {
-  // let element = document.getElementById("developers");
-  // element.classList.add("pulse");
-  // setTimeout(function(){ 
-  //   element.classList.remove("pulse"); 
-  // }, 1000);
-  // }
-  
-  // addClass4() {
-  // let element = document.getElementById("how-it-works");
-  // element.classList.add("pulse");
-  // setTimeout(function(){ 
-  //   element.classList.remove("pulse"); 
-  // }, 1000);
-  // }
 
   mobileMenu() {
     this.mobile = !this.mobile;

@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//Material
+// Material
 import { MaterialModule } from '../app/material/material.module';
 
-//Carrousel
+// Carrousel
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
