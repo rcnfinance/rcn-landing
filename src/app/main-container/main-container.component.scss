@@ -75,14 +75,14 @@ section {
 			font-size: 14px;
 			margin: 0 2% ;
 			cursor: pointer;
-			-webkit-transition: color 0.2s; /* Safari */
-			transition: color 0.2s;
-			animation-duration: 0.2s;
+			-webkit-transition: color 0.5s; /* Safari */
+			transition: color 0.5s;
+			animation-duration: 0.5s;
 		}
 		.menu-text:hover {
 			color: $text-gray;
-			-webkit-transition: color 0.2s; /* Safari */
-			transition: color 0.8s;
+			-webkit-transition: color 0.5s; /* Safari */
+			transition: color 0.5s;
 		} 
   }
 }
