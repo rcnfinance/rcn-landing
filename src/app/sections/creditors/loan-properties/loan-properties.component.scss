@@ -132,6 +132,7 @@ h6 {
 	right: 150%;
 	bottom: 300%;
 	z-index: 2;
+	@include shadowElement;
 }
 
 .tooltip-box2 {
@@ -147,6 +148,7 @@ h6 {
 	left: 300%;
 	bottom: 300%;
 	z-index: 2;
+	@include shadowElement;
 }
 
 .tooltip-box3 {
@@ -163,6 +165,7 @@ h6 {
 	bottom: 300%;
 	z-index: 2;
 	padding: 0 0 5% 5%;
+	@include shadowElement;
 }
 
 	.front-box {

@@ -145,10 +145,14 @@
 			font: inherit;
 			outline: inherit;
 			cursor: pointer;
+			-webkit-transition: background-color 0.2s; /* Safari */
+			transition: background-color 0.2s;
 		}
 		button:hover {
 			background-color: rgb(200, 200, 200);
 			border-radius: 50px;
+			-webkit-transition: background-color 0.2s; /* Safari */
+			transition: background-color 0.2s;
 		}
 		i {
 			color: $rcn-blue;

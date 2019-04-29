@@ -11,26 +11,26 @@
   </div>
 
   <div [ngClass]="mobile ? 'mobile' : 'main-container'">
-    <div class="logo" (click)="markAsSelected('home')" routerLink='/home'>
+    <div id="home" class="logo animated" (click)="markAsSelected('home')" routerLink='/home'>
       <img src="../../assets/img/isologotypo.svg" alt="">
     </div>
     <div class="col-tabs">
 
       <ul class="tabs underline">
-        <li class="menu-text" (click)="markAsSelected('creditors')" routerLink='/creditors'>
+        <li class="menu-text animated" id="creditors" (click)="markAsSelected('creditors')" routerLink='/creditors'>
           <a>CREDITORS</a>
           <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateCreditors, params: {widthLength: '30%' }}"></h3>
         </li>
 
-        <li class="menu-text" (click)="markAsSelected('originators')" routerLink='/originators'>
+        <li class="menu-text animated" id="originators" (click)="markAsSelected('originators')" routerLink='/originators'>
           <a>ORIGINATORS</a>
           <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateOriginators, params: {widthLength: '30%' }}"></h3>
         </li>
-        <li class="menu-text" (click)="markAsSelected('developers')">
+        <li class="menu-text animated" id="developers" (click)="markAsSelected('developers')">
           <a href="https://github.com/ripio" target="blank">DEVELOPERS</a>
           <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateDevelopers, params: {widthLength: '30%' }}"></h3>
         </li>
-        <li class="menu-text" (click)="markAsSelected('how-it-works')"
+        <li class="menu-text animated" id="how-it-works" (click)="markAsSelected('how-it-works')"
           routerLink='/how-it-works'>
           <a>HOW IT WORKS</a>
           <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateHowItWorks, params: {widthLength: '30%' }}"></h3>

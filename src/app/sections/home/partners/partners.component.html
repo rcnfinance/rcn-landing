@@ -13,7 +13,7 @@
     <div [ngClass]="show ? 'row-show' : 'row'">
       <table class="table">
         <tr>
-          <th [ngClass]="activePartner.title === 'Ripio' ? 'th-back-up-left' : 'first'" (click)="onClickPartner('Ripio')">
+          <th id="Ripio" (mouseenter) ="addClass('Ripio')" [ngClass]="activePartner.title === 'Ripio' ? 'th-back-up-left' : 'first'" (click)="onClickPartner('Ripio')">
             <div [ngClass]="show ? 'img-outer-show' : 'img-outer'">
               <div class="img-box"><img src="../../../../assets/partners/logo-ripio.png" alt=""></div>
               <div class="text-box"><h6 [ngClass]="activePartner.title === 'Ripio' ? 'h6-bold' : 'h6'">Ripio</h6></div>

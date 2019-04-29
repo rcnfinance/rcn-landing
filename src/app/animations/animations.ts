@@ -146,7 +146,7 @@ export class LandingAnimations {
                 state('fadeIn', style({
                   opacity: 1
                 })),
-                transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0.8 }), animate('600ms ease-in-out')]),
+                transition('void=>fadeIn', [ style({ transform: 'translateX(0)', opacity: 0.8 }), animate('600ms ease-out')]),
               ]),
               trigger('slideInUpGroup', [
                 transition(':enter', [

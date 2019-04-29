@@ -9,6 +9,14 @@ export class FooterComponent implements OnInit {
 
   constructor() { }
 
+  addClass(net) {
+    let element = document.getElementById(net);
+    element.classList.add("bounce");
+    setTimeout(function(){ 
+      element.classList.remove("bounce"); 
+    }, 1000);
+    }
+
   ngOnInit() {
   }
 
