@@ -22,14 +22,24 @@
         .text {
             @include three-quarters;
             .title {
-                @include subtitle;
+								@include subtitle;
+								color: white;
+								margin-bottom: 1%;
+						}
+						.subtitle {
+							margin: 0;
+							padding: 0;
+							display: none;
 						}
 						.line {
-							width: 10%;
-							border-bottom: solid black 3px; 
+							width: 8%;
+							border-bottom: solid white 5px; 
 						}
 						.text-p {
 							color: white;
+							p {
+								margin: 0;
+							}
 						}
             
         }
@@ -49,9 +59,6 @@
 			width: 22%;
 			position: relative;
 			.box-number {
-				// position: absolute;
-				top: 0;
-				left: -10%;
 				margin: 0;
 				padding: 0;
 				.number {
@@ -60,6 +67,7 @@
 					margin: 0;
 					font-family: 'Montserrat', sans-serif;
 					font-weight: 400;
+					margin-left: -10%;
 				}
 			}
 			.box-img {
@@ -74,6 +82,7 @@
 				h6 {
 					margin-top: 0;
 					@include tab-title;
+					color: white;
 					font-weight: 700;
 				}
 				p {
