@@ -181,6 +181,7 @@ h6 {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		padding: 5%;
 
 		.content {
 			width: 250px;
@@ -190,10 +191,12 @@ h6 {
 				@include link-text;
 				font-size: 15px;
 				border-bottom: none;
+				margin-bottom: 4%;
 			}
 			p {
 				@include sm-text;
 				font-size: 12px;
+				margin: 0;
 			}
 		}
 	}
@@ -236,7 +239,7 @@ h6 {
 }
 
 .sub-title {
-	font-size: 10px;
+	font-size: 11px;
 	font-weight: 400;
 	margin-bottom: 6%;
 }
