@@ -14,7 +14,35 @@
     padding: 5% 0;
     background-color: $rcn-blue;
 		border-radius: 120px 120px 0 0;
-		background-image: $gradient;
+		// background-image: $gradient;
+		background-image: linear-gradient(177deg, #4352ff, #202880);
+		background-size: 50% 600%;
+		
+		-webkit-animation: rcn 47s ease infinite;
+		-moz-animation: rcn 47s ease infinite;
+		-o-animation: rcn 47s ease infinite;
+		animation: rcn 47s ease infinite;
+		
+		@-webkit-keyframes rcn {
+				0%{background-position:49% 0%}
+				50%{background-position:52% 100%}
+				100%{background-position:49% 0%}
+		}
+		@-moz-keyframes rcn {
+				0%{background-position:49% 0%}
+				50%{background-position:52% 100%}
+				100%{background-position:49% 0%}
+		}
+		@-o-keyframes rcn {
+				0%{background-position:49% 0%}
+				50%{background-position:52% 100%}
+				100%{background-position:49% 0%}
+		}
+		@keyframes rcn { 
+				0%{background-position:49% 0%}
+				50%{background-position:52% 100%}
+				100%{background-position:49% 0%}
+		}
 		.phrase {
 			display: flex;
 			justify-content: center;
