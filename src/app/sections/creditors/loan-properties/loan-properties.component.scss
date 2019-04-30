@@ -188,7 +188,8 @@ h6 {
 
 			h6 {
 				@include link-text;
-  			font-size: 13px;
+				font-size: 15px;
+				border-bottom: none;
 			}
 			p {
 				@include sm-text;
@@ -307,7 +308,7 @@ h6 {
 			align-items: center;
 			margin-bottom: 2%;
 			.img-box {
-				width: 35px;
+				width: 32px;
 				height: auto;
 				margin-right: 2%;
 		}
