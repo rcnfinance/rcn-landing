@@ -162,10 +162,6 @@ th {
 	@include shadowElement;
 }
 
-// img:hover {
-// 	@include shadowElement;
-// }
-
 .first {
 	border-top: none;
 }
@@ -187,8 +183,6 @@ td:first-child, th:first-child {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 50%;
-		// -webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
-		// transition: width 0.6s, transform 0.6s ease;
 		img {
 			width: 100%;
 		}
@@ -203,14 +197,10 @@ td:first-child, th:first-child {
 	height: 160px;
 	-webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
 	transition: width 0.6s, transform 0.6s ease;
-	// -webkit-transition: height 0.4s; /* Safari */
-	// transition: height 0.4s;
 	.img-box {
 		margin: 10%;
 		margin-bottom: 0;
 		width: 40%;
-		// -webkit-transition: width 0.6s, transform 0.6s ease; /* Safari */
-		// transition: width 0.6s, transform 0.6s ease;
 		img {
 			width: 100%;
 		}
@@ -238,10 +228,6 @@ td:first-child, th:first-child {
 	transition: font-weight 0.2s;
 }
 
-// .img-outer:hover {
-// 	@include shadowElement;
-// }
-
 .row2 {
 height: 100%;
 -webkit-transition: right 0.4s; /* Safari */
@@ -266,7 +252,8 @@ height: 100%;
 position: absolute;
 top: 0;
 @include shadowElement;
-background-color: $rcn-blue;
+// background-color: $rcn-blue;
+background-image: $gradient-sm;
 border-top-left-radius: 150px;
 overflow-x: hidden;
 	.content {
