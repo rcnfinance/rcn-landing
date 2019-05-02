@@ -14,6 +14,7 @@ export class MainContainerComponent implements OnInit {
   lineState = 'hide';
   mobile = false;
   menu = false;
+  menuBlack = false;
 
   lineStateCreditors = 'hide';
   lineStateOriginators = 'hide';
@@ -28,6 +29,7 @@ export class MainContainerComponent implements OnInit {
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
+    console.info(scrollPosition)
 
     if (scrollPosition > componentPosition) {
       this.lineState = 'show';
@@ -36,6 +38,14 @@ export class MainContainerComponent implements OnInit {
       this.lineState = 'hide';
       this.state = 'default';
     }
+
+    if (scrollPosition > 50) {
+      this.menuBlack = true;
+    } else {
+      this.menuBlack = false;
+    }
+
+    console.info(this.menuBlack)
 
   }
 

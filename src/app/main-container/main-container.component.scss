@@ -28,13 +28,27 @@ ul {
 	width: 100%;
 	top: 0px;
 	z-index: 9999;
-	background: white;
+	background-color: white;
 	height: 8vh;
 	transform-origin: top;
+	-webkit-transition: background-color 0.5s; /* Safari */
+	transition: background-color 0.5s;
+}
+
+.navbar-black {
+	position: fixed;
+	width: 100%;
+	top: 0px;
+	z-index: 9999;
+	background-color: black;
+	height: 8vh;
+	transform-origin: top;
+	-webkit-transition: background-color 0.5s; /* Safari */
+	transition: background-color 0.5s;
 }
 
 .main-container {
-	@include shadow;
+	// @include shadow;
 	position: sticky;
 	height: 8vh;
 	display: flex;
@@ -76,22 +90,33 @@ ul {
 		margin: 0;
 		display: flex;
 		align-items: center;	
-    .menu-text {
-			@include menu-text;
-			font-size: 14px;
-			margin: 0 2% ;
-			cursor: pointer;
-			-webkit-transition: color 0.5s; /* Safari */
-			transition: color 0.5s;
-			animation-duration: 0.5s;
-		}
-		.menu-text:hover {
-			color: $text-gray;
-			-webkit-transition: color 0.5s; /* Safari */
-			transition: color 0.5s;
-		} 
+    
   }
 }
+
+.menu-text {
+	@include menu-text;
+	// font-size: 14px;
+	margin: 0 2% ;
+	cursor: pointer;
+	-webkit-transition: color 0.5s; /* Safari */
+	transition: color 0.5s;
+	animation-duration: 0.5s;
+}
+.menu-text-black {
+	@include menu-text;
+	color: white;
+	margin: 0 2% ;
+	cursor: pointer;
+	-webkit-transition: color 0.5s; /* Safari */
+	transition: color 0.5s;
+	animation-duration: 0.5s;
+}
+.menu-text:hover {
+	color: $text-gray;
+	-webkit-transition: color 0.5s; /* Safari */
+	transition: color 0.5s;
+} 
 
 a {
 	text-decoration: none;
