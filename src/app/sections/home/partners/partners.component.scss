@@ -3,8 +3,9 @@
 .page-title:after {
     content: ""; 
     display: block;
-    margin: 0; 
-    border-bottom: 2px solid $rcn-blue; 
+	margin: 0; 
+	margin-top: 3px;
+    border-bottom: 3px solid $rcn-blue; 
 }
 
 
@@ -14,7 +15,7 @@
     margin: 0; 
     padding-top: 5px; 
     padding-top: 0; 
-    border-bottom: 1px solid $rcn-blue; 
+    border-bottom: 3px solid $rcn-blue; 
 }
 
 .page-title-mobile:after {
@@ -288,7 +289,7 @@ overflow-x: hidden;
 	}
 }
 
-.title {
+.cardTitle {
 	@include char-card-text;
 	font-size: 25px;
 	font-weight: 700;

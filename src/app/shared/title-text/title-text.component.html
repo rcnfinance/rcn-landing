@@ -1,5 +1,12 @@
 <div class="col-inner">
-  <h3 class="title"><ng-content select = "h3"></ng-content></h3>
+  <div class="container">
+  <h3 class="title"><ng-content select = ".title"></ng-content></h3>
+  <ng-content></ng-content>
+  <!-- <h3 class="page-title2" [@lineAnimationThin]="lineState"></h3>
+  <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
+  <h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
+  <h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3> -->
+  </div>
   <h6 class="subtitle"><ng-content select = "h6"></ng-content></h6>
   <p class="reg-text"><ng-content select = "p"></ng-content></p>
   <!-- <h3 class="title">THE NETWORK</h3>
