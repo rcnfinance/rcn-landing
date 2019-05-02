@@ -1,6 +1,31 @@
+//-----------------------------------------------------------------------------------------------------------
 //Font
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+//-----------------------------------------------------------------------------------------------------------
+
+@font-face {
+  font-family: 'regular';
+  src: url('src/assets/fonts/ProximaNova-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'semi';
+  src: url("src/assets/fonts/ProximaNova-Semibold.woff") format('woff');
+}
+
+@font-face {
+  font-family: 'extra';
+  src: url('src/assets/fonts/ProximaNova-Extrabld.woff') format('woff');
+}
+
+//-----------------------------------------------------------------------------------------------------------
+//Angular material theme
+//-----------------------------------------------------------------------------------------------------------
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+//-----------------------------------------------------------------------------------------------------------
+//Body styles
+//-----------------------------------------------------------------------------------------------------------
 
 body {
   margin: 0 !important;
@@ -95,7 +120,7 @@ $gradient-sm: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
 
 @mixin gradient-animation-back {
   background-image: linear-gradient(177deg, #4352ff, #202880);
-  background-size: 100% 150%;
+  background-size: 100% 600%;
   
   -webkit-animation: rcn 47s ease infinite;
   -moz-animation: rcn 47s ease infinite;
@@ -207,21 +232,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @mixin main-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'extra';
   font-size: 60px;
   font-weight: 500;
   color: white;
 }
 
 @mixin main-subtitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'regular';
   font-size: 35px;
   font-weight: 400;
   color: white;
 }
 
 @mixin main-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'regular';
   font-size: 20px;
   font-weight: 400;
   color: white;
@@ -234,21 +259,21 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @mixin title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 42px;
   font-weight: 500;
   color: black;
 }
 
 @mixin subtitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'extra';
   font-size: 28px;
   font-weight: 700;
   color: black;
 }
 
 @mixin tab-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 15px;
   font-weight: 500;
   color: black;
@@ -257,7 +282,7 @@ h1,h2,h3,h4,h5,h6 {
 
 //Buttons
 @mixin button-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -266,14 +291,14 @@ h1,h2,h3,h4,h5,h6 {
 
 //Cards
 @mixin char-card-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 16px;
   font-weight: 500;
   color: white;
 }
 
 @mixin char-card-text-color {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 16px;
   font-weight: 500;
   color: $dark-blue;
@@ -281,28 +306,28 @@ h1,h2,h3,h4,h5,h6 {
 
 
 @mixin part-card-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 14px;
   font-weight: 500;
   color: $dark-blue;
 }
 
 @mixin spon-card-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 28px;
   font-weight: 500;
   color: $dark-blue;
 }
 
 @mixin spon-card-sub {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 13px;
   font-weight: 500;
   color: $dark-blue;
 }
 
 @mixin spon-card-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'regular';
   font-size: 15px;
   font-weight: 400;
   color: $text-gray;
@@ -310,21 +335,21 @@ h1,h2,h3,h4,h5,h6 {
 
 //Text
 @mixin reg-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'regular';
   font-size: 20px;
   font-weight: 400;
   color: $text-gray;
 }
 
 @mixin sm-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'regular';
   font-size: 16px;
   font-weight: 400;
   color: $text-gray;
 }
 
 @mixin link-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'extra';
   font-size: 11px;
   font-weight: 700;
   color: $rcn-blue;
@@ -335,14 +360,14 @@ h1,h2,h3,h4,h5,h6 {
 
 //Footer
 @mixin foot-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'extra';
   font-size: 15px;
   font-weight: 700;
   color: white;
 }
 
 @mixin foot-subtitle {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'regular';
   font-size: 15px;
   font-weight: 400;
   color: white;
@@ -350,7 +375,7 @@ h1,h2,h3,h4,h5,h6 {
 
 //Menu
 @mixin menu-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'semi';
   font-size: 11px;
   font-weight: 500;
   color: black;

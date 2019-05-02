@@ -1,11 +1,15 @@
 @import '../../../../styles.scss'; //Styles
 
 .row {
-	@include row-right;
+	// @include row-right;
+	display: flex;
 	position: relative;
 	.col-right {
+		position: absolute;
+		top: 10%;
+		right: 0;
 		@include three-quarters;
-		width: 68%;
+		width: 50%;
 		height: auto;
 		// width: auto;
 		margin-right: 0;
@@ -15,8 +19,8 @@
 			height: auto;
 		}
 		img {
-			min-height: 780px;
-			width: auto;
+			// min-height: 780px;
+			width: 100%;
 			
 		}
 	}
@@ -29,17 +33,17 @@
 .content-back {
 	@include shadowElement;
     @include row-center;
-    position: absolute;
-    left: 0;
-    top: 5%;
-	height: auto;
-	opacity: 0.9;
-    z-index: 999;
-    width: 50%;
+    // position: absolute;
+    // left: 0;
+    // top: 5%;
+	height: 100vh;
+	// opacity: 0.9;
+    // z-index: 999;
+    width: 60%;
     border-right: solid white 10px;
 	background-color: $rcn-blue;
     .content {
-        margin: 4% 6% 4% 20%;
+        margin: 10% 25% 4% 10%;
     }
     .white-line {
         height: 100%;
@@ -66,7 +70,7 @@
 	outline: white;
 	margin:  4% 0 0 0;
 	padding: 20px 50px;
-	border-radius: 30px;
+	border-radius: 10px;
 	width: auto;
 	overflow: visible;
 	background: transparent;
