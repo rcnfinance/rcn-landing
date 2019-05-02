@@ -45,6 +45,7 @@ ul {
 	transform-origin: top;
 	-webkit-transition: background-color 0.5s; /* Safari */
 	transition: background-color 0.5s;
+	border-bottom: solid $rcn-blue 1px;
 }
 
 .main-container {
@@ -59,7 +60,7 @@ ul {
 .logo img{
 	width: 100%;
 	margin-left: 40%;
-	background-color: white;
+	// background-color: white;
 	cursor: pointer;
 	
 	img {

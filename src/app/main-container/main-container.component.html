@@ -12,7 +12,8 @@
 
   <div [ngClass]="mobile ? 'mobile' : 'main-container'">
     <div id="home" class="logo animated" (click)="markAsSelected('home')" routerLink='/home'>
-      <img src="../../assets/img/isologotypo.svg" alt="">
+      <img *ngIf="!menuBlack" src="../../assets/img/isologotypo.svg" alt="">
+      <img *ngIf="menuBlack" src="../../assets/img/logo-negativo-2.svg" alt="">
     </div>
     <div class="col-tabs">
       <ul class="tabs underline">
