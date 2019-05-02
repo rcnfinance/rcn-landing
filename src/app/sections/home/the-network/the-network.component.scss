@@ -33,14 +33,14 @@
 
 .row{
     @include row-both;
-    padding-bottom: 2%;
+    padding: 4% 0;
     .container {
         @include row-around;
         margin: 3% 0;
         .col-1 {
             @include half;
             margin-left: 10%;
-            margin-top: 5%;
+            margin-top: 4%;
         }
         .col-2 {
             @include half;
