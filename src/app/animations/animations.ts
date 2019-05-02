@@ -58,7 +58,7 @@ export class LandingAnimations {
               ]),
               trigger('lineAnimationThinMobile', [
                 state('show', style({
-                  width: '50%',
+                  width: '100%',
                   transform: 'translateX(0)'
                 })),
                 state('hide',   style({
@@ -70,7 +70,7 @@ export class LandingAnimations {
               ]),
               trigger('lineAnimationThickMobile', [
                 state('show', style({
-                  width: '16%',
+                  width: '40px',
                   transform: 'translateX(0)'
                 })),
                 state('hide',   style({

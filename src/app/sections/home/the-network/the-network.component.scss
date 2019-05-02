@@ -108,8 +108,8 @@ img {
     .page-title-mobile:after {
         content: ""; 
         display: block;
-        margin: 0; 
-        border-bottom: 2px solid $rcn-blue; 
+        margin-top: 3px; 
+        border-bottom: 3px solid $rcn-blue; 
     }
     
     
@@ -117,9 +117,9 @@ img {
         content: ""; 
         display: block; 
         margin: 0; 
-        padding-top: 5px; 
+        padding-top: 8px; 
         padding-top: 0; 
-        border-bottom: 1px solid $rcn-blue; 
+        border-bottom: 3px solid $rcn-blue; 
     }
 
 	.row{
