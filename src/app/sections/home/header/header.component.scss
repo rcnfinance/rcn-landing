@@ -166,14 +166,15 @@
 }
 
 .col-right-mobile {
-	display: block;
+	display: flex;
+	justify-content: flex-start;
 	transition: display 2s;
-	width: 70%;
+	width: 700%;
 	margin-right: 0;
 	.img-box {
-		height: 90%;
+		height: 80%;
 		margin-bottom: 4%;
-		width: auto
+		width: auto;
 		img {
 			height: 100%;
 		}
@@ -182,11 +183,15 @@
 
 
 .content-back {
+	position: absolute;
+	z-index: 2;
 	left: 0;
-	top: 5%;
-	width: 85%;
+	top: 15vh;
+	width: 90%;
+	height: auto;
 	.content {
 		margin: 10% 8% 10% 12%;
+		width: 75%;
 	}
 
 	.main-title {
@@ -202,19 +207,30 @@
 }
 
 
+.button {
+	padding: 14px 26px;
+	margin-bottom: 10%;
+	font-size: 12px;
+		.gray {
+		color: gray;
+		cursor: auto;
+		}
+	}
 
 .buttons-box {
-	width: 80%;
+	width: 100%;
 	height: 5%;
 	margin-top: 8%;
-	.button {
-		padding: 14px 26px;
-		  font-size: 12px;
-		  .gray {
-			color: gray;
-			cursor: auto;
-		}
-	  }
+	margin-right: 30%;
+	justify-content: flex-start;
+	button {
+		margin-right: 30%;
+	i {
+		color: white;
+		cursor: pointer;
+		margin: 0 15%;
+	}
+}
 }
 
 
@@ -222,7 +238,7 @@
 }  
 
 
-@media (min-width: 700px) and (max-width: 1100px) {
+@media (min-width: 900px) and (max-width: 1100px) {
 	.content-back {
 
 		.content {
@@ -233,6 +249,22 @@
 	.buttons-box {
 		margin-top: 5%;
 	}
+
+	// .col-right-mobile {
+	// 	// display: flex;
+	// 	// justify-content: flex-start;
+	// 	// transition: display 2s;
+	// 	// width: 700%;
+	// 	// margin-right: 0;
+	// 	.img-box {
+	// 		height: auto;
+	// 		margin-bottom: 4%;
+	// 		width: 100%;
+	// 		img {
+	// 			width: 100%;
+	// 		}
+	// 	}
+	// }
 }
 
 
