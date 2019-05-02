@@ -17,6 +17,7 @@
 		.img-box {
 			width: auto;
 			height: auto;
+			@include shadowElement;
 		}
 		img {
 			// min-height: 780px;
@@ -31,19 +32,19 @@
 }
 
 .content-back {
-	@include shadowElement;
+	
     @include row-center;
     // position: absolute;
     // left: 0;
     // top: 5%;
-	height: 100vh;
+	height: 92vh;
 	// opacity: 0.9;
     // z-index: 999;
     width: 60%;
-    border-right: solid white 10px;
+    // border-right: solid white 10px;
 	background-color: $rcn-blue;
     .content {
-        margin: 10% 25% 4% 10%;
+        margin: 10% 35% 4% 10%;
     }
     .white-line {
         height: 100%;
@@ -51,16 +52,17 @@
         background-color: white;
     }
     .main-title {
-        @include main-title;
+		@include main-title;
+		margin-bottom: 1%;
     }
     .main-subtitle {
         @include main-subtitle;
-        margin-bottom: 2%;
+        margin-bottom: 3%;
     }
     .main-text {
         @include main-text;
         line-height: 1.6;
-        margin-bottom: 2%;
+        margin-bottom: 5%;
     }
 
 }
@@ -68,7 +70,7 @@
 .button {
 	border: solid white 1px;
 	outline: white;
-	margin:  4% 0 0 0;
+	margin:  4% 0 30% 0;
 	padding: 20px 50px;
 	border-radius: 10px;
 	width: auto;
@@ -92,8 +94,8 @@
 
 .buttons-box {
 	display: flex;
-	justify-content: space-between;
-	width: 50%;
+	justify-content: flex-start;
+	width: 100%;
 	margin-top: 1%;
 	height: 10%;
 	button {
@@ -102,23 +104,35 @@
 		border: none;
 		padding: 0;
 		margin-bottom: 2%;
+		margin-right: 10%;
 		font: inherit;
 		outline: inherit;
-		width: 30px;
+		width: 15%;
 		height: 30px;
 		-webkit-transition: background-color 0.2s; /* Safari */
 		transition: background-color 0.2s;
+		display: flex;
+		@include button-text;
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
 	}
-	button:hover {
+	i:hover {
 		background-color: rgb(200, 200, 200);
 		border-radius: 50px;
+		padding: 6%;
 		-webkit-transition: background-color 0.2s; /* Safari */
 		transition: background-color 0.2s;
 	}
 	i {
-		color: $rcn-blue;
+		color: white;
 		cursor: pointer;
+		margin: 0 15%;
 	}
+	// i:first-of-type {
+	// 	margin: 0;
+	// }
 	.gray {
 		color: gray;
 		cursor: auto;
