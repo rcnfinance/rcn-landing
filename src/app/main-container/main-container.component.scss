@@ -102,6 +102,7 @@ ul {
 	-webkit-transition: color 0.5s; /* Safari */
 	transition: color 0.5s;
 	animation-duration: 0.5s;
+	outline: white;
 }
 .menu-text-black {
 	@include menu-text;
@@ -111,6 +112,7 @@ ul {
 	-webkit-transition: color 0.5s; /* Safari */
 	transition: color 0.5s;
 	animation-duration: 0.5s;
+	outline: black;
 }
 .menu-text:hover {
 	color: $text-gray;
