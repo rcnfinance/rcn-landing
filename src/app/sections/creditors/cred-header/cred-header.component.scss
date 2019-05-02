@@ -13,11 +13,13 @@
 	img {
     width: auto;
     min-height: 500px;
+    @include byn;
 	}
 }
 
 .img-box-mobile {
-	display: none;
+  display: none;
+  @include byn;
 } 
 
 

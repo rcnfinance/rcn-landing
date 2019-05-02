@@ -149,6 +149,14 @@ $gradient-sm: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
   }
 }
 
+//Black and white
+
+@mixin byn {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+
 
 //-----------------------------------------------------------------------------------------------------------
 
