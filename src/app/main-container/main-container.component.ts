@@ -29,7 +29,6 @@ export class MainContainerComponent implements OnInit {
   checkScroll() {
     const componentPosition = this.el.nativeElement.offsetTop;
     const scrollPosition = window.pageYOffset;
-    console.info(scrollPosition)
 
     if (scrollPosition > componentPosition) {
       this.lineState = 'show';
@@ -44,8 +43,6 @@ export class MainContainerComponent implements OnInit {
     } else {
       this.menuBlack = false;
     }
-
-    console.info(this.menuBlack)
 
   }
 
