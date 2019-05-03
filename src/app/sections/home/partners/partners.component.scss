@@ -33,8 +33,8 @@
 	width: 100%;
 	display:flex;
 	flex-wrap: wrap;
-	padding: 2% 0 2% 0;
-	border-bottom: solid $gray 1px;
+	padding: 7% 0;
+	border-bottom: solid $text-gray 1px;
 	.col-1 {
 		@include half;
 		margin-left: 10%;
@@ -60,7 +60,7 @@
 			margin: auto;
 			-webkit-transition: margin 0.6, transform 0.6s ease,; /* Safari */
 			transition: margin 0.6s, transform 0.6s ease;
-			// @include shadowElement;
+			@include shadowElement;
 		}
   	}
 }
@@ -262,6 +262,7 @@ overflow-x: hidden;
 		margin: 15%;
 		.title {
 			width: 100%;
+			font-size: 42px;
 		}
 		.img-box {
 			width: 40%;
@@ -310,6 +311,10 @@ overflow-x: hidden;
 
 .table-mobile {
 	display: none;
+}
+
+.opacity {
+	opacity: 0.5;
 }
 
 @media (min-width: 1000px) and (max-width: 1300px) {

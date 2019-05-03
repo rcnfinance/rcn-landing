@@ -48,13 +48,7 @@ export class PartnersComponent implements OnInit {
     this.lastIndex = partnerIndex;
     this.partners[partnerIndex].active = true;
     this.activePartner = this.partners[partnerIndex];
-  //   let element = document.getElementById(partnerName);
-  //   element.classList.add("pulse");
-  //   setTimeout(function(){ 
-  //   element.classList.remove("pulse"); 
-  // }, 1000);
-
-  }
+ }
 
   addClass(partnerName: string) {
     let element = document.getElementById(partnerName);
