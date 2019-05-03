@@ -20,6 +20,7 @@
 	margin-right: 5%;
 	.title {
 		@include subtitle;
+		font-size: 30px;
 		margin-top: 10%;
 		margin-bottom: 1%;
 	}
