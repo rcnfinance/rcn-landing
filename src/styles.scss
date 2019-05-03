@@ -124,10 +124,10 @@ $gradient-diag: linear-gradient(to top right, $gradient-blue, $rcn-blue);
   background-image: linear-gradient(177deg, #4352ff, #202880);
   background-size: 100% 600%;
   
-  -webkit-animation: rcn 47s ease infinite;
-  -moz-animation: rcn 47s ease infinite;
-  -o-animation: rcn 47s ease infinite;
-  animation: rcn 47s ease infinite;
+  -webkit-animation: rcn 15s ease infinite;
+  -moz-animation: rcn 15s ease infinite;
+  -o-animation: rcn 15s ease infinite;
+  animation: rcn 15s ease infinite;
   
   @-webkit-keyframes rcn {
       0%{background-position:49% 0%}
