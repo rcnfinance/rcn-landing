@@ -7,8 +7,7 @@
 		position: absolute;
 		top: 10%;
 		right: 0;
-		@include three-quarters;
-		width: 50%;
+		width: 55%;
 		height: fit-content;
 		overflow: hidden;
 		@include shadowElement;
@@ -35,7 +34,7 @@
     width: 60%;
 	background-color: $rcn-blue;
     .content {
-        margin: 10% 25% 4% 16%;
+        margin: 10% 30% 4% 16%;
     }
     .white-line {
         height: 100%;
