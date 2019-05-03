@@ -27,11 +27,41 @@
     display: none;
 }
 
+.main-container {
+	padding: 5% 0;
+	overflow: hidden;
+}
+
+.background {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	
+	img {
+		height: auto;
+		min-width: 100%;
+		filter: brightness(30%);
+	}
+}
+
+.content {
+	position: relative;
+	z-index: 1;
+}
 
 .col-1 {
 	@include half;
 	margin-left: 10%;
 	margin-top: 5%;
+	.title {
+		color: white;
+	}
+	.reg-text {
+		color: white;
+	}
 }
 
 .container {
@@ -43,8 +73,9 @@
 
 
 .border {
-	border: solid $rcn-blue 1.2px;
-	border-left: solid $rcn-blue 0.6px;
+	border: solid white 1.2px;
+	border-left: solid white 0.6px;
+	background-color: $rcn-blue;
 	width: 375px;
 	height: 270px;
 	display: flex;
@@ -66,11 +97,12 @@
 					h3 {
 							@include spon-card-title;
 							font-size: 27px;
+							color: white;
 					}
 			}
 			.line {
 				width: 10%;
-				border-bottom: solid $rcn-blue 1.2px;
+				border-bottom: solid white 2px;
 				margin-top: 2%;
 			}
 				.p-box {
@@ -79,6 +111,7 @@
 					width: 90%;
 						p {
 								@include spon-card-text;
+								color: white;
 								margin-bottom: 0;
 						}
 				}
@@ -96,11 +129,12 @@
 					display: flex;
 					align-items: center;
 					font-size: 12px;
+					color: white;
 				}
 				p {
 					@include spon-card-sub;
 					margin: 0;
-					color: black;
+					color: white;
 					font-size: 14px;
 				}
 			}
@@ -136,7 +170,7 @@
 		margin-top: 1%;
 		margin-left: 5%;
 		button {
-			background-color: white;
+			background: none;
 			width: 30px;
 			height: 30px;
 			color: inherit;
@@ -155,7 +189,7 @@
 			transition: background-color 0.2s;
 		}
 		i {
-			color: $rcn-blue;
+			color: white;
 		}
 		.gray {
 			color: gray;
