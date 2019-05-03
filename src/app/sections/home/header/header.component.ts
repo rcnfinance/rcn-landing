@@ -70,8 +70,8 @@ export class HeaderComponent implements OnInit {
         fadeIn: 'notFadeIn'
       },
       {
-        title0: '',
-        title: 'FRICTIONLESS DEBT MARKETS',
+        title0: 'FRICTIONLESS',
+        title: 'DEBT MARKETS',
         img: '../../../../assets/img/slider-frictionless_desktop.jpg',
         imgMobile: '../../../../assets/img/slider-frictionless_desktop.jpg',
         selected: 'notSelected',

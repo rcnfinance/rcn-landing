@@ -118,6 +118,7 @@ $button-rollover: #8b93ff;
 
 $gradient: linear-gradient($rcn-blue, $gradient-blue);
 $gradient-sm: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
+$gradient-diag: linear-gradient(to top right, $gradient-blue, $rcn-blue);
 
 @mixin gradient-animation-back {
   background-image: linear-gradient(177deg, #4352ff, #202880);
