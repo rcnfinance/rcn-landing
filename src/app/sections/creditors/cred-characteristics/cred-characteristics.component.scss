@@ -1,11 +1,6 @@
 @import '../../../../styles.scss'; //Styles
 
-
-.col-1 {
-  @include half;
-  margin-left: 10%;
-}
-
+// Section ------------------
 .row-2 {
 max-height: 214px;
 width: 100%;
@@ -17,6 +12,7 @@ margin: 5% 0;
     width: auto;
     display: flex;
 		justify-content: space-around;
+		// Card ------------------
 		.card {
 			width: 32%;
 			height: auto;
@@ -31,6 +27,7 @@ margin: 5% 0;
 				-webkit-transition: border-radius 0.2s; /* Safari */
 				transition: border-radius 0.2s;
 			}
+			// Expanded card ------------------
 			.card-border-expanded{
 				border: solid $rcn-blue 1px; 
 				border-radius: 15px;
@@ -44,6 +41,7 @@ margin: 5% 0;
 				transition: background-image 0.2s;
 				-webkit-transition: border-left 0.2s; /* Safari */
 				transition: border-left 0.2s;
+				// Content ------------------
 				.content-box {
 					width: 220px;
 					height: 220px;
@@ -51,6 +49,7 @@ margin: 5% 0;
 					flex-wrap: wrap;
 					justify-content: center;
 					align-items: center;
+					// Expanded content ------------------
 					.content-expanded {
 						width: 80%;
 						height: auto;
@@ -59,39 +58,39 @@ margin: 5% 0;
 						justify-content: flex-start;
 						align-items: center;
 						margin: 3%;
+						// Expanded image ------------------
 						.img-box-expanded {
 							width: 35%;
 							margin-right: 60%;
-
 							img {
 								width: 100%;
 							}
 						}
-
+						// Title ------------------
 						.h6 {
 							@include char-card-text-color;
 							margin-bottom: 1%;
 						}
+						// Line ------------------
 						.line {
 							width: 8%;
 							border-bottom: solid $rcn-blue 2px;
 							margin-top: 2%;
 						}
+						// Text ------------------
 						.text {
 							@include char-card-text-color;
 							font-size: 12px;
 							margin-top: 6%;
 						}
-
 					}
 				}
 			}
-
 		}
-
-  }
+  	}
 }
-  
+
+// Card content ------------------
 .content-box {
 	width: 200px;
 	height: 200px;
@@ -99,123 +98,19 @@ margin: 5% 0;
 	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-}
-
-.content {
-	width: 50%;
-	height: auto;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	.img-box {
-		width: 100%;
-		img {
-			width: 100%;
-		}
-	}
-
-	.h6 {
-		display: flex;
-		justify-content: center;
-		h6 {
-			@include char-card-text-color;
-			margin-top: 8%;
-			text-align: center;
-		}
-	} 
-
-}
-
-.show {
-	display: block;
-}
-
-.hide {
-	display: none;
-}
-
-@media (max-width: 910px){
-
-	.row-2 {
-		max-height: 600px;
-	}
-
-	.main-container {
-		background-image: $gradient;
+	// Content ------------------
+	.content {
+		width: 50%;
 		height: auto;
-		padding: 15% 0;
-	}
-	.col-1 {
-		width: 80%
-	}
-	
-	.content-box {
-		width: 150px;
-		height: 150px;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-	}
-
-	.content{
 		.img-box {
-			width: 50%;
+			width: 100%;
 			img {
 				width: 100%;
 			}
-		}
-	}
-
-	.title {
-		color: white;
-	}
-	.reg-text {
-		color: white;
-		font-size: 18px;
-		line-height: 1.6;
-	}
-	
-	.row-2 {
-		width: 100%;
-		height: auto;
-		display: flex;
-		justify-content: center;
-		padding-top: 5%;
-		padding-bottom: 5%;
-		.row-inner {
-			width: 40%;
-			display: flex;
-				justify-content: center;
-				flex-wrap: wrap;
-				margin-top: 2%;
-				.card {
-					width: 100%;
-						height: auto;
-						padding: 1%;
-						margin: 0 4%;
-						display: flex;
-						justify-content: center;
-			.card-border {
-				width: auto;
-				height: auto;
-				padding: 4%;
-				margin: 5% 0;
-				border: solid $rcn-blue 1.2px;
-				border-radius: 40px;
-				display: flex;
-				justify-content: center;
-				
-			}
-		}
-		}
-	}
-	
-	.content {
-		width: 100%;
-		img {
-			width: 100%;
 		}
 		.h6 {
 			display: flex;
@@ -226,7 +121,78 @@ margin: 5% 0;
 				text-align: center;
 			}
 		} 
-	
 	}
+}
+
+//-----------------------------------------------------------------------------------------------------------
+//Maximum width 910px
+//-----------------------------------------------------------------------------------------------------------
+
+@media (max-width: 910px){
+
+// Section ------------------
+.row-2 {
+	max-height: 600px;
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	.row-inner {
+		width: 40%;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 2%;
+		// Card ------------------
+		.card {
+			width: 100%;
+			height: auto;
+			padding: 1%;
+			margin: 0 4%;
+			display: flex;
+			justify-content: center;
+		.card-border {
+			width: auto;
+			height: auto;
+			padding: 4%;
+			margin: 5% 0;
+			border: solid $rcn-blue 1.2px;
+			border-radius: 40px;
+			display: flex;
+			justify-content: center;
+		}
+		}
+	}
+}
+
+// Content ------------------
+.content-box {
+	width: 150px;
+	height: 150px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	.content {
+		width: 100%;
+		.img-box {
+			width: 50%;
+			img {
+				width: 100%;
+			}
+		}
+		.h6 {
+			display: flex;
+			justify-content: center;
+			h6 {
+				@include char-card-text-color;
+				margin-top: 8%;
+				text-align: center;
+			}
+		} 
+	}
+}
 
 }	
