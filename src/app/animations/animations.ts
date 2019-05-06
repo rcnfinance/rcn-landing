@@ -106,24 +106,31 @@ export class LandingAnimations {
                 transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+                state('enterLeft', style({ transform: 'translateX(-375px)', opacity: 1})),
                 transition('* => enterLeft', [
-                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('900ms ease-in')
+                  style({ transform: 'translateX(0)', opacity: 1 }),
+                  animate('600ms ease-in-out')
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
-                transition('void => enterLeft', [
-                  style({ transform: 'translateX(2px)', opacity: 0.2 }),
-                  animate('900ms ease-in')
+                state('enterLeftOpacity', style({ transform: 'translateX(-375px)', opacity: 0.2})),
+                transition('* => enterLeftOpacity', [
+                  style({ transform: 'translateX(0)', opacity: 0.2 }),
+                  animate('600ms ease-in-out')
                 ]),
               ]),
               trigger('slideInRight', [
-                state('enterRight', style({ transform: 'translateX(0)' })),
-                transition('void => enterRight', [
-                  style({ transform: 'translateX(-2px)', opacity: 0 }),
-                  animate('900ms ease-in')
+                state('enterRight', style({ transform: 'translateX(0)', opacity: 1 })),
+                transition('* => enterRight', [
+                  style({ transform: 'translateX(-375px)', opacity: 1 }),
+                  animate('600ms ease-in-out')
+                ])
+              ]),
+              trigger('slideInRightWithOpacity', [
+                state('enterRightOpacity', style({ transform: 'translateX(0)', opacity: 0.2 })),
+                transition('* => enterRightOpacity', [
+                  style({ transform: 'translateX(-375px)', opacity: 0.2 }),
+                  animate('600ms ease-in-out')
                 ])
               ]),
               trigger('opacity', [
