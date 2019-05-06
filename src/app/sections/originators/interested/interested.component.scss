@@ -1,5 +1,6 @@
 @import '../../../../styles.scss'; //Styles
 
+// Line animation ------------------
 .page-title:after {
     content: ""; 
     display: block;
@@ -8,6 +9,7 @@
 	margin-bottom: 3px;
 }
 
+// Section ------------------
 .phrase {
 	display: flex;
 	justify-content: center;
@@ -16,6 +18,7 @@
 		.row {
 		width: 100%;
 		margin-left: 10%;
+		// Text ------------------
 		.text {
 			@include half;
 			.title {
@@ -26,13 +29,19 @@
 	}
 }
 
+// Mail ------------------
 .mail {
 	@include link-text;
 	display: inline-block;
 }
 
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
+
 @media (max-width: 1000px){
 
+// Section ------------------
 .phrase {
 	display: flex;
 	justify-content: center;
@@ -44,15 +53,17 @@
 		.text {
 			@include half;
 			width: 100%;
-			
 			line-height: 1.6;
+			// Title ------------------
 			.title {
 				@include subtitle;
 			}
+			// Text ------------------
 			.text-p {
 				font-size: 18px;
 			}
-			}
 		}
 	}
+}
+
 }
