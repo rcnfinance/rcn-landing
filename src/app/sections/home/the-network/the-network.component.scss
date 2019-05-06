@@ -1,12 +1,12 @@
 @import '../../../../styles.scss'; //Styles
 
+// Line animation ------------------
 .page-title:after {
     content: ""; 
     display: block;
     margin-top: 3px; 
     border-bottom: 3px solid $rcn-blue; 
 }
-
 
 .page-title2:after {
     content: ""; 
@@ -17,34 +17,36 @@
     border-bottom: 3px solid $rcn-blue; 
 }
 
+// Line mobile ------------------
 .page-title-mobile:after {
     display: none;
 }
-
 
 .page-title2-mobile:after {
     display: none;
 }
 
-.title {
-    margin-bottom: 8px;
-}
-
-
+// Section ------------------
 .row{
     @include row-both;
     padding: 4% 0;
     .container {
         @include row-around;
         margin: 3% 0;
+        // First column ------------------
         .col-1 {
             @include half;
             margin-left: 10%;
             margin-top: 4%;
+            // Title ------------------
+            .title {
+                margin-bottom: 8px;
+            }
         }
+        // Second column ------------------
         .col-2 {
             @include half;
-
+            // Image ------------------
             .img {
                 width: 80%;
                 img {
@@ -52,102 +54,93 @@
 
                 }
             }
-            
         }
-
     }
 }
 
-img {
-    width: 100%;
-}
 
-.tab-title-box {
-    width: auto;
-}
-.tab-title {
-    @include tab-title;
-    color: black;
-}
 
-.sm-text {
-    @include sm-text;
-    line-height: 1.6;
-}
-
+// Tabs container ------------------
 .tabs {
     width: 80%;
-
+    // Tab text ------------------
+    .sm-text {
+        @include sm-text;
+        line-height: 1.6;
+    }
+    // Link ------------------
+    .link {
+        @include link-text;
+    }
+    // Link hover ------------------
+    .link:hover {
+        color: $text-gray;
+    }
 }
 
-.link {
-    @include link-text;
-
-
-}
-
-.link:hover {
-    color: $text-gray;
-}
-
-
-
-
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1310px
+//-----------------------------------------------------------------------------------------------------------
 
 @media (max-width: 1310px){
 
-    .page-title:after {
-        display: none;
-    }
-    
-    
-    .page-title2:after {
-        display: none;
-    }
-    
-    .page-title-mobile:after {
-        content: ""; 
-        display: block;
-        margin-top: 3px; 
-        border-bottom: 3px solid $rcn-blue; 
-    }
-    
-    
-    .page-title2-mobile:after {
-        content: ""; 
-        display: block; 
-        margin: 0; 
-        padding-top: 8px; 
-        padding-top: 0; 
-        border-bottom: 3px solid $rcn-blue; 
-    }
+// Lines desktop ------------------
+.page-title:after {
+    display: none;
+}
 
-	.row{
+.page-title2:after {
+    display: none;
+}
+
+// Line animation ------------------
+.page-title-mobile:after {
+    content: ""; 
+    display: block;
+    margin-top: 3px; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2-mobile:after {
+    content: ""; 
+    display: block; 
+    margin: 0; 
+    padding-top: 8px; 
+    padding-top: 0; 
+    border-bottom: 3px solid $rcn-blue; 
+}
+
+// Section ------------------
+.row {
     @include row-both;
-
     .container {
         @include row-around;
-				margin: 3% 0;
-				display: block;
+        margin: 3% 0;
+        display: block;
+        // First column ------------------
         .col-1 {
             @include half;
             margin-left: 10%;
-						margin-top: 5%;
-						margin-bottom: 2%;
-                        width: 80%;
-                        .title {
-                            margin-bottom: 2%;
-                        }
-						.text {
-							font-size: 18px;
-							line-height: 1.6;
-						}
+            margin-top: 5%;
+            margin-bottom: 2%;
+            width: 80%;
+            // Title ------------------
+            .title {
+                margin-bottom: 2%;
+            }
+            // Text ------------------
+            .text {
+                font-size: 18px;
+                line-height: 1.6;
+            }
         }
+        // Second column ------------------
         .col-2 {
             @include half;
-			width: 80%;
+            width: 80%;
             margin-bottom: 5%;
             margin-left: 10%;
+            // Image ------------------
             .img {
                 width: 100%;
                 img {
@@ -155,87 +148,45 @@ img {
                 }
             }
         }
-       
     }
 }
 
-.tab-title-box {
-    width: auto;
-}
-.tab-title {
-    @include tab-title;
-		color: black;
-		font-size: 8px;
-}
-
-.sm-text {
-    @include sm-text;
-}
-
+// Tabs container ------------------
 .tabs {
     width: 100%;
-
-}
-
-//----------------------
-
-/* active tab */
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    @include tab-title;
+    // Text ------------------
+    .sm-text {
+        @include sm-text;
     }
-    
-    /* ink bar */
-    ::ng-deep .mat-ink-bar {
-    background-color: $yellow !important;
-    width: 30px;
-		}
-		
-		::ng-deep .mat-tab-label-container {
-			width: auto;
-
-		}
-
-		::ng-deep .mat-tab-label  {
-			font-size: 12px;
-			padding: 0 12px !important;
-			color: black !important;
-		}
-
-		::ng-deep .mat-tab-label-content  {
-			font-size: 12px;
-			color: black !important;
-		}
-
-
-
-
-    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-        background: white;
-        height: 5px; 
-      }
+}
 
 }
+
+//-----------------------------------------------------------------------------------------------------------
+// Minimum width 800px + Maximum width 1310px
+//-----------------------------------------------------------------------------------------------------------
 
 @media (min-width: 800px) and (max-width: 1310px) {
 
-    .row{
-        .container {
-
-            .col-2 {
-                width: 100%;
-                margin-bottom: 5%;
-                margin-left: 0%;
-                display: flex;
-                justify-content: center;
-                .img {
-                    width: 60%;
-                    img {
-                        margin: 0;
-                    }
+// Section ------------------
+.row{
+    .container {
+        // Second column ------------------
+        .col-2 {
+            width: 100%;
+            margin-bottom: 5%;
+            margin-left: 0%;
+            display: flex;
+            justify-content: center;
+            // Image ------------------
+            .img {
+                width: 60%;
+                img {
+                    margin: 0;
                 }
             }
-           
         }
     }
+}
 
 }

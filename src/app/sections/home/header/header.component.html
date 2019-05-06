@@ -1,52 +1,33 @@
-<!-- <div class="row"  [@slideInUp] > -->
 <div class="row">
-  <div class="content-back">
-    <div class="content" *ngFor="let activeContent of activeContent" [@fadeInImage]="activeContent.fadeIn">
-      <h2 class="main-subtitle">WELCOME TO...</h2>
-      <h1 class="main-title">{{activeContent.title0}} <br *ngIf="activeContent.title0 != ''"> {{activeContent.title}}
-      </h1>
-      <p class="main-text">RCN is an open global credit network that connects borrowers, creditors,
-        and financial institucions on the blockchain to create efficient, acalable, and borderless debt market</p>
-      <button id="button" class="button animated btn-3" (mouseenter)="addClass()" href="#howItWorks" (click)="navigate()"> <span> SEE
-        HOW IT WORKS</span></button>
-
-      <div class="second-container">
-        <div class="buttons-box">
-          <button id="button1" class="animated" (mouseenter)="addClass1()" (click)="left()"><i
-              [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i>BACK</button>
-          <button id="button2" class="animated" (mouseenter)="addClass2()" (click)="right()">NEXT<i
-              [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
-        </div>
-      </div>
-      <!--  -->
-    </div>
-  </div>
-  <!-- <div class="second-container">
-    <div class="buttons-box">
-      <button (click)="left()"><i [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i></button>
-      <button (click)="right()"><i [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
-    </div>
-</div> -->
-  <div class="col-right">
-    <div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected">
-      <img src="{{activeContent.img}}" alt="">
-    </div>
-    <!-- <div class="second-container" >
-      <div class="buttons-box">
-        <button id="button1" class="animated" (mouseenter) ="addClass1()" (click)="left()"><i [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i></button>
-        <button id="button2" class="animated" (mouseenter) ="addClass2()" (click)="right()"><i [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
-      </div>
-    </div> -->
-  </div>
-  <div class="col-right-mobile">
-    <div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected">
-      <img src="{{activeContent.img}}" alt="">
-    </div>
-    <!-- <div class="second-container">
-        <div class="buttons-box">
-          <button (click)="left()"><i [ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i></button>
-          <button (click)="right()"><i [ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
-        </div>
-    </div> -->
-  </div>
+	<div class="content-back">
+		<div class="content" *ngFor="let activeContent of activeContent" [@fadeInImage]="activeContent.fadeIn">
+			<h2 class="main-subtitle">WELCOME TO...</h2>
+			<h1 class="main-title">{{activeContent.title0}} <br *ngIf="activeContent.title0 != ''">
+				{{activeContent.title}}
+			</h1>
+			<p class="main-text">RCN is an open global credit network that connects borrowers, creditors,
+				and financial institucions on the blockchain to create efficient, acalable, and borderless debt market
+			</p>
+			<button id="button" class="button animated btn-3" (mouseenter)="addClass()" href="#howItWorks"
+				(click)="navigate()"> <span> SEE HOW IT WORKS</span></button>
+			<div class="second-container">
+				<div class="buttons-box">
+					<button id="button1" class="animated" (mouseenter)="addClass1()" (click)="left()"><i
+							[ngClass]="first ? 'gray fas fa-arrow-left' : 'fas fa-arrow-left'"></i>BACK</button>
+					<button id="button2" class="animated" (mouseenter)="addClass2()" (click)="right()">NEXT<i
+							[ngClass]="last ? 'gray fas fa-arrow-right' : 'fas fa-arrow-right'"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-right">
+		<div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected">
+			<img src="{{activeContent.img}}" alt="">
+		</div>
+	</div>
+	<div class="col-right-mobile">
+		<div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected">
+			<img src="{{activeContent.img}}" alt="">
+		</div>
+	</div>
 </div>
