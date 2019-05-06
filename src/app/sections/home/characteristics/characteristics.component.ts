@@ -32,17 +32,17 @@ export class CharacteristicsComponent implements OnInit {
     this.characteristics = [
       {
         img: '../../../../assets/icons/icon-frictionless.svg',
-        text:'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+        text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
         title: 'Frictionless', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {
         img: '../../../../assets/icons/icon-transparent.svg',
-        text:'RCN smart-contracts ensure non-custodial storage of all funds and full auditability of every transaction.',
+        text: 'RCN smart-contracts ensure non-custodial storage of all funds and full auditability of every transaction.',
         title: 'Transparent', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {
         img: '../../../../assets/icons/icon-borderless.svg',
-        text:'The network seamlessly connects borrowers and creditors from all around the world.',
+        text: 'The network seamlessly connects borrowers and creditors from all around the world.',
         title: 'Borderless', selected: 'notSelected', opacity: 'notopacity', expanded : false
       }
     ];

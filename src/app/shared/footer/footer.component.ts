@@ -16,9 +16,9 @@ export class FooterComponent implements OnInit {
     this.counter++
     if (this.counter >= 5) {
       let element = document.getElementById(net);
-      element.classList.add("bounce");
+      element.classList.add('bounce');
       setTimeout(function(){ 
-      element.classList.remove("bounce"); 
+      element.classList.remove('bounce'); 
     }, 1000);
     this.counter = 0;
     }

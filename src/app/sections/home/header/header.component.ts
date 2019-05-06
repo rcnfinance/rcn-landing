@@ -28,26 +28,26 @@ export class HeaderComponent implements OnInit {
   }
 
   addClass() {
-  let element = document.getElementById("button");
-  element.classList.add("pulse");
-  setTimeout(function(){ 
-    element.classList.remove("pulse"); 
+  const element = document.getElementById('button');
+  element.classList.add('pulse');
+  setTimeout(function() {
+    element.classList.remove('pulse');
   }, 1000);
   }
 
   addClass1() {
-  let element = document.getElementById("button1");
-  element.classList.add("ZoomIn");
-  setTimeout(function(){ 
-    element.classList.remove("ZoomIn"); 
+  const element = document.getElementById('button1');
+  element.classList.add('ZoomIn');
+  setTimeout(function() {
+    element.classList.remove('ZoomIn');
   }, 800);
   }
 
   addClass2() {
-  let element = document.getElementById("button2");
-  element.classList.add("ZoomIn");
-  setTimeout(function(){ 
-    element.classList.remove("ZoomIn"); 
+  const element = document.getElementById('button2');
+  element.classList.add('ZoomIn');
+  setTimeout(function() {
+    element.classList.remove('ZoomIn');
   }, 800);
   }
 
@@ -124,16 +124,10 @@ export class HeaderComponent implements OnInit {
       if (this.activeContentIndex === 0) {
         this.first = true;
       }
-      // let element = document.getElementById("button2");
-      // element.classList.add("pulse");
-      // setTimeout(function(){ 
-      //   element.classList.remove("pulse"); 
-      // }, 1000);
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
-      
     }
   }
 
@@ -144,23 +138,16 @@ export class HeaderComponent implements OnInit {
       if (this.activeContentIndex === this.content.length - 1) {
         this.last = true;
       }
-      // let element = document.getElementById("button2");
-      // element.classList.add("pulse");
-      // setTimeout(function(){ 
-      //   element.classList.remove("pulse"); 
-      // }, 1000);
       this.activeContent.shift();
       this.activeContent.push(this.content[this.activeContentIndex]);
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
     } 
   }
-
 }
 
-
 interface IContent {
-  title0:string;
+  title0: string;
   title: string;
   img: string;
   imgMobile: string;
