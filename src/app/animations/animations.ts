@@ -198,7 +198,21 @@ export class LandingAnimations {
                 transform: 'translateX(0)'
               })),
               transition('hide => show', animate('600ms ease-in'))
-            ])
+            ]),
+            trigger('slideInLeftMobile', [
+              state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+              transition('* => enterLeft', [
+                style({ transform: 'translateX(5px)', opacity: 1 }),
+                animate('600ms ease-in-out')
+              ]),
+            ]),
+            trigger('slideInRightMobile', [
+              state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+              transition('* => enterLeft', [
+                style({ transform: 'translateX(-5px)', opacity: 1 }),
+                animate('600ms ease-in-out')
+              ]),
+            ]),
         ];
     }
 
