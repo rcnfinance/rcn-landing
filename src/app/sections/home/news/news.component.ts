@@ -36,6 +36,9 @@ export class NewsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   checkWidth() {
+
+    console.log('Window width', window.innerWidth);
+
     if (window.innerWidth < 768) {
       this.isMobileResolution = true;
       this.activateContent(this.activeContentStartIndex, 'enterLeft')
@@ -79,6 +82,10 @@ export class NewsComponent implements OnInit {
   }
 
   ngOnInit() {
+
+    this.checkWidth();
+    console.log(this.isMobileResolution);
+
     this.content = [
       {
         title: "",
@@ -170,6 +177,7 @@ export class NewsComponent implements OnInit {
   activateContent(startIndex: number, movement: string) {
 
     if (this.isMobileResolution === true) {
+      console.log('Is mobile resolution');
       this.maxActiveContent = 1;
     }
 
@@ -190,31 +198,49 @@ export class NewsComponent implements OnInit {
 
     activeContent = JSON.parse(JSON.stringify(this.content));
 
-    if (startIndex === 0 && movement !== 'left' && movement !== 'right') {
-      this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
-      const contentLength = this.activeContent.length;
-      this.activeContent[contentLength - 2].opacity = 'opacity';
-    }
+    if (!this.isMobileResolution) {
+      if (startIndex === 0 && movement !== 'left' && movement !== 'right') {
+        this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
+        const contentLength = this.activeContent.length;
+        this.activeContent[contentLength - 2].opacity = 'opacity';
+      }
 
-    if (movement === 'right') {
-      this.activeContent = activeContent.slice(startIndex - 1, startIndex - 1 + this.maxActiveContent);
-      for (let index = 0; index <= this.activeContent.length - 1; index++) {
-        if (index === this.activeContent.length - 1) {
-          this.activeContent[this.activeContent.length - 1].movement = 'enterLeftOpacity';
-        } else {
-          this.activeContent[index].movement = 'enterLeft';
+      if (movement === 'right') {
+        this.activeContent = activeContent.slice(startIndex - 1, startIndex - 1 + this.maxActiveContent);
+        for (let index = 0; index <= this.activeContent.length - 1; index++) {
+          if (index === this.activeContent.length - 1) {
+            this.activeContent[this.activeContent.length - 1].movement = 'enterLeftOpacity';
+          } else {
+            this.activeContent[index].movement = 'enterLeft';
+          }
+        }
+      }
+
+      if (movement === 'left') {
+        this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
+        for (let index = 0; index <= this.activeContent.length - 1; index++) {
+          if (index >= this.activeContent.length - 2) {
+            this.activeContent[index].movement = 'enterRightOpacity';
+          } else {
+            this.activeContent[index].movement = 'enterRight';
+          }
         }
       }
     }
 
-    if (movement === 'left') {
-      this.activeContent = activeContent.slice(startIndex, startIndex + this.maxActiveContent);
-      for (let index = 0; index <= this.activeContent.length - 1; index++) {
-        if (index >= this.activeContent.length - 2) {
-          this.activeContent[index].movement = 'enterRightOpacity';
-        } else {
-          this.activeContent[index].movement = 'enterRight';
-        }
+    if (this.isMobileResolution) {
+      if (startIndex === 0 && movement !== 'left' && movement !== 'right') {
+        this.activeContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent);
+      }
+
+      if (movement === 'right') {
+        this.activeContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent);
+        this.activeContent[0].movement = 'enterLeft';
+      }
+
+      if (movement === 'left') {
+        this.activeContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent);
+        this.activeContent[0].movement = 'enterRight';
       }
     }
 
@@ -238,8 +264,6 @@ export class NewsComponent implements OnInit {
   }
 
   right() {
-
-    console.info('activeContent inicialized:', this.activeContent);
 
     if (this.activeContentStartIndex < this.content.length - this.maxActiveContent + 1) {
       for (let index = 0; index <= this.activeContent.length - 1; index++) {
