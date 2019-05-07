@@ -397,6 +397,8 @@ h1,h2,h3,h4,h5,h6 {
 
 //-----------------------------------------------------------------------------------------------------------
 
+//Material styles
+
 /* active tab */
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {
   @include tab-title;
@@ -438,6 +440,12 @@ h1,h2,h3,h4,h5,h6 {
 
   ::ng-deep .mat-tab-list .mat-tab-label  {
   width: 29%;
+  }
+
+  ::ng-deep .mat-tab-label  {
+    font-size: 12px;
+    padding: 0 12px !important;
+    color: black !important;
   }
 
   ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {

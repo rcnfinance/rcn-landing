@@ -1,9 +1,11 @@
 @import '../../../../styles.scss'; //Styles
 
+// Header ------------------
 .sticky {
     position: fixed;
 }
 
+// Content ------------------
 .content {
     position: absolute;
     z-index: 2;
@@ -12,8 +14,15 @@
     @include shadowElementUp;
 }
 
+//-----------------------------------------------------------------------------------------------------------
+//Maximum width 768px
+//-----------------------------------------------------------------------------------------------------------
+
 @media (max-width: 768px){ 
-    .content {
-        margin-top: 1113px;
-    }
+
+// Content ------------------
+.content {
+    margin-top: 1113px;
+}
+
 }
