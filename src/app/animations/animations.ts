@@ -1,4 +1,4 @@
-import { AnimationTriggerMetadata, animate, state, style, transition, trigger, animateChild, query } from '@angular/animations';
+import { AnimationTriggerMetadata, animate, state, style, transition, trigger, animateChild, query, group } from '@angular/animations';
 
 
 export class LandingAnimations {
@@ -41,7 +41,7 @@ export class LandingAnimations {
                   width: '0%',
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('300ms ease-out')),
+                transition('show => hide', animate('600ms ease-out')),
                 transition('hide => show', animate('600ms ease-in'))
               ]),
               trigger('lineAnimationThick', [
@@ -53,7 +53,7 @@ export class LandingAnimations {
                   width: '0%',
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('300ms ease-out')),
+                transition('show => hide', animate('600ms ease-out')),
                 transition('hide => show', animate('600ms  ease-in'))
               ]),
               trigger('lineAnimationThinMobile', [
@@ -89,10 +89,11 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('hide => show', [ animate('600ms ease-in'),  query('@*', [
+                 transition('hide => show', group( [ animate('600ms ease-in', style({
+                   opacity: 1
+                 })),  query('@*', [
                   animateChild(),
-                ])
-              ])
+                ])]))
               ]),
               trigger('scrollAnimation', [
                 state('show', style({
