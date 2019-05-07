@@ -264,8 +264,8 @@
 	border-left: solid white 6px;
 	border-radius: 0 35px 35px 0;
 	background-color: $rcn-blue;
-	width: 375px;
-	height: 270px;
+	width: 350px;
+	height: 250px;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -322,10 +322,13 @@
 
 // // Carrousel container ------------------
 .container-mobile {
-	display: block;
+	display: flex;
+	justify-content: center;
 	margin-top: 4%;
 	width: 100%;
-	margin: 0 6%;
+	margin: 0;
+	position: relative;
+	z-index: 1;
 }
 
 
@@ -337,8 +340,20 @@
 		// width: auto;
 		// display: flex;
 		// overflow: hidden;
+		position: relative;
 		margin-left: 0%;
+		
 	}
+}
+
+.back {
+	position: absolute;
+	z-index: 0;
+	top: 10%;
+	border: solid white 1px;
+	height: 200px;
+	width: 100%;
+	opacity: 0.5;
 }
 
 // Arrows ------------------
