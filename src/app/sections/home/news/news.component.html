@@ -51,6 +51,43 @@
             </div>
           </div>
         </div>
+<!-- Prueba mobile---------------------------------------------------- -->
+        <div class="container-mobile"  [@slideInLeft]="eachContent.movement"
+          [@slideInRight]="eachContent.movement" [@opacity]="eachContent.opacity"
+          [@slideInLeftWithOpacity]="eachContent.movement" [@slideInRightWithOpacity]="eachContent.movement">
+          <div class="border">
+            <div class="content">
+              <div class="row-up">
+                <div class="title-box">
+                  <div>
+                    <h3>{{eachContent.title}}</h3>
+                  </div>
+                  <div class="line"></div>
+                </div>
+                <div>
+                  <div class="p-box">
+                    <p>{{eachContent.text}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row-down">
+                <div class="info-box">
+                  <div class="icon"><i class="{{eachContent.icon1}}"></i></div>
+                  <div>
+                    <p>{{eachContent.date}}</p>
+                  </div>
+                </div>
+                <div class="info-box">
+                  <div class="icon"><i class="{{eachContent.icon2}}"></i></div>
+                  <div>
+                    <p>{{eachContent.location}}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- ------------------------------------------------- -->
       </div>
       <div class="second-container">
         <div class="buttons-box">
