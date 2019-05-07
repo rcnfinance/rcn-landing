@@ -1,13 +1,12 @@
 @import '../../../../styles.scss'; //Styles
 
-
+// Line animation ------------------
 .page-title:after {
     content: ""; 
     display: block;
     margin-top: 3px; 
     border-bottom: 3px solid $rcn-blue; 
 }
-
 
 .page-title2:after {
     content: ""; 
@@ -18,31 +17,33 @@
     border-bottom: 3px solid $rcn-blue; 
 }
 
+// Lines mobile ------------------
 .page-title-mobile:after {
     display: none;
 }
-
 
 .page-title2-mobile:after {
     display: none;
 }
 
-
+// Section ------------------
 .row{
     @include row-both;
-
+	// Container ------------------
     .container {
         @include row-both;
-        margin: 0 0 3% 0;
+		margin: 0 0 3% 0;
+		// First column ------------------
         .col-1 {
             @include half;
             margin-left: 10%;
             margin-top: 5%;
-        }
+		}
+		// Second column ------------------
         .col-2 {
             @include half;
-            // background-color: green;
-        }
+		}
+		// Image ------------------
         .img {
             width: 30%;
             img {
@@ -52,161 +53,90 @@
     }
 }
 
-.tab-title-box {
-    width: auto;
-}
-.tab-title {
-    @include tab-title;
-    color: black;
-}
-
-.sm-text {
-    @include sm-text;
-}
-
+// Tabs container ------------------
 .tabs {
-    width: 80%;
-
+	width: 80%;
+	// Text ------------------
+	.sm-text {
+		@include sm-text;
+	}
+	// Link ------------------
+	.link {
+		@include link-text;
+	}
 }
 
-.link {
-    @include link-text;
-}
-
-//----------------------
-
-/* active tab */
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-    @include tab-title;
-    }
-    
-    /* ink bar */
-    ::ng-deep .mat-ink-bar {
-    background-color: $yellow !important;
-    width: 30px;
-    }
-
-    .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-        background: white;
-        height: 5px; 
-      }
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1230px
+//-----------------------------------------------------------------------------------------------------------
 
 @media (max-width: 1230px){
 
-	.col-2 {
-		display: none;
-	}
+// Lines desktop ------------------
+.page-title:after {
+	display: none;
+}
 
-	.page-title:after {
-		display: none;
-	}
-	
-	
-	.page-title2:after {
-		display: none;
-	}
-	
-	.page-title-mobile:after {
-		content: ""; 
+.page-title2:after {
+	display: none;
+}
+
+// Line animation ------------------
+.page-title-mobile:after {
+	content: ""; 
+	display: block;
+	margin-top: 3px; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+.page-title2-mobile:after {
+	content: ""; 
+	display: block; 
+	margin: 0; 
+	padding-top: 8px; 
+	padding-top: 0; 
+	border-bottom: 3px solid $rcn-blue; 
+}
+
+// Section ------------------
+.row{
+	@include row-both;
+	// Container ------------------
+	.container {
+		@include row-around;
+		margin: 3% 0;
 		display: block;
-		margin-top: 3px; 
-		border-bottom: 3px solid $rcn-blue; 
-	}
-	
-	
-	.page-title2-mobile:after {
-		content: ""; 
-		display: block; 
-		margin: 0; 
-		padding-top: 8px; 
-		padding-top: 0; 
-		border-bottom: 3px solid $rcn-blue; 
-	}
-
-	.row{
-		@include row-both;
-
-		.container {
-				@include row-around;
-				margin: 3% 0;
-				display: block;
-				.col-1 {
-						margin-left: 10%;
-						margin-top: 5%;
-						width: 80%;
-						.text {
-							font-size: 18px;
-							line-height: 1.6;
-						}
-				}
-				.col-2 {
-						@include half;
-						// background-color: green;
-						width: 90%;
-				}
-				.img {
-						width: 100%;
-						img {
-								margin: 0;
-						}
-				}
-		}
-}
-
-.tab-title-box {
-		width: auto;
-}
-.tab-title {
-		@include tab-title;
-		color: black;
-		font-size: 8px;
-}
-
-.sm-text {
-		@include sm-text;
-}
-
-.tabs {
-		width: 100%;
-
-}
-
-//----------------------
-
-/* active tab */
-::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-active {
-		@include tab-title;
-		}
-		
-		/* ink bar */
-		::ng-deep .mat-ink-bar {
-		background-color: $yellow !important;
-		width: 30px;
-		}
-		
-		::ng-deep .mat-tab-label-container {
-			width: auto;
-
-		}
-
-		::ng-deep .mat-tab-label  {
-			font-size: 12px;
-			padding: 0 12px !important;
-			color: black !important;
-		}
-
-		::ng-deep .mat-tab-label-content  {
-			font-size: 12px;
-			color: black !important;
-		}
-
-
-
-
-		.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
-				background: white;
-				height: 5px; 
+		// First column ------------------
+		.col-1 {
+			margin-left: 10%;
+			margin-top: 5%;
+			width: 80%;
+			.text {
+				font-size: 18px;
+				line-height: 1.6;
 			}
+		}
+		// Second column ------------------
+		.col-2 {
+			@include half;
+			width: 90%;
+		}
+		.img {
+			width: 100%;
+			img {
+				margin: 0;
+			}
+		}
+	}
+}
+
+// Tabs container ------------------
+.tabs {
+	width: 100%;
+	.sm-text {
+		@include sm-text;
+	}
+}
 
 }
 

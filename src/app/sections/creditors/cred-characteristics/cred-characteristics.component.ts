@@ -16,7 +16,7 @@ export class CredCharacteristicsComponent implements OnInit {
   ngOnInit() {
     this.characteristics = [
       {img: '../../../../assets/icons/icon-multicurrency.png',
-      title: 'Multicurrency', 
+      title: 'Multicurrency',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-competitive.png',
@@ -24,7 +24,7 @@ export class CredCharacteristicsComponent implements OnInit {
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-risk.png',
-      title: 'Risk Versatile', 
+      title: 'Risk Versatile',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false}
       ];

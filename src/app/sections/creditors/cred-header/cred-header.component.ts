@@ -8,9 +8,6 @@ import { LandingAnimations } from 'src/app/animations/animations';
   animations: LandingAnimations.animations
 })
 export class CredHeaderComponent implements OnInit {
-
-
- 
   constructor() { }
 
   ngOnInit() {

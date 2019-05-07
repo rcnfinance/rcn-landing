@@ -1,5 +1,6 @@
 @import '../../../../styles.scss'; //Styles
 
+// Line animation ------------------
 .page-title:after {
     content: ""; 
     display: block;
@@ -7,6 +8,7 @@
 	border-bottom: 3px solid $rcn-blue; 
 }
 
+// Section ------------------
 .main-container {
 	display: flex;
 	justify-content: center;
@@ -14,19 +16,23 @@
 	padding-bottom: 5%;
 }
 
+// Content column ------------------
 .col-1 {
 	width: 55%;
 	margin-top: 5%;
 	margin-right: 5%;
+	// Title ------------------
 	.title {
 		@include subtitle;
 		font-size: 30px;
 		margin-top: 10%;
 		margin-bottom: 1%;
 	}
+	// Text------------------
 	p {
 		margin: 5% 0;
 	}
+	// CTA Button ------------------
 	.button {
 		border: solid $rcn-blue 1px;
 		margin: 0;
@@ -48,6 +54,7 @@
 		animation-duration: 0.5s;
 		
 	}
+	// CTA Button hover ------------------
 	.button:hover {
 		background-color: $rcn-blue;
 		color: white;
@@ -62,25 +69,29 @@
 	}
 }
 
+// Image column ------------------
 .col-2 {
 	width: 45%;
 	margin-left: 10%;
 	margin-top: 5%;
-}
-
-.img-box {
-	width: 120%;
-	height: auto;
-	img {
-		width: 100%;
-		margin-left: -60%;
+	.img-box {
+		width: 120%;
+		height: auto;
+		img {
+			width: 100%;
+			margin-left: -60%;
+		}
 	}
 }
 
+//-----------------------------------------------------------------------------------------------------------
+// Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
 
 
 @media (max-width: 1000px){
 
+// Section ------------------	
 .main-container {
 	display: flex;
 	align-items: flex-end;
@@ -88,20 +99,24 @@
 	flex-direction: column-reverse;
 }
 
+// Content column ------------------	
 .col-1 {
 	width: 80%;
 	margin-top: 5%;
 	margin-right: 10%;
+	// Title ------------------	
 	.title {
 		@include subtitle;
 		margin-top: 10%;
 		margin-bottom: 2%;
 	}
+	// Text ------------------	
 	.text {
 		margin: 5% 0;
 		font-size: 18px;
 		line-height: 1.6;
 	}
+	// CTA Button ------------------	
 	.button {
 		padding: 14px 26px;
 		margin: 2% 0;
@@ -110,6 +125,7 @@
 	}
 }
 
+// Focus ------------------	
 a:focus {
 	outline: white;
 }
@@ -118,26 +134,33 @@ button:focus {
 	outline: white;
 }
 
+// Image column ------------------	
 .col-2 {
 	width: 90%;
 	margin-left: 0;
 	margin-top: 5%;
 	overflow: hidden;
-}
-
-.img-box {
-	width: 120%;
-	height: auto;
-	img {
-		width: 100%;
-		margin-left: 0%;
-		margin-right: -47%;
+	// Image ------------------	
+	.img-box {
+		width: 120%;
+		height: auto;
+		img {
+			width: 100%;
+			margin-left: 0%;
+			margin-right: -47%;
+		}
 	}
 }
+
 }
+
+//-----------------------------------------------------------------------------------------------------------
+// Minimum width 800px + Maximum width 1000px
+//-----------------------------------------------------------------------------------------------------------
 
 @media (min-width: 800px) and (max-width: 1000px) {
 
+	// Image column ------------------	
 	.col-2 {
 		width: 70%
 	}
