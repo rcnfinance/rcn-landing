@@ -15,7 +15,7 @@ export class NewsComponent implements OnInit {
   xDisabled;
   yDisabled;
 
-  mobileContent: IContent;
+  mobileContent: IContent[] = [];
   content: IContent[] = [];
   activeContent: IContent[] = [];
   activeContentStartIndex: number;
@@ -179,7 +179,7 @@ export class NewsComponent implements OnInit {
 
     if (this.isMobileResolution === true) {
       console.log('Is mobile resolution');
-      this.maxActiveContent = 2;
+      this.maxActiveContent = 1;
     }
 
     if (this.isDesktopResolution === true) {
@@ -230,17 +230,17 @@ export class NewsComponent implements OnInit {
 
     if (this.isMobileResolution) {
       if (startIndex === 0 && movement !== 'left' && movement !== 'right') {
-        this.mobileContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent)[0];
+        this.mobileContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent);
       }
 
       if (movement === 'right') {
-        this.mobileContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent)[0];
-        this.mobileContent.movement = 'enterLeft';
+        this.mobileContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent);
+        this.mobileContent[0].movement = 'enterLeft';
       }
 
       if (movement === 'left') {
-        this.mobileContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent)[0];
-        this.mobileContent.movement = 'enterRight';
+        this.mobileContent = activeContent.slice(startIndex + 1, startIndex + 1 + this.maxActiveContent);
+        this.mobileContent[0].movement = 'enterRight';
       }
     }
 
@@ -250,9 +250,7 @@ export class NewsComponent implements OnInit {
 
   left() {
     if (this.activeContentStartIndex > 0) {
-      for (let index = 0; index <= this.activeContent.length - 1; index++) {
-        this.activeContent[index].movement = 'noMovement';
-      }
+      this.setInitialValues();
       --this.activeContentStartIndex;
       this.activateContent(this.activeContentStartIndex, 'left');
     }
@@ -266,7 +264,7 @@ export class NewsComponent implements OnInit {
   right() {
 
     if (this.activeContentStartIndex < this.content.length - this.maxActiveContent + 1) {
-
+      this.setInitialValues();
       ++this.activeContentStartIndex;
       this.activateContent(this.activeContentStartIndex, 'right');
     }
@@ -282,6 +280,13 @@ export class NewsComponent implements OnInit {
       for (let index = 0; index <= this.activeContent.length - 1; index++) {
         this.activeContent[index].movement = 'noMovement';
       }
+    } else {
+      console.log('set initial value');
+      for (let index = 0; index <= this.mobileContent.length - 1; index++) {
+        this.mobileContent[index].movement = 'noMovement';
+      }
+      console.log(this.mobileContent[0].movement);
+
     }
   }
 

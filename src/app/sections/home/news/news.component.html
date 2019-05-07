@@ -52,35 +52,33 @@
           </div>
         </div>
 <!-- Prueba mobile---------------------------------------------------- -->
-        <div class="container-mobile"  [@slideInLeftMobile]="mobileContent.movement"
-          [@slideInRightMobile]="mobileContent.movement" [@opacity]="mobileContent.opacity"
-          [@slideInLeftWithOpacity]="mobileContent.movement" [@slideInRightWithOpacity]="mobileContent.movement">
+        <div class="container-mobile">
           <div class="border">
-            <div class="content">
+            <div class="content" *ngFor="let eachContent of mobileContent" [@slideInLeftMobile]="eachContent.movement" [@slideInRightMobile]="eachContent.movement">
               <div class="row-up">
                 <div class="title-box">
                   <div>
-                    <h3>{{mobileContent.title}}</h3>
+                    <h3>{{eachContent.title}}</h3>
                   </div>
                   <div class="line"></div>
                 </div>
                 <div>
                   <div class="p-box">
-                    <p>{{mobileContent.text}}</p>
+                    <p>{{eachContent.text}}</p>
                   </div>
                 </div>
               </div>
               <div class="row-down">
                 <div class="info-box">
-                  <div class="icon"><i class="{{mobileContent.icon1}}"></i></div>
+                  <div class="icon"><i class="{{eachContent.icon1}}"></i></div>
                   <div>
-                    <p>{{mobileContent.date}}</p>
+                    <p>{{eachContent.date}}</p>
                   </div>
                 </div>
                 <div class="info-box">
-                  <div class="icon"><i class="{{mobileContent.icon2}}"></i></div>
+                  <div class="icon"><i class="{{eachContent.icon2}}"></i></div>
                   <div>
-                    <p>{{mobileContent.location}}</p>
+                    <p>{{eachContent.location}}</p>
                   </div>
                 </div>
               </div>

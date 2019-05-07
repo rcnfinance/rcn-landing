@@ -201,15 +201,15 @@ export class LandingAnimations {
             ]),
             trigger('slideInLeftMobile', [
               state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
-              transition('* => enterLeft', [
-                style({ transform: 'translateX(5px)', opacity: 1 }),
+              transition('* => enterRight', [
+                style({ transform: 'translateX(-15px)', opacity: 0.3 }),
                 animate('600ms ease-in-out')
               ]),
             ]),
             trigger('slideInRightMobile', [
               state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
               transition('* => enterLeft', [
-                style({ transform: 'translateX(-5px)', opacity: 1 }),
+                style({ transform: 'translateX(15px)', opacity: 0.3 }),
                 animate('600ms ease-in-out')
               ]),
             ]),
