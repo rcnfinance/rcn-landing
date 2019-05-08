@@ -21,34 +21,35 @@ export class HeaderComponent implements OnInit {
   last = false;
   screen = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   navigate() {
     this.router.navigate(['how-it-works']);
   }
 
   addClass() {
-  const element = document.getElementById('button');
-  element.classList.add('pulse');
-  setTimeout(function() {
-    element.classList.remove('pulse');
-  }, 1000);
+    const element = document.getElementById('button');
+    element.classList.add('pulse');
+    setTimeout(function () {
+      element.classList.remove('pulse');
+    }, 1000);
   }
 
   addClass1() {
-  const element = document.getElementById('button1');
-  element.classList.add('ZoomIn');
-  setTimeout(function() {
-    element.classList.remove('ZoomIn');
-  }, 800);
+    const element = document.getElementById('button1');
+    element.classList.add('ZoomIn');
+    setTimeout(function () {
+      element.classList.remove('ZoomIn');
+    }, 800);
   }
 
   addClass2() {
-  const element = document.getElementById('button2');
-  element.classList.add('ZoomIn');
-  setTimeout(function() {
-    element.classList.remove('ZoomIn');
-  }, 800);
+    const element = document.getElementById('button2');
+    element.classList.add('ZoomIn');
+    setTimeout(function () {
+      element.classList.remove('ZoomIn');
+    }, 800);
   }
 
   ngOnInit() {
@@ -84,7 +85,7 @@ export class HeaderComponent implements OnInit {
     this.activeContent[0].fadeIn = 'fadeIn';
     this.first = true;
 
-    // setInterval(() => this.changeActiveContent(), 5000);
+    setInterval(() => this.changeActiveContent(), 10000);
 
   }
 
@@ -142,7 +143,7 @@ export class HeaderComponent implements OnInit {
       this.activeContent.push(this.content[this.activeContentIndex]);
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
-    } 
+    }
   }
 }
 

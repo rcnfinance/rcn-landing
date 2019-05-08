@@ -213,6 +213,13 @@ export class LandingAnimations {
                 animate('600ms ease-in-out')
               ]),
             ]),
+            trigger('slideInLeftImages', [
+              state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+              transition('* => enterLeft', [
+                style({ transform: 'translateX(0)', opacity: 0.8 }),
+                animate('600ms ease-out')
+              ]),
+            ]),
         ];
     }
 
