@@ -1,4 +1,4 @@
-import { AnimationTriggerMetadata, animate, state, style, transition, trigger, animateChild, query } from '@angular/animations';
+import { AnimationTriggerMetadata, animate, state, style, transition, trigger, animateChild, query, group } from '@angular/animations';
 
 
 export class LandingAnimations {
@@ -41,7 +41,7 @@ export class LandingAnimations {
                   width: '0%',
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('300ms ease-out')),
+                transition('show => hide', animate('600ms ease-out')),
                 transition('hide => show', animate('600ms ease-in'))
               ]),
               trigger('lineAnimationThick', [
@@ -53,7 +53,7 @@ export class LandingAnimations {
                   width: '0%',
                   transform: 'translateX(0)'
                 })),
-                transition('show => hide', animate('300ms ease-out')),
+                transition('show => hide', animate('600ms ease-out')),
                 transition('hide => show', animate('600ms  ease-in'))
               ]),
               trigger('lineAnimationThinMobile', [
@@ -89,10 +89,11 @@ export class LandingAnimations {
                   opacity: 0,
                   transform: 'translateX(0)'
                 })),
-                transition('hide => show', [ animate('600ms ease-in'),  query('@*', [
+                 transition('hide => show', group( [ animate('600ms ease-in', style({
+                   opacity: 1
+                 })),  query('@*', [
                   animateChild(),
-                ])
-              ])
+                ])]))
               ]),
               trigger('scrollAnimation', [
                 state('show', style({
@@ -106,24 +107,31 @@ export class LandingAnimations {
                 transition('hide => show', animate('400ms ease-in'))
               ]),
               trigger('slideInLeft', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+                state('enterLeft', style({ transform: 'translateX(-375px)', opacity: 1})),
                 transition('* => enterLeft', [
-                  style({ transform: 'translateX(20px)', opacity: 0.2 }),
-                  animate('900ms ease-in')
+                  style({ transform: 'translateX(0)', opacity: 1 }),
+                  animate('600ms ease-in-out')
                 ]),
               ]),
               trigger('slideInLeftWithOpacity', [
-                state('enterLeft', style({ transform: 'translateX(0)', opacity: 0.2})),
-                transition('void => enterLeft', [
-                  style({ transform: 'translateX(2px)', opacity: 0.2 }),
-                  animate('900ms ease-in')
+                state('enterLeftOpacity', style({ transform: 'translateX(-375px)', opacity: 0.2})),
+                transition('* => enterLeftOpacity', [
+                  style({ transform: 'translateX(0)', opacity: 0.2 }),
+                  animate('600ms ease-in-out')
                 ]),
               ]),
               trigger('slideInRight', [
-                state('enterRight', style({ transform: 'translateX(0)' })),
-                transition('void => enterRight', [
-                  style({ transform: 'translateX(-2px)', opacity: 0 }),
-                  animate('900ms ease-in')
+                state('enterRight', style({ transform: 'translateX(0)', opacity: 1 })),
+                transition('* => enterRight', [
+                  style({ transform: 'translateX(-375px)', opacity: 1 }),
+                  animate('600ms ease-in-out')
+                ])
+              ]),
+              trigger('slideInRightWithOpacity', [
+                state('enterRightOpacity', style({ transform: 'translateX(0)', opacity: 0.2 })),
+                transition('* => enterRightOpacity', [
+                  style({ transform: 'translateX(-375px)', opacity: 0.2 }),
+                  animate('600ms ease-in-out')
                 ])
               ]),
               trigger('opacity', [
@@ -190,7 +198,21 @@ export class LandingAnimations {
                 transform: 'translateX(0)'
               })),
               transition('hide => show', animate('600ms ease-in'))
-            ])
+            ]),
+            trigger('slideInLeftMobile', [
+              state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+              transition('* => enterRight', [
+                style({ transform: 'translateX(-15px)', opacity: 0.3 }),
+                animate('600ms ease-in-out')
+              ]),
+            ]),
+            trigger('slideInRightMobile', [
+              state('enterLeft', style({ transform: 'translateX(0)', opacity: 1})),
+              transition('* => enterLeft', [
+                style({ transform: 'translateX(15px)', opacity: 0.3 }),
+                animate('600ms ease-in-out')
+              ]),
+            ]),
         ];
     }
 
