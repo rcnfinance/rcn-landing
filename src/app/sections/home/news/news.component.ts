@@ -37,9 +37,6 @@ export class NewsComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   checkWidth() {
-
-    console.log('Window width', window.innerWidth);
-
     if (window.innerWidth < 768) {
       this.isMobileResolution = true;
       this.activateContent(this.activeContentStartIndex, 'enterLeft')
@@ -208,7 +205,8 @@ export class NewsComponent implements OnInit {
       if (movement === 'right') {
         this.activeContent = activeContent.slice(startIndex - 1, startIndex - 1 + this.maxActiveContent);
         for (let index = 0; index <= this.activeContent.length - 1; index++) {
-          if (index === this.activeContent.length - 1) {
+          if (index === this.activeContent.length - 1 &&
+            this.activeContent[this.activeContent.length - 1].title !== this.content[this.content.length - 1].title) {
             this.activeContent[this.activeContent.length - 1].movement = 'enterLeftOpacity';
           } else {
             this.activeContent[index].movement = 'enterLeft';
@@ -244,8 +242,6 @@ export class NewsComponent implements OnInit {
       }
     }
 
-    console.info(this.activeContent);
-
   }
 
   left() {
@@ -253,26 +249,36 @@ export class NewsComponent implements OnInit {
       this.setInitialValues();
       --this.activeContentStartIndex;
       this.activateContent(this.activeContentStartIndex, 'left');
+      this.last = false;
     }
-    this.screen--
-    if (this.screen < 0) {
-      this.screen = 0;
+
+    if (this.activeContentStartIndex === 0) {
+      this.first = true;
     }
-    this.check()
+
   }
 
   right() {
 
-    if (this.activeContentStartIndex < this.content.length - this.maxActiveContent + 1) {
+    let lessContent = 0;
+    if (this.isMobileResolution) {
+       lessContent = 2;
+    }
+
+    const maxMovements = this.content.length - this.maxActiveContent - lessContent;
+
+    if (this.activeContentStartIndex <= maxMovements) {
       this.setInitialValues();
       ++this.activeContentStartIndex;
       this.activateContent(this.activeContentStartIndex, 'right');
+      this.first = false;
     }
-    this.screen++
-    if (this.screen > 2) {
-      this.screen = 2;
+
+    if (this.activeContentStartIndex - 1 === maxMovements) {
+      this.last = true;
     }
-    this.check()
+
+
   }
 
   setInitialValues() {
@@ -281,27 +287,13 @@ export class NewsComponent implements OnInit {
         this.activeContent[index].movement = 'noMovement';
       }
     } else {
-      console.log('set initial value');
       for (let index = 0; index <= this.mobileContent.length - 1; index++) {
         this.mobileContent[index].movement = 'noMovement';
       }
-      console.log(this.mobileContent[0].movement);
 
     }
   }
 
-  check() {
-    if (this.screen == 0) {
-      this.first = true;
-      this.last = false;
-    } else if (this.screen == 2) {
-      this.first = false;
-      this.last = true;
-    } else {
-      this.first = false;
-      this.last = false;
-    }
-  }
 }
 
 interface IContent {
