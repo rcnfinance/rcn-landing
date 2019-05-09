@@ -16,15 +16,15 @@ export class OriginCharComponent implements OnInit {
   ngOnInit() {
 
     this.characteristics = [
-      {img: '../../../../assets/icons/icon-multicurrency.png',
+      {img: '../../../../assets/icons/icon-liquid.png',
       title: 'Globaly liquid',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
-      {img: '../../../../assets/icons/icon-competitive.png',
+      {img: '../../../../assets/icons/icon-term.png',
       title: 'Term flexible',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
-      {img: '../../../../assets/icons/icon-risk.png',
+      {img: '../../../../assets/icons/icon-plugplay.png',
       title: 'Plug & play',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false}

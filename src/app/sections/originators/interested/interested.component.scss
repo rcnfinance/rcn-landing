@@ -13,7 +13,7 @@
 .phrase {
 	display: flex;
 	justify-content: center;
-	padding: 5% 0;
+	padding: 8% 0;
 	background-color: rgb(245, 245, 245);
 		.row {
 		width: 100%;
@@ -32,6 +32,7 @@
 // Mail ------------------
 .mail {
 	@include link-text;
+	font-size: 18px;
 	display: inline-block;
 }
 
