@@ -21,12 +21,12 @@
 		</div>
 	</div>
 	<div class="col-right">
-		<div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected">
-			<img src="{{activeContent.img}}" alt="">
+		<div class="img-box" *ngFor="let activeContent of activeContent">
+			<img src="{{activeContent.img}}" alt="" [@slideInLeftImages]="activeContent.selected">
 		</div>
 	</div>
 	<div class="col-right-mobile">
-		<div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeft]="activeContent.selected">
+		<div class="img-box" *ngFor="let activeContent of activeContent" [@slideInLeftImages]="activeContent.selected">
 			<img src="{{activeContent.img}}" alt="">
 		</div>
 	</div>

@@ -21,7 +21,8 @@ export class HeaderComponent implements OnInit {
   last = false;
   screen = 0;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) {
+  }
 
   navigate() {
     this.router.navigate(['how-it-works']);
@@ -60,7 +61,7 @@ export class HeaderComponent implements OnInit {
     this.activeContent[0].fadeIn = 'fadeIn';
     this.first = true;
 
-    // setInterval(() => this.changeActiveContent(), 5000);
+    setInterval(() => this.changeActiveContent(), 10000);
 
   }
 
@@ -118,7 +119,7 @@ export class HeaderComponent implements OnInit {
       this.activeContent.push(this.content[this.activeContentIndex]);
       this.activeContent[0].selected = 'enterLeft';
       this.activeContent[0].fadeIn = 'fadeIn';
-    } 
+    }
   }
 }
 
