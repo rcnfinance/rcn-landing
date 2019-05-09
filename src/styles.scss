@@ -295,16 +295,16 @@ h1,h2,h3,h4,h5,h6 {
 
 //Buttons
 @mixin button-text {
-  font-family: 'semi';
+  font-family: 'regular';
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 2px;
   color: black;
 }
 
 //Cards
 @mixin char-card-text {
-  font-family: 'semi';
+  font-family: 'regular';
   font-size: 16px;
   font-weight: 500;
   color: white;
@@ -314,7 +314,7 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'semi';
   font-size: 16px;
   font-weight: 500;
-  color: $dark-blue;
+  color: $rcn-blue;
 }
 
 
@@ -322,21 +322,21 @@ h1,h2,h3,h4,h5,h6 {
   font-family: 'semi';
   font-size: 14px;
   font-weight: 500;
-  color: $dark-blue;
+  color: $rcn-blue;
 }
 
 @mixin spon-card-title {
   font-family: 'semi';
   font-size: 28px;
   font-weight: 500;
-  color: $dark-blue;
+  color: $rcn-blue;
 }
 
 @mixin spon-card-sub {
   font-family: 'semi';
   font-size: 13px;
   font-weight: 500;
-  color: $dark-blue;
+  color: $rcn-blue;
 }
 
 @mixin spon-card-text {

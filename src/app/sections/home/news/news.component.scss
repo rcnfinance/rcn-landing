@@ -15,7 +15,7 @@
     margin: 0; 
     padding-top: 8px; 
     padding-top: 0; 
-    border-bottom: 3px solid blue; 
+    border-bottom: 3px solid $rcn-blue; 
 }
 
 // Line mobile ------------------
@@ -43,8 +43,8 @@
 	// Image ------------------
 	img {
 		height: auto;
-		min-width: 100%;
-		filter: brightness(30%);
+		width: 100%;
+		// filter: brightness(30%);
 	}
 }
 
@@ -176,7 +176,7 @@
 		justify-content: space-between;
 		width: 75%;
 		margin-top: 1%;
-		margin-left: 5%;
+		margin-left: 10%;
 		button {
 			background: none;
 			width: 30px;
@@ -187,12 +187,14 @@
 			font: inherit;
 			outline: inherit;
 			cursor: pointer;
+			background-color: none;;
+			border-radius: 50px;
 			-webkit-transition: background-color 0.2s; /* Safari */
 			transition: background-color 0.2s;
 		}
 		// Button hover ------------------
 		button:hover {
-			background-color: rgb(200, 200, 200);
+			background-color: rgb(170, 170, 170);
 			border-radius: 50px;
 			-webkit-transition: background-color 0.2s; /* Safari */
 			transition: background-color 0.2s;

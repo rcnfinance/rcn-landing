@@ -10,13 +10,14 @@
 		top: 10%;
 		right: 0;
 		width: 60%;
+		margin-left: 40%;
 		height: fit-content;
 		overflow: hidden;
-		@include shadowElement;
 		// Image ------------------
 		.img-box {
 			width: auto;
 			height: auto;
+			@include shadowElement;
 		}
 		img {
 			width: 100%;
@@ -39,7 +40,7 @@
 	background-color: $rcn-blue;
 	// Content col ------------------
     .content {
-        margin: 10% 30% 4% 16%;
+		margin: 10% 38% 4% 16%;
     }
 	// Title ------------------
     .main-title {
@@ -116,10 +117,15 @@
 		justify-content: flex-start;
 	}
 	// Icon ------------------
-	i:hover {
-		background-color: rgb(200, 200, 200);
-		border-radius: 50px;
-		padding: 6%;
+	.arrow:hover {
+		color: gray;
+		cursor: pointer;
+		-webkit-transition: background-color 0.2s; /* Safari */
+		transition: background-color 0.2s;
+	}
+	.arrow:hover i {
+		color: gray;
+		cursor: pointer;
 		-webkit-transition: background-color 0.2s; /* Safari */
 		transition: background-color 0.2s;
 	}
