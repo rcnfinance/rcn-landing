@@ -33,7 +33,7 @@ export class HeaderComponent implements OnInit {
         title0: 'THE RCN',
         title: 'NETWORK',
         img: '../../../../assets/img/slider-RCN_desktop.jpg',
-        imgMobile: '../../../../assets/img/slider-RCN_desktop.jpg',
+        imgMobile: '../../../../assets/img/slider-RCN_mobile.jpg',
         selected: 'notSelected',
         fadeIn: 'notFadeIn'
       },
@@ -41,7 +41,7 @@ export class HeaderComponent implements OnInit {
         title0: '',
         title: 'BLOCKCHAIN GLOBAL LENDING',
         img: '../../../../assets/img/slider-blockchain_desktop.jpg',
-        imgMobile: '../../../../assets/img/slider-blockchain_desktop.jpg',
+        imgMobile: '../../../../assets/img/slider-blockchain_mobile.jpg',
         selected: 'notSelected',
         fadeIn: 'notFadeIn'
       },
@@ -49,7 +49,7 @@ export class HeaderComponent implements OnInit {
         title0: 'FRICTIONLESS',
         title: 'DEBT MARKETS',
         img: '../../../../assets/img/slider-frictionless_desktop.jpg',
-        imgMobile: '../../../../assets/img/slider-frictionless_desktop.jpg',
+        imgMobile: '../../../../assets/img/slider-frictionless_mobile.jpg',
         selected: 'notSelected',
         fadeIn: 'notFadeIn'
       }

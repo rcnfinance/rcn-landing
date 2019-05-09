@@ -243,6 +243,27 @@
 	border-bottom: 3px solid $rcn-blue; 
 }
 
+// Section ------------------
+.main-container {
+	padding: 16% 0 0 0;
+}
+
+// Background mobile ------------------
+.background {
+	width: auto;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	// Image ------------------
+	img {
+		height: 100%;
+		width: auto;
+	}
+}
+
 // First row ------------------
 .col-1 {
 	@include three-quarters;
@@ -253,9 +274,8 @@
 
 // Card border ------------------
 .border {
-	border: solid $rcn-blue 1px;
-	border-right: solid $rcn-blue 1px;
-	border-left: solid $rcn-blue 6px;
+	border: solid white 1px;
+	border-left: solid white 6px;
 	border-radius:  0 35px 35px 0;
 	width: 330px;
 	height: auto;
@@ -275,6 +295,7 @@
 				flex-wrap: wrap;
 				p {
 					@include spon-card-text;
+					color: white;
 					margin-bottom: 6%;
 				}
 			}
@@ -285,6 +306,7 @@
 				margin: 0;
 					h3 {
 						@include spon-card-title;
+						color: white;
 						font-size: 20px;
 					}
 		
@@ -299,10 +321,11 @@
 				// Icon ------------------
 				.icon {
 					margin-right: 3%;
+					color: white;
 				}
 				// Info ------------------
 				p {
-					color: black;
+					color: white;
 					font-size: 11px;
 					font-weight: 400;
 				}
