@@ -13,13 +13,12 @@
 	display: flex;
 	justify-content: center;
 	background-color: $gray;
-	padding-bottom: 5%;
+	padding: 8% 0;
 }
 
 // Content column ------------------
 .col-1 {
 	width: 55%;
-	margin-top: 5%;
 	margin-right: 5%;
 	// Title ------------------
 	.title {
@@ -59,6 +58,7 @@
 		background-color: $rcn-blue;
 		color: white;
 		font-weight: 700;
+		opacity: 0.5;
 		-webkit-transition: font-weight 0.2s; /* Safari */
 		transition: font-weight 0.2s;
 		-webkit-transition: background-color 0.2s; /* Safari */
@@ -73,7 +73,6 @@
 .col-2 {
 	width: 45%;
 	margin-left: 10%;
-	margin-top: 5%;
 	.img-box {
 		width: 120%;
 		height: auto;

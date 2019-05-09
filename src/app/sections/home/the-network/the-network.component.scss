@@ -29,7 +29,7 @@
 // Section ------------------
 .row{
     @include row-both;
-    padding: 4% 0;
+    padding: 4% 0 8% 0;
     .container {
         @include row-around;
         margin: 3% 0;
@@ -70,11 +70,13 @@
     }
     // Link ------------------
     .link {
-        @include link-text;
+        @include button-text;
+        color: $rcn-blue;
+        text-decoration: none;
     }
     // Link hover ------------------
     .link:hover {
-        color: $text-gray;
+       opacity: 0.5;
     }
 }
 

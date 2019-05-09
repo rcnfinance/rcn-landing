@@ -33,7 +33,7 @@
 .main-container {
 	background-image: $gradient-diag;
   	height: auto;
-	padding: 6% 0;
+	padding: 8% 0 6% 0;
 	max-height: 570px;
 	.col-1 {
 		@include half;
@@ -79,7 +79,7 @@
 			.card-border-expanded {
 				border: solid white 1.2px; 
 				border-radius: 15px;
-				background-image: linear-gradient(to bottom right, $rcn-blue, #5F24BE);
+				background-color: $rcn-blue;
 				@include shadowElement;
 				-webkit-transition: box-shadow 0.2s; /* Safari */
 				transition: box-shadow 0.2s;
@@ -106,7 +106,7 @@
 						margin: 3%;
 						// Image expanded ------------------
 						.img-box-expanded {
-							width: 35%;
+							width: 25%;
 							margin-right: 60%;
 							margin-bottom: 2%;
 							img {
@@ -116,6 +116,7 @@
 						// Title ------------------
 						.h6 {
 							@include char-card-text;
+							font-family: 'semi';
 							margin-bottom: 1%;
 						}
 						// Line ------------------
@@ -129,6 +130,7 @@
 							@include char-card-text;
 							font-size: 12px;
 							margin-top: 6%;
+							margin-bottom: 0;
 						}
 					}
 				}
