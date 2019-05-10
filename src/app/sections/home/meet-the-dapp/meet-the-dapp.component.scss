@@ -58,7 +58,6 @@
 		background-color: $rcn-blue;
 		color: white;
 		font-weight: 700;
-		opacity: 0.5;
 		-webkit-transition: font-weight 0.2s; /* Safari */
 		transition: font-weight 0.2s;
 		-webkit-transition: background-color 0.2s; /* Safari */
@@ -136,10 +135,9 @@ button:focus {
 
 .col-1 {
 	.button:hover {
-		background-color: white;
-		color: $rcn-blue;
+		background-color: $rcn-blue;
+		color: white ;
 		font-weight: 700;
-		opacity: 0.5;
 		padding: 14px 26px;
 		margin: 2% 0;
 		font-size: 12px;

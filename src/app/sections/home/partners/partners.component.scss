@@ -118,13 +118,13 @@ th {
 .th-back-up-left {
 	background-color: $gray;
 	border-top: none;
-	border-top-left-radius: 35px;
+	border-top-left-radius: 15px;
 }
 
 .th-back-up-right {
 	background-color: $gray;
 	border-top: none;
-	border-top-right-radius: 35px;
+	border-top-right-radius: 15px;
 }
 
 .th-back-up {
@@ -140,14 +140,14 @@ th {
 .th-back-down-left {
 	background-color: $gray;
 	border-top: none;
-	border-bottom-left-radius: 35px;
+	border-bottom-left-radius: 15px;
 	border-top: solid $rcn-blue 1px;
 }
 
 .th-back-down-right {
 	background-color: $gray;
 	border-top: none;
-	border-bottom-right-radius: 35px;
+	border-bottom-right-radius: 15px;
 	border-top: solid $rcn-blue 1px;
 }
 
@@ -280,7 +280,14 @@ overflow-x: hidden;
 		font-size: 30px;
 		color: white;
 		margin-right: 4%;
+		cursor: pointer;
 	}
+}
+
+// Close expansible card hover ------------------
+.close-icon:hover .fas {
+	color: rgb(223, 223, 223);
+	cursor: pointer;
 }
 
 // Expansible card's content ------------------
@@ -404,7 +411,7 @@ overflow-x: hidden;
 		width: auto;
 		border-collapse:separate;
 		border:solid $rcn-blue 1.2px;
-		border-radius:35px;
+		border-radius:15px;
 		-moz-border-radius:6px;
 	}
 }
@@ -432,7 +439,7 @@ p {
 		width: 45%;
 		border-collapse:separate;
 		border:solid $rcn-blue 1.2px;
-		border-radius:35px;
+		border-radius:15px;
 		-moz-border-radius:6px;
 		margin: 3%;
 	}
