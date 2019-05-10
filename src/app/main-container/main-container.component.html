@@ -2,7 +2,7 @@
 <nav [ngClass]="menuBlack ? 'navbar-black' : 'navbar'">
   <div  [ngClass]="menuBlack ? 'mobile-nav-black' : 'mobile-nav'">
     <div class="logo-mobile animated" (click)="markAsSelected('home')" routerLink='/home'>
-      <img *ngIf="!menuBlack" class="img" src="../../../assets/isologotypo.svg" alt="">
+      <img *ngIf="!menuBlack" class="img" src="../../../assets/img/isologotypo.svg" alt="">
       <img *ngIf="menuBlack" class="img-black" src="../../../assets/isologotypo.svg" alt="">
     </div>
     <button class="bars" (click)="mobileMenu()">
