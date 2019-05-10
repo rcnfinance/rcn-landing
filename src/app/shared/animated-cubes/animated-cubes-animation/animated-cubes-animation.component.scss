@@ -1,0 +1,14 @@
+
+.animation-container {
+
+    margin-left: -50px;
+    
+    @media (min-width: 1310px) and (max-width: 1400px) {
+        margin-left: 0;
+    }
+
+    @media (min-width: 1401px) {
+        margin-left: -100px;
+    }
+
+}

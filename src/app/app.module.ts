@@ -36,6 +36,8 @@ import { TypesComponent } from './sections/originators/types/types.component';
 import { InterestedComponent } from './sections/originators/interested/interested.component';
 import { HowHeaderComponent } from './sections/how-it-works/how-header/how-header.component';
 import { UsecasesComponent } from './sections/how-it-works/usecases/usecases.component';
+import { AnimatedCubesComponent } from './shared/animated-cubes/animated-cubes.component';
+import { AnimatedCubesAnimationComponent } from './shared/animated-cubes/animated-cubes-animation/animated-cubes-animation.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +68,9 @@ import { UsecasesComponent } from './sections/how-it-works/usecases/usecases.com
     TypesComponent,
     InterestedComponent,
     HowHeaderComponent,
-    UsecasesComponent
+    UsecasesComponent,
+    AnimatedCubesComponent,
+    AnimatedCubesAnimationComponent
   ],
   imports: [
     BrowserModule,
