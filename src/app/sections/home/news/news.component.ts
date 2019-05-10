@@ -96,12 +96,12 @@ export class NewsComponent implements OnInit {
         opacity: ''
       },
       {
-        title: 'LendIt USA 2019',
-        text: 'LendIt is one of the world’s leading events in financial services innovation, fintech, digital banking, blockchain and lending.',
-        icon1: 'fas fa-calendar-alt',
-        icon2: 'fas fa-map-marker-alt',
-        date: '04/08-09/2019',
-        location: 'San Fransisco - US',
+        title: 'VentureBeat',
+        text: 'RCN launches Ripio engine to bring blockchain and smart contracts to loans.',
+        icon1: '',
+        icon2: '',
+        date: '',
+        location: '',
         movement: 'noMovement',
         opacity: 'notOpacity'
       },
