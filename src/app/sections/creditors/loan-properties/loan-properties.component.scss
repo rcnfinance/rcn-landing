@@ -30,7 +30,7 @@
 .main-container {
 	display:flex;
 	justify-content: center;
-	margin: 5% 0;
+	margin: 8% 0;
 	.row {
 		width: 80%;
 		// Text ------------------
@@ -138,7 +138,7 @@ h6 {
 	width: 230%;
 	height: auto;
 	position: absolute;
-	right: 150%;
+	left: -410px;
 	bottom: 300%;
 	z-index: 2;
 	@include shadowElement;
@@ -230,7 +230,14 @@ h6 {
 	opacity: 1.0;
 }
 
-.hover:hover > h6{
+.hover:hover div h6 {
+	color: $rcn-blue;
+	cursor: pointer;
+	-webkit-transition: color 0.2s; /* Safari */
+	transition: color 0.2s;
+}
+
+.hover:hover div i {
 	color: $rcn-blue;
 	cursor: pointer;
 	-webkit-transition: color 0.2s; /* Safari */
@@ -287,7 +294,7 @@ h6 {
 .main-container {
 	display:flex;
 	justify-content: center;
-	margin: 5% 0;
+	padding: 8% 0;
 	.row {
 		width: 80%;
 		// Text ------------------

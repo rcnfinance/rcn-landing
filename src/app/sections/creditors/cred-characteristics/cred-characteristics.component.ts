@@ -15,15 +15,15 @@ export class CredCharacteristicsComponent implements OnInit {
 
   ngOnInit() {
     this.characteristics = [
-      {img: '../../../../assets/icons/icon-multicurrency.png',
+      {img: '../../../../assets/icons/icon-multicurrency.svg',
       title: 'Multicurrency',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
-      {img: '../../../../assets/icons/icon-competitive.png',
+      {img: '../../../../assets/icons/icon-competitive.svg',
       title: 'Competitive',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
-      {img: '../../../../assets/icons/icon-risk.png',
+      {img: '../../../../assets/icons/icon-risk.svg',
       title: 'Risk Versatile',
       text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false}

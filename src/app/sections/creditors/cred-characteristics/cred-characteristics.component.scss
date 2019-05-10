@@ -31,7 +31,7 @@ margin: 5% 0;
 			.card-border-expanded{
 				border: solid $rcn-blue 1px; 
 				border-radius: 15px;
-				background-image: white ;
+				background-color: white;
 				@include shadowElement;
 				-webkit-transition: box-shadow 0.2s; /* Safari */
 				transition: box-shadow 0.2s;
@@ -60,7 +60,7 @@ margin: 5% 0;
 						margin: 3%;
 						// Expanded image ------------------
 						.img-box-expanded {
-							width: 35%;
+							width: 25%;
 							margin-right: 60%;
 							img {
 								width: 100%;
@@ -107,7 +107,7 @@ margin: 5% 0;
 		justify-content: center;
 		align-items: center;
 		.img-box {
-			width: 100%;
+			width: 80%;
 			img {
 				width: 100%;
 			}
@@ -159,7 +159,7 @@ margin: 5% 0;
 			padding: 4%;
 			margin: 5% 0;
 			border: solid $rcn-blue 1.2px;
-			border-radius: 40px;
+			border-radius: 15px;
 			display: flex;
 			justify-content: center;
 		}

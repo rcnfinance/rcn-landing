@@ -362,13 +362,12 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 @mixin link-text {
-  font-family: 'extra';
+  font-family: 'regular';
   font-size: 11px;
   font-weight: 700;
   color: $rcn-blue;
   letter-spacing: 1.1px;
   text-decoration: none;
-  border-bottom: solid $rcn-blue 1px;
 }
 
 //Footer
@@ -398,6 +397,18 @@ h1,h2,h3,h4,h5,h6 {
 //-----------------------------------------------------------------------------------------------------------
 
 //Material styles
+
+.mat-tab-header-pagination.mat-tab-header-pagination-disabled {
+  display: none !important;
+}
+
+.mat-tab-header-pagination.mat-tab-header-pagination-chevron-disabled {
+  display: none !important;
+}
+
+.mat-tab-header-pagination-controls-enabled .mat-tab-header-pagination {
+  display: none !important; 
+}
 
 /* active tab */
 ::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label-content {
