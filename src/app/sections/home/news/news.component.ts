@@ -164,6 +164,17 @@ export class NewsComponent implements OnInit {
         opacity: 'notOpacity',
         link: 'https://www.youtube.com/watch?v=H4Dwyv1ySjk'
       },
+      {
+        title: '',
+        text: '',
+        icon1: '',
+        icon2: '',
+        date: '',
+        location: '',
+        movement: '',
+        opacity: '',
+        link: ''
+      },
     ];
 
     this.activeContentStartIndex = 0;

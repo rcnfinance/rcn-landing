@@ -76,6 +76,13 @@
 	width: 380px;
 }
 
+// Card border hover ------------------
+.border:hover {
+	background-color: black;
+	-webkit-transition: background-color 0.2s; /* Safari */
+	transition: background-color 0.2s;
+}
+
 // Card border ------------------
 .border {
 	border: solid white 1.2px;
@@ -87,6 +94,8 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	cursor: pointer;
+	-webkit-transition: background-color 0.2s; /* Safari */
+	transition: background-color 0.2s;
 	// Card content ------------------
 	.content {
 		width: 100%;
