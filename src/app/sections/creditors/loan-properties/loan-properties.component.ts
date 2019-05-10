@@ -16,7 +16,7 @@ export class LoanPropertiesComponent implements OnInit {
     {icon: 'fas fa-user',
     title: 'BORROWER',
     data: 'ox2c...ef20',
-    tooltip: 'The Borrower’s address is a unique identification of his or hers Ethereum wallet.',
+    tooltip: 'The Borrower’s address is a unique identification of his or her Ethereum wallet.',
     tooltipTitle: 'Borrower',
     icon2: 'fas fa-calendar-alt',
     title2: 'DURATION',

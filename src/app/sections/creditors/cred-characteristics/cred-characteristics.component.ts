@@ -17,15 +17,15 @@ export class CredCharacteristicsComponent implements OnInit {
     this.characteristics = [
       {img: '../../../../assets/icons/icon-multicurrency.svg',
       title: 'Multicurrency',
-      text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+      text: 'The decentralized marketplace allows creditors to make loans in a variety of lending and borrowing currencies.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-competitive.svg',
       title: 'Competitive',
-      text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+      text: 'By accessing emerging debt markets, RCN creditors can fund high-yield loans and earn passive income at attractive interest rates.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-risk.svg',
       title: 'Risk Versatile',
-      text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+      text: 'Whether cosigned or backed by crypto collateral, all the network’s loans count with a risk strategy to manage the Creditor’s exposure.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false}
       ];
   }

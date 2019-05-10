@@ -17,16 +17,16 @@ export class OriginCharComponent implements OnInit {
 
     this.characteristics = [
       {img: '../../../../assets/icons/icon-liquid.png',
-      title: 'Globaly liquid',
-      text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+      title: 'Globaly Liquid',
+      text: 'By accessing global credit supply, Originators can get funding at affordable rates regardless of their local APR.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-term.png',
-      title: 'Term flexible',
-      text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+      title: 'Term Flexible',
+      text: 'Debt products can be customized to fit each Originator’s required amount, currency, APR, LTV and maturity, among other parameters.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-plugplay.png',
-      title: 'Plug & play',
-      text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+      title: 'Plug & Play',
+      text: 'The RCN protocol allows originators to get integrated using a simple SDK and without requiring any previous blockchain experience.',
       selected: 'notSelected', opacity: 'notopacity', expanded : false}
       ];
   }

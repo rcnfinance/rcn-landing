@@ -32,7 +32,7 @@ export class CharacteristicsComponent implements OnInit {
     this.characteristics = [
       {
         img: '../../../../assets/icons/icon-frictionless.svg',
-        text: 'By reducing fees and eliminating entry barriers RCN increases efficiency throughout the lending process.',
+        text: 'By reducing fees and eliminating entry barriers the network increases efficiency throughout the lending process.',
         title: 'Frictionless', selected: 'notSelected', opacity: 'notOpacity', expanded : false
       },
       {

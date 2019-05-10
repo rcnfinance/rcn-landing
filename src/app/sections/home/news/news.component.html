@@ -10,8 +10,7 @@
         <h3 class="page-title" [@lineAnimationThick]="lineState"></h3>
         <h3 class="page-title2-mobile" [@lineAnimationThinMobile]="lineState"></h3>
         <h3 class="page-title-mobile" [@lineAnimationThickMobile]="lineState"></h3>
-        <p class="reg-text">As one of the Decentralized Finance ecosystem’s key stakeholders,
-          RCN is regularly featured at top events and media outlets across the world.</p>
+        <p class="reg-text">As one of the Decentralized Finance ecosystem’s key stakeholders, the RCN network is regularly featured at top events and media outlets across the world.</p>
       </app-title-text>
     </div>
     <div class="row">
@@ -19,6 +18,7 @@
         <div class="container" *ngFor="let eachContent of activeContent" [@slideInLeft]="eachContent.movement"
           [@slideInRight]="eachContent.movement" [@opacity]="eachContent.opacity"
           [@slideInLeftWithOpacity]="eachContent.movement" [@slideInRightWithOpacity]="eachContent.movement">
+          <a href="{{eachContent.link}}" target="blank_" class="links">
           <div class="border">
             <div class="content">
               <div class="row-up">
@@ -50,6 +50,7 @@
               </div>
             </div>
           </div>
+          </a>
         </div>
 <!-- Prueba mobile---------------------------------------------------- -->
         <div class="container-mobile">

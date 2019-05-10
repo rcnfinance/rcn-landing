@@ -93,27 +93,8 @@ export class NewsComponent implements OnInit {
         date: '',
         location: '',
         movement: '',
-        opacity: ''
-      },
-      {
-        title: 'VentureBeat',
-        text: 'RCN launches Ripio engine to bring blockchain and smart contracts to loans.',
-        icon1: '',
-        icon2: '',
-        date: '',
-        location: '',
-        movement: 'noMovement',
-        opacity: 'notOpacity'
-      },
-      {
-        title: 'Coindesk',
-        text: 'Ripio Rolls Out Crypto-Powered Loans Across Latin America.',
-        icon1: '',
-        icon2: '',
-        date: '',
-        location: '',
-        movement: 'noMovement',
-        opacity: 'notOpacity'
+        opacity: '',
+        link: ''
       },
       {
         title: 'EDCON 2019',
@@ -123,8 +104,22 @@ export class NewsComponent implements OnInit {
         date: '04/08-14/2019',
         location: 'Sydney - Australia',
         movement: 'noMovement',
-        opacity: 'notOpacity'
+        opacity: 'notOpacity',
+        link: 'https://www.edcon.io/'
       },
+    
+      {
+        title: 'Coindesk',
+        text: 'Ripio Rolls Out Crypto-Powered Loans Across Latin America.',
+        icon1: '',
+        icon2: '',
+        date: '',
+        location: '',
+        movement: 'noMovement',
+        opacity: 'notOpacity',
+        link: 'https://www.coindesk.com/ripio-rolls-out-crypto-powered-loans-across-latin-america'
+      },
+      
       {
         title: 'Forbes',
         text: 'A Journey From Poverty To Banking The Unbanked in Argentina.',
@@ -133,37 +128,41 @@ export class NewsComponent implements OnInit {
         date: '',
         location: '',
         movement: 'noMovement',
-        opacity: 'notOpacity'
+        opacity: 'notOpacity',
+        link: 'https://www.forbes.com/sites/geraldfenech/2018/12/24/interview-a-journey-from-poverty-to-banking-the-unbanked-in-argentina'
       },
       {
         title: 'Cointelegraph',
-        text: 'Ripio Closes $37 million ICO for Ethereum Lending Network.',
+        text: 'Global Lending System Can Be Improved With Blockchain.',
         icon1: '',
         icon2: '',
         date: '',
         location: '',
         movement: 'noMovement',
-        opacity: 'notOpacity'
+        opacity: 'notOpacity',
+        link: 'https://cointelegraph.com/news/global-lending-system-can-be-improved-with-blockchain'
       },
       {
         title: 'Venturebeat',
-        text: 'RCN launches Ripio engine to bring blockchain and smart-contracts to loans.',
+        text: 'RCN launches Ripio Engine To Bring Blockchain And Smart-Contracts To Loans.',
         icon1: '',
         icon2: '',
         date: '',
         location: '',
         movement: 'noMovement',
-        opacity: 'notOpacity'
+        opacity: 'notOpacity',
+        link: 'https://venturebeat.com/2018/05/03/rcn-launches-ripio-engine-to-bring-blockchain-and-smart-contracts-to-loans/'
       },
       {
         title: 'Nasdaq',
-        text: 'Trade Talks - Blockchain is Transforming Global Credit and Lending.',
+        text: 'Trade Talks - Blockchain Is Transforming Global Credit And Lending.',
         icon1: '',
         icon2: '',
         date: '',
         location: '',
         movement: 'noMovement',
-        opacity: 'notOpacity'
+        opacity: 'notOpacity',
+        link: 'https://www.youtube.com/watch?v=H4Dwyv1ySjk'
       },
     ];
 
@@ -305,4 +304,5 @@ interface IContent {
   location: string;
   movement: string;
   opacity: string;
+  link: string;
 }
