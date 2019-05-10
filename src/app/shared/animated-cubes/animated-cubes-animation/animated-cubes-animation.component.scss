@@ -1,9 +1,11 @@
 
-.animation-container {
-
-    margin-left: -50px;
+.anim-cubes-animation {
+  
+    &.hidden {
+        height: 0;
+    }
     
-    @media (min-width: 1310px) and (max-width: 1400px) {
+    @media (min-width: 1230px) and (max-width: 1400px) {
         margin-left: 0;
     }
 

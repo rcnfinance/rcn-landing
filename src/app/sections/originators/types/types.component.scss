@@ -45,8 +45,10 @@
 		}
 		// Image ------------------
         .img {
-			width: 35%;
-			margin-right: auto;
+			width: 80%;
+			img {
+				margin: 15% 0 0 -30% ;
+			}
         }
     }
 }
@@ -121,8 +123,10 @@
 			width: 90%;
 		}
 		.img {
-			width: 80%;
-			margin: auto;
+			width: 100%;
+			img {
+				margin: 0;
+			}
 		}
 	}
 }

@@ -9,6 +9,7 @@ import { getAnimationKeys } from '../../../assets/lottie-animations/cubes';
 export class AnimatedCubesComponent implements OnInit {
 
   @Input() currentTab: number | null;
+  @Input() shown: boolean;
 
   tabAnimatingTo = null;
   animationKeys = getAnimationKeys();
@@ -20,22 +21,15 @@ export class AnimatedCubesComponent implements OnInit {
   ngOnInit() {
   }
 
-  ngOnChanges({currentTab}: {[propKey: string]: SimpleChange}) {
+  ngOnChanges({currentTab, shown}: {[propKey: string]: SimpleChange}) {
+    if (!this.initialized && shown.currentValue === true) {
+      this.playAnimation('-10');
+      this.initialized = true;
+    }
     if (!currentTab || currentTab.firstChange || this.tabAnimatingTo !== null) return;
 
     const { previousValue, currentValue } = currentTab;
     this.playAnimation(`${previousValue}${currentValue}`);
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  checkScroll() {
-    if (this.initialized) return;
-
-    const componentRect = this.el.nativeElement.getBoundingClientRect();
-    if (componentRect.top - window.innerHeight - 300 > 0) return;
-    
-    this.playAnimation('-10');
-    this.initialized = true;
   }
   
   animationFinished() {
