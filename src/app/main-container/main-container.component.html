@@ -1,5 +1,6 @@
 
 <nav [ngClass]="menuBlack ? 'navbar-black' : 'navbar'">
+  <div class="container">
   <div  [ngClass]="menuBlack ? 'mobile-nav-black' : 'mobile-nav'">
     <div class="logo-mobile animated" (click)="markAsSelected('home')" routerLink='/home'>
       <img *ngIf="!menuBlack" class="img" src="../../../assets/img/isologotypo.svg" alt="">
@@ -40,6 +41,7 @@
     </div>
     <div class="overlay" (click)="mobileMenu()"></div>
   </div>
+</div>
 </nav>
 
 

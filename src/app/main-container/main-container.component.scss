@@ -15,21 +15,16 @@ ul {
 	border-bottom: 2px solid $rcn-blue; 
 }
 
-
-// section {
-// 	position: absolute;
-// 	z-index: 2;
-// 	top: 0;
-// 	background-color: white;
-// }
-
 .navbar {
 	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	width: 100%;
 	top: 0px;
 	z-index: 9999;
 	background-color: white;
-	height: 8vh;
+	height: 60px;
 	transform-origin: top;
 	-webkit-transition: background-color 0.5s; /* Safari */
 	transition: background-color 0.5s;
@@ -37,20 +32,28 @@ ul {
 
 .navbar-black {
 	position: fixed;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
 	width: 100%;
 	top: 0px;
 	z-index: 9999;
 	background-color: black;
-	height: 8vh;
+	height: 60px;
 	transform-origin: top;
 	-webkit-transition: background-color 0.5s; /* Safari */
 	transition: background-color 0.5s;
 	border-bottom: solid $rcn-blue 1px;
 }
 
+.container {
+	width: 100%;
+	height: auto;
+}
+
 .main-container {
 	position: sticky;
-	height: 8vh;
+	height: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
