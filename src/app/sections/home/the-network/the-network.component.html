@@ -12,7 +12,7 @@
 					and demand across borders, creating a new ecosystem for decentralized debt products.</p>
 			</app-title-text>
 			<div class="tabs">
-				<mat-tab-group>
+				<mat-tab-group (selectedTabChange)="tabChanged($event)">
 					<mat-tab>
 						<ng-template mat-tab-label ng-click="onClickMe()">
 							CREDITORS
@@ -42,7 +42,8 @@
 		</div>
 		<div class="col-2">
 			<div class="img">
-				<img src="../../../../assets/img/home-creditors-grilla.svg" alt="">
+				<!--<img src="../../../../assets/img/home-creditors-grilla.svg" alt="">-->
+				<app-animated-cubes [currentTab]="currentTab" [shown]="lineState === 'show'"></app-animated-cubes>
 			</div>
 		</div>
 	</div>

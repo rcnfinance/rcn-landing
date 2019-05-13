@@ -23,6 +23,7 @@
     "@angular/router": "~7.2.0",
     "animate.css": "^3.7.0",
     "core-js": "^2.5.4",
+    "lottie-web": "5.4.3",
     "ngx-drag-scroll": "^7.1.5",
     "rxjs": "~6.3.3",
     "slick": "1.12.2",

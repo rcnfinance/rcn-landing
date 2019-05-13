@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
+import { MatTabChangeEvent } from '@angular/material/tabs';
 import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
@@ -11,6 +12,7 @@ import { LandingAnimations } from 'src/app/animations/animations';
 export class TypesComponent implements OnInit {
   state = 'hide';
   lineState = 'hide';
+  currentTab = 0;
 
   constructor(public el: ElementRef, private router: Router) { }
 
@@ -30,4 +32,8 @@ export class TypesComponent implements OnInit {
     ngOnInit() {
     }
 
+    tabChanged = (tabChangeEvent: MatTabChangeEvent): void => {
+      this.currentTab = tabChangeEvent.index;
+    }
+  
 }
