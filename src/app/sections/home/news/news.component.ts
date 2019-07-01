@@ -97,6 +97,17 @@ export class NewsComponent implements OnInit {
         link: ''
       },
       {
+        title: 'Money 20/20 Europe',
+        text: "Money 20/20 is Europe's leading payments & financial services innovation event.",
+        icon1: 'fas fa-calendar-alt',
+        icon2: 'fas fa-map-marker-alt',
+        date: '06/03-05/2019',
+        location: 'Amsterdam - Netherlands',
+        movement: 'noMovement',
+        opacity: 'notOpacity',
+        link: 'https://europe.money2020.com/'
+      },
+      {
         title: 'EDCON 2019',
         text: 'EDCON is a global conference series aiming to accelerate the development of the Ethereum ecosystem worldwide.',
         icon1: 'fas fa-calendar-alt',
