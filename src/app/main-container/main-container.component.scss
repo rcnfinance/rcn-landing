@@ -15,6 +15,13 @@ ul {
 	border-bottom: 2px solid $rcn-blue; 
 }
 
+.page-title-2:after {
+	content: ""; 
+	display: block;
+	margin-top: 4px; 
+	border-bottom: 2px solid white; 
+}
+
 .navbar {
 	position: fixed;
 	display: flex;
@@ -110,6 +117,19 @@ ul {
 	animation-duration: 0.5s;
 	outline: white;
 }
+
+.menu-text-2 {
+	@include menu-text;
+	color: $rcn-blue;
+	// font-size: 14px;
+	margin: 0 2% ;
+	cursor: pointer;
+	-webkit-transition: color 0.5s; /* Safari */
+	transition: color 0.5s;
+	animation-duration: 0.5s;
+	outline: white;
+}
+
 .menu-text-black {
 	@include menu-text;
 	color: white;
@@ -121,6 +141,12 @@ ul {
 	outline: black;
 }
 .menu-text:hover {
+	color: $text-gray;
+	-webkit-transition: color 0.5s; /* Safari */
+	transition: color 0.5s;
+}
+
+.menu-text-2:hover {
 	color: $text-gray;
 	-webkit-transition: color 0.5s; /* Safari */
 	transition: color 0.5s;

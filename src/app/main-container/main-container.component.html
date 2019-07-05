@@ -37,6 +37,10 @@
           <a>HOW IT WORKS</a>
           <h3 class="page-title" [@lineAnimationThickParameter]="{value: lineStateHowItWorks, params: {widthLength: '30%' }}"></h3>
         </li>
+        <li [ngClass]="menuBlack ? 'menu-text-black animated' : 'menu-text-2 animated'" id="marketplace" (click)="markAsSelected('marketplace')">
+          <a href=" https://rcn.loans/" target="_blank">MARKETPLACE</a>
+          <h3 class="page-title-2" [@lineAnimationThickParameter]="{value: lineStateHowItWorks, params: {widthLength: '30%' }}"></h3>
+        </li>
       </ul>
     </div>
     <div class="overlay" (click)="mobileMenu()"></div>
