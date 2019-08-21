@@ -98,8 +98,7 @@ export class NewsComponent implements OnInit {
       },
       {
         title: 'Blockchain Week Berlin',
-        text: `Blockchain Week Berlin is a community-based initiative that gathers more than 40 educational blockchain events,
-            including Web3 Summit, DAPPCON and ETHBerlin.`,
+        text: `Blockchain Week Berlin is a community initiative that gathers more than 40 events, including Web3 Summit and DAPPCON.`,
         icon1: '',
         icon2: '',
         date: '08/18-29/2019',
