@@ -97,8 +97,20 @@ export class NewsComponent implements OnInit {
         link: ''
       },
       {
+        title: 'Blockchain Week Berlin',
+        text: `Blockchain Week Berlin is a community-based initiative that gathers more than 40 educational blockchain events,
+            including Web3 Summit, DAPPCON and ETHBerlin.`,
+        icon1: '',
+        icon2: '',
+        date: '08/18-29/2019',
+        location: 'Berlin - Germany',
+        movement: 'noMovement',
+        opacity: 'notOpacity',
+        link: 'https://www.blockchainweek.berlin/'
+      },
+      {
         title: 'Money 20/20 Europe',
-        text: "Money 20/20 is Europe's leading payments & financial services innovation event.",
+        text: 'Money 20/20 is Europe\'s leading payments & financial services innovation event.',
         icon1: 'fas fa-calendar-alt',
         icon2: 'fas fa-map-marker-alt',
         date: '06/03-05/2019',
@@ -118,7 +130,7 @@ export class NewsComponent implements OnInit {
         opacity: 'notOpacity',
         link: 'https://www.edcon.io/'
       },
-    
+
       {
         title: 'Coindesk',
         text: 'Ripio Rolls Out Crypto-Powered Loans Across Latin America.',
@@ -130,7 +142,7 @@ export class NewsComponent implements OnInit {
         opacity: 'notOpacity',
         link: 'https://www.coindesk.com/ripio-rolls-out-crypto-powered-loans-across-latin-america'
       },
-      
+
       {
         title: 'Forbes',
         text: 'A Journey From Poverty To Banking The Unbanked in Argentina.',
