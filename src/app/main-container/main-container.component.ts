@@ -49,7 +49,7 @@ export class MainContainerComponent implements OnInit {
   markAsSelected(section: string) {
     const element = document.getElementById(section);
     element.classList.add('pulse');
-    setTimeout(function() {
+    setTimeout(() => {
     element.classList.remove('pulse');
     }, 1000);
     this.lineStateCreditors = 'hide';

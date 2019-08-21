@@ -15,19 +15,33 @@ export class CredCharacteristicsComponent implements OnInit {
 
   ngOnInit() {
     this.characteristics = [
-      {img: '../../../../assets/icons/icon-multicurrency.svg',
-      title: 'Multicurrency',
-      text: 'The decentralized marketplace allows creditors to make loans in a variety of lending and borrowing currencies.',
-      selected: 'notSelected', opacity: 'notopacity', expanded : false},
-      {img: '../../../../assets/icons/icon-competitive.svg',
-      title: 'Competitive',
-      text: 'By accessing emerging debt markets, RCN creditors can fund high-yield loans and earn passive income at attractive interest rates.',
-      selected: 'notSelected', opacity: 'notopacity', expanded : false},
-      {img: '../../../../assets/icons/icon-risk.svg',
-      title: 'Risk Versatile',
-      text: 'Whether cosigned or backed by crypto collateral, all the network’s loans count with a risk strategy to manage the Creditor’s exposure.',
-      selected: 'notSelected', opacity: 'notopacity', expanded : false}
-      ];
+      {
+        img: '../../../../assets/icons/icon-multicurrency.svg',
+        title: 'Multicurrency',
+        text: 'The decentralized marketplace allows creditors to make loans in a variety of lending and borrowing currencies.',
+        selected: 'notSelected',
+        opacity: 'notopacity',
+        expanded : false
+      },
+      {
+        img: '../../../../assets/icons/icon-competitive.svg',
+        title: 'Competitive',
+        text: `By accessing emerging debt markets, RCN creditors can fund high-yield loans and earn passive income at attractive
+            interest rates.`,
+        selected: 'notSelected',
+        opacity: 'notopacity',
+        expanded : false
+      },
+      {
+        img: '../../../../assets/icons/icon-risk.svg',
+        title: 'Risk Versatile',
+        text: `Whether cosigned or backed by crypto collateral, all the network’s loans count with a risk strategy to manage
+            the Creditor’s exposure.`,
+        selected: 'notSelected',
+        opacity: 'notopacity',
+        expanded : false
+      }
+    ];
   }
 
   updateNoSelections() {

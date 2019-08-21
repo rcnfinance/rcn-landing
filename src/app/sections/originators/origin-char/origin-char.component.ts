@@ -22,11 +22,13 @@ export class OriginCharComponent implements OnInit {
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-term.png',
       title: 'Term Flexible',
-      text: 'Debt products can be customized to fit each Originator’s required amount, currency, APR, LTV and maturity, among other parameters.',
+      text: `Debt products can be customized to fit each Originator’s required amount, currency, APR, LTV and maturity, among
+          other parameters.`,
       selected: 'notSelected', opacity: 'notopacity', expanded : false},
       {img: '../../../../assets/icons/icon-plugplay.png',
       title: 'Plug & Play',
-      text: 'The RCN protocol allows originators to get integrated using a simple SDK and without requiring any previous blockchain experience.',
+      text: `The RCN protocol allows originators to get integrated using a simple SDK and without requiring any previous blockchain
+          experience.`,
       selected: 'notSelected', opacity: 'notopacity', expanded : false}
       ];
   }

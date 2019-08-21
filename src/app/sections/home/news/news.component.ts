@@ -39,28 +39,28 @@ export class NewsComponent implements OnInit {
   checkWidth() {
     if (window.innerWidth < 768) {
       this.isMobileResolution = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isMobileResolution = false;
     }
 
     if (window.innerWidth > 768 && window.innerWidth < 1180) {
       this.isResolution1 = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isResolution1 = false;
     }
 
     if (window.innerWidth > 1180 && window.innerWidth < 1560) {
       this.isResolution2 = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isResolution2 = false;
     }
 
     if (window.innerWidth > 1560) {
       this.isDesktopResolution = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isDesktopResolution = false;
     }

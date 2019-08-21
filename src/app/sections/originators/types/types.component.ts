@@ -35,5 +35,5 @@ export class TypesComponent implements OnInit {
     tabChanged = (tabChangeEvent: MatTabChangeEvent): void => {
       this.currentTab = tabChangeEvent.index;
     }
-  
+
 }
