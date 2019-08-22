@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Input, SimpleChange, HostListener } from '@angular/core';
+import { Component, OnInit, OnChanges, ElementRef, Input, SimpleChange, HostListener } from '@angular/core';
 import { getAnimationKeys } from '../../../assets/lottie-animations/cubes';
 
 @Component({
@@ -6,7 +6,7 @@ import { getAnimationKeys } from '../../../assets/lottie-animations/cubes';
   templateUrl: './animated-cubes.component.html'
 })
 
-export class AnimatedCubesComponent implements OnInit {
+export class AnimatedCubesComponent implements OnInit, OnChanges {
 
   @Input() currentTab: number | null;
   @Input() shown: boolean;
@@ -17,7 +17,7 @@ export class AnimatedCubesComponent implements OnInit {
   initialized = false;
 
   constructor(private el: ElementRef) { }
-  
+
   ngOnInit() {
   }
 
@@ -26,12 +26,12 @@ export class AnimatedCubesComponent implements OnInit {
       this.playAnimation('-10');
       this.initialized = true;
     }
-    if (!currentTab || currentTab.firstChange || this.tabAnimatingTo !== null) return;
+    if (!currentTab || currentTab.firstChange || this.tabAnimatingTo !== null) { return; }
 
     const { previousValue, currentValue } = currentTab;
     this.playAnimation(`${previousValue}${currentValue}`);
   }
-  
+
   animationFinished() {
     if (this.currentTab === this.tabAnimatingTo) {
       this.tabAnimatingTo = null;
@@ -39,7 +39,7 @@ export class AnimatedCubesComponent implements OnInit {
     }
     this.playAnimation(`${this.tabAnimatingTo}${this.currentTab}`);
   }
-  
+
   playAnimation(key: string) {
     this.currentAnimation = key;
     this.tabAnimatingTo = this.currentTab;

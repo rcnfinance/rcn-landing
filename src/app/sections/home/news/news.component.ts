@@ -39,28 +39,28 @@ export class NewsComponent implements OnInit {
   checkWidth() {
     if (window.innerWidth < 768) {
       this.isMobileResolution = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isMobileResolution = false;
     }
 
     if (window.innerWidth > 768 && window.innerWidth < 1180) {
       this.isResolution1 = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isResolution1 = false;
     }
 
     if (window.innerWidth > 1180 && window.innerWidth < 1560) {
       this.isResolution2 = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isResolution2 = false;
     }
 
     if (window.innerWidth > 1560) {
       this.isDesktopResolution = true;
-      this.activateContent(this.activeContentStartIndex, 'enterLeft')
+      this.activateContent(this.activeContentStartIndex, 'enterLeft');
     } else {
       this.isDesktopResolution = false;
     }
@@ -97,8 +97,19 @@ export class NewsComponent implements OnInit {
         link: ''
       },
       {
+        title: 'Blockchain Week Berlin',
+        text: `Blockchain Week Berlin is a community initiative that gathers more than 40 events, including Web3 Summit and DAPPCON.`,
+        icon1: '',
+        icon2: '',
+        date: '08/18-29/2019',
+        location: 'Berlin - Germany',
+        movement: 'noMovement',
+        opacity: 'notOpacity',
+        link: 'https://www.blockchainweek.berlin/'
+      },
+      {
         title: 'Money 20/20 Europe',
-        text: "Money 20/20 is Europe's leading payments & financial services innovation event.",
+        text: 'Money 20/20 is Europe\'s leading payments & financial services innovation event.',
         icon1: 'fas fa-calendar-alt',
         icon2: 'fas fa-map-marker-alt',
         date: '06/03-05/2019',
@@ -118,7 +129,7 @@ export class NewsComponent implements OnInit {
         opacity: 'notOpacity',
         link: 'https://www.edcon.io/'
       },
-    
+
       {
         title: 'Coindesk',
         text: 'Ripio Rolls Out Crypto-Powered Loans Across Latin America.',
@@ -130,7 +141,7 @@ export class NewsComponent implements OnInit {
         opacity: 'notOpacity',
         link: 'https://www.coindesk.com/ripio-rolls-out-crypto-powered-loans-across-latin-america'
       },
-      
+
       {
         title: 'Forbes',
         text: 'A Journey From Poverty To Banking The Unbanked in Argentina.',

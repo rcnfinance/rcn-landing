@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Input, SimpleChange, ViewChild, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, OnChanges, ElementRef, Input, SimpleChange, ViewChild, Output, EventEmitter } from '@angular/core';
 import lottie from 'lottie-web';
 import { getAnimation } from '../../../../assets/lottie-animations/cubes';
 
@@ -8,18 +8,18 @@ import { getAnimation } from '../../../../assets/lottie-animations/cubes';
   styleUrls: ['./animated-cubes-animation.component.scss']
 })
 
-export class AnimatedCubesAnimationComponent implements OnInit {
-  
-  @Input('key') key: string;
-  @Input('current') current: boolean;
-  @Output() finishedPlaying = new EventEmitter;
+export class AnimatedCubesAnimationComponent implements OnInit, OnChanges {
+
+  @Input() key: string;
+  @Input() current: boolean;
+  @Output() finishedPlaying = new EventEmitter();
   @ViewChild('container') container: ElementRef;
 
   animation = null;
 
   ngOnInit() {
     const animation = getAnimation(this.key);
-    if (!animation) return;
+    if (!animation) { return; }
     this.animation = lottie.loadAnimation({
       container: this.container.nativeElement,
       autoplay: false,
@@ -31,11 +31,11 @@ export class AnimatedCubesAnimationComponent implements OnInit {
     this.animation.setSpeed(animation.speed);
     this.animation.addEventListener('complete', () => this.finishedPlaying.emit());
   }
-  
+
   ngOnChanges({current}: {[propKey: string]: SimpleChange}) {
-    if (!current || current.firstChange) return;
-    if (current.currentValue) this.animation.play();
-    if (current.previousValue) this.animation.stop();
+    if (!current || current.firstChange) { return; }
+    if (current.currentValue) { this.animation.play(); }
+    if (current.previousValue) { this.animation.stop(); }
   }
 
 }
