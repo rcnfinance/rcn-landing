@@ -12,18 +12,18 @@ export class FooterComponent implements OnInit {
   constructor() { }
 
 
-  addClass(net) {
-    this.counter++;
-    if (this.counter >= 5) {
-      const element = document.getElementById(net);
-      element.classList.add('bounce');
-      setTimeout(() => {
-        element.classList.remove('bounce');
-      }, 1000);
-      this.counter = 0;
-    }
+  // addClass(net) {
+  //   this.counter++;
+  //   if (this.counter >= 5) {
+  //     const element = document.getElementById(net);
+  //     element.classList.add('bounce');
+  //     setTimeout(() => {
+  //       element.classList.remove('bounce');
+  //     }, 1000);
+  //     this.counter = 0;
+  //   }
 
-    }
+  //   }
 
   ngOnInit() {
   }
