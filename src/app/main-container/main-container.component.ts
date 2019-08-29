@@ -20,6 +20,7 @@ export class MainContainerComponent implements OnInit {
   lineStateOriginators = 'hide';
   lineStateDevelopers = 'hide';
   lineStateHowItWorks = 'hide';
+  lineStateMarketplace = 'hide';
 
 
   constructor(public el: ElementRef, private router: Router) {
@@ -56,6 +57,7 @@ export class MainContainerComponent implements OnInit {
     this.lineStateOriginators = 'hide';
     this.lineStateDevelopers = 'hide';
     this.lineStateHowItWorks = 'hide';
+    this.lineStateMarketplace = 'hide';
     switch (section) {
       case 'creditors':
         this.lineStateCreditors = 'show';
@@ -69,6 +71,9 @@ export class MainContainerComponent implements OnInit {
       case 'how-it-works':
         this.lineStateHowItWorks = 'show';
         break;
+        case 'marketplace':
+          this.lineStateMarketplace = 'show';
+          break;
       default:
       break;
 
