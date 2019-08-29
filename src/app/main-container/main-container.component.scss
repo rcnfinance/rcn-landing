@@ -337,6 +337,13 @@ section {
 			padding: 8% 0;
 			border-bottom: solid rgb(66, 66, 66) 1px;
 			}
+			.menu-text-2 {
+				@include menu-text;
+				color: $rcn-blue;
+				font-size: 17px;
+				padding: 8% 0;
+				border-bottom: solid rgb(66, 66, 66) 1px;
+				}
 			.menu-text-black {
 				@include menu-text;
 				color: white;
