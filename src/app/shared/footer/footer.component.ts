@@ -1,31 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
-
-  counter = 0;
+export class FooterComponent {
 
   constructor() { }
-
-
-  // addClass(net) {
-  //   this.counter++;
-  //   if (this.counter >= 5) {
-  //     const element = document.getElementById(net);
-  //     element.classList.add('bounce');
-  //     setTimeout(() => {
-  //       element.classList.remove('bounce');
-  //     }, 1000);
-  //     this.counter = 0;
-  //   }
-
-  //   }
-
-  ngOnInit() {
-  }
 
 }
