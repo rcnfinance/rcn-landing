@@ -97,10 +97,21 @@ export class NewsComponent implements OnInit {
         link: ''
       },
       {
-        title: 'Blockchain Week Berlin',
-        text: `Blockchain Week Berlin is a community initiative that gathers more than 40 events, including Web3 Summit and DAPPCON.`,
+        title: 'Yahoo! Finance',
+        text: `Three Innovative Blockchain Projects in Argentina.`,
         icon1: '',
         icon2: '',
+        date: '',
+        location: '',
+        movement: 'noMovement',
+        opacity: 'notOpacity',
+        link: 'https://finance.yahoo.com/news/three-innovative-blockchain-projects-argentina-140030383.html'
+      },
+      {
+        title: 'Blockchain Week Berlin',
+        text: `Blockchain Week Berlin is a community initiative that gathers more than 40 events, including Web3 Summit and DAPPCON.`,
+        icon1: 'fas fa-calendar-alt',
+        icon2: 'fas fa-map-marker-alt',
         date: '08/18-29/2019',
         location: 'Berlin - Germany',
         movement: 'noMovement',
