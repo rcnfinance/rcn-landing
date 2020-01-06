@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { LandingAnimations } from '../../animations/animations';
 
 @Component({
@@ -9,9 +10,10 @@ import { LandingAnimations } from '../../animations/animations';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title) { }
 
   ngOnInit() {
+    this.title.setTitle('RCN - Global Lending');
   }
 
 }

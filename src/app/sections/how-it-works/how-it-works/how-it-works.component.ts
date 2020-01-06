@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { LandingAnimations } from 'src/app/animations/animations';
 
 @Component({
@@ -9,9 +10,10 @@ import { LandingAnimations } from 'src/app/animations/animations';
 })
 export class HowItWorksComponent implements OnInit {
 
-  constructor() { }
+  constructor(private title: Title) { }
 
   ngOnInit() {
+    this.title.setTitle('RCN | How It Works');
   }
 
 }
